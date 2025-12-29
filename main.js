@@ -1,88 +1,26 @@
-// Academic Portfolio JavaScript
+// Main JavaScript for Tala Khaddour's Portfolio Website
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
     
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            
-            // Update aria-expanded attribute for accessibility
-            const isExpanded = this.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-        });
-        
-        // Close menu when clicking a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-    
-    // Contact Form Handling
-    const contactForm = document.getElementById('academicForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Form validation
-            const requiredFields = this.querySelectorAll('[required]');
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = '#dc3545';
-                } else {
-                    field.style.borderColor = '#E8ECF1';
-                }
-            });
-            
-            if (isValid) {
-                // In production, this would send to backend
-                // For demo, show success message
-                alert('Thank you for your academic inquiry. This is a demonstration form. In a production environment, your message would be sent to: tala.khaddour@example.edu\n\nI typically respond within 2 business days.');
-                this.reset();
-                
-                // Remove any error styling
-                requiredFields.forEach(field => {
-                    field.style.borderColor = '#E8ECF1';
-                });
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-times');
             } else {
-                alert('Please fill in all required fields marked with *.');
+                icon.classList.replace('fa-times', 'fa-bars');
             }
         });
         
-        // Real-time form validation
-        const formInputs = contactForm.querySelectorAll('input, select, textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.hasAttribute('required') && !this.value.trim()) {
-                    this.style.borderColor = '#dc3545';
-                } else {
-                    this.style.borderColor = '#E8ECF1';
-                }
-            });
-            
-            input.addEventListener('input', function() {
-                if (this.value.trim()) {
-                    this.style.borderColor = '#2F5D8C';
-                }
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
             });
         });
     }
@@ -91,100 +29,263 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href !== '#' && href.startsWith('#')) {
+            
+            // Only handle internal page anchors, not external links
+            if (href === '#' || href.startsWith('#!')) return;
+            
+            if (href.startsWith('#')) {
                 e.preventDefault();
                 const targetElement = document.querySelector(href);
+                
                 if (targetElement) {
-                    // Calculate offset for fixed navbar
-                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                    
                     window.scrollTo({
-                        top: targetPosition,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
-                    // Update URL without page jump
-                    history.pushState(null, null, href);
                 }
             }
         });
     });
     
-    // Add active class to current section in viewport
+    // Animate elements on scroll
     const observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: 0
+        rootMargin: '0px',
+        threshold: 0.1
     };
     
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            const id = entry.target.getAttribute('id');
-            if (id && entry.isIntersecting) {
-                // Update active nav link
-                document.querySelectorAll('.nav-menu a').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
             }
         });
     }, observerOptions);
     
-    // Observe all sections with IDs
-    document.querySelectorAll('section[id]').forEach(section => {
-        observer.observe(section);
+    // Observe elements to animate
+    document.querySelectorAll('.highlight-card, .research-card, .value-card, .timeline-content').forEach(el => {
+        observer.observe(el);
     });
     
-    // Lazy loading for images
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src || img.src;
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const name = this.querySelector('input[name="name"]');
+            const email = this.querySelector('input[name="email"]');
+            const message = this.querySelector('textarea[name="message"]');
+            
+            let isValid = true;
+            
+            if (!name.value.trim()) {
+                showError(name, 'Please enter your name');
+                isValid = false;
+            } else {
+                removeError(name);
+            }
+            
+            if (!email.value.trim() || !isValidEmail(email.value)) {
+                showError(email, 'Please enter a valid email address');
+                isValid = false;
+            } else {
+                removeError(email);
+            }
+            
+            if (!message.value.trim()) {
+                showError(message, 'Please enter your message');
+                isValid = false;
+            } else {
+                removeError(message);
+            }
+            
+            if (isValid) {
+                // In a real implementation, you would send the form data to a server
+                // For this example, we'll just show a success message
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    showNotification('Message sent successfully! I will get back to you soon.', 'success');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            }
         });
     }
     
-    // Add current year to footer
-    const currentYear = new Date().getFullYear();
-    const yearElements = document.querySelectorAll('.current-year');
-    yearElements.forEach(element => {
-        element.textContent = currentYear;
-    });
+    // Helper function for email validation
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
     
-    // Print functionality enhancement
-    const printButtons = document.querySelectorAll('.btn-print');
-    printButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.print();
+    // Helper function to show error
+    function showError(input, message) {
+        const formGroup = input.closest('.form-group');
+        let errorElement = formGroup.querySelector('.error-message');
+        
+        if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            formGroup.appendChild(errorElement);
+        }
+        
+        errorElement.textContent = message;
+        input.style.borderColor = '#e74c3c';
+    }
+    
+    // Helper function to remove error
+    function removeError(input) {
+        const formGroup = input.closest('.form-group');
+        const errorElement = formGroup.querySelector('.error-message');
+        
+        if (errorElement) {
+            errorElement.remove();
+        }
+        
+        input.style.borderColor = '#ddd';
+    }
+    
+    // Notification system
+    function showNotification(message, type = 'info') {
+        // Remove any existing notification
+        const existingNotification = document.querySelector('.notification');
+        if (existingNotification) {
+            existingNotification.remove();
+        }
+        
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span>${message}</span>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+        
+        // Add to page
+        document.body.appendChild(notification);
+        
+        // Show notification
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 10);
+        
+        // Close button
+        notification.querySelector('.notification-close').addEventListener('click', () => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        });
+        
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 300);
+            }
+        }, 5000);
+    }
+    
+    // Add CSS for notifications
+    const notificationStyles = document.createElement('style');
+    notificationStyles.textContent = `
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 1rem;
+            max-width: 350px;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-success {
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .notification-error {
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .notification-info {
+            border-left: 4px solid #3498db;
+        }
+        
+        .notification-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+            line-height: 1;
+            margin-left: 1rem;
+        }
+        
+        .notification-close:hover {
+            color: #333;
+        }
+    `;
+    document.head.appendChild(notificationStyles);
+    
+    // Dynamic year in footer
+    const yearElement = document.querySelector('#current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Add hover effect to cards
+    const cards = document.querySelectorAll('.highlight-card, .research-card, .value-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
         });
     });
     
-    // Add subtle hover effects to interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .focus-card, .method-card');
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-    });
-    
-    // Initialize tooltips for complex terms (for scholarship committees)
-    const technicalTerms = document.querySelectorAll('.technical-term');
-    technicalTerms.forEach(term => {
-        term.setAttribute('title', term.dataset.definition || 'Technical term in robotics/engineering');
-        term.style.borderBottom = '1px dotted var(--secondary)';
-        term.style.cursor = 'help';
+    // Load placeholder images dynamically
+    const placeholderImages = document.querySelectorAll('.teaser-image, .research-image, .about-image');
+    placeholderImages.forEach((img, index) => {
+        // In a real implementation, you would set actual image URLs here
+        // For now, we'll just set different gradient backgrounds
+        const gradients = [
+            'linear-gradient(135deg, #3498db, #2c3e50)',
+            'linear-gradient(135deg, #e74c3c, #c0392b)',
+            'linear-gradient(135deg, #2ecc71, #27ae60)',
+            'linear-gradient(135deg, #9b59b6, #8e44ad)'
+        ];
+        
+        img.style.background = gradients[index % gradients.length];
     });
 });

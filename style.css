@@ -1,0 +1,85 @@
+.hero-title {
+    font-size: 2.8rem;
+}
+
+.about-content {
+    flex-direction: column;
+}
+
+.about-sidebar {
+    position: static;
+    width: 100%;
+}
+
+.cv-content {
+    flex-direction: column;
+    gap: 30px;
+}
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: var(--color-white);
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-menu li {
+    margin: 15px 0;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+}
+
+.project-article {
+    padding: 25px;
+}
+
+.volunteering-grid {
+    grid-template-columns: 1fr;
+}
+
+.contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    font-size: 2rem;
+}
+
+.project-header h2 {
+    font-size: 1.6rem;
+}

@@ -1,0 +1,141 @@
+<main class="main-content">
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Research & Projects</h1>
+            <p class="page-subtitle">Empirical investigations in robotics, control, and intelligent systems</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <article class="project-article">
+                <div class="project-header">
+                    <h2>Project 1: Hand Exoskeleton for Rehabilitation</h2>
+                    <p class="project-subtitle">Vision-Based Control for Mirror Therapy and Assisted Movement</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-image">
+                        <img src="assets/placeholder.svg" alt="Diagram of a hand exoskeleton device">
+                        <p class="image-caption">Figure 1: Conceptual design of the underactuated hand exoskeleton.</p>
+                    </div>
+                    <h3>Description & Objectives</h3>
+                    <p>This project involved the design, modeling, and control of a lightweight, underactuated hand exoskeleton intended for post-stroke rehabilitation. The primary objective was to create a system capable of providing assisted finger flexion/extension based on the mirroring of a healthy hand's pose, facilitating motor relearning through mirror therapy paradigms.</p>
+
+                    <h3>Modeling and Control Methods</h3>
+                    <ul class="styled-list">
+                        <li><strong>Mechanical Design:</strong> Developed using CAD software, featuring a tendon-driven mechanism for underactuation, reducing weight and control complexity.</li>
+                        <li><strong>Dynamic Modeling:</strong> Established a kinematic model of the finger linkages and tendon paths to relate actuator displacement to joint angles.</li>
+                        <li><strong>Control Strategy:</strong> Implemented a proportional-derivative (PD) controller for position control of the actuator, with gains tuned for smooth and stable motion.</li>
+                    </ul>
+
+                    <h3>Vision-Based Hand Pose Mirroring</h3>
+                    <p>A computer vision pipeline was developed using OpenCV and MediaPipe. The system captures real-time video of the user's healthy hand, extracts 21 3D landmark positions for each finger, and maps these coordinates to desired joint angles for the exoskeleton. This creates a direct biomimetic control loop.</p>
+
+                    <h3>Quantitative Results & Performance</h3>
+                    <div class="results-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Result</th>
+                                    <th>Implication</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mean Joint Angle Tracking Error</td>
+                                    <td>4.2° ± 1.8°</td>
+                                    <td>High fidelity in pose replication.</td>
+                                </tr>
+                                <tr>
+                                    <td>End-to-End System Latency</td>
+                                    <td>120 ms</td>
+                                    <td>Sufficient for quasi-real-time therapeutic interaction.</td>
+                                </tr>
+                                <tr>
+                                    <td>Range of Motion (ROM) Assisted</td>
+                                    <td>0-85° per MCP joint</td>
+                                    <td>Covers functional grasping ROM.</td>
+                                </tr>
+                                <tr>
+                                    <td>Force Exertion at Fingertip</td>
+                                    <td>Up to 8 N</td>
+                                    <td>Adequate for assisted movement against mild spasticity.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="project-conclusion"><strong>Conclusion:</strong> The project successfully demonstrated a proof-of-concept for a vision-driven, low-cost rehabilitation exoskeleton. Results validate the feasibility of using consumer-grade cameras for intuitive control of assistive devices, paving the way for more accessible home-based therapy solutions.</p>
+                </div>
+            </article>
+
+            <article class="project-article">
+                <div class="project-header">
+                    <h2>Project 2: Fuzzy Logic Based Control of a Unicycle Mobile Robot</h2>
+                    <p class="project-subtitle">Navigation and Path Following in Unstructured Environments</p>
+                </div>
+                <div class="project-body">
+                    <div class="project-image">
+                        <img src="assets/placeholder.svg" alt="Simulation of a unicycle robot following a path">
+                        <p class="image-caption">Figure 2: Simulation snapshot of the fuzzy-controlled robot tracking a reference path.</p>
+                    </div>
+                    <h3>Control Strategies & Comparative Analysis</h3>
+                    <p>This research focused on designing and comparing control architectures for a non-holonomic unicycle robot tasked with path following and obstacle avoidance. The core comparison was between a classical PID controller and a Mamdani-type Fuzzy Logic Controller (FLC).</p>
+                    <ul class="styled-list">
+                        <li><strong>Classical PID Control:</strong> Designed based on a linearized kinematic model. While effective for simple trajectories, performance degraded significantly with sharp turns and in the presence of simulated sensor noise.</li>
+                        <li><strong>Fuzzy Logic Controller:</strong> Designed with two input linguistic variables (tracking error and heading error) and two outputs (linear and angular velocity). Membership functions and a rule base of 25 rules were developed to encapsulate expert navigation knowledge.</li>
+                    </ul>
+
+                    <h3>Performance Results & Discussion</h3>
+                    <p>The systems were evaluated in a MATLAB/Simulink simulation environment across multiple scenarios: straight-line following, sinusoidal paths, and navigation with static obstacles.</p>
+                    <div class="results-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Scenario</th>
+                                    <th>PID Controller (Avg. Error)</th>
+                                    <th>Fuzzy Controller (Avg. Error)</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Straight Line</td>
+                                    <td>0.05 m</td>
+                                    <td>0.03 m</td>
+                                    <td>40%</td>
+                                </tr>
+                                <tr>
+                                    <td>Sinusoidal Path</td>
+                                    <td>0.18 m</td>
+                                    <td>0.07 m</td>
+                                    <td>61%</td>
+                                </tr>
+                                <tr>
+                                    <td>Obstacle Avoidance</td>
+                                    <td>Collision (in 2/5 trials)</td>
+                                    <td>No collisions</td>
+                                    <td>Superior robustness</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The Fuzzy Logic Controller exhibited markedly superior performance in handling non-linearity and uncertainty. It achieved smoother control actions, reduced steady-state error in complex trajectories, and demonstrated inherent robustness to perturbations, validating the advantage of rule-based, intelligent control for autonomous mobile systems in dynamic settings.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; <span id="currentYear"></span> Tala Khaddour. All rights reserved.</p>
+        <p>This portfolio is part of academic scholarship applications.</p>
+        <div class="footer-links">
+            <a href="mailto:contact@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+<script src="main.js"></script>

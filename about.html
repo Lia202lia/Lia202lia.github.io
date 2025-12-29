@@ -1,37 +1,97 @@
-<!-- about.html -->
+<!-- FILE: about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Tala Khaddour, her academic background and interests">
-    <title>Tala Khaddour - About Me</title>
+    <title>About | Tala Khaddour</title>
+    <meta name="description" content="Academic background and research philosophy of Tala Khaddour.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Tala Khaddour</a>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="research.html">Research & Projects</a></li>
-                <li><a href="volunteering.html">Volunteering</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="volunteering.html">Service</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>About Me</h1>
-            <p>I am Tala Khaddour, a recent graduate in Robotics and Intelligent Systems Engineering from Manara University, where I pursued an advanced academic track as part of the Distinguished Student Program. My education has equipped me with a strong foundation in robotics, control systems, and artificial intelligence, culminating in an honors thesis on intelligent trajectory control for rehabilitation exoskeletons.</p>
-            <p>My motivation stems from a deep interest in bridging technology with human needs, particularly in areas where robotics can restore mobility and independence. Growing up in Syria, I witnessed the impact of limited access to advanced healthcare, which fueled my commitment to rehabilitation robotics.</p>
-            <p>My research interests include human-robot interaction, rehabilitation robotics, intelligent control strategies, and computer vision applications. I am particularly drawn to developing systems that ensure safe and adaptive interactions between humans and machines.</p>
-            <p>Guided by values of perseverance, social responsibility, and equitable access to education, I strive to contribute to global advancements in robotics while fostering international collaborations. My experiences have shaped an international outlook, emphasizing cross-cultural innovation in technology.</p>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="about-main">
+        <header class="page-header">
+            <h1>Academic Identity & Motivation</h1>
+            <p class="page-subtitle">A reflection on my journey in robotics and engineering.</p>
+        </header>
+
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Educational Foundation</h2>
+                <p>I am a dedicated Robotics and Intelligent Systems Engineer, holding a degree from a leading institution in Damascus. My academic trajectory has been defined by a deliberate focus on the intersection of theoretical control systems and their tangible, human-centric applications.</p>
+                <p>My coursework and independent study provided a robust foundation in dynamics, control theory, signal processing, and embedded systems, which I have consistently applied to solve complex robotic challenges.</p>
+            </div>
+            <div class="about-visual">
+                <div class="visual-placeholder">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section reverse">
+            <div class="about-content">
+                <h2>Research Philosophy</h2>
+                <p>My research interests are unified by a core principle: technology should augment human capability and resilience. This drives my work in three interconnected domains:</p>
+                <ul class="philosophy-list">
+                    <li><strong>Human–Robot Interaction:</strong> Creating systems where communication is intuitive and trust is built through reliable, predictable behavior.</li>
+                    <li><strong>Rehabilitation Robotics:</strong> Engineering devices that are not only mechanically sound but also adaptable to the unique and evolving needs of the user.</li>
+                    <li><strong>Intelligent Control & Vision:</strong> Developing the cognitive layer that allows robots to perceive, decide, and act effectively in unstructured environments.</li>
+                </ul>
+            </div>
+            <div class="about-visual">
+                <div class="visual-placeholder">
+                    <i class="fas fa-microscope"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Personal Values & International Outlook</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3><i class="fas fa-mountain"></i> Perseverance</h3>
+                    <p>Engineering complex systems requires resilience in the face of iterative failure and refinement. I view each challenge as a necessary step toward a robust solution.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-handshake"></i> Responsibility</h3>
+                    <p>I believe engineers bear a profound responsibility for the ethical implications, safety, and societal impact of the systems they create.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-hands-holding-heart"></i> Service</h3>
+                    <p>My drive stems from a desire to serve—whether by increasing access to rehabilitative technology or by mentoring the next generation of engineers.</p>
+                </div>
+                <div class="value-card">
+                    <h3><i class="fas fa-globe-americas"></i> Global Perspective</h3>
+                    <p>My experience has fostered a deep appreciation for cross-cultural collaboration. I am committed to contributing to the global scientific community and addressing challenges that transcend borders.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Tala Khaddour</p>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic Portfolio.</p>
+        <p>Damascus, Syria</p>
     </footer>
     <script src="main.js"></script>
 </body>

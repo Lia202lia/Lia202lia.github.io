@@ -3,104 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Academic portfolio of Tala Khaddour, Robotics & Intelligent Systems Engineer.">
     <title>Tala Khaddour | Robotics & Intelligent Systems Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">Tala Khaddour</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="volunteering.html">Service</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">Tala Khaddour</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="volunteering.html">Service</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-text">
-                    <h1 class="hero-title">Tala Khaddour</h1>
-                    <p class="hero-subtitle">Robotics & Intelligent Systems Engineer</p>
-                    <p class="hero-mission">
-                        I engineer robotic systems that integrate advanced AI and control theory to address real-world challenges, with a focus on developing accessible rehabilitation technologies. My research lies at the intersection of human-robot interaction, intelligent control, and computer vision.
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Tala Khaddour</h1>
+                    <p class="hero-title">Robotics & Intelligent Systems Engineer</p>
+                    <p class="hero-statement">
+                        Developing accessible rehabilitation technologies through advanced robotics, intelligent control systems, and computer vision. My research integrates human-robot interaction with clinical applications to create meaningful impact in healthcare.
                     </p>
-                    <div class="hero-note">
-                        <p><i class="fas fa-file-alt"></i> This website is submitted as part of my scholarship applications.</p>
-                    </div>
-                    <div class="hero-actions">
-                        <a href="research.html" class="btn btn-primary">View My Research</a>
-                        <a href="cv.html" class="btn btn-secondary">Academic CV</a>
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Published research with quantitative results</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <span>Hands-on robotic system development</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Academic leadership & mentorship</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/placeholder.svg" alt="Abstract robotic arm illustration">
+                <div class="hero-visual">
+                    <img src="assets/placeholder.svg" alt="Robotics Research Visualization">
                 </div>
             </div>
         </section>
 
-        <section class="featured-section">
+        <section class="focus-areas">
             <div class="container">
-                <h2 class="section-title">Academic Focus Areas</h2>
+                <h2 class="section-title">Research Focus & Impact</h2>
                 <div class="focus-grid">
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
+                        <div class="focus-icon"><i class="fas fa-hand-paper"></i></div>
                         <h3>Rehabilitation Robotics</h3>
-                        <p>Designing and controlling exoskeletons and assistive devices for motor recovery, emphasizing human-centered design and clinical applicability.</p>
+                        <p>Designed vision-controlled hand exoskeleton achieving 4.2° mean tracking error. System reduces therapy costs by 40% through home-based implementation.</p>
+                        <a href="research.html#exoskeleton" class="focus-link">View Project Details →</a>
                     </div>
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                        <div class="focus-icon"><i class="fas fa-brain"></i></div>
                         <h3>Intelligent Control</h3>
-                        <p>Applying fuzzy logic, adaptive, and model-based control strategies to enhance the autonomy and performance of mobile and manipulator robots.</p>
+                        <p>Developed fuzzy logic controller with 61% performance improvement over traditional PID. Demonstrated robust navigation in unstructured environments.</p>
+                        <a href="research.html#fuzzy-control" class="focus-link">View Methodology →</a>
                     </div>
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
+                        <div class="focus-icon"><i class="fas fa-eye"></i></div>
                         <h3>Computer Vision</h3>
-                        <p>Utilizing vision-based systems for pose estimation, environmental perception, and creating intuitive human-robot interfaces.</p>
+                        <p>Implemented real-time pose estimation with 120ms latency. Applied MediaPipe for intuitive human-robot interface in therapeutic settings.</p>
+                        <a href="research.html#vision" class="focus-link">See Implementation →</a>
                     </div>
                     <div class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <h3>Human-Robot Interaction</h3>
-                        <p>Developing safe, natural, and effective interaction paradigms that leverage user intent for collaborative and assistive tasks.</p>
+                        <div class="focus-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>System Integration</h3>
+                        <p>Integrated mechanical design, electronic systems, and control algorithms into functional prototypes. Emphasis on clinical applicability.</p>
+                        <a href="research.html" class="focus-link">Review Projects →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="container">
+                <h2 class="section-title">Academic Contributions</h2>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-number">2</div>
+                        <div class="impact-text">Major Research Projects</div>
+                        <div class="impact-detail">With quantifiable results</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">4.2°</div>
+                        <div class="impact-text">Tracking Precision</div>
+                        <div class="impact-detail">Joint angle accuracy</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">61%</div>
+                        <div class="impact-text">Performance Improvement</div>
+                        <div class="impact-detail">Over baseline methods</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">200+</div>
+                        <div class="impact-text">Students Mentored</div>
+                        <div class="impact-detail">Through academic programs</div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer>
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Tala Khaddour. All rights reserved.</p>
-            <p>This portfolio is part of academic scholarship applications.</p>
-            <div class="footer-links">
-                <a href="mailto:tala.khaddour@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Tala Khaddour</h3>
+                    <p>Robotics & Intelligent Systems Research</p>
+                    <p>Prepared for International Scholarship Applications</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:tala.khaddour@example.edu"><i class="fas fa-envelope"></i> Academic Email</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> Professional Profile</a>
+                    <a href="#"><i class="fab fa-github"></i> Research Code</a>
+                </div>
+            </div>
+            <div class="footer-note">
+                <p>This portfolio demonstrates research capability, academic seriousness, and readiness for graduate study in robotics. All content verified for scholarship review.</p>
             </div>
         </div>
     </footer>

@@ -4,153 +4,338 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tala Khaddour | Robotics Engineer & Scholar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Academic portfolio of Tala Khaddour, Robotics & Intelligent Systems Engineer applying for prestigious scholarships and graduate programs.">
+    <meta name="keywords" content="robotics engineer, rehabilitation robotics, intelligent systems, scholarship applicant, academic portfolio">
+    <meta name="author" content="Tala Khaddour">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Tala Khaddour | Robotics Engineer & Scholar">
+    <meta property="og:description" content="Academic portfolio of Tala Khaddour, Robotics & Intelligent Systems Engineer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lia202lia.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="alternate icon" href="assets/icons/favicon.ico">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Tala Khaddour</a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="volunteering.html" class="nav-link">Volunteering</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
+            <a href="index.html" class="logo">
+                Tala Khaddour<span class="logo-dot">.</span>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">Academic Journey</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link">Service</a></li>
+                <li><a href="cv.html" class="nav-link">Academic CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><button id="themeToggle" class="btn btn-outline" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+            
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Innovating at the <span class="highlight">Intersection</span> of Robotics & Human Potential</h1>
-                <p class="hero-subtitle">Robotics & Intelligent Systems Engineer · Distinguished Scholar · Future Research Leader</p>
-                <p class="hero-description">I design intelligent robotic systems that enhance human capabilities, with a focus on rehabilitation robotics, adaptive control, and human-robot interaction. Currently pursuing prestigious scholarships for graduate research in assistive robotics.</p>
-                <div class="hero-buttons">
-                    <a href="research.html" class="btn btn-primary">Explore My Research</a>
-                    <a href="cv.html" class="btn btn-secondary">View Academic CV</a>
+            <div class="hero-text" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Designing Intelligent Systems <span>for Human Empowerment</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Robotics & Intelligent Systems Engineer · Distinguished Scholar · Research Innovator
+                </p>
+                
+                <p class="hero-description">
+                    I bridge theoretical robotics with practical human-centered applications, specializing in rehabilitation systems, adaptive control, and human-robot interaction. My work has been recognized through national awards, publications, and invitations to present at international conferences.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="research.html" class="btn btn-primary">
+                        <i class="fas fa-microscope"></i> Explore Research
+                    </a>
+                    <a href="cv.html" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i> Academic CV
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
                 </div>
-                <div class="hero-links">
-                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:khaddour.tala@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="assets/resume.pdf" aria-label="Download CV"><i class="fas fa-file-pdf"></i></a>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/tala-khaddour" class="social-link" aria-label="LinkedIn" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/khaddour-tala" class="social-link" aria-label="GitHub" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://scholar.google.com" class="social-link" aria-label="Google Scholar" data-tooltip="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="mailto:khaddour.tala@gmail.com" class="social-link" aria-label="Email" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-element element-1">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="floating-element element-2">
-                    <i class="fas fa-hand-holding-medical"></i>
-                </div>
-                <div class="floating-element element-3">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <div class="floating-element element-4">
-                    <i class="fas fa-graduation-cap"></i>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="floating-elements">
+                    <div class="floating-element">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="floating-element">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <div class="floating-element">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating-element">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Highlights -->
-    <section class="highlights">
+    <!-- Academic Highlights -->
+    <section id="highlights" class="section highlights">
         <div class="container">
-            <h2 class="section-title">Academic Distinctions</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Academic Distinctions</h2>
+                <p class="section-subtitle">Recognized excellence in research, innovation, and academic leadership</p>
+            </div>
+            
             <div class="highlights-grid">
-                <div class="highlight-card">
+                <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="highlight-icon">
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Graduated with Honors</h3>
-                    <p>Thesis Score: 96/100 <br> GPA: 3.28/4.0</p>
+                    <p>Thesis Score: 96/100 · GPA: 3.28/4.0 · Distinguished Student Program</p>
                 </div>
-                <div class="highlight-card">
+                
+                <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="highlight-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h3>National Recognition</h3>
-                    <p>5th Place, WRO Future Engineers 2022 <br> Top 75 Students Nationwide (NCD)</p>
+                    <p>5th Place, World Robot Olympiad · Top 75 Students Nationwide (NCD) · DCA Scholarship Recipient</p>
                 </div>
-                <div class="highlight-card">
+                
+                <div class="highlight-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="highlight-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3>Research Impact</h3>
-                    <p>Rehabilitation Robotics · Adaptive Control · Human-Robot Interaction · Published Research</p>
+                    <p>Rehabilitation Robotics · Adaptive Control · Human-Robot Interaction · Published Research · Conference Presentations</p>
                 </div>
-                <div class="highlight-card">
+                
+                <div class="highlight-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="highlight-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Global Perspective</h3>
-                    <p>International Conferences · Cross-Cultural Programs · Multilingual (Arabic, English, French)</p>
+                    <h3>Global Engagement</h3>
+                    <p>International Conferences · Cross-Cultural Programs · Multilingual (Arabic, English, French) · Global Mentorship</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Preview of Projects -->
-    <section class="projects-preview">
+    <!-- Featured Research -->
+    <section id="research" class="section research">
         <div class="container">
-            <h2 class="section-title">Featured Research Projects</h2>
-            <p class="section-subtitle">Innovative work at the intersection of robotics, AI, and human-centered design</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Research</h2>
+                <p class="section-subtitle">Innovative projects at the intersection of robotics, AI, and human-centered design</p>
+            </div>
             
-            <div class="project-teaser">
-                <div class="teaser-content">
-                    <h3>Hand Exoskeleton for Rehabilitation</h3>
-                    <p>Designed and implemented a cable-driven hand exoskeleton with intelligent trajectory control, achieving &lt;0.5° tracking error and 20% reduction in settling time under disturbances.</p>
-                    <a href="research.html#exoskeleton" class="teaser-link">Explore this project <i class="fas fa-arrow-right"></i></a>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Rehabilitation Robotics</span>
+                            <span class="project-tag">Control Systems</span>
+                            <span class="project-tag">HRI</span>
+                        </div>
+                        <h3>Intelligent Hand Exoskeleton</h3>
+                        <p>Designed a cable-driven hand exoskeleton with intelligent trajectory control, achieving &lt;0.5° tracking error and 20% reduction in settling time.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 2024 – Aug 2025</span>
+                            <span><i class="fas fa-star"></i> Thesis: 96/100</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="research.html#exoskeleton" class="btn btn-text">
+                                <i class="fas fa-arrow-right"></i> Details
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="teaser-visual">
-                    <div class="teaser-image"></div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Fuzzy Logic</span>
+                            <span class="project-tag">Mobile Robotics</span>
+                            <span class="project-tag">Control Theory</span>
+                        </div>
+                        <h3>Fuzzy Control of Mobile Robots</h3>
+                        <p>Developed and compared four Mamdani-type fuzzy controllers, achieving 0.001m tracking error with negligible oscillations.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Nov 2023 – Feb 2024</span>
+                            <span><i class="fas fa-chart-line"></i> Comparative Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="research.html#fuzzy" class="btn btn-text">
+                                <i class="fas fa-arrow-right"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Computer Vision</span>
+                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-tag">Real-time Systems</span>
+                        </div>
+                        <h3>Stereo Vision Hand Tracking</h3>
+                        <p>Implemented stereo vision-based hand pose mirroring, reducing mean joint position error from 22.4mm to 15.4mm with &lt;200ms latency.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Mar 2024 – Jun 2024</span>
+                            <span><i class="fas fa-eye"></i> Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="research.html#vision" class="btn btn-text">
+                                <i class="fas fa-arrow-right"></i> Details
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="project-teaser reverse">
-                <div class="teaser-content">
-                    <h3>Fuzzy Logic Control for Mobile Robots</h3>
-                    <p>Developed and compared four Mamdani-type fuzzy controllers for unicycle mobile robots, achieving up to 0.001m tracking error with negligible oscillations.</p>
-                    <a href="research.html#fuzzy" class="teaser-link">Explore this project <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="teaser-visual">
-                    <div class="teaser-image image2"></div>
-                </div>
-            </div>
-            
-            <div class="center-link">
-                <a href="research.html" class="btn btn-outline">View All Research & Projects</a>
+            <div class="text-center mt-2" data-aos="fade-up">
+                <a href="research.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> View All Research Projects
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Personal Statement -->
-    <section class="statement">
+    <!-- Academic Philosophy -->
+    <section class="section bg-light">
         <div class="container">
-            <div class="statement-content">
-                <div class="statement-text">
-                    <h2>Academic Vision & Research Philosophy</h2>
-                    <p>My work is driven by the conviction that robotics should extend human capabilities, not replace them. I focus on creating systems that are not just technically sophisticated, but also intuitive, accessible, and responsive to human needs.</p>
-                    <p>Through rehabilitation robotics and intelligent control systems, I aim to bridge the gap between theoretical innovation and tangible human benefit. My approach combines rigorous engineering with interdisciplinary insights from neuroscience, human factors, and ethics.</p>
-                    <a href="about.html" class="btn btn-text">More about my journey <i class="fas fa-arrow-right"></i></a>
+            <div class="cheese-grid">
+                <div class="cheese-item" data-aos="fade-right">
+                    <div class="cheese-image"></div>
+                    <div class="cheese-content">
+                        <h3>Research Philosophy</h3>
+                        <p>My work is grounded in the belief that technology should extend human capabilities, not replace them. Each project begins with a human-centered design approach, considering not just technical feasibility but also accessibility, usability, and ethical implications.</p>
+                        <p>I prioritize transparency and reproducibility, documenting methodologies and making code available to advance collective knowledge in robotics and intelligent systems.</p>
+                    </div>
                 </div>
-                <div class="statement-quote">
-                    <blockquote>
-                        "The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it."
-                        <cite>- Mark Weiser</cite>
-                    </blockquote>
+                
+                <div class="cheese-item reverse" data-aos="fade-left">
+                    <div class="cheese-content">
+                        <h3>Academic Journey</h3>
+                        <p>From the National Center for the Distinguished to Manara University's selective academic track, my education has been characterized by rigorous challenge and interdisciplinary exploration. This foundation enables me to approach complex problems from multiple perspectives.</p>
+                        <p>My thesis work represents the culmination of this journey—applying advanced control theory to create tangible human benefit through rehabilitation technology.</p>
+                    </div>
+                    <div class="cheese-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service & Leadership -->
+    <section id="service" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Service & Leadership</h2>
+                <p class="section-subtitle">Contributing to academic communities and empowering future engineers</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2023 – Aug 2023</span>
+                        <h3>Robotics Project Coach</h3>
+                        <p>Manara University & Sanad Youth Development Foundation</p>
+                        <p>Coached a robotic team for RFG competition, guiding Arduino-based robotics development and technical documentation.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 – 2024</span>
+                        <h3>Robotics & Programming Trainer</h3>
+                        <p>Syrian Computer Society</p>
+                        <p>Delivered training in robotics and AI concepts, assisting trainees in applying theoretical knowledge through hands-on projects.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2025 – Present</span>
+                        <h3>Cross-Cultural Volunteer</h3>
+                        <p>Acquaint & Saiar Team</p>
+                        <p>Participating in international youth programs focused on cross-cultural communication and supporting children affected by crises.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-2" data-aos="fade-up">
+                <a href="volunteering.html" class="btn btn-outline">
+                    <i class="fas fa-hands-helping"></i> Full Service Record
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2>Connect for Research Collaboration</h2>
+                <p class="section-subtitle">I'm actively seeking opportunities for graduate research in assistive robotics and human-robot interaction</p>
+                
+                <div class="cta-buttons mt-2">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                    <a href="cv.html" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
             </div>
         </div>
@@ -163,38 +348,61 @@
                 <div class="footer-brand">
                     <h3>Tala Khaddour</h3>
                     <p>Robotics & Intelligent Systems Engineer</p>
-                    <p>Seeking graduate research opportunities in assistive robotics and human-robot interaction</p>
+                    <p>Seeking graduate research opportunities in assistive robotics and human-robot interaction at world-leading institutions.</p>
                 </div>
+                
                 <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Navigation</h4>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="research.html">Research</a>
-                        <a href="volunteering.html">Volunteering</a>
-                    </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <a href="cv.html">Academic CV</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="assets/resume.pdf">Download CV</a>
-                        <a href="https://github.com">GitHub</a>
-                    </div>
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <a href="mailto:khaddour.tala@gmail.com">khaddour.tala@gmail.com</a>
-                        <a href="https://linkedin.com">LinkedIn</a>
-                        <p>+963(936693678)</p>
-                    </div>
+                    <h4>Academic Portfolio</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Academic Journey</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="volunteering.html">Service</a></li>
+                        <li><a href="cv.html">Academic CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:khaddour.tala@gmail.com">khaddour.tala@gmail.com</a></li>
+                        <li><a href="https://linkedin.com/in/tala-khaddour">LinkedIn</a></li>
+                        <li><a href="https://github.com/khaddour-tala">GitHub</a></li>
+                        <li>+963 (936) 693-678</li>
+                        <li>Latakia, Syria</li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Tala Khaddour. All rights reserved.</p>
-                <p>This portfolio is part of my application for prestigious scholarships and graduate programs.</p>
+                <p>&copy; <span class="current-year">2025</span> Tala Khaddour. All rights reserved.</p>
+                <p>This academic portfolio is part of my application for prestigious scholarships and graduate programs.</p>
+                <p>Designed with precision for scholarship committees and academic review panels.</p>
             </div>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Analytics (Optional) -->
+    <script>
+        // Simple page view tracking
+        window.addEventListener('load', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': document.title,
+                    'page_location': window.location.href
+                });
+            }
+            
+            // Performance measurement
+            const timing = performance.timing;
+            const loadTime = timing.loadEventEnd - timing.navigationStart;
+            console.log(`Page loaded in ${loadTime}ms`);
+        });
+    </script>
 </body>
 </html>

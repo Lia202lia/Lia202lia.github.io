@@ -1,184 +1,47 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Contact | Tala Khaddour</title>
+    <meta name="description" content="Contact Tala Khaddour">
+    <title>Tala Khaddour - Contact</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">Tala Khaddour</div>
-            <ul class="nav-menu">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="volunteering.html">Service</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="research.html">Research & Projects</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
                 <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
+        </nav>
+    </header>
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Academic Contact</h1>
-                <p class="subtitle">For Research Collaboration & Scholarship Committee Communication</p>
-            </div>
-        </section>
-
-        <section class="contact-content">
-            <div class="container">
-                <div class="contact-intro">
-                    <h2>Professional Communication</h2>
-                    <p>I welcome serious inquiries regarding research collaboration, graduate study opportunities, and scholarship program applications. This portfolio is prepared specifically for review by academic committees and potential research supervisors.</p>
-                </div>
-                
-                <div class="contact-methods">
-                    <div class="method-card">
-                        <div class="method-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Primary Email</h3>
-                        <p>tala.khaddour@example.edu</p>
-                        <p class="method-desc">Preferred for formal academic correspondence. Responses within 2 business days.</p>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>Professional Network</h3>
-                        <p>linkedin.com/in/talakhaddour</p>
-                        <p class="method-desc">Connect for research collaboration and academic networking.</p>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <h3>Research Code</h3>
-                        <p>github.com/talakhaddour</p>
-                        <p class="method-desc">Selected project code and implementation details.</p>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Location</h3>
-                        <p>Damascus, Syria</p>
-                        <p class="method-desc">Available for remote collaboration worldwide. Timezone: UTC+3</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form-section">
-                    <h2>Direct Inquiry Form</h2>
-                    <p>For scholarship committees and academic supervisors. Please provide details for specific discussion.</p>
-                    
-                    <form class="contact-form" id="academicForm">
-                        <div class="form-group">
-                            <label for="inquirer-name">Full Name *</label>
-                            <input type="text" id="inquirer-name" name="name" required placeholder="Dr. Professor Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquirer-role">Position / Role *</label>
-                            <select id="inquirer-role" name="role" required>
-                                <option value="">Select your role</option>
-                                <option value="scholarship">Scholarship Committee Member</option>
-                                <option value="professor">Professor / Research Supervisor</option>
-                                <option value="admissions">Graduate Admissions Committee</option>
-                                <option value="collaborator">Research Collaborator</option>
-                                <option value="other">Other Academic Role</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquirer-institution">Institution / Organization *</label>
-                            <input type="text" id="inquirer-institution" name="institution" required placeholder="University Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquirer-email">Email Address *</label>
-                            <input type="email" id="inquirer-email" name="email" required placeholder="professional@institution.edu">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="inquiry-type">Inquiry Type *</label>
-                            <select id="inquiry-type" name="inquiryType" required>
-                                <option value="">Select inquiry type</option>
-                                <option value="scholarship-review">Scholarship Application Review</option>
-                                <option value="research-discussion">Research Discussion / Collaboration</option>
-                                <option value="graduate-admission">Graduate Program Admission</option>
-                                <option value="reference-request">Reference or Verification Request</option>
-                                <option value="other">Other Academic Matter</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="specific-topic">Specific Topic *</label>
-                            <input type="text" id="specific-topic" name="topic" required placeholder="e.g., Hand Exoskeleton Research, Fuzzy Control Application">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Detailed Message *</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Please provide specific details about your inquiry, including any particular aspects of my research or background you wish to discuss..."></textarea>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="btn-submit">
-                                <i class="fas fa-paper-plane"></i> Send Academic Inquiry
-                            </button>
-                            <p class="form-note">This is a demonstration form. In production, this would connect to email backend.</p>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="contact-guidelines">
-                    <h3><i class="fas fa-info-circle"></i> Communication Guidelines</h3>
-                    <div class="guidelines-content">
-                        <div class="guideline">
-                            <h4>For Scholarship Committees</h4>
-                            <p>Please reference specific scholarship program and application ID if applicable. I can provide additional documentation or schedule an interview to discuss my qualifications in detail.</p>
-                        </div>
-                        <div class="guideline">
-                            <h4>For Research Collaboration</h4>
-                            <p>I am particularly interested in rehabilitation robotics, intelligent control systems, and computer vision applications. Please specify potential collaboration areas and project timelines.</p>
-                        </div>
-                        <div class="guideline">
-                            <h4>Response Time</h4>
-                            <p>I endeavor to respond to all academic inquiries within 2 business days. For urgent scholarship-related matters, please indicate "URGENT" in your subject line.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section>
+            <h1>Contact</h1>
+            <p>Email: khaddour.tala@gmail.com</p>
+            <p>Phone: +963(936693678)</p>
+            <p>LinkedIn: [LinkedIn Profile]</p>
+            <p>GitHub: [GitHub Profile]</p>
+            <p>Location: Syria</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
-
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Tala Khaddour</h3>
-                    <p>Academic Contact Information | Prepared for Scholarship Review</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html"><i class="fas fa-home"></i> Portfolio</a>
-                    <a href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
-                    <a href="research.html"><i class="fas fa-flask"></i> Research</a>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2025 Tala Khaddour</p>
     </footer>
     <script src="main.js"></script>
 </body>

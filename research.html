@@ -1,133 +1,136 @@
-<!-- FILE: research.html -->
+<!-- research.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research & Projects | Tala Khaddour</title>
-    <meta name="description" content="Academic research projects and case studies in robotics and intelligent systems.">
+    <meta name="description" content="Research and projects by Tala Khaddour">
+    <title>Tala Khaddour - Research & Projects</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Tala Khaddour</a>
-            <ul class="nav-menu">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="volunteering.html">Service</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="research.html">Research & Projects</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="research-main">
-        <header class="page-header">
-            <h1>Research & Academic Projects</h1>
-            <p class="page-subtitle">Case studies in applied robotics and intelligent systems.</p>
-        </header>
-
-        <article class="project-case-study">
-            <div class="project-visual">
-                <div class="figure-gallery">
-                    <div class="figure"><i class="fas fa-project-diagram"></i> CAD Model</div>
-                    <div class="figure"><i class="fas fa-chart-line"></i> Force Analysis</div>
-                    <div class="figure"><i class="fas fa-hand-paper"></i> Prototype</div>
-                    <div class="figure"><i class="fas fa-user-check"></i> User Testing</div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Research & Projects</h1>
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Hand Exoskeleton for Rehabilitation</h2>
+                    <p>January 2024 – August 2025</p>
+                    <p>Designed and performed dynamic modeling of a self-aligning, lightweight, cable-driven hand exoskeleton optimized for safe human-robot interaction.</p>
+                    <ul>
+                        <li>Implemented three control strategies for the nonlinear model, achieving less than 0.5° tracking error and a 20% reduction in settling time under disturbances.</li>
+                        <li>Applied stereo vision-based hand pose mirroring, reducing mean joint position error from 22.4 mm to 15.4 mm with system latency under 200 ms.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 1">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 2">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 3">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 4">
                 </div>
             </div>
-            <div class="project-content">
-                <h2>Hand Exoskeleton for Rehabilitation</h2>
-                <p class="project-subtitle"><strong>Problem:</strong> Post-stroke hand rehabilitation requires intensive, repetitive therapy. Existing devices are often costly, rigid, or lack adaptive support.</p>
-                <p><strong>Methods & Technical Approach:</strong> Designed and prototyped a lightweight, underactuated exoskeleton using 3D-printed linkages and compliant tendons. Implemented a closed-loop control system using surface EMG sensors to detect user intent and provide proportional assistive force.</p>
-                <p><strong>Quantitative Results:</strong> The device achieved a <strong>92%</strong> accuracy in intent detection from EMG signals. It provided adjustable force up to <strong>25N</strong> per finger, with a total system weight of <strong>380g</strong>. Preliminary tests showed a <strong>30% reduction</strong in perceived exertion during repetitive grasping exercises.</p>
-                <div class="project-tags">
-                    <span>Rehabilitation Robotics</span>
-                    <span>Mechatronic Design</span>
-                    <span>EMG Control</span>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 1">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 2">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 3">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>Fuzzy Logic Based Control of a Unicycle Mobile Robot - Comparative Analysis</h2>
+                    <p>November 2023 – February 2024</p>
+                    <p>Designed, implemented, and fine-tuned four Mamdani-type fuzzy controllers (P, PI, PD, PID-like) for controlling a unicycle mobile robot.</p>
+                    <ul>
+                        <li>Achieved high accuracy in goal tracking: PID-like fuzzy control reached 0.001 m error with negligible oscillations, PI-like 0.05 m, PD-like 0.1 m.</li>
+                        <li>Demonstrated robustness and smooth trajectory following through comparative analysis.</li>
+                    </ul>
                 </div>
             </div>
-        </article>
-
-        <article class="project-case-study reverse">
-            <div class="project-visual">
-                <div class="figure-gallery">
-                    <div class="figure"><i class="fas fa-robot"></i> Robot Platform</div>
-                    <div class="figure"><i class="fas fa-sitemap"></i> Fuzzy Logic Block Diagram</div>
-                    <div class="figure"><i class="fas fa-road"></i> Path Tracking</div>
-                    <div class="figure"><i class="fas fa-chart-bar"></i> Error Plot</div>
+            <!-- Additional projects based on user mention of 4 more; using participations as placeholders with minimal details -->
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Project at Damascus International Fair (62nd Edition)</h2>
+                    <p>2025</p>
+                    <p>Participated in the Scientific Projects Pavilion under the Distinction and Creativity Agency, showcasing innovative robotics solutions.</p>
+                    <ul>
+                        <li>Focused on practical applications in intelligent systems.</li>
+                        <li>Received recognition for creativity and technical execution.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 4">
                 </div>
             </div>
-            <div class="project-content">
-                <h2>Fuzzy Logic Control of a Unicycle Mobile Robot</h2>
-                <p class="project-subtitle"><strong>Problem:</strong> Precise trajectory tracking for non-holonomic mobile robots in the presence of uncertainties and disturbances is a classic control challenge.</p>
-                <p><strong>Methods & Technical Approach:</strong> Developed a two-layer fuzzy logic controller (FLC) in MATLAB/Simulink. The outer layer generated linear and angular velocity commands from pose error, while the inner layer mapped these to wheel velocities. The Mamdani inference system with centroid defuzzification was used.</p>
-                <p><strong>Quantitative Results:</strong> Compared to a conventional PID controller, the FLC reduced steady-state tracking error by <strong>68%</strong> on a curved path. It demonstrated superior robustness, maintaining stability with introduced mass disturbances up to <strong>20%</strong> of the robot's weight.</p>
-                <div class="project-tags">
-                    <span>Fuzzy Logic</span>
-                    <span>Mobile Robotics</span>
-                    <span>Non-linear Control</span>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>InnoSync Conference Project</h2>
+                    <p>2025</p>
+                    <p>Contributed to conference discussions on innovation in robotics, organized by Junior Chamber International (JCI).</p>
+                    <ul>
+                        <li>Presented ideas on AI integration in youth-led projects.</li>
+                        <li>Engaged in collaborative problem-solving sessions.</li>
+                    </ul>
                 </div>
             </div>
-        </article>
-
-        <article class="project-case-study">
-            <div class="project-visual">
-                <div class="figure-gallery">
-                    <div class="figure"><i class="fas fa-camera"></i> Vision Setup</div>
-                    <div class="figure"><i class="fas fa-shapes"></i> Object Segmentation</div>
-                    <div class="figure"><i class="fas fa-route"></i> Planned Trajectory</div>
-                    <div class="figure"><i class="fas fa-tachometer-alt"></i> Performance Metrics</div>
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Manara University Student Exhibition Project</h2>
+                    <p>2025</p>
+                    <p>Participated and received a Certificate of Appreciation for exhibiting robotics projects.</p>
+                    <ul>
+                        <li>Showcased control systems and modeling techniques.</li>
+                        <li>Interacted with peers and faculty on research advancements.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 4">
                 </div>
             </div>
-            <div class="project-content">
-                <h2>Vision-Based Autonomous Navigation for Indoor Robots</h2>
-                <p class="project-subtitle"><strong>Problem:</strong> Enabling reliable autonomous navigation in dynamic indoor environments without reliance on external beacons or pre-built maps.</p>
-                <p><strong>Methods & Technical Approach:</strong> Implemented a ROS-based pipeline using an RGB-D camera. Used ORB-SLAM2 for simultaneous localization and mapping (SLAM) and YOLOv4 for real-time object detection and classification to identify dynamic obstacles. A* algorithm was used for global path planning with a dynamic window approach (DWA) for local obstacle avoidance.</p>
-                <p><strong>Quantitative Results:</strong> The system achieved real-time operation at <strong>15 FPS</strong>. Mapping accuracy was within <strong>±5cm</strong> over a 10m trajectory. The navigation stack successfully avoided dynamic obstacles with a <strong>99%</strong> success rate in tested scenarios, with a mean replanning latency of <strong>120ms</strong>.</p>
-                <div class="project-tags">
-                    <span>Computer Vision</span>
-                    <span>ROS</span>
-                    <span>Autonomous Navigation</span>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>World Robot Olympiad (WRO) – Future Engineers Category</h2>
+                    <p>2022</p>
+                    <p>Achieved 5th Place Nationwide in developing engineering solutions for future robotics challenges.</p>
+                    <ul>
+                        <li>Designed autonomous systems with sensor integration.</li>
+                        <li>Focused on efficiency and innovation in competition settings.</li>
+                    </ul>
                 </div>
             </div>
-        </article>
-
-        <article class="project-case-study reverse">
-            <div class="project-visual">
-                <div class="figure-gallery">
-                    <div class="figure"><i class="fas fa-wind"></i> Wind Tunnel</div>
-                    <div class="figure"><i class="fas fa-feather-alt"></i> Wing Design</div>
-                    <div class="figure"><i class="fas fa-gamepad"></i> Control Interface</div>
-                    <div class="figure"><i class="fas fa-chart-pie"></i> Stability Data</div>
-                </div>
-            </div>
-            <div class="project-content">
-                <h2>Design and Control of a Bio-inspired Flapping-Wing Micro Air Vehicle (FWMAV)</h2>
-                <p class="project-subtitle"><strong>Problem:</strong> Achieving stable, controlled flight in a lightweight FWMAV, mimicking insect agility while managing complex, unsteady aerodynamics.</p>
-                <p><strong>Methods & Technical Approach:</strong> Developed a carbon-fiber and mylar airframe with a four-bar linkage mechanism for wing actuation. Designed a custom lightweight avionics board with an IMU and microcontroller. Implemented a cascaded PID controller for attitude stabilization, with control surfaces actuated by micro-servos.</p>
-                <p><strong>Quantitative Results:</strong> The final prototype had a wingspan of <strong>25cm</strong> and a mass of <strong>28g</strong>. It achieved sustained hovering flight for <strong>85 seconds</strong>. The controller maintained roll and pitch angles within <strong>±3 degrees</strong> under mild turbulence simulated in a controlled environment.</p>
-                <div class="project-tags">
-                    <span>Bio-inspired Robotics</span>
-                    <span>Mechatronics</span>
-                    <span>Embedded Systems</span>
-                </div>
-            </div>
-        </article>
+        </section>
     </main>
-
-    <footer class="main-footer">
-        <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic Portfolio.</p>
-        <p>Damascus, Syria</p>
+    <footer>
+        <p>&copy; 2025 Tala Khaddour</p>
     </footer>
     <script src="main.js"></script>
 </body>

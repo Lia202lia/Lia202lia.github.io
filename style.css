@@ -7,9 +7,9 @@
 
 :root {
     /* 🎨 Updated Academic Color Palette */
-    --color-primary: #0B1C2D;      /* Deep Academic Navy - Navbar, Headings */
-    --color-secondary: #2F5D8C;    /* Muted Slate Blue - Links, buttons */
-    --color-background: #F8F9FB;   /* Soft Off-White - Background */
+    --color-primary: #102A43;      /* Deep Academic Navy - Navbar, Headings */
+    --color-secondary:#486581;    /* Muted Slate Blue - Links, buttons */
+    --color-background: #F1F5F9;   /* Soft Off-White - Background */
     --color-text: #1A1A1A;         /* Near-black - Main Text */
     --color-accent: #9FB7D4;       /* Light Desaturated Blue - icons, lines */
     --color-gray-dark: #3A4A5C;    /* For subtle text */

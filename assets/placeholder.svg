@@ -1,9 +1,5 @@
-<!-- FILE: assets/placeholder.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#e8eef5"/>
-  <text x="200" y="150" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#9FB7D4">
-    Image Placeholder
-  </text>
-  <line x1="100" y1="100" x2="300" y2="200" stroke="#9FB7D4" stroke-width="2"/>
-  <line x1="100" y1="200" x2="300" y2="100" stroke="#9FB7D4" stroke-width="2"/>
+<!-- assets/placeholder.svg -->
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#ccc"/>
+  <text x="50" y="50" font-size="12" text-anchor="middle" fill="#fff">Placeholder</text>
 </svg>

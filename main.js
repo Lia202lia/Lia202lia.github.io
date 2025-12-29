@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const currentYearElement = document.getElementById('currentYear');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
 
     // Mobile navigation toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger) {
+    if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             this.classList.toggle('active');
@@ -17,24 +20,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
             if (hamburger) {
                 hamburger.classList.remove('active');
             }
         });
     });
 
-    // Contact form simulation (no actual submission)
+    // Contact form simulation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message. This is a demonstration form. In a production environment, this would send your inquiry.\n\nYou can contact me directly at: contact@example.com');
+            alert('Thank you for your message. This is a demonstration form. In a production environment, this would send your inquiry.\n\nYou can contact me directly at: tala.khaddour@example.com');
             this.reset();
         });
     }
 
-    // Smooth scroll for anchor links (if any added later)
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add subtle fade-in animation to sections on scroll
+    // Add fade-in animation to sections on scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -66,24 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe all sections and project articles
+    // Observe all sections and cards
     document.querySelectorAll('section, .project-article, .volunteering-card, .focus-card').forEach((el) => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
 });
-
-// Add a simple CSS class for fade-in
-const style = document.createElement('style');
-style.textContent = `
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae | Tala Khaddour</title>
-    <meta name="description" content="Formal academic CV of Tala Khaddour.">
+    <meta name="description" content="Academic CV for scholarship applications.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="volunteering.html">Service</a></li>
+                <li><a href="impact.html">Impact</a></li>
                 <li><a href="cv.html" class="active">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -30,106 +30,242 @@
         </div>
     </nav>
 
-    <main class="cv-main">
-        <header class="cv-header">
-            <div>
-                <h1>Tala Khaddour</h1>
-                <p class="cv-subtitle">Robotics & Intelligent Systems Engineer</p>
-                <p>Damascus, Syria</p>
-            </div>
-            <a href="#" class="btn-download" onclick="alert('PDF placeholder. In a full implementation, this would link to a PDF file.'); return false;"><i class="fas fa-download"></i> Download PDF</a>
-        </header>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="cv-item">
-                <h3>B.Sc. in Robotics & Intelligent Systems Engineering</h3>
-                <p class="cv-meta">University of Damascus | Expected Graduation: 2024</p>
-                <p><strong>Relevant Coursework:</strong> Advanced Control Systems, Robotic Dynamics & Kinematics, Digital Signal Processing, Computer Vision, Artificial Intelligence, Embedded Systems Design, Fuzzy Logic & Neural Networks.</p>
-                <p><strong>Thesis:</strong> "Adaptive Fuzzy-PID Hybrid Control for a Robotic Manipulator with Payload Uncertainty."</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-tasks"></i> Research & Key Projects</h2>
-            <div class="cv-item">
-                <h3>Hand Exoskeleton for Rehabilitation</h3>
-                <p class="cv-meta">Lead Designer & Controls Engineer</p>
-                <p>Designed a soft-robotic exoskeleton using intent detection via EMG signals. Achieved 92% detection accuracy and 30% reduction in user exertion metrics.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Fuzzy Logic Control of a Unicycle Robot</h3>
-                <p class="cv-meta">Control Systems Designer</p>
-                <p>Developed a Mamdani-type FLC, reducing trajectory tracking error by 68% compared to PID in simulation environments.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Vision-Based Autonomous Navigation</h3>
-                <p class="cv-meta">Perception & Planning Developer</p>
-                <p>Implemented a full ROS-based SLAM and navigation stack, achieving ±5cm mapping accuracy and 99% dynamic obstacle avoidance.</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-award"></i> Awards & Honors</h2>
-            <ul class="cv-list">
-                <li><strong>University Distinction Scholarship</strong> (2020 – Present)</li>
-                <li><strong>First Place</strong>, National Engineering Innovation Challenge – Robotics Track (2022)</li>
-                <li><strong>Top 5 Finalist</strong>, Arab Robotics Competition (2021)</li>
-                <li><strong>Member</strong>, Distinction and Creativity Agency (2021 – Present)</li>
-            </ul>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-briefcase"></i> Work & Leadership Experience</h2>
-            <div class="cv-item">
-                <h3>Robotics Teaching Assistant</h3>
-                <p class="cv-meta">University of Damascus | 2022 – 2023</p>
-                <p>Led lab sessions for 'Introduction to Robotics,' graded assignments, and provided one-on-one student support on kinematic analysis and sensor integration.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Technical Intern</h3>
-                <p class="cv-meta">Advanced Systems Lab (Local R&D Firm) | Summer 2022</p>
-                <p>Assisted in the development of a drone-based inspection system, focusing on camera gimbal stabilization and data logging software.</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>Programming & Tools</h3>
-                    <ul class="cv-list">
-                        <li><strong>Proficient:</strong> Python, C++, MATLAB/Simulink</li>
-                        <li><strong>Experienced:</strong> ROS, Git, Linux, SolidWorks, LaTeX</li>
-                        <li><strong>Familiar:</strong> JavaScript (for web visualization), OpenCV, TensorFlow (basics)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Robotics Domains</h3>
-                    <ul class="cv-list">
-                        <li>Control Systems (PID, Fuzzy, Adaptive)</li>
-                        <li>Computer Vision (SLAM, Object Detection)</li>
-                        <li>Mechatronic Design & Prototyping</li>
-                        <li>Embedded Systems (Arduino, STM32)</li>
-                    </ul>
+    <main class="cv-page">
+        <!-- CV Header -->
+        <section class="cv-header-section">
+            <div class="container">
+                <div class="cv-header">
+                    <div>
+                        <h1>Tala Khaddour</h1>
+                        <p class="cv-title">Robotics & Intelligent Systems Engineer</p>
+                        <div class="cv-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> Damascus, Syria</p>
+                            <p><i class="fas fa-envelope"></i> tala.khaddour@academic.example</p>
+                            <p><i class="fab fa-linkedin"></i> linkedin.com/in/tala-khaddour</p>
+                            <p><i class="fab fa-github"></i> github.com/lia202lia</p>
+                        </div>
+                    </div>
+                    <div class="cv-actions">
+                        <a href="assets/docs/cv-tala-khaddour.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download PDF CV
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="cv-section">
-            <h2><i class="fas fa-language"></i> Languages</h2>
-            <ul class="cv-list inline">
-                <li><strong>Arabic:</strong> Native</li>
-                <li><strong>English:</strong> Fluent (Professional Proficiency)</li>
-                <li><strong>German:</strong> Intermediate (B1)</li>
-            </ul>
+        <!-- CV Content -->
+        <section class="cv-content">
+            <div class="container">
+                <div class="cv-grid">
+                    <!-- Left Column -->
+                    <div class="cv-left">
+                        <!-- Education -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-graduation-cap"></i> Education
+                            </h2>
+                            <div class="cv-item">
+                                <h3>B.Sc. in Robotics & Intelligent Systems Engineering</h3>
+                                <p class="cv-meta">University of Damascus | Expected Graduation: 2024</p>
+                                <p><strong>GPA:</strong> 3.8/4.0 (Distinction)</p>
+                                <p><strong>Thesis:</strong> "Adaptive Fuzzy-PID Hybrid Control for a Robotic Manipulator with Payload Uncertainty"</p>
+                                <p><strong>Relevant Coursework:</strong> Advanced Control Systems, Robotic Kinematics & Dynamics, Computer Vision, Artificial Intelligence, Digital Signal Processing, Embedded Systems Design, Mechatronics, Fuzzy Logic & Neural Networks.</p>
+                            </div>
+                        </section>
+
+                        <!-- Research Experience -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-microscope"></i> Research Experience
+                            </h2>
+                            <div class="cv-item">
+                                <h3>Hand Exoskeleton for Rehabilitation</h3>
+                                <p class="cv-meta">Lead Designer & Controls Engineer | 2022–2023</p>
+                                <ul>
+                                    <li>Designed underactuated tendon-driven mechanism using SolidWorks</li>
+                                    <li>Implemented EMG-based intent detection system (92% accuracy)</li>
+                                    <li>Developed PD control with force feedback for proportional assistance</li>
+                                    <li>Reduced user perceived exertion by 30% in preliminary tests</li>
+                                </ul>
+                            </div>
+                            <div class="cv-item">
+                                <h3>Fuzzy Logic Control for Mobile Robot</h3>
+                                <p class="cv-meta">Control Systems Designer | 2022</p>
+                                <ul>
+                                    <li>Developed two-layer fuzzy logic controller in MATLAB/Simulink</li>
+                                    <li>Achieved 68% tracking error reduction compared to PID</li>
+                                    <li>Validated robustness to mass disturbances up to 20%</li>
+                                    <li>Documented methodology for adaptation to various platforms</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Technical Skills -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-tools"></i> Technical Skills
+                            </h2>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Programming & Software</h4>
+                                    <ul class="skill-list">
+                                        <li><strong>Proficient:</strong> Python, C++, MATLAB/Simulink</li>
+                                        <li><strong>Experienced:</strong> ROS/ROS2, Git, Linux, LaTeX</li>
+                                        <li><strong>Familiar:</strong> JavaScript, OpenCV, TensorFlow Basics</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Design & Simulation</h4>
+                                    <ul class="skill-list">
+                                        <li>SolidWorks (CAD & FEA)</li>
+                                        <li>ANSYS (CFD for aerodynamic analysis)</li>
+                                        <li>Gazebo (Robot simulation)</li>
+                                        <li>Fusion 360</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Hardware & Fabrication</h4>
+                                    <ul class="skill-list">
+                                        <li>3D Printing (FDM, SLA)</li>
+                                        <li>PCB Design (Eagle, KiCAD)</li>
+                                        <li>Embedded Systems (Arduino, STM32, Raspberry Pi)</li>
+                                        <li>Sensor integration (IMU, EMG, Force, Vision)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="cv-right">
+                        <!-- Awards & Honors -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-award"></i> Awards & Honors
+                            </h2>
+                            <ul class="cv-list">
+                                <li>
+                                    <strong>First Place</strong>, National Engineering Innovation Challenge – Robotics Track (2022)
+                                    <span class="award-desc">For developing an affordable water quality monitoring robot</span>
+                                </li>
+                                <li>
+                                    <strong>University Distinction Scholarship</strong> (2020–Present)
+                                    <span class="award-desc">Full tuition scholarship based on academic excellence</span>
+                                </li>
+                                <li>
+                                    <strong>Top 5 Finalist</strong>, Arab Robotics Competition (2021)
+                                    <span class="award-desc">International competition with teams from 14 countries</span>
+                                </li>
+                                <li>
+                                    <strong>Member</strong>, Distinction and Creativity Agency (2021–Present)
+                                    <span class="award-desc">Appointed to evaluate exceptional student research</span>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Leadership & Service -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-users"></i> Leadership & Service
+                            </h2>
+                            <div class="cv-item">
+                                <h3>Robotics Teaching Assistant</h3>
+                                <p class="cv-meta">University of Damascus | 2022–2023</p>
+                                <p>Led lab sessions, graded assignments, and provided one-on-one support for "Introduction to Robotics" course (60+ students).</p>
+                            </div>
+                            <div class="cv-item">
+                                <h3>Science Olympiad Trainer</h3>
+                                <p class="cv-meta">National Program | 2021–Present</p>
+                                <p>Coach high school teams for national robotics competitions. Three teams achieved top-three finishes under my mentorship.</p>
+                            </div>
+                            <div class="cv-item">
+                                <h3>Faculty Student Committee Representative</h3>
+                                <p class="cv-meta">Department of Robotics | 2021–2022</p>
+                                <p>Advocated for curriculum improvements and organized technical workshops on emerging topics.</p>
+                            </div>
+                        </section>
+
+                        <!-- Publications & Presentations -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-file-alt"></i> Publications & Presentations
+                            </h2>
+                            <ul class="cv-list">
+                                <li>
+                                    <strong>Conference Presentation:</strong> "Underactuated Hand Exoskeleton for Affordable Rehabilitation"
+                                    <span class="pub-desc">National Conference on Biomedical Engineering, 2023</span>
+                                </li>
+                                <li>
+                                    <strong>Technical Report:</strong> "Comparative Analysis of Fuzzy vs PID Control for Non-Holonomic Robots"
+                                    <span class="pub-desc">University Research Symposium, 2022</span>
+                                </li>
+                                <li>
+                                    <strong>In Preparation:</strong> "EMG-Based Intent Detection for Adaptive Rehabilitation Devices"
+                                    <span class="pub-desc">Target journal: IEEE Transactions on Neural Systems and Rehabilitation Engineering</span>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Languages -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-language"></i> Languages
+                            </h2>
+                            <div class="languages-grid">
+                                <div class="language-item">
+                                    <span class="language-name">Arabic</span>
+                                    <span class="language-level">Native</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-name">English</span>
+                                    <span class="language-level">Fluent (Professional)</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-name">German</span>
+                                    <span class="language-level">Intermediate (B1)</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- References -->
+                        <section class="cv-section">
+                            <h2 class="cv-section-title">
+                                <i class="fas fa-user-check"></i> References
+                            </h2>
+                            <div class="references-note">
+                                <p>References available upon request. Includes academic advisors, research supervisors, and mentoring program coordinators.</p>
+                                <a href="contact.html" class="reference-link">Request references →</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Footer -->
+        <section class="cv-footer">
+            <div class="container">
+                <div class="cv-update">
+                    <p><i class="fas fa-history"></i> CV last updated: December 2023</p>
+                    <p>This CV is tailored for international scholarship and graduate program applications.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic Portfolio.</p>
-        <p>Damascus, Syria</p>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic portfolio for scholarship applications.</p>
+                <p>Damascus, Syria</p>
+            </div>
+        </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>

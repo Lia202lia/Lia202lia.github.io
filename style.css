@@ -1,797 +1,238 @@
-/* ==========================================================================
-   PRESTIGE ACADEMIC COLOR PALETTE
-   ========================================================================== */
+/* ==========================================================
+   ACADEMIC PRESTIGE DESIGN SYSTEM — FINAL
+   Author: Senior CSS Engineer Revision
+   ========================================================== */
+
+/* ---------- CORE TOKENS ---------- */
 
 :root {
-    /* CORE IDENTITY - ELEGANCE & AUTHORITY */
-    --oxford-navy: #0C1E32;         /* Deep academic authority - replaces primary */
-    --oxford-navy-light: #1A2C42;   /* For subtle variations */
-    
-    /* PRESTIGE ACCENTS - INTELLIGENCE & INNOVATION */
-    --cambridge-blue: #A3C1DA;      /* Cambridge blue - intelligence, clarity */
-    --royal-gold: #B8935C;          /* Oxford gold - excellence, achievement */
-    
-    /* NEUTRALS - REFINED & TIMELESS */
-    --ivory: #F8F5F0;               /* Warm ivory background - approachable prestige */
-    --charcoal: #2D3436;            /* Rich charcoal text - serious depth */
-    --slate: #6C7A89;               /* Refined slate - secondary text */
-    --silver: #E8EDF3;              /* Light silver - subtle borders */
-    
-    /* STATUS COLORS (USED SPARINGLY) */
-    --research-accent: #2A6E78;     /* Teal - research, innovation */
-    --impact-accent: #8B4513;       /* Sienna - impact, legacy */
-    
-    /* TYPOGRAPHY - ACADEMIC REFINEMENT */
-    --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
-    --font-serif: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
-    --font-accent: 'Playfair Display', Georgia, serif; /* For special headings */
-    
-    /* SPACING - PRECISE & BALANCED */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-xxl: 5rem;
-    
-    /* BORDER RADIUS - SUBTLE ELEGANCE */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 20px;
-    
-    /* SHADOWS - REFINED DEPTH */
-    --shadow-sm: 0 2px 8px rgba(12, 30, 50, 0.08);
-    --shadow-md: 0 4px 20px rgba(12, 30, 50, 0.12);
-    --shadow-lg: 0 8px 30px rgba(12, 30, 50, 0.15);
-    
-    /* TRANSITIONS - GRACEFUL */
-    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Identity */
+  --navy: #0C1E32;
+  --navy-soft: #162A42;
+  --gold: #B8935C;
+  --blue: #6FA4C8;
+
+  /* Neutrals */
+  --bg-main: #F9FAFB;
+  --bg-soft: #F3F4F6;
+  --text-main: #111827;
+  --text-soft: #4B5563;
+  --border-soft: #E5E7EB;
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+
+  /* Spacing */
+  --xs: .5rem; --sm: 1rem; --md: 1.5rem;
+  --lg: 2.5rem; --xl: 4rem;
+
+  /* Motion */
+  --fast: .2s ease;
+  --normal: .35s ease;
+
+  /* Depth */
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.06);
+  --shadow-md: 0 12px 28px rgba(0,0,0,.10);
 }
 
-/* ==========================================================================
-   BASE STYLES WITH NEW PALETTE
-   ========================================================================== */
+/* ---------- GLOBAL RESET ---------- */
 
 body {
-    font-family: var(--font-sans);
-    line-height: 1.6;
-    color: var(--charcoal);
-    background-color: var(--ivory);
-    overflow-x: hidden;
+  font-family: var(--font-main);
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* ==========================================================================
-   TYPOGRAPHY HIERARCHY
-   ========================================================================== */
+/* ---------- TYPOGRAPHY ---------- */
 
-h1, h2, h3, h4, h5 {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    line-height: 1.3;
-    color: var(--oxford-navy);
-    margin-bottom: var(--spacing-md);
+h1,h2,h3,h4,h5 {
+  font-family: var(--font-serif);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -.02em;
 }
 
-h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
+h1 { font-size: clamp(2.6rem,5vw,3.4rem); }
+h2 { font-size: clamp(1.8rem,4vw,2.4rem); }
+h3 { font-size: 1.35rem; }
 
-h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    position: relative;
-    display: inline-block;
-}
-
-h3 {
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
-    color: var(--oxford-navy-light);
-}
+p { color: var(--text-soft); }
 
 .section-title {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-    position: relative;
-    padding-bottom: var(--spacing-md);
+  text-align:center;
+  margin-bottom: var(--lg);
+  position: relative;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--cambridge-blue), var(--royal-gold));
-    border-radius: 1px;
+.section-title::after{
+  content:"";
+  width:60px;
+  height:3px;
+  background: linear-gradient(90deg,var(--blue),var(--gold));
+  display:block;
+  margin:1rem auto 0;
+  border-radius:2px;
 }
 
-.page-subtitle {
-    font-size: 1.2rem;
-    color: var(--slate);
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto var(--spacing-xl);
-    font-weight: 400;
-    letter-spacing: 0.3px;
-}
-
-/* ==========================================================================
-   LINK STYLING
-   ========================================================================== */
+/* ---------- LINKS ---------- */
 
 a {
-    color: var(--research-accent);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    position: relative;
+  color: var(--blue);
+  text-decoration:none;
+  transition: color var(--fast);
 }
 
-a:hover {
-    color: var(--oxford-navy);
-}
+a:hover { color: var(--navy); }
 
-a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--royal-gold);
-    transition: width var(--transition-normal);
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-/* ==========================================================================
-   BUTTON SYSTEM - PRESTIGE
-   ========================================================================== */
+/* ---------- BUTTONS ---------- */
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    padding: 0.875rem 2rem;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-    transition: all var(--transition-normal);
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 0.3px;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
+  padding:.75rem 2rem;
+  border-radius: 10px;
+  font-weight:600;
+  transition: all var(--normal);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--oxford-navy), var(--oxford-navy-light));
-    color: white;
-    box-shadow: var(--shadow-md);
+  background: var(--navy);
+  color:white;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--oxford-navy);
-    border: 2px solid var(--oxford-navy);
+  border:2px solid var(--navy);
+  color: var(--navy);
 }
 
 .btn-secondary:hover {
-    background-color: var(--oxford-navy);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+  background: var(--navy);
+  color:white;
 }
 
-.btn-accent {
-    background: linear-gradient(135deg, var(--royal-gold), #C9A769);
-    color: white;
-    box-shadow: var(--shadow-md);
-}
-
-.btn-accent:hover {
-    background: linear-gradient(135deg, #C9A769, var(--royal-gold));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    color: white;
-}
-
-/* ==========================================================================
-   NAVIGATION - ELEGANT
-   ========================================================================== */
+/* ---------- NAVIGATION ---------- */
 
 .main-nav {
-    background-color: var(--oxford-navy);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow-md);
-    backdrop-filter: blur(10px);
-    background-color: rgba(12, 30, 50, 0.95);
+  background: rgba(12,30,50,.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top:0;
+  z-index:1000;
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width:1200px;
+  margin:auto;
+  padding:1.2rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .nav-logo {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
-
-.nav-logo::after {
-    content: none; /* Remove underline from logo */
+  color:white;
+  font-family: var(--font-serif);
+  font-size:1.4rem;
 }
 
 .nav-menu {
-    display: flex;
-    list-style: none;
-    gap: var(--spacing-xl);
+  list-style:none;
+  display:flex;
+  gap:2rem;
 }
 
 .nav-menu a {
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 500;
-    padding: var(--spacing-xs) 0;
-    letter-spacing: 0.3px;
+  color:rgba(255,255,255,.85);
+  font-weight:500;
 }
 
 .nav-menu a:hover,
-.nav-menu a.active {
-    color: white;
-}
+.nav-menu a.active { color:white; }
 
-.nav-menu a::after {
-    background-color: var(--royal-gold);
-    bottom: -4px;
-    height: 2px;
-}
-
-/* ==========================================================================
-   HERO SECTION - PRESTIGIOUS INTRODUCTION
-   ========================================================================== */
+/* ---------- HERO ---------- */
 
 .hero {
-    background: linear-gradient(135deg, var(--oxford-navy) 0%, #1A2C42 50%, #2A3C52 100%);
-    color: white;
-    padding: var(--spacing-xxl) 0;
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:white;
+  padding: var(--xl) 0;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: 
-        radial-gradient(circle at 20% 80%, rgba(163, 193, 218, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(184, 147, 92, 0.08) 0%, transparent 50%);
-    pointer-events: none;
+.hero-title { color:white; }
+
+.hero-subtitle { color: var(--blue); }
+
+/* ---------- CARDS ---------- */
+
+.mission-card,
+.focus-item,
+.project-case-study,
+.award-card,
+.testimonial-card {
+  background:white;
+  border:1px solid var(--border-soft);
+  border-radius:14px;
+  padding: var(--lg);
+  transition: all var(--normal);
 }
 
-.hero-container {
-    position: relative;
-    z-index: 1;
+.mission-card:hover,
+.focus-item:hover,
+.project-case-study:hover,
+.award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
 }
 
-.hero-title {
-    color: white;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    margin-bottom: var(--spacing-sm);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.hero-subtitle {
-    font-size: 1.4rem;
-    color: var(--cambridge-blue);
-    margin-bottom: var(--spacing-lg);
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
-
-.mission-statement {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: var(--spacing-lg);
-    color: rgba(255, 255, 255, 0.95);
-    max-width: 700px;
-    border-left: 3px solid var(--royal-gold);
-    padding-left: var(--spacing-lg);
-}
-
-.scholarship-notice {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: 3px solid var(--royal-gold);
-    padding: var(--spacing-md);
-    border-radius: var(--radius-sm);
-    margin: var(--spacing-lg) 0;
-    backdrop-filter: blur(10px);
-}
-
-/* ==========================================================================
-   MISSION CARDS - ELEGANT PRESENTATION
-   ========================================================================== */
-
-.mission-section {
-    background-color: white;
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-    margin-top: -40px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 -10px 30px rgba(12, 30, 50, 0.1);
-}
-
-.mission-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
-}
-
-.mission-card {
-    padding: var(--spacing-xl);
-    background: white;
-    border-radius: var(--radius-lg);
-    transition: all var(--transition-normal);
-    border: 1px solid var(--silver);
-    position: relative;
-    overflow: hidden;
-}
-
-.mission-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--cambridge-blue), var(--royal-gold));
-}
-
-.mission-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--cambridge-blue);
-}
-
-.mission-icon {
-    font-size: 2.5rem;
-    color: var(--oxford-navy);
-    margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, var(--cambridge-blue), var(--royal-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.mission-card h3 {
-    color: var(--oxford-navy);
-    margin-bottom: var(--spacing-sm);
-    font-weight: 700;
-}
-
-/* ==========================================================================
-   FOCUS ITEMS - ACADEMIC REFINEMENT
-   ========================================================================== */
-
-.focus-preview {
-    background-color: var(--ivory);
-    padding: var(--spacing-xxl) 0;
-}
-
-.focus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-}
-
-.focus-item {
-    background: white;
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    border-top: 4px solid var(--oxford-navy);
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-}
-
-.focus-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--cambridge-blue), var(--royal-gold));
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-}
-
-.focus-item:hover::before {
-    opacity: 1;
-}
-
-.focus-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.focus-header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.focus-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--cambridge-blue);
-    opacity: 0.7;
-    font-family: var(--font-serif);
-}
-
-.focus-item h3 {
-    margin-bottom: 0;
-    color: var(--oxford-navy);
-    font-weight: 600;
-}
-
-.focus-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    color: var(--oxford-navy);
-    font-weight: 600;
-    margin-top: var(--spacing-md);
-    text-decoration: none;
-}
-
-.focus-link::after {
-    content: '→';
-    transition: transform var(--transition-normal);
-}
-
-.focus-link:hover::after {
-    transform: translateX(5px);
-}
-
-/* ==========================================================================
-   METRICS - IMPACTFUL PRESENTATION
-   ========================================================================== */
+/* ---------- METRICS ---------- */
 
 .metrics-section {
-    background: linear-gradient(135deg, var(--oxford-navy) 0%, var(--oxford-navy-light) 100%);
-    color: white;
-    border-radius: var(--radius-xl);
-    margin: var(--spacing-xxl) auto;
-    max-width: 1200px;
-    padding: var(--spacing-xl);
-    position: relative;
-    overflow: hidden;
-}
-
-.metrics-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(163, 193, 218, 0.1) 0%, transparent 70%);
-}
-
-.metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-xl);
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.metric {
-    padding: var(--spacing-lg);
+  background: linear-gradient(135deg,var(--navy),var(--navy-soft));
+  color:white;
+  border-radius:20px;
+  padding: var(--lg);
 }
 
 .metric-value {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--royal-gold);
-    margin-bottom: var(--spacing-xs);
-    font-family: var(--font-serif);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size:2.6rem;
 }
 
-.metric-label {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--cambridge-blue);
-}
-
-/* ==========================================================================
-   PROJECT CASE STUDIES - SCHOLARLY PRESENTATION
-   ========================================================================== */
-
-.project-case-study {
-    background: white;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--silver);
-    overflow: hidden;
-    margin-bottom: var(--spacing-xl);
-    transition: all var(--transition-normal);
-}
-
-.project-case-study:hover {
-    box-shadow: var(--shadow-lg);
-    border-color: var(--cambridge-blue);
-}
-
-.project-header {
-    padding: var(--spacing-lg);
-    background: linear-gradient(90deg, var(--oxford-navy), var(--oxford-navy-light));
-    color: white;
-}
-
-.project-category {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--royal-gold);
-    color: white;
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.project-header h2 {
-    color: white;
-    margin-bottom: 0;
-}
-
-.project-meta {
-    background-color: var(--ivory);
-    border-bottom: 1px solid var(--silver);
-}
-
-/* ==========================================================================
-   AWARDS & HONORS - PRESTIGE DISPLAY
-   ========================================================================== */
-
-.award-card {
-    background: white;
-    border: 1px solid var(--silver);
-    border-left: 4px solid var(--royal-gold);
-    transition: all var(--transition-normal);
-}
-
-.award-card.featured {
-    background: linear-gradient(135deg, white, var(--ivory));
-    border-color: var(--royal-gold);
-    box-shadow: var(--shadow-md);
-}
-
-.award-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--cambridge-blue);
-}
-
-.award-icon {
-    color: var(--royal-gold);
-}
-
-/* ==========================================================================
-   TESTIMONIALS - ELEGANT QUOTES
-   ========================================================================== */
-
-.testimonial-card {
-    background: white;
-    border: 1px solid var(--silver);
-    position: relative;
-}
-
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 4rem;
-    color: var(--cambridge-blue);
-    opacity: 0.2;
-    font-family: var(--font-serif);
-}
-
-.testimonial-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--cambridge-blue), var(--royal-gold));
-}
-
-/* ==========================================================================
-   CV SECTION - PROFESSIONAL PRESENTATION
-   ========================================================================== */
-
-.cv-header-section {
-    background: linear-gradient(135deg, var(--ivory) 0%, #F0EDE8 100%);
-    border-bottom: 1px solid var(--silver);
-}
-
-.cv-title {
-    color: var(--oxford-navy);
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-lg);
-}
-
-.cv-section {
-    border-bottom: 1px solid var(--silver);
-}
-
-.cv-section-title {
-    color: var(--oxford-navy);
-    position: relative;
-    padding-bottom: var(--spacing-sm);
-}
-
-.cv-section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background-color: var(--royal-gold);
-}
-
-/* ==========================================================================
-   FOOTER - REFINED CLOSURE
-   ========================================================================== */
+/* ---------- FOOTER ---------- */
 
 .main-footer {
-    background-color: var(--oxford-navy);
-    color: white;
-    border-top: 4px solid var(--royal-gold);
-}
-
-.footer-brand h3 {
-    color: white;
+  background: var(--navy);
+  color:white;
+  border-top:4px solid var(--gold);
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+  color: rgba(255,255,255,.75);
 }
 
-.footer-links a:hover {
-    color: var(--cambridge-blue);
-}
+.footer-links a:hover { color: var(--blue); }
 
-.footer-bottom {
-    color: var(--cambridge-blue);
-    border-top: 1px solid rgba(163, 193, 218, 0.2);
-}
+/* ---------- MOTION ---------- */
 
-/* ==========================================================================
-   RESPONSIVE ADJUSTMENTS
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    .mission-card::before {
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--cambridge-blue), var(--royal-gold));
-    }
-    
-    .focus-item::before {
-        height: 100%;
-        width: 4px;
-        opacity: 0.3;
-    }
-    
-    .focus-item:hover::before {
-        opacity: 0.6;
-    }
-}
-
-/* ==========================================================================
-   ANIMATIONS & MICRO-INTERACTIONS
-   ========================================================================== */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(25px); }
+  to { opacity:1; transform:none; }
 }
 
 .js-loaded .mission-card,
 .js-loaded .focus-item,
 .js-loaded .project-case-study {
-    animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
-}
-
-.js-loaded .mission-card:nth-child(1) { animation-delay: 0.1s; }
-.js-loaded .mission-card:nth-child(2) { animation-delay: 0.2s; }
-.js-loaded .mission-card:nth-child(3) { animation-delay: 0.3s; }
-.js-loaded .focus-item:nth-child(1) { animation-delay: 0.1s; }
-.js-loaded .focus-item:nth-child(2) { animation-delay: 0.2s; }
-.js-loaded .focus-item:nth-child(3) { animation-delay: 0.3s; }
-.js-loaded .focus-item:nth-child(4) { animation-delay: 0.4s; }
-
-/* ==========================================================================
-   PREFERS-REDUCED-MOTION
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    .js-loaded .mission-card,
-    .js-loaded .focus-item,
-    .js-loaded .project-case-study {
-        animation: none;
-        opacity: 1;
-    }
+  animation: fadeUp .6s ease forwards;
 }

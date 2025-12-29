@@ -1,252 +1,136 @@
+<!-- research.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Projects | Tala Khaddour</title>
+    <meta name="description" content="Research and projects by Tala Khaddour">
+    <title>Tala Khaddour - Research & Projects</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">Tala Khaddour</div>
-            <ul class="nav-menu">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="volunteering.html">Service</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="research.html">Research & Projects</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
+        </nav>
+    </header>
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Research Projects</h1>
-                <p class="subtitle">Empirical Investigations with Quantifiable Results</p>
+        <section>
+            <h1>Research & Projects</h1>
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Hand Exoskeleton for Rehabilitation</h2>
+                    <p>January 2024 – August 2025</p>
+                    <p>Designed and performed dynamic modeling of a self-aligning, lightweight, cable-driven hand exoskeleton optimized for safe human-robot interaction.</p>
+                    <ul>
+                        <li>Implemented three control strategies for the nonlinear model, achieving less than 0.5° tracking error and a 20% reduction in settling time under disturbances.</li>
+                        <li>Applied stereo vision-based hand pose mirroring, reducing mean joint position error from 22.4 mm to 15.4 mm with system latency under 200 ms.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 1">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 2">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 3">
+                    <img src="assets/placeholder.svg" alt="Hand Exoskeleton Figure 4">
+                </div>
             </div>
-        </section>
-
-        <section class="research-projects">
-            <div class="container">
-                <article class="project" id="exoskeleton">
-                    <div class="project-header">
-                        <h2>Project 1: Vision-Based Hand Exoskeleton for Rehabilitation</h2>
-                        <div class="project-meta">
-                            <span class="tag">Rehabilitation Robotics</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Control Systems</span>
-                            <span class="date">2023-Present</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <div class="project-visual">
-                            <img src="assets/placeholder.svg" alt="Hand exoskeleton system diagram">
-                            <p class="caption">Figure 1: System architecture showing vision capture, processing, and actuation components</p>
-                        </div>
-                        
-                        <h3>Problem Statement</h3>
-                        <p>Post-stroke rehabilitation requires repetitive, guided movement therapy. Traditional methods are labor-intensive and expensive, limiting accessibility. Existing robotic systems lack intuitive control and affordability for home use.</p>
-                        
-                        <h3>Technical Approach</h3>
-                        <div class="approach-grid">
-                            <div class="approach-item">
-                                <div class="approach-number">1</div>
-                                <h4>Mechanical Design</h4>
-                                <p>Underactuated tendon-driven mechanism reducing weight by 40% compared to fully actuated designs. 3D-printed components for rapid prototyping.</p>
-                            </div>
-                            <div class="approach-item">
-                                <div class="approach-number">2</div>
-                                <h4>Vision System</h4>
-                                <p>MediaPipe hand tracking with custom calibration for individual anatomical variations. Real-time 3D pose estimation at 30fps.</p>
-                            </div>
-                            <div class="approach-item">
-                                <div class="approach-number">3</div>
-                                <h4>Control Algorithm</h4>
-                                <p>PD controller with gravity compensation. Adaptive gain scheduling based on user capability assessment.</p>
-                            </div>
-                            <div class="approach-item">
-                                <div class="approach-number">4</div>
-                                <h4>System Integration</h4>
-                                <p>ROS-based architecture connecting perception, planning, and control modules. Modular design for component testing.</p>
-                            </div>
-                        </div>
-                        
-                        <h3>Quantitative Results</h3>
-                        <div class="results-table">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Performance Metric</th>
-                                        <th>Result</th>
-                                        <th>Methodology</th>
-                                        <th>Significance</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Joint Angle Tracking Error</td>
-                                        <td>4.2° ± 1.8°</td>
-                                        <td>Comparison with goniometer measurements</td>
-                                        <td>Clinically acceptable for therapy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>System Latency</td>
-                                        <td>120ms end-to-end</td>
-                                        <td>High-speed camera timestamp comparison</td>
-                                        <td>Enables real-time mirror therapy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Range of Motion</td>
-                                        <td>0-85° MCP joints</td>
-                                        <td>Physical measurement with protractor</td>
-                                        <td>Covers functional grasping range</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Force Generation</td>
-                                        <td>8N at fingertip</td>
-                                        <td>Load cell measurement</td>
-                                        <td>Sufficient for assisted movement</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <h3>Impact & Applications</h3>
-                        <ul class="impact-list">
-                            <li><strong>Clinical:</strong> Enables home-based rehabilitation with professional guidance quality</li>
-                            <li><strong>Economic:</strong> Reduces therapy costs by estimated 40% through automation</li>
-                            <li><strong>Technical:</strong> Demonstrates effective integration of vision and actuation in soft robotics</li>
-                            <li><strong>Research:</strong> Provides framework for adaptable rehabilitation systems</li>
-                        </ul>
-                        
-                        <div class="project-conclusion">
-                            <h4>Conclusion</h4>
-                            <p>This project successfully demonstrates a vision-controlled rehabilitation system with clinically relevant performance metrics. The integration of consumer-grade vision with custom mechanical design presents a viable path toward accessible robotic therapy.</p>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="project" id="fuzzy-control">
-                    <div class="project-header">
-                        <h2>Project 2: Fuzzy Logic Control for Mobile Robot Navigation</h2>
-                        <div class="project-meta">
-                            <span class="tag">Intelligent Control</span>
-                            <span class="tag">Mobile Robotics</span>
-                            <span class="tag">Simulation</span>
-                            <span class="date">2022</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-content">
-                        <div class="project-visual">
-                            <img src="assets/placeholder.svg" alt="Fuzzy control simulation results">
-                            <p class="caption">Figure 2: Path following performance comparison: PID vs Fuzzy Logic Controller</p>
-                        </div>
-                        
-                        <h3>Research Question</h3>
-                        <p>Can fuzzy logic control provide superior performance to classical PID for non-holonomic mobile robots in unstructured environments with uncertainty?</p>
-                        
-                        <h3>Methodology</h3>
-                        <div class="methodology-detail">
-                            <h4>Controller Design</h4>
-                            <div class="design-comparison">
-                                <div class="design-item">
-                                    <h5>PID Controller</h5>
-                                    <ul>
-                                        <li>Based on linearized kinematic model</li>
-                                        <li>Fine-tuned for straight-line tracking</li>
-                                        <li>Fixed gains throughout operation</li>
-                                    </ul>
-                                </div>
-                                <div class="design-item">
-                                    <h5>Fuzzy Logic Controller</h5>
-                                    <ul>
-                                        <li>Mamdani-type inference system</li>
-                                        <li>25 rules based on expert knowledge</li>
-                                        <li>Adaptive to environmental changes</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <h4>Simulation Environment</h4>
-                            <ul>
-                                <li>MATLAB/Simulink implementation</li>
-                                <li>Three test scenarios: straight line, sinusoidal path, obstacle field</li>
-                                <li>Added sensor noise (5% Gaussian) to simulate real conditions</li>
-                                <li>Performance metrics: tracking error, completion time, collision rate</li>
-                            </ul>
-                        </div>
-                        
-                        <h3>Performance Analysis</h3>
-                        <div class="performance-chart">
-                            <div class="chart-item">
-                                <div class="chart-label">Straight Line Error</div>
-                                <div class="chart-bar">
-                                    <div class="bar pid" style="width: 70%">0.18m</div>
-                                    <div class="bar fuzzy" style="width: 30%">0.05m</div>
-                                </div>
-                            </div>
-                            <div class="chart-item">
-                                <div class="chart-label">Sinusoidal Path Error</div>
-                                <div class="chart-bar">
-                                    <div class="bar pid" style="width: 100%">0.28m</div>
-                                    <div class="bar fuzzy" style="width: 39%">0.11m</div>
-                                </div>
-                            </div>
-                            <div class="chart-item">
-                                <div class="chart-label">Obstacle Success Rate</div>
-                                <div class="chart-bar">
-                                    <div class="bar pid" style="width: 60%">60%</div>
-                                    <div class="bar fuzzy" style="width: 100%">100%</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="key-findings">
-                            <h4>Key Findings</h4>
-                            <ol>
-                                <li>Fuzzy controller showed 61% lower average error in complex trajectories</li>
-                                <li>Superior handling of non-linearities and uncertainty</li>
-                                <li>No collisions in obstacle field vs 40% collision rate for PID</li>
-                                <li>Smoother control actions with less overshoot</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="project-conclusion">
-                            <h4>Research Contribution</h4>
-                            <p>This study validates fuzzy logic as a robust control strategy for mobile robots in dynamic environments. The quantitative comparison provides evidence for intelligent control methods over traditional approaches when dealing with uncertainty and non-linearity.</p>
-                        </div>
-                    </div>
-                </article>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 1">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 2">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 3">
+                    <img src="assets/placeholder.svg" alt="Unicycle Robot Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>Fuzzy Logic Based Control of a Unicycle Mobile Robot - Comparative Analysis</h2>
+                    <p>November 2023 – February 2024</p>
+                    <p>Designed, implemented, and fine-tuned four Mamdani-type fuzzy controllers (P, PI, PD, PID-like) for controlling a unicycle mobile robot.</p>
+                    <ul>
+                        <li>Achieved high accuracy in goal tracking: PID-like fuzzy control reached 0.001 m error with negligible oscillations, PI-like 0.05 m, PD-like 0.1 m.</li>
+                        <li>Demonstrated robustness and smooth trajectory following through comparative analysis.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Additional projects based on user mention of 4 more; using participations as placeholders with minimal details -->
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Project at Damascus International Fair (62nd Edition)</h2>
+                    <p>2025</p>
+                    <p>Participated in the Scientific Projects Pavilion under the Distinction and Creativity Agency, showcasing innovative robotics solutions.</p>
+                    <ul>
+                        <li>Focused on practical applications in intelligent systems.</li>
+                        <li>Received recognition for creativity and technical execution.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="Damascus Fair Project Figure 4">
+                </div>
+            </div>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="InnoSync Project Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>InnoSync Conference Project</h2>
+                    <p>2025</p>
+                    <p>Contributed to conference discussions on innovation in robotics, organized by Junior Chamber International (JCI).</p>
+                    <ul>
+                        <li>Presented ideas on AI integration in youth-led projects.</li>
+                        <li>Engaged in collaborative problem-solving sessions.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project chessboard-left">
+                <div class="project-text">
+                    <h2>Manara University Student Exhibition Project</h2>
+                    <p>2025</p>
+                    <p>Participated and received a Certificate of Appreciation for exhibiting robotics projects.</p>
+                    <ul>
+                        <li>Showcased control systems and modeling techniques.</li>
+                        <li>Interacted with peers and faculty on research advancements.</li>
+                    </ul>
+                </div>
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="Manara Exhibition Project Figure 4">
+                </div>
+            </div>
+            <div class="project chessboard-right">
+                <div class="project-images">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 1">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 2">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 3">
+                    <img src="assets/placeholder.svg" alt="WRO Project Figure 4">
+                </div>
+                <div class="project-text">
+                    <h2>World Robot Olympiad (WRO) – Future Engineers Category</h2>
+                    <p>2022</p>
+                    <p>Achieved 5th Place Nationwide in developing engineering solutions for future robotics challenges.</p>
+                    <ul>
+                        <li>Designed autonomous systems with sensor integration.</li>
+                        <li>Focused on efficiency and innovation in competition settings.</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
-
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Tala Khaddour</h3>
-                    <p>Research Portfolio | Robotics & Intelligent Systems</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                    <a href="cv.html"><i class="fas fa-file-alt"></i> Full CV</a>
-                    <a href="contact.html"><i class="fas fa-envelope"></i> Research Inquiry</a>
-                </div>
-            </div>
-        </div>
+        <p>&copy; 2025 Tala Khaddour</p>
     </footer>
     <script src="main.js"></script>
 </body>

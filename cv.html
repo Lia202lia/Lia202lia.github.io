@@ -1,134 +1,109 @@
-<!-- FILE: cv.html -->
+<!-- cv.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Tala Khaddour</title>
-    <meta name="description" content="Formal academic CV of Tala Khaddour.">
+    <meta name="description" content="Curriculum Vitae of Tala Khaddour">
+    <title>Tala Khaddour - CV</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Tala Khaddour</a>
-            <ul class="nav-menu">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="volunteering.html">Service</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="research.html">Research & Projects</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="cv-main">
-        <header class="cv-header">
-            <div>
-                <h1>Tala Khaddour</h1>
-                <p class="cv-subtitle">Robotics & Intelligent Systems Engineer</p>
-                <p>Damascus, Syria</p>
-            </div>
-            <a href="#" class="btn-download" onclick="alert('PDF placeholder. In a full implementation, this would link to a PDF file.'); return false;"><i class="fas fa-download"></i> Download PDF</a>
-        </header>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="cv-item">
-                <h3>B.Sc. in Robotics & Intelligent Systems Engineering</h3>
-                <p class="cv-meta">University of Damascus | Expected Graduation: 2024</p>
-                <p><strong>Relevant Coursework:</strong> Advanced Control Systems, Robotic Dynamics & Kinematics, Digital Signal Processing, Computer Vision, Artificial Intelligence, Embedded Systems Design, Fuzzy Logic & Neural Networks.</p>
-                <p><strong>Thesis:</strong> "Adaptive Fuzzy-PID Hybrid Control for a Robotic Manipulator with Payload Uncertainty."</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-tasks"></i> Research & Key Projects</h2>
-            <div class="cv-item">
-                <h3>Hand Exoskeleton for Rehabilitation</h3>
-                <p class="cv-meta">Lead Designer & Controls Engineer</p>
-                <p>Designed a soft-robotic exoskeleton using intent detection via EMG signals. Achieved 92% detection accuracy and 30% reduction in user exertion metrics.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Fuzzy Logic Control of a Unicycle Robot</h3>
-                <p class="cv-meta">Control Systems Designer</p>
-                <p>Developed a Mamdani-type FLC, reducing trajectory tracking error by 68% compared to PID in simulation environments.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Vision-Based Autonomous Navigation</h3>
-                <p class="cv-meta">Perception & Planning Developer</p>
-                <p>Implemented a full ROS-based SLAM and navigation stack, achieving ±5cm mapping accuracy and 99% dynamic obstacle avoidance.</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-award"></i> Awards & Honors</h2>
-            <ul class="cv-list">
-                <li><strong>University Distinction Scholarship</strong> (2020 – Present)</li>
-                <li><strong>First Place</strong>, National Engineering Innovation Challenge – Robotics Track (2022)</li>
-                <li><strong>Top 5 Finalist</strong>, Arab Robotics Competition (2021)</li>
-                <li><strong>Member</strong>, Distinction and Creativity Agency (2021 – Present)</li>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Curriculum Vitae</h1>
+            <a href="#" class="download-btn">Download CV (PDF)</a>
+            <h2>Contact Information</h2>
+            <p>+963(936693678) | khaddour.tala@gmail.com | LinkedIn | GitHub | Portfolio | Syria</p>
+            
+            <h2>Education</h2>
+            <p><strong>Manara University</strong> 2020 – 2025</p>
+            <p>Bachelor of Science in Robotics and Intelligent Systems Engineering, Latakia, Syria</p>
+            <ul>
+                <li>Distinguished Student Program</li>
+                <li>GPA: 3.28/4.0 | Thesis Score: 96/100 (Graduated with Honors)</li>
+                <li>Thesis: Intelligent Trajectory and Control of a Designed Hand Exoskeleton for Rehabilitation</li>
             </ul>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-briefcase"></i> Work & Leadership Experience</h2>
-            <div class="cv-item">
-                <h3>Robotics Teaching Assistant</h3>
-                <p class="cv-meta">University of Damascus | 2022 – 2023</p>
-                <p>Led lab sessions for 'Introduction to Robotics,' graded assignments, and provided one-on-one student support on kinematic analysis and sensor integration.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Technical Intern</h3>
-                <p class="cv-meta">Advanced Systems Lab (Local R&D Firm) | Summer 2022</p>
-                <p>Assisted in the development of a drone-based inspection system, focusing on camera gimbal stabilization and data logging software.</p>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>Programming & Tools</h3>
-                    <ul class="cv-list">
-                        <li><strong>Proficient:</strong> Python, C++, MATLAB/Simulink</li>
-                        <li><strong>Experienced:</strong> ROS, Git, Linux, SolidWorks, LaTeX</li>
-                        <li><strong>Familiar:</strong> JavaScript (for web visualization), OpenCV, TensorFlow (basics)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Robotics Domains</h3>
-                    <ul class="cv-list">
-                        <li>Control Systems (PID, Fuzzy, Adaptive)</li>
-                        <li>Computer Vision (SLAM, Object Detection)</li>
-                        <li>Mechatronic Design & Prototyping</li>
-                        <li>Embedded Systems (Arduino, STM32)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h2><i class="fas fa-language"></i> Languages</h2>
-            <ul class="cv-list inline">
-                <li><strong>Arabic:</strong> Native</li>
-                <li><strong>English:</strong> Fluent (Professional Proficiency)</li>
-                <li><strong>German:</strong> Intermediate (B1)</li>
+            <p><strong>National Center for the Distinguished (NCD)</strong> 2017 – 2020</p>
+            <p>High School Diploma - Scientific Stream, Latakia, Syria</p>
+            <ul>
+                <li>Final Grade: 92.3% | Rank: 3 out of 75 students</li>
             </ul>
+            
+            <h2>Projects and Research Experience</h2>
+            <p><strong>Hand Exoskeleton for Rehabilitation</strong> Jan 2024 – Aug 2025</p>
+            <ul>
+                <li>Designed and dynamic modeling of a self-alignment, lightweight, cable-driven hand exoskeleton.</li>
+                <li>Implemented three control strategies, achieving <0.5° tracking error.</li>
+                <li>Applied stereo vision–based hand pose mirroring, reducing error from 22.4 mm to 15.4 mm.</li>
+            </ul>
+            <p><strong>Fuzzy Logic Based Control of a Unicycle Mobile Robot</strong> Nov 2023 – Feb 2024</p>
+            <ul>
+                <li>Designed four Mamdani-type fuzzy controllers.</li>
+                <li>Achieved high accuracy: PID-like reached 0.001 m error.</li>
+            </ul>
+            
+            <h2>Participation & Awards</h2>
+            <ul>
+                <li>Damascus International Fair (62nd Edition), 2025 – Participant</li>
+                <li>InnoSync Conference, 2025 – Participant</li>
+                <li>Manara University Student Exhibition, 2025 – Participant</li>
+                <li>Distinction and Creativity Agency (DCA) Academic Scholarship, 2020 – 2025</li>
+                <li>World Robot Olympiad (WRO), 2022 – 5th Place Nationwide</li>
+                <li>Girls in AI Hackathon, 2021 – Participant</li>
+            </ul>
+            
+            <h2>Work Experience</h2>
+            <p><strong>Manara University & Sanad Youth Development Foundation</strong> Jan 2023 – Aug 2023</p>
+            <p>Robotics Project Coach, Latakia, Syria</p>
+            <ul>
+                <li>Coached teams for RFG competition.</li>
+                <li>Guided Arduino-based development and documentation.</li>
+            </ul>
+            <p><strong>Syrian Computer Society</strong> 2023 – 2024</p>
+            <p>Robotics and Programming Trainer, Latakia & Jableh, Syria</p>
+            <ul>
+                <li>Delivered training in robotics and AI.</li>
+                <li>Assisted in hands-on projects.</li>
+            </ul>
+            
+            <h2>Academic Service & Volunteering</h2>
+            <ul>
+                <li>Acquaint Culture Communication, Nov 2025 – Present</li>
+                <li>Kaan Balsaman Charity Earthquake Response</li>
+                <li>Saiar Team for Street Children</li>
+                <li>Syrian Science Olympiad (SSO), 2023</li>
+                <li>Distinction and Creativity Agency (DCA), 2018 – 2024</li>
+            </ul>
+            
+            <h2>Relevant Coursework & Technical Competencies</h2>
+            <p><strong>Selected Coursework:</strong> Modern Robotics (Coursera), Robot modeling, ROS, SolidWorks, Adaptive control, Sensor fusion, MATLAB/Simulink, Python, TensorFlow, PyTorch, Computer Vision, Neural Networks, Arduino, Raspberry Pi, C, C++, Linux, Git, Docker, Gazebo, RViz, LaTeX</p>
+            
+            <h2>Languages</h2>
+            <ul>
+                <li>Arabic: Native</li>
+                <li>English: Proficient (C1)</li>
+                <li>French: Basic (A2)</li>
+            </ul>
+            
+            <h2>References</h2>
+            <p>Available upon request</p>
         </section>
     </main>
-
-    <footer class="main-footer">
-        <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic Portfolio.</p>
-        <p>Damascus, Syria</p>
+    <footer>
+        <p>&copy; 2025 Tala Khaddour</p>
     </footer>
     <script src="main.js"></script>
 </body>

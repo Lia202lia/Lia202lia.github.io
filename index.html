@@ -3,109 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tala Khaddour | Robotics & Intelligent Systems Engineer</title>
-    <meta name="description" content="Aca portfolio for international scholarship applications in robotics, AI, and rehabilitation systems.">
+    <title>Tala Khaddour | Robotics Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-    <!-- Header remains the same as before -->
-    <header class="site-header">
-        <nav class="main-nav">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">
-                    <span class="logo-name">Tala Khaddour</span>
-                    <span class="logo-title">Robotics Engineer</span>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="research.html" class="nav-link">Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link">Service</a></li>
-                    <li><a href="cv.html" class="nav-link">CV</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <button class="menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">TK</div>
+                <span>Tala Khaddour</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="volunteering.html">Volunteering</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-    <main class="home-main">
-        <!-- UPDATED HERO SECTION with Circular Portrait -->
-        <section class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">Tala Khaddour</h1>
-                        <p class="hero-subtitle">Robotics & Intelligent Systems Engineer</p>
-                        <p class="hero-mission">I engineer intelligent systems that bridge human capability with technological innovation—particularly in rehabilitation robotics and adaptive control.</p>
-                        
-                        <div class="scholarship-notice">
-                            <i class="fas fa-award"></i>
-                            <p>This academic portfolio is submitted for international scholarship and graduate program consideration.</p>
-                        </div>
-                        
-                        <div class="hero-actions">
-                            <a href="research.html" class="btn btn-primary">
-                                <i class="fas fa-microscope"></i> View Research
-                            </a>
-                            <a href="cv.html" class="btn btn-secondary">
-                                <i class="fas fa-file-alt"></i> Academic CV
-                            </a>
-                        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Distinguished Graduate</span>
+                </div>
+                <h1 class="hero-title">Tala Khaddour</h1>
+                <h2 class="hero-subtitle">Robotics & Intelligent Systems Engineer</h2>
+                <p class="hero-description">
+                    Passionate about rehabilitation robotics, intelligent control systems, 
+                    and creating technology that enhances human capabilities. 
+                    Seeking prestigious scholarship opportunities to advance research 
+                    in human-robot interaction.
+                </p>
+                <div class="hero-actions">
+                    <a href="cv.html" class="btn btn-primary">View Full CV</a>
+                    <a href="research.html" class="btn btn-secondary">Explore Research</a>
+                </div>
+                <div class="hero-social">
+                    <a href="mailto:khaddour.tala@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="tel:+963936693678" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/tala-portrait.jpg" alt="Tala Khaddour Portrait" class="portrait">
+                <div class="portrait-frame"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">96/100</div>
+                    <div class="stat-label">Thesis Score</div>
+                    <div class="stat-desc">Graduated with Honors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5<sup>th</sup></div>
+                    <div class="stat-label">National Rank</div>
+                    <div class="stat-desc">WRO Future Engineers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years</div>
+                    <div class="stat-desc">Academic Scholarship</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3.28</div>
+                    <div class="stat-label">GPA</div>
+                    <div class="stat-desc">Bachelor's Degree</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Research</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-paper"></i>
                     </div>
-                    
-                    <!-- Circular Portrait Section -->
-                    <div class="portrait-container">
-                        <img src="assets/img/tala-portrait.jpg" 
-                             alt="Tala Khaddour - Robotics Engineer" 
-                             class="academic-portrait">
+                    <h3 class="card-title">Hand Exoskeleton for Rehabilitation</h3>
+                    <p class="card-date">Jan 2024 – Aug 2025</p>
+                    <p class="card-desc">
+                        Designed and implemented intelligent control strategies for a 
+                        cable-driven hand exoskeleton, achieving &lt;0.5° tracking error 
+                        with 20% reduction in settling time.
+                    </p>
+                    <a href="research.html#exoskeleton" class="card-link">View Details →</a>
+                </div>
+                <div class="featured-card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
+                    <h3 class="card-title">Fuzzy Logic Control of Mobile Robot</h3>
+                    <p class="card-date">Nov 2023 – Feb 2024</p>
+                    <p class="card-desc">
+                        Developed and compared four Mamdani-type fuzzy controllers, 
+                        achieving 0.001m tracking error with PID-like fuzzy control.
+                    </p>
+                    <a href="research.html#fuzzy-robot" class="card-link">View Details →</a>
                 </div>
             </div>
-            
-            <div class="scroll-indicator">
-                <span>Explore</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Rest of the index.html content remains exactly the same -->
-        <section class="research-preview">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Research Focus</h2>
-                    <p class="section-subtitle">Interdisciplinary work at the intersection of robotics, AI, and human-centered design</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">TK</div>
+                    <p>Tala Khaddour<br>Robotics & Intelligent Systems Engineer</p>
                 </div>
-                
-                <div class="focus-grid">
-                    <article class="focus-card">
-                        <div class="focus-icon">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <h3>Human-Robot Interaction</h3>
-                        <p>Designing intuitive interfaces and safe collaborative systems that understand and respond to human intent.</p>
-                        <a href="research.html#hri" class="focus-link">Explore projects →</a>
-                    </article>
-                    
-                    <!-- Other focus cards remain the same -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="cv.html">Curriculum Vitae</a>
+                    <a href="research.html">Research Portfolio</a>
+                    <a href="volunteering.html">Volunteering</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> khaddour.tala@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +963 (936) 693 678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Latakia, Syria</p>
                 </div>
             </div>
-        </section>
+            <div class="footer-bottom">
+                <p>© 2025 Tala Khaddour. Prepared for prestigious scholarship applications.</p>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Other sections remain exactly as in your original HTML -->
-        <!-- ... -->
-    </main>
-
-    <!-- Footer remains the same -->
     <script src="script.js"></script>
 </body>
 </html>

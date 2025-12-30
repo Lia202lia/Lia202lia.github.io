@@ -1,10 +1,10 @@
 /**
- * Feminine & Academic Portfolio JavaScript
- * Smooth, elegant animations for prestigious scholarship applications
+ * Academic Portfolio JavaScript
+ * Clean, professional animations for scholarship applications
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎓 Tala Khaddour Portfolio - Feminine Academic Edition');
+    console.log('🎓 Tala Khaddour Portfolio - Academic Edition');
     
     // Initialize components
     initNavigation();
@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionReveal();
     initHoverEffects();
     initPortraitAnimation();
-    initQuoteAnimation();
 });
 
 /**
- * Elegant Navigation
+ * Clean Navigation
  */
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
@@ -25,24 +24,13 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Subtle scroll effect
-    let lastScroll = 0;
+    // Scroll effect
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            navbar.style.boxShadow = 'none';
-            navbar.style.transform = 'translateY(0)';
-        } else if (currentScroll > lastScroll) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
+        if (window.scrollY > 20) {
+            navbar.style.boxShadow = '0 2px 20px rgba(44, 90, 160, 0.1)';
         } else {
-            // Scrolling up
-            navbar.style.transform = 'translateY(0)';
-            navbar.style.boxShadow = '0 2px 20px rgba(124, 144, 178, 0.1)';
+            navbar.style.boxShadow = 'none';
         }
-        
-        lastScroll = currentScroll;
     });
 
     // Mobile menu
@@ -141,8 +129,6 @@ function initSectionReveal() {
                 // Special animations for specific sections
                 if (entry.target.classList.contains('hero')) {
                     animateHeroElements();
-                } else if (entry.target.classList.contains('focus-card')) {
-                    animateFocusCard(entry.target);
                 }
             }
         });
@@ -179,8 +165,28 @@ function initSectionReveal() {
             }
         }
         
+        .focus-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
         .focus-card.revealed {
-            animation-delay: calc(var(--index, 0) * 0.2s);
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .focus-card:nth-child(1).revealed {
+            transition-delay: 0.1s;
+        }
+        
+        .focus-card:nth-child(2).revealed {
+            transition-delay: 0.3s;
+        }
+        
+        .focus-card:nth-child(3).revealed {
+            transition-delay: 0.5s;
         }
     `;
     document.head.appendChild(style);
@@ -190,28 +196,40 @@ function initSectionReveal() {
  * Animate hero elements with staggered delay
  */
 function animateHeroElements() {
-    const heroElements = document.querySelectorAll('.hero-content > *');
+    const heroTitle = document.querySelector('.hero-title');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroActions = document.querySelector('.hero-actions');
     
-    heroElements.forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        
-        setTimeout(() => {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }, index * 200 + 300);
+    // Reset animations
+    [heroTitle, heroDescription, heroActions].forEach(el => {
+        if (el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
     });
-}
-
-/**
- * Animate focus cards
- */
-function animateFocusCard(card) {
-    // Set CSS variable for staggered animation
-    const cards = document.querySelectorAll('.focus-card');
-    const index = Array.from(cards).indexOf(card);
-    card.style.setProperty('--index', index);
+    
+    // Animate with delays
+    setTimeout(() => {
+        if (heroTitle) {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.transform = 'translateY(0)';
+        }
+    }, 100);
+    
+    setTimeout(() => {
+        if (heroDescription) {
+            heroDescription.style.opacity = '1';
+            heroDescription.style.transform = 'translateY(0)';
+        }
+    }, 300);
+    
+    setTimeout(() => {
+        if (heroActions) {
+            heroActions.style.opacity = '1';
+            heroActions.style.transform = 'translateY(0)';
+        }
+    }, 500);
 }
 
 /**
@@ -219,7 +237,7 @@ function animateFocusCard(card) {
  */
 function initHoverEffects() {
     // Card hover effects
-    const cards = document.querySelectorAll('.edu-card, .focus-card, .sidebar-link');
+    const cards = document.querySelectorAll('.focus-card, .sidebar-link');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -236,7 +254,7 @@ function initHoverEffects() {
     
     buttons.forEach(button => {
         button.addEventListener('mouseenter', () => {
-            button.style.transform = 'translateY(-3px)';
+            button.style.transform = 'translateY(-2px)';
         });
         
         button.addEventListener('mouseleave', () => {
@@ -264,31 +282,6 @@ function initPortraitAnimation() {
         const overlay = portraitContainer.querySelector('.portrait-overlay');
         if (overlay) {
             overlay.style.transform = 'translateY(100%)';
-        }
-    });
-}
-
-/**
- * Quote animation
- */
-function initQuoteAnimation() {
-    const quote = document.querySelector('.sidebar-quote');
-    
-    if (!quote) return;
-    
-    quote.addEventListener('mouseenter', () => {
-        const quoteMark = quote.querySelector('.quote-mark');
-        if (quoteMark) {
-            quoteMark.style.transform = 'scale(1.1) rotate(5deg)';
-            quoteMark.style.opacity = '0.5';
-        }
-    });
-    
-    quote.addEventListener('mouseleave', () => {
-        const quoteMark = quote.querySelector('.quote-mark');
-        if (quoteMark) {
-            quoteMark.style.transform = 'scale(1) rotate(0)';
-            quoteMark.style.opacity = '0.3';
         }
     });
 }
@@ -336,4 +329,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-console.log('✨ Portfolio initialized successfully');
+console.log('✅ Portfolio initialized successfully');

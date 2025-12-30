@@ -7,25 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-    <!-- Animated Background Elements (Simplified) -->
-    <div class="floating-elements">
-        <div class="floating-circle circle-1"></div>
-        <div class="floating-circle circle-2"></div>
-    </div>
-
+    <!-- Soft Gradient Background -->
+    <div class="gradient-background"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-wrapper">
                 <a href="index.html" class="logo">
                     <div class="logo-symbol">
-                        <span>T</span>
-                        <div class="logo-dot"></div>
+                        <svg width="36" height="36" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="17" fill="#7C90B2" opacity="0.9"/>
+                            <path d="M12 12 L24 18 L12 24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
                     </div>
                     <div class="logo-text">
                         <span class="logo-name">Tala Khaddour</span>
@@ -37,41 +36,27 @@
             <div class="nav-right">
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link active">
-                        <span class="nav-icon"><i class="fas fa-home"></i></span>
                         <span class="nav-text">Home</span>
                     </a></li>
                     <li><a href="about.html" class="nav-link">
-                        <span class="nav-icon"><i class="fas fa-user-graduate"></i></span>
                         <span class="nav-text">About</span>
                     </a></li>
                     <li><a href="research.html" class="nav-link">
-                        <span class="nav-icon"><i class="fas fa-microscope"></i></span>
                         <span class="nav-text">Research</span>
                     </a></li>
                     <li><a href="volunteering.html" class="nav-link">
-                        <span class="nav-icon"><i class="fas fa-hands-helping"></i></span>
                         <span class="nav-text">Service</span>
                     </a></li>
                     <li><a href="cv.html" class="nav-link">
-                        <span class="nav-icon"><i class="fas fa-file-alt"></i></span>
                         <span class="nav-text">CV</span>
                     </a></li>
                     <li class="nav-contact">
                         <a href="contact.html" class="nav-contact-btn">
-                            <i class="fas fa-paper-plane"></i>
+                            <i class="fas fa-envelope"></i>
                             <span>Contact</span>
                         </a>
                     </li>
                 </ul>
-
-                <div class="social-mini">
-                    <a href="mailto:khaddour.tala@gmail.com" class="social-mini-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="#" class="social-mini-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
 
                 <button class="menu-toggle">
                     <div class="menu-line"></div>
@@ -82,279 +67,287 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Simplified & Elegant -->
+    <!-- Hero Section - Feminine & Academic -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="academic-tagline">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Honors Graduate | Robotics & Intelligent Systems Engineering</span>
+                    <div class="tagline-decoration"></div>
+                    <span class="tagline-text">Robotics Engineer Specializing in Intelligent Rehabilitation Systems</span>
                 </div>
 
                 <h1 class="hero-title">
                     <span class="title-line title-line-1">Tala Khaddour</span>
-                    <span class="title-line title-line-2">Engineering Intelligent Systems for Human Rehabilitation</span>
+                    <span class="title-line title-line-2">Engineering Compassionate Technology for Human Recovery</span>
                 </h1>
 
                 <div class="hero-description">
                     <p>
-                        I am a <strong>Robotics and Intelligent Systems Engineer</strong> specializing in 
-                        rehabilitation robotics and intelligent control systems. My research focuses on 
-                        developing affordable, accessible assistive technologies that enhance human 
-                        capabilities and improve quality of life.
+                        As a <strong>Robotics and Intelligent Systems Engineer</strong>, I bridge advanced 
+                        engineering principles with human-centered design to create innovative 
+                        rehabilitation solutions. My work focuses on developing intelligent control 
+                        systems for assistive devices that are both technologically sophisticated 
+                        and clinically accessible.
                     </p>
                     <p>
-                        Graduating with honors from Manara University, my thesis on intelligent hand 
-                        exoskeleton control achieved a score of 96/100, reflecting my commitment to 
-                        academic excellence and impactful engineering solutions.
+                        My academic journey at Manara University, where I graduated with honors, 
+                        has equipped me with expertise in adaptive control, computer vision, and 
+                        human-robot interaction—skills I apply to make rehabilitation technology 
+                        more effective and affordable.
                     </p>
-                </div>
-
-                <div class="hero-quick-facts">
-                    <div class="fact-item">
-                        <i class="fas fa-university"></i>
-                        <div class="fact-content">
-                            <span class="fact-label">Manara University</span>
-                            <span class="fact-value">BSc Robotics Engineering</span>
-                        </div>
-                    </div>
-                    <div class="fact-item">
-                        <i class="fas fa-award"></i>
-                        <div class="fact-content">
-                            <span class="fact-label">Thesis Score</span>
-                            <span class="fact-value">96/100 (Honors)</span>
-                        </div>
-                    </div>
-                    <div class="fact-item">
-                        <i class="fas fa-robot"></i>
-                        <div class="fact-content">
-                            <span class="fact-label">Research Focus</span>
-                            <span class="fact-value">Rehabilitation Robotics</span>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="hero-actions">
                     <a href="research.html" class="btn btn-primary">
                         <i class="fas fa-flask"></i>
-                        <span>Explore Research</span>
+                        <span>Explore My Research</span>
                     </a>
-                    <a href="cv.html" class="btn btn-outline">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Academic CV</span>
+                    <a href="about.html" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Academic Journey</span>
                     </a>
                 </div>
             </div>
 
             <div class="hero-portrait">
-                <div class="portrait-container">
-                    <div class="portrait-frame">
+                <div class="portrait-wrapper">
+                    <div class="portrait-container">
                         <img src="assets/img/tala-portrait.jpg" alt="Tala Khaddour - Robotics Engineer" class="portrait-img">
-                        <div class="portrait-accent"></div>
+                        <div class="portrait-overlay">
+                            <div class="overlay-content">
+                                <h4>Robotics Researcher</h4>
+                                <p>Specializing in Rehabilitation Technology</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portrait-caption">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Latakia, Syria | Seeking Graduate Research Opportunities</span>
+                    <div class="portrait-decoration">
+                        <div class="decoration-element element-1"></div>
+                        <div class="decoration-element element-2"></div>
                     </div>
+                </div>
+                <div class="portrait-caption">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Latakia, Syria • Aspiring Graduate Researcher</span>
                 </div>
             </div>
         </div>
+
+        <div class="scroll-guidance">
+            <div class="guidance-line"></div>
+            <span class="guidance-text">Continue to explore</span>
+        </div>
     </section>
 
-    <!-- About Me Section -->
-    <section class="about-me">
+    <!-- Academic Profile Section -->
+    <section class="academic-profile">
         <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Academic Profile</span>
-                <h2 class="section-title">Engineering with Purpose</h2>
-                <div class="section-decoration">
+            <div class="profile-header">
+                <span class="profile-subtitle">Academic Profile</span>
+                <h2 class="profile-title">Where Engineering Meets Compassion</h2>
+                <div class="profile-decoration">
+                    <div class="decoration-dot"></div>
                     <div class="decoration-line"></div>
-                    <div class="decoration-circle"></div>
+                    <div class="decoration-dot"></div>
                 </div>
             </div>
 
-            <div class="about-grid">
-                <div class="about-intro">
-                    <h3>Academic Journey & Research Philosophy</h3>
-                    <p>
-                        My path in robotics engineering began at the <strong>National Center for the Distinguished</strong>, 
-                        where I ranked 3rd among 75 selected students nationwide. This foundation in rigorous 
-                        scientific education led me to pursue a Bachelor's in Robotics and Intelligent Systems 
-                        Engineering at <strong>Manara University</strong>, graduating with honors.
-                    </p>
-                    <p>
-                        My research philosophy centers on <strong>human-centered design</strong> and <strong>accessible technology</strong>. 
-                        I believe that engineering solutions should prioritize usability, affordability, and 
-                        direct positive impact on human lives, particularly in healthcare applications.
-                    </p>
-                    
-                    <div class="education-highlight">
-                        <div class="edu-item">
-                            <div class="edu-icon">
-                                <i class="fas fa-graduation-cap"></i>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <div class="profile-intro">
+                        <h3>My Approach to Robotics Engineering</h3>
+                        <p>
+                            I believe that the most meaningful engineering solutions emerge at the 
+                            intersection of technical excellence and human empathy. My research in 
+                            rehabilitation robotics is driven by a commitment to creating technology 
+                            that not only demonstrates engineering sophistication but also addresses 
+                            real human needs with sensitivity and practicality.
+                        </p>
+                    </div>
+
+                    <div class="education-summary">
+                        <div class="edu-card">
+                            <div class="edu-card-header">
+                                <div class="edu-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="edu-title">
+                                    <h4>Manara University</h4>
+                                    <p>Bachelor of Science in Robotics and Intelligent Systems Engineering</p>
+                                </div>
                             </div>
-                            <div class="edu-content">
-                                <h4>Manara University</h4>
-                                <p>BSc Robotics & Intelligent Systems Engineering (2020-2025)</p>
-                                <span class="edu-detail">Graduated with Honors | GPA: 3.28/4.0</span>
+                            <div class="edu-card-content">
+                                <p>
+                                    Graduated with honors, specializing in control systems and 
+                                    human-robot interaction. My honors thesis focused on intelligent 
+                                    control strategies for hand rehabilitation devices, achieving 
+                                    exceptional results in both theoretical innovation and practical 
+                                    application.
+                                </p>
                             </div>
                         </div>
-                        <div class="edu-item">
-                            <div class="edu-icon">
-                                <i class="fas fa-school"></i>
+
+                        <div class="edu-card">
+                            <div class="edu-card-header">
+                                <div class="edu-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="edu-title">
+                                    <h4>Academic Foundation</h4>
+                                    <p>National Center for the Distinguished</p>
+                                </div>
                             </div>
-                            <div class="edu-content">
-                                <h4>National Center for the Distinguished</h4>
-                                <p>High School Diploma - Scientific Stream (2017-2020)</p>
-                                <span class="edu-detail">Rank: 3/75 | Final Grade: 92.3%</span>
+                            <div class="edu-card-content">
+                                <p>
+                                    Selected among Syria's top students, this rigorous program 
+                                    cultivated my analytical thinking and passion for scientific 
+                                    innovation. The experience shaped my approach to engineering 
+                                    as both a technical discipline and a means for societal contribution.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="motivation-sidebar">
-                    <div class="sidebar-card">
-                        <div class="sidebar-header">
+                <div class="profile-sidebar">
+                    <div class="sidebar-quote">
+                        <div class="quote-mark">
                             <i class="fas fa-quote-left"></i>
-                            <h4>Research Motivation</h4>
                         </div>
-                        <blockquote class="sidebar-quote">
-                            "The true measure of engineering success lies not in technical complexity, 
-                            but in tangible improvements to human life. My work in rehabilitation 
-                            robotics aims to bridge advanced technology with accessible healthcare 
-                            solutions."
+                        <blockquote>
+                            True innovation in engineering comes not from chasing complexity, 
+                            but from creating elegant solutions to meaningful human challenges. 
+                            In rehabilitation robotics, every technical advancement should 
+                            translate to improved quality of life.
                         </blockquote>
-                        <div class="sidebar-footer">
-                            <span class="quote-author">Tala Khaddour</span>
-                            <span class="quote-title">Robotics Engineer</span>
+                        <div class="quote-author">
+                            <span>Tala Khaddour</span>
+                            <span>Robotics Engineer</span>
                         </div>
                     </div>
 
-                    <div class="sidebar-stats">
-                        <div class="stat-mini">
-                            <div class="stat-mini-value">96%</div>
-                            <div class="stat-mini-label">Thesis Excellence</div>
-                        </div>
-                        <div class="stat-mini">
-                            <div class="stat-mini-value">5<sup>th</sup></div>
-                            <div class="stat-mini-label">WRO National Rank</div>
-                        </div>
-                        <div class="stat-mini">
-                            <div class="stat-mini-value">5</div>
-                            <div class="stat-mini-label">Years Scholarship</div>
-                        </div>
+                    <div class="sidebar-links">
+                        <a href="research.html" class="sidebar-link">
+                            <div class="link-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="link-content">
+                                <h4>Research Portfolio</h4>
+                                <p>Detailed exploration of my technical projects</p>
+                            </div>
+                        </a>
+                        <a href="cv.html" class="sidebar-link">
+                            <div class="link-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="link-content">
+                                <h4>Academic CV</h4>
+                                <p>Complete scholarly profile</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Academic Focus Section -->
-    <section class="academic-focus">
+    <!-- Research Focus Section -->
+    <section class="research-focus">
         <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Research Focus</span>
-                <h2 class="section-title">Areas of Expertise</h2>
-                <p class="section-description">Specialized knowledge in intelligent systems and rehabilitation technology</p>
+            <div class="focus-header">
+                <span class="focus-subtitle">Technical Expertise</span>
+                <h2 class="focus-title">Areas of Specialization</h2>
+                <p class="focus-description">Integrating multiple disciplines to advance rehabilitation technology</p>
             </div>
 
             <div class="focus-grid">
                 <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-hand-paper"></i>
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="visual-wave"></div>
                     </div>
-                    <h3 class="focus-title">Rehabilitation Robotics</h3>
-                    <p class="focus-description">
-                        Design and control of assistive devices for hand rehabilitation, 
-                        focusing on affordable solutions for post-stroke recovery.
-                    </p>
-                    <div class="focus-tags">
-                        <span class="tag">Adaptive Control</span>
-                        <span class="tag">Human-Robot Interaction</span>
-                        <span class="tag">Biomechanics</span>
-                    </div>
-                </div>
-
-                <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="focus-title">Intelligent Control Systems</h3>
-                    <p class="focus-description">
-                        Development of fuzzy logic and adaptive control algorithms 
-                        for precise trajectory tracking in robotic systems.
-                    </p>
-                    <div class="focus-tags">
-                        <span class="tag">Fuzzy Logic</span>
-                        <span class="tag">Adaptive Control</span>
-                        <span class="tag">System Modeling</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Rehabilitation Robotics</h3>
+                        <p class="card-description">
+                            Designing intelligent assistive devices with adaptive control 
+                            strategies that respond to individual user needs and recovery 
+                            progress.
+                        </p>
+                        <div class="card-technologies">
+                            <span>Adaptive Control</span>
+                            <span>Human-Robot Interaction</span>
+                            <span>Biomechanical Modeling</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="focus-card">
-                    <div class="focus-icon">
-                        <i class="fas fa-eye"></i>
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="visual-wave"></div>
                     </div>
-                    <h3 class="focus-title">Computer Vision Integration</h3>
-                    <p class="focus-description">
-                        Stereo vision systems for real-time hand pose estimation 
-                        and human-robot interaction in rehabilitation devices.
-                    </p>
-                    <div class="focus-tags">
-                        <span class="tag">Stereo Vision</span>
-                        <span class="tag">Pose Estimation</span>
-                        <span class="tag">Real-time Processing</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Intelligent Control Systems</h3>
+                        <p class="card-description">
+                            Developing sophisticated control algorithms that enable precise, 
+                            responsive, and safe human-robot collaboration in therapeutic settings.
+                        </p>
+                        <div class="card-technologies">
+                            <span>Fuzzy Logic</span>
+                            <span>Adaptive Algorithms</span>
+                            <span>Real-time Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="visual-wave"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Computer Vision Integration</h3>
+                        <p class="card-description">
+                            Creating vision-based systems for natural human-robot interaction, 
+                            enabling devices to understand and respond to human movement intuitively.
+                        </p>
+                        <div class="card-technologies">
+                            <span>Stereo Vision</span>
+                            <span>Pose Estimation</span>
+                            <span>Real-time Processing</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Access Section -->
-    <section class="quick-access">
+    <!-- Next Steps Section -->
+    <section class="next-steps">
         <div class="container">
-            <div class="access-grid">
-                <a href="research.html" class="access-card">
-                    <div class="access-content">
-                        <h3>Research Portfolio</h3>
-                        <p>Detailed documentation of my robotics projects and technical research</p>
-                        <span class="access-cta">
-                            View Projects
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="access-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                </a>
-
-                <a href="cv.html" class="access-card">
-                    <div class="access-content">
-                        <h3>Academic CV</h3>
-                        <p>Complete professional profile for scholarship and graduate applications</p>
-                        <span class="access-cta">
-                            View CV
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="access-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                </a>
-
-                <a href="contact.html" class="access-card">
-                    <div class="access-content">
-                        <h3>Contact & References</h3>
-                        <p>Professional contact information and academic references</p>
-                        <span class="access-cta">
-                            Get in Touch
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="access-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                </a>
+            <div class="steps-content">
+                <h2 class="steps-title">Pursuing Advanced Research Opportunities</h2>
+                <p class="steps-description">
+                    I am seeking graduate research positions and prestigious scholarship 
+                    opportunities to further develop intelligent rehabilitation systems. 
+                    My goal is to contribute to global healthcare innovation through 
+                    rigorous academic research and collaborative engineering.
+                </p>
+                <div class="steps-actions">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Discuss Research Collaboration</span>
+                    </a>
+                    <a href="cv.html" class="btn btn-outline">
+                        <i class="fas fa-download"></i>
+                        <span>Download Academic CV</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -365,103 +358,84 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-brand">
-                        <a href="index.html" class="footer-logo">
+                        <div class="brand-logo">
                             <div class="logo-symbol">
-                                <span>T</span>
-                                <div class="logo-dot"></div>
+                                <svg width="32" height="32" viewBox="0 0 32 32">
+                                    <circle cx="16" cy="16" r="15" fill="#7C90B2"/>
+                                    <path d="M12 12 L20 16 L12 20" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                </svg>
                             </div>
-                            <div class="footer-logo-text">
+                            <div class="brand-text">
                                 <h3>Tala Khaddour</h3>
                                 <p>Robotics & Intelligent Systems Engineer</p>
                             </div>
-                        </a>
-                        <p class="footer-mission">
-                            Advancing rehabilitation robotics through intelligent systems 
-                            and human-centered design for global healthcare innovation.
-                        </p>
-                        <div class="footer-social">
-                            <a href="mailto:khaddour.tala@gmail.com" class="social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-link" aria-label="ResearchGate">
-                                <i class="fab fa-researchgate"></i>
-                            </a>
                         </div>
+                        <p class="brand-mission">
+                            Advancing human-centered robotics through innovative research 
+                            and compassionate engineering for global healthcare improvement.
+                        </p>
                     </div>
 
-                    <div class="footer-links">
-                        <div class="links-column">
-                            <h4>Navigation</h4>
+                    <div class="footer-navigation">
+                        <div class="nav-column">
+                            <h4>Explore</h4>
                             <ul>
-                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
-                                <li><a href="research.html"><i class="fas fa-chevron-right"></i> Research</a></li>
-                                <li><a href="volunteering.html"><i class="fas fa-chevron-right"></i> Service</a></li>
-                                <li><a href="cv.html"><i class="fas fa-chevron-right"></i> CV</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">Academic Journey</a></li>
+                                <li><a href="research.html">Research Portfolio</a></li>
+                                <li><a href="volunteering.html">Community Service</a></li>
+                                <li><a href="cv.html">Academic CV</a></li>
                             </ul>
                         </div>
 
-                        <div class="links-column">
-                            <h4>Resources</h4>
-                            <ul>
-                                <li><a href="assets/documents/CV.pdf" download><i class="fas fa-download"></i> Download CV</a></li>
-                                <li><a href="assets/documents/Thesis_Abstract.pdf"><i class="fas fa-file-pdf"></i> Thesis Abstract</a></li>
-                                <li><a href="assets/documents/Research_Statement.pdf"><i class="fas fa-file-alt"></i> Research Statement</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="links-column">
-                            <h4>Contact</h4>
+                        <div class="nav-column">
+                            <h4>Connect</h4>
                             <div class="contact-info">
                                 <p><i class="fas fa-envelope"></i> khaddour.tala@gmail.com</p>
                                 <p><i class="fas fa-phone"></i> +963 (936) 693 678</p>
                                 <p><i class="fas fa-map-marker-alt"></i> Latakia, Syria</p>
-                                <p><i class="fas fa-university"></i> Manara University</p>
                             </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="nav-column">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="assets/documents/cv.pdf" download>Download CV (PDF)</a></li>
+                                <li><a href="assets/documents/thesis-abstract.pdf">Thesis Abstract</a></li>
+                                <li><a href="assets/documents/research-statement.pdf">Research Statement</a></li>
+                                <li><a href="contact.html">Academic References</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="footer-divider">
                     <div class="divider-line"></div>
-                    <div class="divider-circle"></div>
                 </div>
 
                 <div class="footer-bottom">
                     <div class="copyright">
                         <p>&copy; 2025 Tala Khaddour. All rights reserved.</p>
-                        <p class="copyright-note">
-                            Prepared for prestigious scholarship applications including 
-                            Fulbright, Chevening, DAAD, and Erasmus Mundus programs.
+                        <p class="copyright-subtitle">
+                            Prepared for prestigious scholarship applications worldwide.
                         </p>
                     </div>
-
-                    <div class="footer-badges">
-                        <div class="footer-badge">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Honors Graduate</span>
-                        </div>
-                        <div class="footer-badge">
-                            <i class="fas fa-robot"></i>
-                            <span>Robotics Engineer</span>
-                        </div>
-                        <div class="footer-badge">
-                            <i class="fas fa-award"></i>
-                            <span>Distinguished Scholar</span>
-                        </div>
+                    <div class="footer-identity">
+                        <span class="identity-badge">Honors Graduate</span>
+                        <span class="identity-badge">Robotics Engineer</span>
+                        <span class="identity-badge">Research Scholar</span>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
+    <!-- Back to Top -->
     <button class="back-to-top">
         <i class="fas fa-chevron-up"></i>
     </button>

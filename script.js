@@ -1,22 +1,23 @@
 /**
- * Simplified & Elegant Portfolio JavaScript
- * Clean, academic animations with minimal effects
+ * Feminine & Academic Portfolio JavaScript
+ * Smooth, elegant animations for prestigious scholarship applications
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📚 Tala Khaddour Portfolio - Academic Edition');
+    console.log('🎓 Tala Khaddour Portfolio - Feminine Academic Edition');
     
     // Initialize components
     initNavigation();
     initSmoothScroll();
     initBackToTop();
-    initSectionAnimations();
+    initSectionReveal();
     initHoverEffects();
-    initStickySidebar();
+    initPortraitAnimation();
+    initQuoteAnimation();
 });
 
 /**
- * Clean Navigation
+ * Elegant Navigation
  */
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
@@ -24,16 +25,27 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Scroll effect - subtle
+    // Subtle scroll effect
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
-        } else {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
             navbar.style.boxShadow = 'none';
+            navbar.style.transform = 'translateY(0)';
+        } else if (currentScroll > lastScroll) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.boxShadow = '0 2px 20px rgba(124, 144, 178, 0.1)';
         }
+        
+        lastScroll = currentScroll;
     });
 
-    // Mobile menu toggle
+    // Mobile menu
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
@@ -42,7 +54,7 @@ function initNavigation() {
         });
     }
 
-    // Close mobile menu when clicking links
+    // Close menu on link click
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (menuToggle.classList.contains('active')) {
@@ -64,29 +76,28 @@ function initNavigation() {
 }
 
 /**
- * Smooth scroll to sections
+ * Smooth scrolling
  */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            if (href === '#' || href === '#!') return;
+            if (href === '#') return;
             
             e.preventDefault();
             const targetElement = document.querySelector(href);
             
             if (targetElement) {
-                const navbar = document.querySelector('.navbar');
-                const offset = navbar ? navbar.offsetHeight + 20 : 0;
-                const targetPosition = targetElement.offsetTop - offset;
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetElement.offsetTop - navbarHeight - 20;
                 
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
                 
-                // Update URL without scrolling
+                // Update URL
                 history.pushState(null, null, href);
             }
         });
@@ -101,7 +112,7 @@ function initBackToTop() {
     
     if (backToTop) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 500) {
                 backToTop.classList.add('visible');
             } else {
                 backToTop.classList.remove('visible');
@@ -118,44 +129,49 @@ function initBackToTop() {
 }
 
 /**
- * Simple section animations
+ * Section reveal animations
  */
-function initSectionAnimations() {
-    // Observer for fade-in animations
+function initSectionReveal() {
+    // Create observer for section animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                entry.target.classList.add('revealed');
                 
-                // Special handling for hero section
+                // Special animations for specific sections
                 if (entry.target.classList.contains('hero')) {
-                    animateHeroContent();
-                }
-                
-                // Special handling for focus cards
-                if (entry.target.classList.contains('academic-focus')) {
-                    animateFocusCards();
+                    animateHeroElements();
+                } else if (entry.target.classList.contains('focus-card')) {
+                    animateFocusCard(entry.target);
                 }
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-    // Observe all sections
+    // Observe sections
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
+    });
+
+    // Observe focus cards individually
+    document.querySelectorAll('.focus-card').forEach(card => {
+        observer.observe(card);
     });
 
     // Add CSS for animations
     const style = document.createElement('style');
     style.textContent = `
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
+        .revealed {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
         
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -163,66 +179,51 @@ function initSectionAnimations() {
             }
         }
         
-        .hero-content > * {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
+        .focus-card.revealed {
+            animation-delay: calc(var(--index, 0) * 0.2s);
         }
-        
-        .hero-title { animation-delay: 0.1s; }
-        .hero-description { animation-delay: 0.3s; }
-        .hero-quick-facts { animation-delay: 0.5s; }
-        .hero-actions { animation-delay: 0.7s; }
-        
-        .focus-card {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .focus-card:nth-child(1) { animation-delay: 0.1s; }
-        .focus-card:nth-child(2) { animation-delay: 0.3s; }
-        .focus-card:nth-child(3) { animation-delay: 0.5s; }
     `;
     document.head.appendChild(style);
 }
 
 /**
- * Hero content animation
+ * Animate hero elements with staggered delay
  */
-function animateHeroContent() {
+function animateHeroElements() {
     const heroElements = document.querySelectorAll('.hero-content > *');
-    heroElements.forEach((el, index) => {
+    
+    heroElements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        
         setTimeout(() => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
-}
-
-/**
- * Focus cards animation
- */
-function animateFocusCards() {
-    const focusCards = document.querySelectorAll('.focus-card');
-    focusCards.forEach((card, index) => {
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
         }, index * 200 + 300);
     });
 }
 
 /**
- * Simple hover effects
+ * Animate focus cards
+ */
+function animateFocusCard(card) {
+    // Set CSS variable for staggered animation
+    const cards = document.querySelectorAll('.focus-card');
+    const index = Array.from(cards).indexOf(card);
+    card.style.setProperty('--index', index);
+}
+
+/**
+ * Subtle hover effects
  */
 function initHoverEffects() {
-    // Cards hover effect
-    const cards = document.querySelectorAll('.focus-card, .access-card, .edu-item');
+    // Card hover effects
+    const cards = document.querySelectorAll('.edu-card, .focus-card, .sidebar-link');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px)';
+            card.style.transform = 'translateY(-8px)';
         });
         
         card.addEventListener('mouseleave', () => {
@@ -230,44 +231,66 @@ function initHoverEffects() {
         });
     });
 
-    // Portrait hover effect
-    const portraitFrame = document.querySelector('.portrait-frame');
-    if (portraitFrame) {
-        portraitFrame.addEventListener('mouseenter', () => {
-            portraitFrame.style.transform = 'scale(1.02)';
+    // Button hover effects
+    const buttons = document.querySelectorAll('.btn');
+    
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-3px)';
         });
         
-        portraitFrame.addEventListener('mouseleave', () => {
-            portraitFrame.style.transform = 'scale(1)';
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
         });
-    }
+    });
 }
 
 /**
- * Sticky sidebar behavior
+ * Portrait animation
  */
-function initStickySidebar() {
-    const sidebar = document.querySelector('.motivation-sidebar');
-    const aboutSection = document.querySelector('.about-me');
+function initPortraitAnimation() {
+    const portraitContainer = document.querySelector('.portrait-container');
     
-    if (!sidebar || !aboutSection) return;
+    if (!portraitContainer) return;
     
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    sidebar.style.position = 'static';
-                    sidebar.style.top = 'auto';
-                } else {
-                    sidebar.style.position = 'sticky';
-                    sidebar.style.top = 'calc(var(--header-height) + var(--space-md))';
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
+    portraitContainer.addEventListener('mouseenter', () => {
+        const overlay = portraitContainer.querySelector('.portrait-overlay');
+        if (overlay) {
+            overlay.style.transform = 'translateY(0)';
+        }
+    });
     
-    observer.observe(aboutSection);
+    portraitContainer.addEventListener('mouseleave', () => {
+        const overlay = portraitContainer.querySelector('.portrait-overlay');
+        if (overlay) {
+            overlay.style.transform = 'translateY(100%)';
+        }
+    });
+}
+
+/**
+ * Quote animation
+ */
+function initQuoteAnimation() {
+    const quote = document.querySelector('.sidebar-quote');
+    
+    if (!quote) return;
+    
+    quote.addEventListener('mouseenter', () => {
+        const quoteMark = quote.querySelector('.quote-mark');
+        if (quoteMark) {
+            quoteMark.style.transform = 'scale(1.1) rotate(5deg)';
+            quoteMark.style.opacity = '0.5';
+        }
+    });
+    
+    quote.addEventListener('mouseleave', () => {
+        const quoteMark = quote.querySelector('.quote-mark');
+        if (quoteMark) {
+            quoteMark.style.transform = 'scale(1) rotate(0)';
+            quoteMark.style.opacity = '0.3';
+        }
+    });
 }
 
 /**
@@ -297,15 +320,15 @@ function initPerformance() {
     window.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-            // Handle scroll-dependent operations
+            // Handle scroll operations
         }, 100);
     });
 }
 
-// Initialize performance optimizations
+// Initialize performance
 initPerformance();
 
-// Current year in footer
+// Set current year in footer
 document.addEventListener('DOMContentLoaded', () => {
     const yearElement = document.querySelector('.current-year');
     if (yearElement) {
@@ -313,4 +336,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-console.log('✅ Portfolio initialized successfully');
+console.log('✨ Portfolio initialized successfully');

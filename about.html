@@ -1,165 +1,229 @@
-<!-- FILE: about.html -->
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Tala Khaddour</title>
-    <meta name="description" content="Academic background, research philosophy, and personal journey in robotics.">
+    <title>About Me | Tala Khaddour</title>
+    <meta name="description" content="Academic journey and research philosophy of Tala Khaddour, Robotics & Intelligent Systems Engineer.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Tala Khaddour</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="impact.html">Impact</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <span class="logo-name">Tala Khaddour</span>
+                    <span class="logo-title">Robotics Engineer</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="volunteering.html" class="nav-link">Service</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <main class="about-page">
-        <!-- Page Header -->
-        <section class="page-header">
+    <main class="about-main">
+        <section class="page-hero">
             <div class="container">
-                <h1>Academic Journey & Philosophy</h1>
-                <p class="page-subtitle">Reflecting on the path that shaped my research perspective</p>
+                <h1 class="page-title">Academic Identity & Philosophy</h1>
+                <p class="page-subtitle">The intersection of technical rigor and human-centered design</p>
             </div>
         </section>
 
-        <!-- Bio Section -->
-        <section class="bio-section">
+        <section class="about-intro">
             <div class="container">
-                <div class="bio-grid">
-                    <div class="bio-content">
+                <div class="intro-grid">
+                    <div class="intro-content">
                         <h2>From Curiosity to Engineering</h2>
-                        <p>My journey into robotics began not with circuits and code, but with a fascination for how things work—and how they could work better to help people. This curiosity evolved into a disciplined study of intelligent systems during my undergraduate degree in Robotics & Intelligent Systems Engineering.</p>
-                        <p>What distinguishes my approach is a deliberate integration of <strong>rigorous theory</strong> with <strong>human-centered application</strong>. I believe the most impactful engineering emerges from this intersection.</p>
-                        <div class="education-highlight">
-                            <h3><i class="fas fa-graduation-cap"></i> Educational Foundation</h3>
-                            <p><strong>B.Sc. in Robotics & Intelligent Systems Engineering</strong> | University of Damascus</p>
-                            <p>Core coursework: Advanced Control Systems, Robotic Kinematics & Dynamics, Computer Vision, AI & Machine Learning, Embedded Systems, Digital Signal Processing.</p>
-                        </div>
+                        <p class="intro-text">My journey into robotics began with a fundamental curiosity about how machines could extend human capability—particularly for those facing physical challenges. This curiosity evolved into a disciplined pursuit during my studies in Robotics & Intelligent Systems Engineering at Manara University, where I discovered that the most meaningful engineering emerges at the intersection of rigorous theory and compassionate application.</p>
+                        
+                        <blockquote class="academic-quote">
+                            <p>"Engineering excellence is measured not only by technical sophistication but by its capacity to create accessible, human-centered solutions."</p>
+                        </blockquote>
                     </div>
-                    <div class="bio-visual">
-                        <div class="avatar-placeholder">
-                            <img src="assets/img/avatar-placeholder.jpg" alt="Tala Khaddour academic portrait">
+                    
+                    <div class="intro-visual">
+                        <div class="education-highlight">
+                            <div class="degree-badge">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>B.Sc. Robotics & Intelligent Systems</h3>
+                                <p>Manara University • 2020–2025</p>
+                                <p class="degree-detail">Graduated with Honors • Thesis Score: 96/100</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Philosophy -->
-        <section class="philosophy-section">
+        <section class="research-interests">
             <div class="container">
                 <h2 class="section-title">Research Philosophy</h2>
-                <div class="philosophy-grid">
-                    <div class="philosophy-card">
-                        <div class="card-header">
-                            <div class="card-icon">
+                <p class="section-subtitle">An integrated approach to intelligent systems design</p>
+                
+                <div class="interests-grid">
+                    <article class="interest-card">
+                        <div class="interest-header">
+                            <div class="interest-icon">
                                 <i class="fas fa-people-arrows"></i>
                             </div>
                             <h3>Human-Centered Design</h3>
                         </div>
-                        <p>Technology should adapt to human needs, not the reverse. My projects begin with understanding user constraints, physical capabilities, and psychological comfort.</p>
-                    </div>
-                    <div class="philosophy-card">
-                        <div class="card-header">
-                            <div class="card-icon">
+                        <p>I believe technology should adapt to human needs, not the reverse. My projects begin with understanding user constraints, physical capabilities, and psychological comfort, ensuring solutions are both effective and accessible.</p>
+                    </article>
+                    
+                    <article class="interest-card">
+                        <div class="interest-header">
+                            <div class="interest-icon">
                                 <i class="fas fa-layer-group"></i>
                             </div>
                             <h3>Interdisciplinary Integration</h3>
                         </div>
-                        <p>Breakthroughs occur at disciplinary boundaries. I actively combine control theory, mechanical design, computer vision, and cognitive science in my work.</p>
-                    </div>
-                    <div class="philosophy-card">
-                        <div class="card-header">
-                            <div class="card-icon">
+                        <p>Breakthroughs occur at disciplinary boundaries. I actively combine control theory, mechanical design, computer vision, and cognitive science, believing that the most innovative solutions emerge from cross-disciplinary thinking.</p>
+                    </article>
+                    
+                    <article class="interest-card">
+                        <div class="interest-header">
+                            <div class="interest-icon">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <h3>Ethical Implementation</h3>
                         </div>
-                        <p>From data privacy in biometric sensing to safety in physical human-robot interaction, ethical considerations are integral to my design process, not an afterthought.</p>
+                        <p>From data privacy in biometric sensing to safety in physical human-robot interaction, ethical considerations are integral to my design process, not an afterthought. Responsible innovation guides every technical decision.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="personal-values">
+            <div class="container">
+                <h2 class="section-title">Guiding Principles</h2>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h3><i class="fas fa-mountain"></i> Perseverance</h3>
+                        <p>Engineering complex systems requires resilience in the face of iterative failure. I view each challenge as a necessary step toward a robust, well-tested solution.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3><i class="fas fa-hand-holding-heart"></i> Social Responsibility</h3>
+                        <p>I believe engineers bear responsibility for the societal impact of their work. My focus on rehabilitation robotics stems from this commitment to serving those with limited access to advanced care.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3><i class="fas fa-globe-americas"></i> Global Perspective</h3>
+                        <p>My experience has fostered appreciation for cross-cultural collaboration. I am committed to contributing to global scientific discourse while addressing challenges that transcend borders.</p>
+                    </div>
+                    
+                    <div class="value-item">
+                        <h3><i class="fas fa-book-open"></i> Knowledge Sharing</h3>
+                        <p>I actively mentor younger students, believing that empowering others amplifies impact. Education should be accessible, and knowledge should be shared to build collective capability.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Problem-Solving Approach -->
-        <section class="process-section">
+        <section class="methodology">
             <div class="container">
-                <h2 class="section-title">Problem-Solving Methodology</h2>
+                <h2 class="section-title">Problem-Solving Approach</h2>
+                
                 <div class="process-steps">
-                    <div class="step">
+                    <div class="process-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>Define & Understand</h3>
-                            <p>Begin with thorough problem analysis: literature review, stakeholder interviews, and constraint identification. What's the real need behind the technical challenge?</p>
+                            <p>Begin with thorough problem analysis: literature review, stakeholder considerations, and constraint identification. What's the real need behind the technical challenge?</p>
                         </div>
                     </div>
-                    <div class="step">
+                    
+                    <div class="process-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
                             <h3>Model & Simulate</h3>
-                            <p>Develop mathematical models and run simulations (MATLAB/Simulink, ROS Gazebo) before physical implementation. This saves resources and reveals hidden complexities.</p>
+                            <p>Develop mathematical models and run simulations before physical implementation. This conserves resources and reveals hidden complexities early in the design process.</p>
                         </div>
                     </div>
-                    <div class="step">
+                    
+                    <div class="process-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>Prototype & Iterate</h3>
                             <p>Build functional prototypes using rapid fabrication methods. Each iteration incorporates testing feedback, with quantitative metrics driving design decisions.</p>
                         </div>
                     </div>
-                    <div class="step">
+                    
+                    <div class="process-step">
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h3>Validate & Document</h3>
-                            <p>Conduct rigorous validation against predefined success criteria. Document thoroughly—results, limitations, and lessons learned—for academic contribution.</p>
+                            <p>Conduct rigorous validation against predefined success criteria. Document thoroughly—results, limitations, and lessons learned—for academic contribution and reproducibility.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- International Perspective -->
-        <section class="perspective-section">
+        <section class="scholarship-goals">
             <div class="container">
-                <div class="perspective-content">
-                    <h2>Global Outlook & Scholarship Goals</h2>
-                    <p>My experience has reinforced that technological challenges and opportunities are global. I seek scholarship opportunities that will:</p>
-                    <ul class="perspective-list">
-                        <li>Provide access to advanced research facilities and interdisciplinary collaboration</li>
-                        <li>Connect me with mentors who share a vision for humanitarian technology applications</li>
-                        <li>Enable me to contribute back through knowledge transfer and capacity building</li>
+                <div class="goals-content">
+                    <h2>Scholarship & Graduate Study Goals</h2>
+                    <p>I seek scholarship opportunities that will enable me to:</p>
+                    
+                    <ul class="goals-list">
+                        <li><i class="fas fa-check-circle"></i> Access advanced research facilities for experimental validation of theoretical models</li>
+                        <li><i class="fas fa-check-circle"></i> Collaborate with interdisciplinary teams on cutting-edge rehabilitation technologies</li>
+                        <li><i class="fas fa-check-circle"></i> Learn from mentors who share a vision for humanitarian technology applications</li>
+                        <li><i class="fas fa-check-circle"></i> Contribute back through knowledge transfer and capacity building in regions with limited resources</li>
                     </ul>
-                    <blockquote class="academic-quote">
-                        <p>"Engineering excellence is measured not only by technical sophistication but by its capacity to create positive, accessible change."</p>
-                        <cite>— Tala Khaddour</cite>
-                    </blockquote>
+                    
+                    <div class="closing-reflection">
+                        <p>My work is driven by the conviction that intelligent systems should empower, not exclude—particularly in healthcare applications where technology can dramatically improve quality of life.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="site-footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-identity">
+                    <h3>Tala Khaddour</h3>
+                    <p>Robotics & Intelligent Systems Engineer</p>
+                    <p class="footer-location">Latakia, Syria</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="mailto:khaddour.tala@gmail.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> Academic Email
+                    </a>
+                    <a href="https://linkedin.com/in/tala-khaddour" class="footer-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/lia202lia" class="footer-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic portfolio for scholarship applications.</p>
-                <p>Damascus, Syria</p>
+                <p>© 2024 Tala Khaddour. Academic portfolio for scholarship applications.</p>
+                <p class="footer-note">Designed with academic rigor and professional integrity</p>
             </div>
         </div>
     </footer>

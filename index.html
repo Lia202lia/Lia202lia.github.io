@@ -7,123 +7,86 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-    <!-- Soft Gradient Background -->
-    <div class="gradient-background"></div>
-    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-wrapper">
-                <a href="index.html" class="logo">
-                    <div class="logo-symbol">
-                        T
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-subtitle">Robotics Engineer</span>
-                    </div>
-                </a>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-symbol">T</div>
+                <div class="logo-text">
+                    <span class="logo-name">Tala Khaddour</span>
+                    <span class="logo-subtitle">Robotics Engineer</span>
+                </div>
+            </a>
 
-            <div class="nav-right">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link active">
-                        <span class="nav-text">Home</span>
-                    </a></li>
-                    <li><a href="about.html" class="nav-link">
-                        <span class="nav-text">About</span>
-                    </a></li>
-                    <li><a href="research.html" class="nav-link">
-                        <span class="nav-text">Research</span>
-                    </a></li>
-                    <li><a href="volunteering.html" class="nav-link">
-                        <span class="nav-text">Service</span>
-                    </a></li>
-                    <li><a href="cv.html" class="nav-link">
-                        <span class="nav-text">CV</span>
-                    </a></li>
-                    <li class="nav-contact">
-                        <a href="contact.html" class="nav-contact-btn">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link">Service</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a></li>
+            </ul>
 
-                <button class="menu-toggle">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </button>
-            </div>
+            <button class="menu-toggle">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section - Updated with Smoother Design -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-intro">
-                    <h1 class="hero-title">
-                        <span class="title-line title-line-1">Tala Khaddour</span>
-                        <span class="title-line title-line-2">Robotics & Intelligent Systems Engineer</span>
-                    </h1>
+                <h1 class="hero-name">Tala Khaddour</h1>
+                <p class="hero-title">Robotics & Intelligent Systems Engineer</p>
+                
+                <blockquote class="hero-philosophy">
+                    "I believe in human potential without limits. When the body reaches its boundaries, 
+                    the mind creates a path beyond."
+                </blockquote>
 
-                    <div class="hero-philosophy">
-                        <div class="philosophy-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <blockquote>
-                            I believe in human potential without limits. When the body reaches its boundaries, 
-                            the mind creates a path beyond.
-                        </blockquote>
-                    </div>
+                <div class="hero-bio">
+                    <p>
+                        A dedicated engineer specializing in rehabilitation robotics, adaptive control systems, 
+                        and human-centered AI. My research focuses on creating intelligent systems that augment 
+                        human capability, particularly for individuals with mobility challenges.
+                    </p>
+                    <p>
+                        Born from adversity in a conflict-affected region, I channel resilience into technological 
+                        innovation that bridges gaps between human limitation and possibility.
+                    </p>
+                </div>
 
-                    <div class="hero-description">
-                        <p>
-                            A dedicated engineer specializing in rehabilitation robotics, adaptive control systems, 
-                            and human-centered AI. My research focuses on creating intelligent systems that augment 
-                            human capability, particularly for individuals with mobility challenges.
-                        </p>
-                        <p>
-                            Born from adversity in a conflict-affected region, I channel resilience into technological 
-                            innovation that bridges gaps between human limitation and possibility.
-                        </p>
-                    </div>
-
-                    <div class="hero-actions">
-                        <a href="research.html" class="btn btn-primary">
-                            <i class="fas fa-flask"></i>
-                            <span>Explore Research</span>
-                        </a>
-                        <a href="cv.html" class="btn btn-secondary">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Academic CV</span>
-                        </a>
-                    </div>
+                <div class="hero-actions">
+                    <a href="research.html" class="btn btn-primary">
+                        <i class="fas fa-flask"></i>
+                        <span>Explore Research</span>
+                    </a>
+                    <a href="cv.html" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Academic CV</span>
+                    </a>
                 </div>
             </div>
 
             <div class="hero-portrait">
-                <div class="portrait-frame">
-                    <div class="portrait-image-container">
-                        <img src="assets/img/profile.jpg" alt="Tala Khaddour - Robotics Engineer" class="portrait-img">
-                        <div class="portrait-overlay">
-                            <div class="overlay-content">
-                                <h4>Robotics Researcher</h4>
-                                <p>Specializing in Rehabilitation Technology</p>
-                            </div>
+                <div class="portrait-container">
+                    <img src="assets/img/profile.jpg" alt="Tala Khaddour - Robotics Engineer" class="portrait-img">
+                    <div class="portrait-overlay">
+                        <div class="overlay-content">
+                            <h4>Robotics Researcher</h4>
+                            <p>Specializing in Rehabilitation Technology</p>
                         </div>
-                    </div>
-                    <div class="portrait-decoration">
-                        <div class="decoration-dot dot-1"></div>
-                        <div class="decoration-dot dot-2"></div>
-                        <div class="decoration-dot dot-3"></div>
                     </div>
                 </div>
             </div>
@@ -136,38 +99,182 @@
         </div>
     </section>
 
-    <!-- Rest of your existing code remains EXACTLY the same -->
-    <!-- Academic Profile Section -->
+    <!-- Academic Profile -->
     <section class="academic-profile">
         <div class="container">
-            <!-- Your existing academic-profile content -->
-            <!-- Keep everything exactly as before -->
+            <div class="profile-header">
+                <span class="profile-subtitle">Academic Profile</span>
+                <h2 class="profile-title">Where Engineering Meets Compassion</h2>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-intro">
+                    <h3>My Approach to Robotics Engineering</h3>
+                    <p>
+                        I believe that the most meaningful engineering solutions emerge at the 
+                        intersection of technical excellence and human empathy. My research in 
+                        rehabilitation robotics is driven by a commitment to creating technology 
+                        that not only demonstrates engineering sophistication but also addresses 
+                        real human needs with sensitivity and practicality.
+                    </p>
+                    <p>
+                        Through my studies and research projects, I've developed expertise in 
+                        intelligent control systems, computer vision, and human-robot interaction, 
+                        always with a focus on creating accessible solutions for healthcare 
+                        applications.
+                    </p>
+                </div>
+
+                <div class="profile-sidebar">
+                    <div class="sidebar-quote">
+                        <div class="quote-mark">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <blockquote>
+                            True innovation in engineering comes not from chasing complexity, 
+                            but from creating elegant solutions to meaningful human challenges.
+                        </blockquote>
+                        <div class="quote-author">
+                            <span>Tala Khaddour</span>
+                            <span>Robotics Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Research Focus Section -->
+    <!-- Research Focus -->
     <section class="research-focus">
         <div class="container">
-            <!-- Your existing research-focus content -->
-            <!-- Keep everything exactly as before -->
+            <div class="focus-header">
+                <span class="focus-subtitle">Technical Expertise</span>
+                <h2 class="focus-title">Areas of Specialization</h2>
+            </div>
+
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Rehabilitation Robotics</h3>
+                        <p class="card-description">
+                            Designing intelligent assistive devices with adaptive control 
+                            strategies that respond to individual user needs and recovery 
+                            progress.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Intelligent Control Systems</h3>
+                        <p class="card-description">
+                            Developing sophisticated control algorithms that enable precise, 
+                            responsive, and safe human-robot collaboration in therapeutic settings.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="focus-card">
+                    <div class="card-visual">
+                        <div class="visual-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Computer Vision Integration</h3>
+                        <p class="card-description">
+                            Creating vision-based systems for natural human-robot interaction, 
+                            enabling devices to understand and respond to human movement intuitively.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Next Steps Section -->
+    <!-- Next Steps -->
     <section class="next-steps">
         <div class="container">
-            <!-- Your existing next-steps content -->
-            <!-- Keep everything exactly as before -->
+            <div class="steps-content">
+                <h2 class="steps-title">Pursuing Advanced Research Opportunities</h2>
+                <p class="steps-description">
+                    I am seeking graduate research positions and prestigious scholarship 
+                    opportunities to further develop intelligent rehabilitation systems. 
+                    My goal is to contribute to global healthcare innovation through 
+                    rigorous academic research and collaborative engineering.
+                </p>
+                <div class="steps-actions">
+                    <a href="cv.html" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        <span>Download Academic CV</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- Your existing footer content -->
-            <!-- Keep everything exactly as before -->
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <div class="logo-symbol">T</div>
+                        <div class="brand-text">
+                            <h3>Tala Khaddour</h3>
+                            <p>Robotics & Intelligent Systems Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="nav-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="volunteering.html">Service</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-column">
+                        <h4>Contact</h4>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> khaddour.tala@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +963 (936) 693 678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Tala Khaddour. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

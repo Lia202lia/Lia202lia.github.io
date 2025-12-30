@@ -1,6 +1,1 @@
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="250" fill="#E3E6EC"/>
-  <text x="200" y="125" text-anchor="middle" fill="#9FB7D4" font-size="18">
-    Figure Placeholder
-  </text>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?> <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc"> <title id="title">Academic figure placeholder</title> <desc id="desc">Soft abstract placeholder graphic for research figures or photos.</desc> <defs> <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"> <stop offset="0%" stop-color="#F8F9FB"/> <stop offset="100%" stop-color="#E3E9F3"/> </linearGradient> </defs> <rect width="600" height="400" fill="url(#bg)" rx="32" /> <circle cx="170" cy="155" r="70" fill="#9FB7D4" opacity="0.65"/> <circle cx="390" cy="235" r="90" fill="#2F5D8C" opacity="0.26"/> <path d="M60,290 C150,250 250,320 340,280 C420,245 470,255 540,235" fill="none" stroke="#0B1C2D" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="4 8" opacity="0.7"/> <rect x="130" y="230" width="160" height="90" rx="18" fill="#FFFFFF" stroke="#9FB7D4" stroke-width="1.5" opacity="0.95"/> <rect x="310" y="90" width="160" height="90" rx="18" fill="#FFFFFF" stroke="#2F5D8C" stroke-width="1.5" opacity="0.95"/> <line x1="210" y1="230" x2="390" y2="180" stroke="#2F5D8C" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 7" opacity="0.85"/> </svg>

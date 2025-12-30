@@ -256,6 +256,11 @@ gap: 3rem;
 align-items: center;
 }
 
+.hero-text {
+margin-left: 3rem;
+max-width: 38rem;
+}
+
 .hero-kicker {
 letter-spacing: 0.18em;
 text-transform: uppercase;
@@ -272,19 +277,16 @@ margin-bottom: 0.5rem;
 .hero-mission {
 font-size: 1.02rem;
 max-width: 36rem;
-padding-right: 2rem;
 }
 
 .hero-note {
 margin-top: 1rem;
 font-size: 0.95rem;
 color: rgba(26, 26, 26, 0.85);
-padding-right: 2rem;
 }
 
 .hero-focus-areas {
 margin-top: 1.5rem;
-padding-right: 2rem;
 }
 
 .section-label {
@@ -293,7 +295,6 @@ letter-spacing: 0.16em;
 text-transform: uppercase;
 color: rgba(11, 28, 45, 0.75);
 margin-bottom: 0.45rem;
-padding-left: 1rem;
 }
 
 .pill-list {
@@ -318,7 +319,6 @@ margin-top: 1.8rem;
 display: flex;
 flex-wrap: wrap;
 gap: 0.9rem;
-padding-right: 2rem;
 }
 
 .hero-visual {
@@ -388,15 +388,9 @@ width: 240px;
 height: 240px;
 }
 
-.hero-mission,
-.hero-note,
-.hero-focus-areas,
-.hero-actions {
-padding-right: 0;
-}
-
-.section-label {
-padding-left: 0;
+.hero-text {
+margin-left: 0;
+max-width: 100%;
 }
 }
 
@@ -839,4 +833,3 @@ font-size: 15px;
 font-size: 1.2rem;
 }
 }
-

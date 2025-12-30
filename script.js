@@ -1,225 +1,144 @@
-/**
- * Complete Portfolio JavaScript
- * Smooth animations and functionality
- */
+// Mobile navigation toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎓 Tala Khaddour Portfolio - Complete');
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        
+        // Update aria-expanded attribute for accessibility
+        const isExpanded = navMenu.classList.contains('active');
+        navToggle.setAttribute('aria-expanded', isExpanded);
+    });
     
-    // Initialize all components
-    initNavigation();
-    initSmoothScroll();
-    initBackToTop();
-    initHeroAnimations();
-    initSectionAnimations();
-    initPortraitHover();
-    initScrollAnimations();
-});
-
-/**
- * Navigation
- */
-function initNavigation() {
-    const navbar = document.querySelector('.navbar');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.boxShadow = 'none';
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
         }
     });
-
-    // Mobile menu toggle
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-    }
-
-    // Close menu on link click
+    
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (menuToggle.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.nav-container') && navMenu.classList.contains('active')) {
-            menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
-
-/**
- * Smooth scrolling
- */
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            if (href === '#') return;
-            
-            e.preventDefault();
-            const targetElement = document.querySelector(href);
-            
-            if (targetElement) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.offsetTop - navbarHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Update URL
-                history.pushState(null, null, href);
-            }
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
         });
     });
 }
 
-/**
- * Back to top button
- */
-function initBackToTop() {
-    const backToTop = document.querySelector('.back-to-top');
-    
-    if (backToTop) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') return;
+        
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            const headerHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            
             window.scrollTo({
-                top: 0,
+                top: targetPosition,
                 behavior: 'smooth'
             });
-        });
-    }
-}
+            
+            // Update URL without scrolling
+            history.pushState(null, null, targetId);
+        }
+    });
+});
 
-/**
- * Hero animations
- */
-function initHeroAnimations() {
-    const hero = document.querySelector('.hero');
+// Staggered animation for focus cards
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            // Add delay based on index for staggered effect
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+        }
+    });
+}, observerOptions);
+
+// Initialize elements with animation
+document.addEventListener('DOMContentLoaded', () => {
+    // Animate focus cards
+    const focusCards = document.querySelectorAll('.focus-card');
+    focusCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
     
-    if (hero) {
-        // Add fade-in effect for hero elements
-        const heroElements = [
-            '.hero-name',
-            '.hero-title',
-            '.hero-philosophy',
-            '.hero-bio',
-            '.hero-actions',
-            '.profile-image-container'
-        ];
+    // Animate highlight items
+    const highlightItems = document.querySelectorAll('.highlight-item');
+    highlightItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         
         setTimeout(() => {
-            heroElements.forEach((selector, index) => {
-                const element = document.querySelector(selector);
-                if (element) {
-                    element.classList.add('fade-in');
-                    setTimeout(() => {
-                        element.classList.add('in-view');
-                    }, 100 * index);
-                }
-            });
-        }, 300);
-    }
-}
-
-/**
- * Section animations on scroll
- */
-function initSectionAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all sections and focus cards
-    document.querySelectorAll('section, .focus-card, .fade-in').forEach(el => {
-        observer.observe(el);
+            observer.observe(item);
+        }, index * 100);
     });
-}
-
-/**
- * Portrait hover enhancements
- */
-function initPortraitHover() {
-    const portraitContainer = document.querySelector('.profile-frame');
     
-    if (portraitContainer) {
-        portraitContainer.addEventListener('mouseenter', () => {
-            const img = portraitContainer.querySelector('.profile-img');
-            img.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-    }
-}
-
-/**
- * Scroll animations for fade-in elements
- */
-function initScrollAnimations() {
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    fadeElements.forEach(el => observer.observe(el));
-}
-
-/**
- * Update copyright year
- */
-function updateCopyrightYear() {
-    const yearElement = document.querySelector('.copyright p');
-    if (yearElement) {
+    // Update copyright year
+    const copyrightElement = document.querySelector('.footer-copyright');
+    if (copyrightElement) {
         const currentYear = new Date().getFullYear();
-        yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
+        copyrightElement.textContent = copyrightElement.textContent.replace('2024', currentYear);
     }
-}
+});
 
-// Initialize additional features
-document.addEventListener('DOMContentLoaded', function() {
-    updateCopyrightYear();
+// Handle window resize for responsive behavior
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Close mobile menu on desktop
+        if (window.innerWidth > 768) {
+            if (navMenu && navToggle) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+    }, 250);
+});
+
+// Add subtle hover effect to navigation prompt links
+const promptLinks = document.querySelectorAll('.nav-prompt-link');
+promptLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
     
-    // Add loading animation
-    document.body.classList.add('loaded');
+    link.addEventListener('mouseleave', function() {
+        this.style.transition = 'all 0.3s ease';
+    });
+});
+
+// Initialize page with fade-in effect
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
 });

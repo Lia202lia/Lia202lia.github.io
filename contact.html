@@ -1,57 +1,62 @@
-<!-- FILE: contact.html -->
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Tala Khaddour</title>
-    <meta name="description" content="Professional contact information and inquiry form.">
+    <meta name="description" content="Professional contact information for scholarship and academic inquiries.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Tala Khaddour</a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="impact.html">Impact</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <span class="logo-name">Tala Khaddour</span>
+                    <span class="logo-title">Robotics Engineer</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="research.html" class="nav-link">Research</a></li>
+                    <li><a href="volunteering.html" class="nav-link">Service</a></li>
+                    <li><a href="cv.html" class="nav-link">CV</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <main class="contact-page">
-        <!-- Page Header -->
-        <section class="page-header">
+    <main class="contact-main">
+        <section class="page-hero">
             <div class="container">
-                <h1>Professional Contact</h1>
-                <p class="page-subtitle">For scholarship inquiries, research collaboration, and academic correspondence</p>
+                <h1 class="page-title">Academic Contact</h1>
+                <p class="page-subtitle">For scholarship committees, research collaboration, and academic correspondence</p>
             </div>
         </section>
 
-        <!-- Contact Content -->
         <section class="contact-content">
             <div class="container">
                 <div class="contact-grid">
-                    <!-- Contact Information -->
                     <div class="contact-info">
                         <h2>Contact Information</h2>
                         <p class="contact-intro">I welcome serious inquiries regarding:</p>
+                        
                         <ul class="inquiry-types">
-                            <li><i class="fas fa-check-circle"></i> Scholarship and graduate program opportunities</li>
-                            <li><i class="fas fa-check-circle"></i> Research collaboration and technical consultation</li>
-                            <li><i class="fas fa-check-circle"></i> Academic mentorship and speaking engagements</li>
-                            <li><i class="fas fa-check-circle"></i> References and recommendation requests</li>
+                            <li><i class="fas fa-graduation-cap"></i> Scholarship and graduate program opportunities</li>
+                            <li><i class="fas fa-microscope"></i> Research collaboration and academic consultation</li>
+                            <li><i class="fas fa-users"></i> Conference speaking and academic engagements</li>
+                            <li><i class="fas fa-file-signature"></i> Reference requests for scholarship applications</li>
                         </ul>
 
                         <div class="contact-details">
@@ -59,55 +64,57 @@
                                 <div class="contact-icon">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <div>
+                                <div class="contact-text">
                                     <h3>Primary Email</h3>
-                                    <a href="mailto:tala.khaddour@academic.example">tala.khaddour@academic.example</a>
-                                    <p class="contact-note">For formal academic correspondence</p>
+                                    <a href="mailto:khaddour.tala@gmail.com">khaddour.tala@gmail.com</a>
+                                    <p class="contact-note">For formal academic correspondence and scholarship inquiries</p>
                                 </div>
                             </div>
+                            
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <i class="fab fa-linkedin"></i>
                                 </div>
-                                <div>
-                                    <h3>LinkedIn</h3>
-                                    <a href="https://linkedin.com/in/tala-khaddour" target="_blank">linkedin.com/in/tala-khaddour</a>
-                                    <p class="contact-note">Professional networking and updates</p>
+                                <div class="contact-text">
+                                    <h3>LinkedIn Profile</h3>
+                                    <a href="https://linkedin.com/in/tala-khaddour">linkedin.com/in/tala-khaddour</a>
+                                    <p class="contact-note">Professional networking and research updates</p>
                                 </div>
                             </div>
+                            
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <i class="fab fa-github"></i>
                                 </div>
-                                <div>
-                                    <h3>GitHub</h3>
-                                    <a href="https://github.com/lia202lia" target="_blank">github.com/lia202lia</a>
+                                <div class="contact-text">
+                                    <h3>GitHub Repository</h3>
+                                    <a href="https://github.com/lia202lia">github.com/lia202lia</a>
                                     <p class="contact-note">Code repositories and project documentation</p>
                                 </div>
                             </div>
+                            
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
-                                <div>
+                                <div class="contact-text">
                                     <h3>Location</h3>
-                                    <p>Damascus, Syria</p>
-                                    <p class="contact-note">Available for remote collaboration worldwide</p>
+                                    <p>Latakia, Syria</p>
+                                    <p class="contact-note">Available for remote collaboration and international opportunities</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="response-time">
                             <h3><i class="fas fa-clock"></i> Response Time</h3>
-                            <p>I typically respond to academic inquiries within <strong>2–3 business days</strong>. For urgent matters regarding scholarship deadlines, please indicate this in your subject line.</p>
+                            <p>I typically respond to academic inquiries within <strong>2–3 business days</strong>. For urgent scholarship deadline matters, please indicate this in your subject line.</p>
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
                     <div class="contact-form-section">
                         <h2>Send a Message</h2>
                         <p>Please use this form for detailed inquiries. For quick questions, LinkedIn messaging may be faster.</p>
-
+                        
                         <form id="contactForm" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
@@ -119,51 +126,52 @@
                                     <input type="email" id="email" name="email" required>
                                 </div>
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="affiliation">Institution/Affiliation</label>
-                                <input type="text" id="affiliation" name="affiliation" placeholder="University, Company, or Organization">
+                                <label for="affiliation">Institution / Organization</label>
+                                <input type="text" id="affiliation" name="affiliation" placeholder="University, Company, or Scholarship Program">
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="subject">Subject *</label>
                                 <select id="subject" name="subject" required>
                                     <option value="" disabled selected>Select inquiry type</option>
-                                    <option value="scholarship">Scholarship/Admission Inquiry</option>
+                                    <option value="scholarship">Scholarship / Admission Inquiry</option>
                                     <option value="research">Research Collaboration</option>
-                                    <option value="technical">Technical Consultation</option>
-                                    <option value="speaking">Speaking Engagement</option>
+                                    <option value="academic">Academic Question</option>
                                     <option value="reference">Reference Request</option>
+                                    <option value="speaking">Speaking Engagement</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="program">Target Program (if applicable)</label>
                                 <input type="text" id="program" name="program" placeholder="e.g., MSc Robotics, PhD Intelligent Systems">
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="deadline">Relevant Deadline</label>
                                 <input type="date" id="deadline" name="deadline">
-                                <small>Please include if your inquiry is time-sensitive</small>
+                                <small>Please include if your inquiry is time-sensitive (scholarship deadlines, etc.)</small>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="8" required placeholder="Please include relevant details about your inquiry, including how you learned about my work."></textarea>
+                                <textarea id="message" name="message" rows="8" required 
+                                          placeholder="Please include relevant details about your inquiry, including how you learned about my work..."></textarea>
                             </div>
-
+                            
                             <div class="form-group checkbox-group">
                                 <input type="checkbox" id="documentation" name="documentation">
                                 <label for="documentation">I would like to receive additional documentation (CV, project summaries, references) if relevant to my inquiry.</label>
                             </div>
-
+                            
                             <div class="form-submit">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fas fa-paper-plane"></i> Send Message
                                 </button>
-                                <p class="form-note">This is a static demonstration form. In a production environment, this would connect to a backend service.</p>
+                                <p class="form-note"><i class="fas fa-info-circle"></i> This is a static demonstration form. In a production environment, this would connect to a backend service.</p>
                             </div>
                         </form>
                     </div>
@@ -171,37 +179,60 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
                 <h2 class="section-title">Frequently Asked Questions</h2>
+                
                 <div class="faq-grid">
-                    <div class="faq-item">
+                    <article class="faq-item">
                         <h3><i class="fas fa-question-circle"></i> What should I include in a scholarship reference request?</h3>
-                        <p>Please provide: 1) The scholarship name and institution, 2) Application deadline, 3) Specific requirements for the reference letter, 4) Your CV and personal statement, 5) Any particular aspects of your work you'd like emphasized.</p>
-                    </div>
-                    <div class="faq-item">
+                        <p>Please provide: 1) Scholarship name and institution, 2) Application deadline, 3) Specific requirements for the reference letter, 4) Your CV and personal statement, 5) Any particular aspects of your work you'd like emphasized.</p>
+                    </article>
+                    
+                    <article class="faq-item">
                         <h3><i class="fas fa-question-circle"></i> Can you review my research proposal or application materials?</h3>
-                        <p>I offer limited review for students from underrepresented regions or working on humanitarian robotics projects. Please include your draft and specific areas where you seek feedback.</p>
-                    </div>
-                    <div class="faq-item">
+                        <p>I offer limited review for students from underrepresented regions or those working on humanitarian robotics projects. Please include your draft and specific areas where you seek feedback in your initial message.</p>
+                    </article>
+                    
+                    <article class="faq-item">
                         <h3><i class="fas fa-question-circle"></i> Are you available for internships or short-term collaborations?</h3>
-                        <p>I consider remote research collaborations and internships, particularly in rehabilitation robotics and intelligent control. Please describe the project scope, timeline, and expected outcomes.</p>
-                    </div>
-                    <div class="faq-item">
+                        <p>I consider remote research collaborations and internships, particularly in rehabilitation robotics and intelligent control. Please describe the project scope, timeline, and expected outcomes in your inquiry.</p>
+                    </article>
+                    
+                    <article class="faq-item">
                         <h3><i class="fas fa-question-circle"></i> What's the best way to stay updated on your research?</h3>
-                        <p>Follow my GitHub for code releases and LinkedIn for research updates and publications. I periodically share project summaries and technical insights.</p>
-                    </div>
+                        <p>Follow my GitHub for code releases and LinkedIn for research updates and publications. I periodically share project summaries and technical insights relevant to the robotics community.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="site-footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-identity">
+                    <h3>Tala Khaddour</h3>
+                    <p>Robotics & Intelligent Systems Engineer</p>
+                    <p class="footer-location">Latakia, Syria</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="mailto:khaddour.tala@gmail.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> Academic Email
+                    </a>
+                    <a href="https://linkedin.com/in/tala-khaddour" class="footer-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/lia202lia" class="footer-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Tala Khaddour. Academic portfolio for scholarship applications.</p>
-                <p>Damascus, Syria</p>
+                <p>© 2024 Tala Khaddour. Academic portfolio for scholarship applications.</p>
+                <p class="footer-note">Designed with academic rigor and professional integrity</p>
             </div>
         </div>
     </footer>

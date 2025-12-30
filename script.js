@@ -1,98 +1,4 @@
 /**
- * Academic Portfolio JavaScript
- * Clean, professional animations for scholarship applications
- */
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎓 Tala Khaddour Portfolio - Academic Edition');
-    
-    // Initialize components
-    initNavigation();
-    initSmoothScroll();
-    initBackToTop();
-    initSectionReveal();
-    initHoverEffects();
-    initPortraitAnimation();
-});
-
-/**
- * Clean Navigation
- */
-function initNavigation() {
-    const navbar = document.querySelector('.navbar');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.style.boxShadow = '0 2px 20px rgba(44, 90, 160, 0.1)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
-
-    // Mobile menu
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-    }
-
-    // Close menu on link click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (menuToggle.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.nav-container') && navMenu.classList.contains('active')) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
-
-/**
- * Smooth scrolling
- */
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            if (href === '#') return;
-            
-            e.preventDefault();
-            const targetElement = document.querySelector(href);
-            
-            if (targetElement) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.offsetTop - navbarHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Update URL
-                history.pushState(null, null, href);
-            }
-        });
-    });
-}
-
-/**
  * Back to top button
  */
 function initBackToTop() {
@@ -106,7 +12,7 @@ function initBackToTop() {
                 backToTop.classList.remove('visible');
             }
         });
-        
+
         backToTop.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -117,41 +23,231 @@ function initBackToTop() {
 }
 
 /**
- * Section reveal animations
+ * Hero animations
  */
-function initSectionReveal() {
-    // Create observer for section animations
+function initHeroAnimations() {
+    const heroName = document.querySelector('.hero-name');
+    const heroTitle = document.querySelector('.hero-title');
+    const heroPhilosophy = document.querySelector('.hero-philosophy');
+    const heroBio = document.querySelector('.hero-bio');
+    const heroActions = document.querySelector('.hero-actions');
+    
+    if (heroName) {
+        setTimeout(() => heroName.classList.add('animated'), 100);
+        setTimeout(() => heroTitle.classList.add('animated'), 300);
+        setTimeout(() => heroPhilosophy.classList.add('animated'), 500);
+        setTimeout(() => heroBio.classList.add('animated'), 700);
+        setTimeout(() => heroActions.classList.add('animated'), 900);
+    }
+}
+
+/**
+ * Section animations on scroll
+ */
+function initSectionAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                
-                // Special animations for specific sections
-                if (entry.target.classList.contains('hero')) {
-                    animateHeroElements();
-                }
+                entry.target.classList.add('animate-in');
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, observerOptions);
 
     // Observe sections
     document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
 
-    // Observe focus cards individually
-    document.querySelectorAll('.focus-card').forEach(card => {
+    // Observe cards
+    document.querySelectorAll('.focus-card').forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(card);
     });
+}
 
-    // Add CSS for animations
+/**
+ * Portrait hover effects
+ */
+function initPortraitHover() {
+    const portrait = document.querySelector('.portrait-container');
+    if (!portrait) return;
+
+    portrait.addEventListener('mouseenter', () => {
+        portrait.style.transform = 'scale(1.02)';
+    });
+
+    portrait.addEventListener('mouseleave', () => {
+        portrait.style.transform = 'scale(1)';
+    });
+}
+
+/**
+ * Form handling for contact page
+ */
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission (replace with actual API call)
+        setTimeout(() => {
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'form-success';
+            successMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for your message. I'll get back to you soon.</p>
+            `;
+            
+            contactForm.style.display = 'none';
+            contactForm.parentNode.appendChild(successMessage);
+            
+            // Animate success message
+            setTimeout(() => {
+                successMessage.classList.add('show');
+            }, 10);
+        }, 2000);
+    });
+}
+
+/**
+ * CV download enhancement
+ */
+function initCVDownload() {
+    const cvDownloadLinks = document.querySelectorAll('a[href*="cv.html"], a[href*="download"]');
+    
+    cvDownloadLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').includes('download')) {
+                e.preventDefault();
+                
+                // Create download notification
+                const notification = document.createElement('div');
+                notification.className = 'download-notification';
+                notification.innerHTML = `
+                    <i class="fas fa-file-download"></i>
+                    <span>Preparing your CV download...</span>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                // Simulate download process
+                setTimeout(() => {
+                    notification.innerHTML = `
+                        <i class="fas fa-check"></i>
+                        <span>CV download started!</span>
+                    `;
+                    
+                    // Actually trigger download
+                    window.location.href = 'assets/cv/tala-khaddour-cv.pdf';
+                    
+                    // Remove notification
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 300);
+                    }, 2000);
+                }, 1500);
+            }
+        });
+    });
+}
+
+/**
+ * Add CSS for animations
+ */
+function injectAnimationStyles() {
     const style = document.createElement('style');
     style.textContent = `
-        .revealed {
-            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        .animate-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        
+        .download-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #89CFF0 0%, #5D8AA8 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .download-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .download-notification i {
+            font-size: 1.25rem;
+        }
+        
+        .form-success {
+            background: #f8fff9;
+            border: 1px solid #d4edda;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .form-success.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .form-success i {
+            font-size: 3rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        
+        .form-success h3 {
+            color: #155724;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-success p {
+            color: #0c4128;
         }
         
         @keyframes fadeInUp {
@@ -165,168 +261,107 @@ function initSectionReveal() {
             }
         }
         
-        .focus-card {
+        .hero .animated {
+            animation: fadeInUp 0.8s ease forwards;
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .focus-card.revealed {
-            opacity: 1;
-            transform: translateY(0);
+        .hero-name.animated {
+            animation-delay: 0.1s;
         }
         
-        .focus-card:nth-child(1).revealed {
-            transition-delay: 0.1s;
+        .hero-title.animated {
+            animation-delay: 0.3s;
         }
         
-        .focus-card:nth-child(2).revealed {
-            transition-delay: 0.3s;
+        .hero-philosophy.animated {
+            animation-delay: 0.5s;
         }
         
-        .focus-card:nth-child(3).revealed {
-            transition-delay: 0.5s;
+        .hero-bio.animated {
+            animation-delay: 0.7s;
+        }
+        
+        .hero-actions.animated {
+            animation-delay: 0.9s;
         }
     `;
     document.head.appendChild(style);
 }
 
 /**
- * Animate hero elements with staggered delay
+ * Initialize everything
  */
-function animateHeroElements() {
-    const heroTitle = document.querySelector('.hero-title');
-    const heroDescription = document.querySelector('.hero-description');
-    const heroActions = document.querySelector('.hero-actions');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎓 Tala Khaddour Portfolio - Complete');
     
-    // Reset animations
-    [heroTitle, heroDescription, heroActions].forEach(el => {
-        if (el) {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-        }
-    });
+    // Inject animation styles
+    injectAnimationStyles();
     
-    // Animate with delays
-    setTimeout(() => {
-        if (heroTitle) {
-            heroTitle.style.opacity = '1';
-            heroTitle.style.transform = 'translateY(0)';
-        }
-    }, 100);
+    // Initialize all components
+    initNavigation();
+    initSmoothScroll();
+    initBackToTop();
+    initHeroAnimations();
+    initSectionAnimations();
+    initPortraitHover();
+    initContactForm();
+    initCVDownload();
     
-    setTimeout(() => {
-        if (heroDescription) {
-            heroDescription.style.opacity = '1';
-            heroDescription.style.transform = 'translateY(0)';
-        }
-    }, 300);
-    
-    setTimeout(() => {
-        if (heroActions) {
-            heroActions.style.opacity = '1';
-            heroActions.style.transform = 'translateY(0)';
-        }
-    }, 500);
-}
-
-/**
- * Subtle hover effects
- */
-function initHoverEffects() {
-    // Card hover effects
-    const cards = document.querySelectorAll('.focus-card, .sidebar-link');
-    
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-8px)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Button hover effects
-    const buttons = document.querySelectorAll('.btn');
-    
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'translateY(-2px)';
-        });
-        
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'translateY(0)';
-        });
-    });
-}
-
-/**
- * Portrait animation
- */
-function initPortraitAnimation() {
-    const portraitContainer = document.querySelector('.portrait-container');
-    
-    if (!portraitContainer) return;
-    
-    portraitContainer.addEventListener('mouseenter', () => {
-        const overlay = portraitContainer.querySelector('.portrait-overlay');
-        if (overlay) {
-            overlay.style.transform = 'translateY(0)';
-        }
-    });
-    
-    portraitContainer.addEventListener('mouseleave', () => {
-        const overlay = portraitContainer.querySelector('.portrait-overlay');
-        if (overlay) {
-            overlay.style.transform = 'translateY(100%)';
-        }
-    });
-}
-
-/**
- * Performance optimizations
- */
-function initPerformance() {
-    // Lazy load images
-    const images = document.querySelectorAll('img[data-src]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
+    // Add current year to footer
+    const yearSpan = document.querySelector('.current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
     
-    // Debounce scroll events
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            // Handle scroll operations
-        }, 100);
+    // Add active state to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || 
+            (currentPage === '' && linkHref === 'index.html') ||
+            (linkHref.includes(currentPage.replace('.html', '')) && linkHref !== '#')) {
+            link.classList.add('active');
+        }
     });
-}
-
-// Initialize performance
-initPerformance();
-
-// Set current year in footer
-document.addEventListener('DOMContentLoaded', () => {
-    const yearElement = document.querySelector('.current-year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
 });
 
-console.log('✅ Portfolio initialized successfully');
+/**
+ * Parallax effect for hero
+ */
+function initParallax() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        hero.style.backgroundPosition = `50% ${rate}px`;
+    });
+}
+
+/**
+ * Initialize typing effect for hero title (optional enhancement)
+ */
+function initTypingEffect() {
+    const heroTitle = document.querySelector('.hero-title');
+    if (!heroTitle) return;
+    
+    const originalText = heroTitle.textContent;
+    heroTitle.textContent = '';
+    let i = 0;
+    
+    function typeWriter() {
+        if (i < originalText.length) {
+            heroTitle.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+    
+    // Start typing after hero animations
+    setTimeout(typeWriter, 1500);
+}
+
+// Call typing effect if you want it
+// initTypingEffect();

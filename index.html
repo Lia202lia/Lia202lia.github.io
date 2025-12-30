@@ -1,55 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tala Khaddour | Robotics & Intelligent Systems Engineer</title>
-  <meta name="description" content="Academic portfolio of Tala Khaddour, Robotics & Intelligent Systems Engineer. International scholarship applications." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tala Khaddour - Robotics & Intelligent Systems Engineer | Distinguished Scholar | Rehabilitation Robotics Researcher">
+    <meta name="keywords" content="Robotics Engineering, Intelligent Systems, Scholarship, Research, Rehabilitation Robotics, Syria, Manara University">
+    <title>Tala Khaddour | Robotics & Intelligent Systems Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="nav-brand">Tala Khaddour</a>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="volunteering.html">Service</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
+                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">Tala Khaddour</span>
+                        <span class="logo-title">Robotics Engineer</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-user-graduate"></i> About</a></li>
+                    <li><a href="research.html" class="nav-link"><i class="fas fa-microscope"></i> Research</a></li>
+                    <li><a href="volunteering.html" class="nav-link"><i class="fas fa-hands-helping"></i> Service</a></li>
+                    <li><a href="cv.html" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
+                    <li><a href="contact.html" class="nav-link btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                
+                <button class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Tala Khaddour</h1>
-      <h2>Robotics &amp; Intelligent Systems Engineer</h2>
-      <p class="mission">
-        My academic mission is to contribute to human-centered robotics research,
-        with a particular focus on intelligent control and assistive technologies
-        that enhance quality of life and expand access to rehabilitation and education.
-      </p>
-      <p class="submission-note">
-        This website is submitted as part of my international scholarship applications.
-      </p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="academic-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Distinguished Graduate • Honors Thesis 96/100</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Tala Khaddour</span>
+                        <br>
+                        <span class="hero-subtitle">Robotics & Intelligent Systems Engineer</span>
+                    </h1>
+                    
+                    <p class="hero-tagline">
+                        Designing intelligent rehabilitation systems that bridge 
+                        <span class="highlight">human capability</span> and 
+                        <span class="highlight">robotic precision</span> for 
+                        global healthcare advancement.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">3.28</div>
+                            <div class="stat-label">GPA / 4.0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">96%</div>
+                            <div class="stat-label">Thesis Score</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5<sup>th</sup></div>
+                            <div class="stat-label">National Rank</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="assets/documents/Tala_Khaddour_CV.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download Full CV
+                        </a>
+                        <a href="research.html" class="btn btn-secondary">
+                            <i class="fas fa-arrow-right"></i> Explore Research
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="mailto:khaddour.tala@gmail.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="tel:+963936693678" class="social-icon" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-portrait">
+                    <div class="portrait-container">
+                        <img src="assets/img/tala-portrait.jpg" alt="Tala Khaddour - Professional Portrait" class="portrait-img">
+                        <div class="portrait-frame"></div>
+                        <div class="portrait-decoration">
+                            <div class="decoration-circle"></div>
+                            <div class="decoration-line"></div>
+                        </div>
+                    </div>
+                    <div class="portrait-caption">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Manara University • Latakia, Syria</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Statement -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2 class="mission-title">Academic Mission</h2>
+                <p class="mission-text">
+                    To advance <strong>human-centered robotics</strong> through innovative control systems 
+                    and intelligent rehabilitation devices. My research focuses on creating affordable, 
+                    accessible assistive technologies that can transform healthcare delivery in 
+                    underserved regions while contributing to the global scientific community through 
+                    rigorous academic inquiry and cross-cultural collaboration.
+                </p>
+                <div class="mission-tags">
+                    <span class="tag">Human-Robot Interaction</span>
+                    <span class="tag">Rehabilitation Robotics</span>
+                    <span class="tag">Intelligent Control Systems</span>
+                    <span class="tag">Global Health Technology</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="focus">
-      <h3>Research Focus Areas</h3>
-      <ul>
-        <li>Human–Robot Interaction</li>
-        <li>Rehabilitation Robotics</li>
-        <li>Intelligent &amp; Adaptive Control</li>
-        <li>Computer Vision for Robotic Systems</li>
-      </ul>
+    <!-- Academic Highlights -->
+    <section class="highlights">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic & Research Excellence</h2>
+                <p class="section-subtitle">Key achievements and recognition in robotics engineering</p>
+            </div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="highlight-title">Honors Graduate</h3>
+                    <p class="highlight-desc">
+                        Bachelor of Science in Robotics and Intelligent Systems Engineering
+                        <br><strong>Manara University</strong>
+                        <br>Graduated with Honors • Thesis Score: 96/100
+                    </p>
+                    <div class="highlight-year">2020-2025</div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="highlight-title">World Robot Olympiad</h3>
+                    <p class="highlight-desc">
+                        5th Place Nationwide in Future Engineers Category
+                        <br>Represented Syria in international robotics competition
+                        <br>Advanced control systems design
+                    </p>
+                    <div class="highlight-year">2022</div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="highlight-title">Distinguished Scholar</h3>
+                    <p class="highlight-desc">
+                        DCA Academic Scholarship Recipient (5 Years)
+                        <br>Selected among top 75 students nationwide
+                        <br>Rank 3/75 in National Center for Distinguished
+                    </p>
+                    <div class="highlight-year">2018-2025</div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="highlight-title">Robotics Educator</h3>
+                    <p class="highlight-desc">
+                        Robotics Project Coach & Trainer
+                        <br>Mentored 50+ students in Arduino & AI
+                        <br>Syrian Computer Society & Sanad Foundation
+                    </p>
+                    <div class="highlight-year">2023-2024</div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025 Tala Khaddour</p>
-  </footer>
+    <!-- Featured Research -->
+    <section class="featured-research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Research Projects</h2>
+                <p class="section-subtitle">Innovative robotics research with tangible impact</p>
+            </div>
+            
+            <div class="research-grid">
+                <article class="research-card">
+                    <div class="research-image">
+                        <img src="assets/projects/exoskeleton-demo.jpg" alt="Hand Exoskeleton Rehabilitation System">
+                        <div class="research-badge">Featured Project</div>
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Intelligent Hand Exoskeleton for Rehabilitation</h3>
+                        <div class="research-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-calendar"></i> Jan 2024 – Aug 2025
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-university"></i> Thesis Project
+                            </span>
+                        </div>
+                        <p class="research-desc">
+                            Designed and implemented a cable-driven hand exoskeleton with three intelligent 
+                            control strategies achieving <strong>&lt;0.5° tracking error</strong> and 
+                            <strong>20% reduction in settling time</strong>. Integrated stereo vision-based 
+                            hand pose mirroring with <strong>&lt;200ms latency</strong>.
+                        </p>
+                        <div class="research-tech">
+                            <span class="tech-tag">Adaptive Control</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">MATLAB/Simulink</span>
+                            <span class="tech-tag">ROS</span>
+                        </div>
+                        <a href="research.html#exoskeleton" class="research-link">
+                            View Technical Details <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="research-card">
+                    <div class="research-image">
+                        <img src="assets/projects/fuzzy-robot-control.jpg" alt="Fuzzy Logic Mobile Robot Control">
+                        <div class="research-badge">Comparative Analysis</div>
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Fuzzy Logic Control of Unicycle Mobile Robot</h3>
+                        <div class="research-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-calendar"></i> Nov 2023 – Feb 2024
+                            </span>
+                            <span class="meta-item">
+                                <i class="fas fa-chart-bar"></i> Comparative Study
+                            </span>
+                        </div>
+                        <p class="research-desc">
+                            Developed and fine-tuned four Mamdani-type fuzzy controllers achieving 
+                            <strong>0.001m tracking error</strong> with PID-like fuzzy control. 
+                            Demonstrated superior robustness and smooth trajectory following 
+                            compared to traditional control methods.
+                        </p>
+                        <div class="research-tech">
+                            <span class="tech-tag">Fuzzy Logic</span>
+                            <span class="tech-tag">Mobile Robotics</span>
+                            <span class="tech-tag">Control Systems</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <a href="research.html#fuzzy-robot" class="research-link">
+                            View Analysis Results <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-  <script src="main.js"></script>
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Building Intelligent Systems for Human Recovery</h2>
+                <p class="cta-text">
+                    Seeking prestigious scholarship opportunities to advance research in 
+                    affordable rehabilitation robotics and contribute to global healthcare 
+                    technology innovation through rigorous academic pursuit.
+                </p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-handshake"></i> Connect for Collaboration
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fas fa-book-open"></i> Read My Academic Journey
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">TK</div>
+                        <div class="footer-brand">
+                            <h3>Tala Khaddour</h3>
+                            <p>Robotics & Intelligent Systems Engineer</p>
+                        </div>
+                    </div>
+                    <p class="footer-mission">
+                        Advancing human-centered robotics through innovative research 
+                        and academic excellence.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> Academic Biography</a></li>
+                        <li><a href="research.html"><i class="fas fa-chevron-right"></i> Research Portfolio</a></li>
+                        <li><a href="cv.html"><i class="fas fa-chevron-right"></i> Full Academic CV</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact & References</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Scholarship Materials</h4>
+                    <ul class="footer-links">
+                        <li><a href="assets/documents/Tala_Khaddour_CV.pdf" download><i class="fas fa-file-pdf"></i> Download CV (PDF)</a></li>
+                        <li><a href="assets/documents/Thesis_Abstract.pdf"><i class="fas fa-file-alt"></i> Thesis Abstract</a></li>
+                        <li><a href="assets/documents/Research_Statement.pdf"><i class="fas fa-file-contract"></i> Research Statement</a></li>
+                        <li><a href="assets/documents/Recommendation_Letters.pdf"><i class="fas fa-envelope-open-text"></i> Recommendation Letters</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Information</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> khaddour.tala@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +963 (936) 693 678</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Latakia, Syria</p>
+                        <p><i class="fas fa-university"></i> Manara University</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Tala Khaddour. All rights reserved. Prepared for prestigious scholarship applications.</p>
+                    <p class="footer-note">
+                        This portfolio demonstrates qualifications for: Fulbright, Chevening, DAAD, Erasmus Mundus, 
+                        and graduate research scholarships worldwide.
+                    </p>
+                </div>
+                <div class="footer-badges">
+                    <span class="badge"><i class="fas fa-award"></i> Honors Graduate</span>
+                    <span class="badge"><i class="fas fa-robot"></i> Robotics Engineer</span>
+                    <span class="badge"><i class="fas fa-globe"></i> Global Scholar</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

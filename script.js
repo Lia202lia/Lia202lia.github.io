@@ -23,24 +23,69 @@ function initBackToTop() {
 }
 
 /**
- * Hero animations
+ * Vibrant Hero Section Animations
  */
-function initHeroAnimations() {
-    const heroName = document.querySelector('.hero-name');
-    const heroTitle = document.querySelector('.hero-title');
-    const heroPhilosophy = document.querySelector('.hero-philosophy');
-    const heroBio = document.querySelector('.hero-bio');
-    const heroActions = document.querySelector('.hero-actions');
+function initVibrantHeroAnimations() {
+    const heroVibrant = document.querySelector('.hero-vibrant');
+    if (!heroVibrant) return;
     
-    if (heroName) {
-        setTimeout(() => heroName.classList.add('animated'), 100);
-        setTimeout(() => heroTitle.classList.add('animated'), 300);
-        setTimeout(() => heroPhilosophy.classList.add('animated'), 500);
-        setTimeout(() => heroBio.classList.add('animated'), 700);
-        setTimeout(() => heroActions.classList.add('animated'), 900);
-    }
+    // Animate content from left
+    const leftElements = [
+        '.hero-name-vibrant',
+        '.hero-title-vibrant',
+        '.intelligence-badge',
+        '.philosophy-vibrant',
+        '.bio-vibrant',
+        '.quick-stats',
+        '.hero-actions-vibrant'
+    ];
+    
+    leftElements.forEach((selector, index) => {
+        const element = heroVibrant.querySelector(selector);
+        if (element) {
+            setTimeout(() => {
+                element.style.animationDelay = `${index * 0.1}s`;
+                element.classList.add('animate-in');
+            }, 100);
+        }
+    });
+    
+    // Animate profile from right
+    const profileElements = [
+        '.circular-frame-vibrant',
+        '.profile-tech-tags',
+        '.profile-status'
+    ];
+    
+    profileElements.forEach((selector, index) => {
+        const element = heroVibrant.querySelector(selector);
+        if (element) {
+            setTimeout(() => {
+                element.style.animation = `slide-in-right 0.6s ease ${index * 0.2 + 0.5}s both`;
+            }, 100);
+        }
+    });
 }
 
+// Update main initialization
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎓 Tala Khaddour Portfolio - Intelligent Design');
+    
+    // Initialize all components
+    initNavigation();
+    initSmoothScroll();
+    initBackToTop();
+    initVibrantHeroAnimations(); // Use vibrant hero animations
+    initSectionAnimations();
+    initContactForm();
+    initCVDownload();
+    
+    // Add current year to footer
+    const yearSpan = document.querySelector('.current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
 /**
  * Section animations on scroll
  */

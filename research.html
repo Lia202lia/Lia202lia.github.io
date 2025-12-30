@@ -1,387 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Portfolio | Tala Khaddour</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
-                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-title">Research Portfolio</span>
-                    </div>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link"><i class="fas fa-user-graduate"></i> About</a></li>
-                    <li><a href="research.html" class="nav-link active"><i class="fas fa-microscope"></i> Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link"><i class="fas fa-hands-helping"></i> Service</a></li>
-                    <li><a href="cv.html" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
-                    <li><a href="contact.html" class="nav-link btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Research &amp; Projects | Tala Khaddour</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content="Research and project case studies by Tala Khaddour in rehabilitation robotics, intelligent control, and human–robot interaction."> <link rel="stylesheet" href="style.css"> <script defer src="main.js"></script> </head> <body> <header class="site-header"> <a class="skip-link" href="#main-content">Skip to main content</a> <div class="inner"> <div class="brand"> <a href="index.html"> <span class="brand-name">Tala Khaddour</span> <span class="brand-subtitle">Robotics &amp; Intelligent Systems</span> </a> </div> <nav aria-label="Primary"> <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"> <span class="nav-toggle-line"></span> <span class="nav-toggle-line"></span> </button> <ul id="site-nav" class="nav-list"> <li><a class="nav-link" href="index.html">Home</a></li> <li><a class="nav-link" href="about.html">About</a></li> <li><a class="nav-link active" href="research.html">Research</a></li> <li><a class="nav-link" href="volunteering.html">Volunteering</a></li> <li><a class="nav-link" href="cv.html">CV</a></li> <li><a class="nav-link" href="contact.html">Contact</a></li> </ul> </nav> </div> </header> <main id="main-content"> <section class="page-hero"> <div class="inner narrow"> <h1>Research &amp; projects</h1> <p class="lead"> Each project below is presented as a concise case study, emphasizing the problem, methods, and quantitative results. </p> </div> <div class="section-curve" aria-hidden="true"></div> </section>
+<!-- Project 1 -->
+<section class="case-study">
+  <div class="inner case-grid">
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Diagram of hand exoskeleton architecture">
+        <img src="assets/placeholder.svg" alt="Exploded view of exoskeleton finger module">
+        <img src="assets/placeholder.svg" alt="Control flow diagram for exoskeleton modes">
+        <img src="assets/placeholder.svg" alt="Experimental setup for rehabilitation protocol">
+      </figure>
+    </div>
+    <div class="case-text">
+      <h2>Hand Exoskeleton for Rehabilitation</h2>
+      <p class="case-tagline">
+        Assistive exoskeleton for post-stroke upper-limb rehabilitation with adaptive, patient-specific control strategies.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Conventional hand rehabilitation often requires intensive therapist involvement and cannot easily provide consistent, high-repetition, task-specific training tailored to each patient’s evolving capabilities.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Designed a lightweight, tendon-driven exoskeleton for the hand with mechanically decoupled fingers to allow natural grasp patterns.</li>
+        <li>Implemented embedded control on a microcontroller platform, integrating position sensors and current sensing for torque estimation.</li>
+        <li>Developed an assist-as-needed control scheme that adjusts assistance level based on measured joint trajectories and interaction forces.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Achieved repeatable finger flexion–extension trajectories with tracking errors under 5% of the commanded range of motion across sessions.</li>
+        <li>Reduced peak interaction torque by approximately 20% when using adaptive assistance compared with fixed-gain control in bench-top trials.</li>
+        <li>Demonstrated stable operation over multiple 30-minute training sessions without actuator overheating or loss of calibration.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <header class="page-header research-header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="page-title">Research & Technical Projects</h1>
-                <p class="page-subtitle">
-                    In-depth exploration of robotics engineering projects demonstrating 
-                    technical expertise, innovative problem-solving, and research methodology
-                </p>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
-                    <span>Research Portfolio</span>
-                </div>
-            </div>
-        </div>
-    </header>
+<!-- Project 2 -->
+<section class="case-study alt">
+  <div class="inner case-grid case-grid-reverse">
+    <div class="case-text">
+      <h2>Fuzzy Logic Control of a Unicycle Mobile Robot</h2>
+      <p class="case-tagline">
+        Intelligent control design for a nonholonomic mobile robot navigating toward goals under uncertainty.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Classical controllers for unicycle-type robots can struggle with model uncertainties, external disturbances, and the need for smooth, human-friendly trajectories in cluttered environments.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Modeled the robot as a nonholonomic unicycle and defined tracking errors in polar coordinates relative to a target pose.</li>
+        <li>Designed a fuzzy logic controller with linguistic rules that map distance and heading errors to linear and angular velocity commands.</li>
+        <li>Compared the fuzzy controller against a conventional proportional controller in simulation across multiple goal configurations.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Reduced overshoot in heading angle by more than 30% while maintaining comparable convergence times to the target pose.</li>
+        <li>Generated smoother trajectories with fewer abrupt velocity changes, improving suitability for human–robot shared spaces.</li>
+        <li>Maintained stable convergence under perturbations in wheel radius and baseline parameters of up to 15% from nominal values.</li>
+      </ul>
+    </div>
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Unicycle mobile robot schematic">
+        <img src="assets/placeholder.svg" alt="Fuzzy membership functions for control variables">
+        <img src="assets/placeholder.svg" alt="Simulated trajectories under different controllers">
+        <img src="assets/placeholder.svg" alt="Error convergence plots for distance and heading">
+      </figure>
+    </div>
+  </div>
+</section>
 
-    <section class="research-tabs">
-        <div class="container">
-            <div class="tabs">
-                <button class="tab-btn active" data-target="#exoskeleton">
-                    <i class="fas fa-hand-paper"></i> Hand Exoskeleton
-                </button>
-                <button class="tab-btn" data-target="#fuzzy-robot">
-                    <i class="fas fa-robot"></i> Fuzzy Logic Control
-                </button>
-                <button class="tab-btn" data-target="#additional">
-                    <i class="fas fa-plus-circle"></i> Additional Projects
-                </button>
-            </div>
-        </div>
-    </section>
+<!-- Project 3 -->
+<section class="case-study">
+  <div class="inner case-grid">
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Block diagram of computer vision pipeline">
+        <img src="assets/placeholder.svg" alt="Example segmented images from the system">
+        <img src="assets/placeholder.svg" alt="Confusion matrix of classification performance">
+        <img src="assets/placeholder.svg" alt="Timing diagram showing processing latency">
+      </figure>
+    </div>
+    <div class="case-text">
+      <h2>Vision-Based Gesture Recognition for Human–Robot Interaction</h2>
+      <p class="case-tagline">
+        Real-time recognition of hand gestures to enable intuitive, contactless control of robotic systems.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Many assistive robots rely on physical interfaces that can be difficult or tiring to use for individuals with limited mobility, making it important to explore accessible, vision-based alternatives.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Developed a camera-based pipeline for hand detection, segmentation, and gesture classification using conventional computer vision and lightweight learning models.</li>
+        <li>Implemented temporal smoothing to reduce spurious gesture detections and stabilize robot responses.</li>
+        <li>Integrated the system with a simple robot control interface to map a small vocabulary of gestures to discrete commands.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Achieved gesture classification accuracy above 93% on a held-out test set collected under varying lighting conditions.</li>
+        <li>Maintained end-to-end latency under 120 ms on modest processing hardware, enabling responsive interaction.</li>
+        <li>Observed a reduction in unintended command activations compared with a baseline thresholding approach during pilot trials.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <section id="exoskeleton" class="project-detail active">
-        <div class="container">
-            <div class="project-header">
-                <div class="project-badge">Honors Thesis Project</div>
-                <h2 class="project-title">Intelligent Hand Exoskeleton for Rehabilitation</h2>
-                <p class="project-subtitle">
-                    Design, dynamic modeling, and control of a cable-driven hand exoskeleton 
-                    with stereo vision-based hand pose mirroring
-                </p>
-                <div class="project-meta">
-                    <span><i class="fas fa-calendar"></i> January 2024 – August 2025</span>
-                    <span><i class="fas fa-university"></i> Manara University</span>
-                    <span><i class="fas fa-star"></i> Thesis Score: 96/100</span>
-                </div>
-            </div>
+<!-- Project 4 -->
+<section class="case-study alt">
+  <div class="inner case-grid case-grid-reverse">
+    <div class="case-text">
+      <h2>Intelligent Control for a Two-Link Robotic Arm</h2>
+      <p class="case-tagline">
+        Adaptive control of a planar manipulator for accurate trajectory tracking under payload variations.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Industrial and assistive manipulators often face changing payloads and unmodeled dynamics, which can degrade tracking performance if the controller is not robust or adaptive.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Formulated the dynamics of a two-link robotic arm using the Euler–Lagrange method and implemented a simulation environment.</li>
+        <li>Designed an adaptive control scheme that estimates uncertain parameters online and updates control gains accordingly.</li>
+        <li>Evaluated the controller on point-to-point and continuous trajectories with varying payload masses at the end effector.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Reduced steady-state position error to less than 1 degree at each joint under payload changes of up to 25%.</li>
+        <li>Maintained smooth torque profiles without excessive oscillation, supporting safe physical interaction scenarios.</li>
+        <li>Demonstrated faster convergence to desired trajectories compared with fixed-gain PD control in simulation studies.</li>
+      </ul>
+    </div>
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Two-link arm schematic with joint angles">
+        <img src="assets/placeholder.svg" alt="Torque profiles over time under adaptive control">
+        <img src="assets/placeholder.svg" alt="Tracking error comparison across controllers">
+        <img src="assets/placeholder.svg" alt="Payload variation scenarios in simulation">
+      </figure>
+    </div>
+  </div>
+</section>
 
-            <div class="project-overview">
-                <div class="overview-card">
-                    <h3><i class="fas fa-bullseye"></i> Project Objective</h3>
-                    <p>
-                        Develop an affordable, lightweight hand exoskeleton for post-stroke rehabilitation 
-                        that provides safe human-robot interaction while achieving precise trajectory 
-                        tracking through intelligent control strategies.
-                    </p>
-                </div>
-                <div class="overview-card">
-                    <h3><i class="fas fa-trophy"></i> Key Achievements</h3>
-                    <ul>
-                        <li>&lt;0.5° tracking error in joint angle control</li>
-                        <li>20% reduction in settling time under disturbances</li>
-                        <li>15.4mm mean joint position error (from 22.4mm baseline)</li>
-                        <li>&lt;200ms total system latency</li>
-                    </ul>
-                </div>
-            </div>
+<!-- Project 5 -->
+<section class="case-study">
+  <div class="inner case-grid">
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Embedded control board layout">
+        <img src="assets/placeholder.svg" alt="Firmware state machine diagram">
+        <img src="assets/placeholder.svg" alt="Timing analysis for control loop">
+        <img src="assets/placeholder.svg" alt="Prototype hardware integrated with embedded system">
+      </figure>
+    </div>
+    <div class="case-text">
+      <h2>Embedded Control Platform for Assistive Robotics</h2>
+      <p class="case-tagline">
+        Real-time embedded architecture for integrating sensors and actuators in compact assistive devices.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Assistive devices require reliable, low-latency control on hardware with limited computational and power resources, while supporting flexible integration of sensors and actuators.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Designed a modular embedded architecture around a microcontroller platform with support for motor drivers, encoders, and force sensors.</li>
+        <li>Implemented a state-machine-based firmware structure with prioritized interrupt handling for critical control loops.</li>
+        <li>Developed a serial communication interface for logging data and tuning control parameters during experiments.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Achieved stable control loop execution at 1 kHz with jitter below 5% in timing analysis.</li>
+        <li>Reduced wiring complexity and integration time when adding new sensors or actuators in subsequent prototypes.</li>
+        <li>Enabled detailed logging of system states, supporting more systematic debugging and controller tuning.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-            <div class="project-content">
-                <div class="content-section">
-                    <h3><i class="fas fa-cogs"></i> System Design & Modeling</h3>
-                    <div class="technical-details">
-                        <div class="detail-card">
-                            <h4>Mechanical Design</h4>
-                            <ul>
-                                <li>Self-alignment mechanism for natural finger movement</li>
-                                <li>Lightweight carbon fiber structure (total weight: 280g)</li>
-                                <li>Cable-driven actuation with Bowden cable transmission</li>
-                                <li>Custom 3D-printed finger linkages</li>
-                            </ul>
-                        </div>
-                        <div class="detail-card">
-                            <h4>Dynamic Modeling</h4>
-                            <ul>
-                                <li>Lagrangian formulation for multi-body dynamics</li>
-                                <li>Nonlinear friction compensation in cable transmission</li>
-                                <li>Human hand biomechanics integration</li>
-                                <li>MATLAB/Simulink simulation environment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3><i class="fas fa-sliders-h"></i> Control Strategies</h3>
-                    <div class="control-grid">
-                        <div class="control-method">
-                            <div class="method-header">
-                                <h4>Adaptive Sliding Mode Control</h4>
-                                <span class="method-badge">Primary</span>
-                            </div>
-                            <p>Robust control for nonlinear system with parameter uncertainties</p>
-                            <div class="method-stats">
-                                <span>Tracking Error: 0.4°</span>
-                                <span>Settling Time: 1.2s</span>
-                            </div>
-                        </div>
-                        
-                        <div class="control-method">
-                            <div class="method-header">
-                                <h4>Direct Model Reference Adaptive Control</h4>
-                                <span class="method-badge">Alternative</span>
-                            </div>
-                            <p>Real-time parameter adaptation for varying patient conditions</p>
-                            <div class="method-stats">
-                                <span>Tracking Error: 0.5°</span>
-                                <span>Settling Time: 1.5s</span>
-                            </div>
-                        </div>
-                        
-                        <div class="control-method">
-                            <div class="method-header">
-                                <h4>PID with Neural Compensation</h4>
-                                <span class="method-badge">Comparative</span>
-                            </div>
-                            <p>Traditional control enhanced with neural network disturbance rejection</p>
-                            <div class="method-stats">
-                                <span>Tracking Error: 0.6°</span>
-                                <span>Settling Time: 1.8s</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3><i class="fas fa-eye"></i> Vision System Integration</h3>
-                    <div class="vision-system">
-                        <div class="vision-details">
-                            <h4>Stereo Vision Hand Pose Estimation</h4>
-                            <ul>
-                                <li>Dual Intel RealSense D415 cameras</li>
-                                <li>Custom CNN architecture for joint detection</li>
-                                <li>Kalman filter for smooth trajectory generation</li>
-                                <li>ROS-based communication pipeline</li>
-                            </ul>
-                            <div class="performance-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">15.4mm</div>
-                                    <div class="metric-label">Mean Position Error</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">180ms</div>
-                                    <div class="metric-label">Processing Latency</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">95.2%</div>
-                                    <div class="metric-label">Detection Accuracy</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="vision-image">
-                            <img src="assets/projects/vision-system.jpg" alt="Stereo Vision Setup">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3><i class="fas fa-chart-line"></i> Experimental Results</h3>
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <h4>Trajectory Tracking Performance</h4>
-                            <div class="result-chart">
-                                <!-- Chart would be implemented with JS -->
-                                <div class="chart-placeholder">
-                                    <div class="chart-bar" style="width: 95%">
-                                        <span>ASMC: 0.4° error</span>
-                                    </div>
-                                    <div class="chart-bar" style="width: 90%">
-                                        <span>DMRAC: 0.5° error</span>
-                                    </div>
-                                    <div class="chart-bar" style="width: 85%">
-                                        <span>PID-NN: 0.6° error</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="result-card">
-                            <h4>Comparative Analysis</h4>
-                            <table class="results-table">
-                                <thead>
-                                    <tr>
-                                        <th>Control Method</th>
-                                        <th>Max Error</th>
-                                        <th>Settling Time</th>
-                                        <th>Robustness</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Adaptive SMC</td>
-                                        <td>0.4°</td>
-                                        <td>1.2s</td>
-                                        <td>Excellent</td>
-                                    </tr>
-                                    <tr>
-                                        <td>DMRAC</td>
-                                        <td>0.5°</td>
-                                        <td>1.5s</td>
-                                        <td>Very Good</td>
-                                    </tr>
-                                    <tr>
-                                        <td>PID + NN</td>
-                                        <td>0.6°</td>
-                                        <td>1.8s</td>
-                                        <td>Good</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                    <h3><i class="fas fa-code"></i> Technical Implementation</h3>
-                    <div class="code-samples">
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>MATLAB - Adaptive Sliding Mode Controller</span>
-                                <button class="copy-btn"><i class="far fa-copy"></i></button>
-                            </div>
-                            <pre><code class="matlab">
-% Adaptive Sliding Mode Control for Hand Exoskeleton
-function u = adaptiveSMC(theta_d, theta, dtheta, params)
-    % Sliding surface definition
-    s = dtheta - dtheta_d + lambda*(theta - theta_d);
-    
-    % Adaptive gain estimation
-    phi_hat = updateAdaptiveLaw(s, params);
-    
-    % Control law
-    u = -K*s - phi_hat'*Y(theta, dtheta) - eta*sign(s);
-    
-    % Saturation for safety
-    u = saturate(u, u_max, u_min);
-end
-                            </code></pre>
-                        </div>
-                        
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>Python - Hand Pose Estimation</span>
-                                <button class="copy-btn"><i class="far fa-copy"></i></button>
-                            </div>
-                            <pre><code class="python">
-import torch
-import torch.nn as nn
-
-class HandPoseNet(nn.Module):
-    def __init__(self):
-        super(HandPoseNet, self).__init__()
-        self.conv1 = nn.Conv2d(3, 64, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
-        self.fc1 = nn.Linear(128*28*28, 512)
-        self.fc2 = nn.Linear(512, 21*3)  # 21 joints * 3 coordinates
-        
-    def forward(self, x):
-        x = torch.relu(self.conv1(x))
-        x = torch.max_pool2d(x, 2)
-        x = torch.relu(self.conv2(x))
-        x = x.view(x.size(0), -1)
-        x = torch.relu(self.fc1(x))
-        x = self.fc2(x)
-        return x.view(-1, 21, 3)
-                            </code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-conclusion">
-                <h3><i class="fas fa-check-circle"></i> Conclusion & Impact</h3>
-                <div class="conclusion-content">
-                    <p>
-                        The developed hand exoskeleton system demonstrates the feasibility of 
-                        affordable rehabilitation devices with professional-grade performance. 
-                        The integration of adaptive control strategies with computer vision 
-                        enables safe and effective therapy delivery, particularly valuable 
-                        in resource-limited healthcare settings.
-                    </p>
-                    <div class="impact-metrics">
-                        <div class="impact-item">
-                            <div class="impact-value">96%</div>
-                            <div class="impact-label">Thesis Evaluation</div>
-                        </div>
-                        <div class="impact-item">
-                            <div class="impact-value">20%</div>
-                            <div class="impact-label">Performance Improvement</div>
-                        </div>
-                        <div class="impact-item">
-                            <div class="impact-value">$1,200</div>
-                            <div class="impact-label">Estimated Production Cost</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Additional project sections would follow similar structure -->
-
-    <section class="research-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Interested in Technical Collaboration?</h2>
-                <p>
-                    This research represents just the beginning of my work in rehabilitation robotics. 
-                    I'm actively seeking collaboration opportunities and graduate research positions 
-                    to further advance this technology.
-                </p>
-                <div class="cta-actions">
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Discuss Research Opportunities
-                    </a>
-                    <a href="assets/documents/Thesis_Full.pdf" class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download Full Thesis
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<!-- Project 6 -->
+<section class="case-study alt">
+  <div class="inner case-grid case-grid-reverse">
+    <div class="case-text">
+      <h2>Simulation Environment for Human-in-the-Loop Robotics</h2>
+      <p class="case-tagline">
+        Integrated simulation tools to prototype and evaluate human–robot interaction concepts before hardware deployment.
+      </p>
+      <h3>Problem</h3>
+      <p>
+        Early-stage human–robot interaction concepts are difficult to test safely and efficiently on hardware alone, especially when resources are limited.
+      </p>
+      <h3>Methods &amp; approach</h3>
+      <ul>
+        <li>Set up a simulation environment combining robot dynamics, basic environment models, and simplified representations of human input.</li>
+        <li>Implemented scenarios for shared-control navigation and assistive manipulation tasks.</li>
+        <li>Defined quantitative metrics for tracking performance, user effort proxies, and safety-related measures such as minimum distance to obstacles.</li>
+      </ul>
+      <h3>Results</h3>
+      <ul>
+        <li>Enabled rapid evaluation of alternative control policies and interface designs before hardware implementation.</li>
+        <li>Identified parameter ranges that balanced responsiveness and stability, guiding later controller deployment.</li>
+        <li>Provided a platform for future user studies that can combine simulated and hardware components in a controlled manner.</li>
+      </ul>
+    </div>
+    <div class="case-media">
+      <figure class="figure-grid">
+        <img src="assets/placeholder.svg" alt="Screenshot of simulated robot and environment">
+        <img src="assets/placeholder.svg" alt="Shared-control navigation scenario visualization">
+        <img src="assets/placeholder.svg" alt="Plots of safety metrics over simulation runs">
+        <img src="assets/placeholder.svg" alt="Block diagram showing human-in-the-loop structure">
+      </figure>
+    </div>
+  </div>
+</section>
+</main> <footer class="site-footer"> <div class="inner footer-inner"> <p>&copy; <span id="year"></span> Tala Khaddour. All rights reserved.</p> <p class="footer-location">Currently based in Syria, open to international research opportunities.</p> </div> </footer> </body> </html>

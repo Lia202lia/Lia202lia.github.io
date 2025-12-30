@@ -1,135 +1,145 @@
-/* Base Styles */
 :root {
-    --primary-blue: #2C3E50;
-    --secondary-blue: #3498DB;
-    --accent-blue: #AED6F1;
-    --light-bg: #F8F9FA;
-    --text-dark: #34495E;
-    --highlight: #E3F2FD;
-    --soft-blue: #D4E6F1;
-    --shadow: 0 4px 20px rgba(52, 152, 219, 0.1);
-    --transition: all 0.3s ease;
+  --primary: #0B1C2D;
+  --secondary: #2F5D8C;
+  --background: #F8F9FB;
+  --text: #1A1A1A;
+  --accent: #9FB7D4;
 }
 
-/* Typography */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-dark);
-    background: linear-gradient(135deg, #F8F9FA 0%, #E3F2FD 100%);
-    line-height: 1.6;
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    color: var(--primary-blue);
+.site-header {
+  background: var(--background);
+  border-bottom: 1px solid var(--accent);
 }
 
-/* Navigation */
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Cards */
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    border-left: 4px solid var(--secondary-blue);
+.nav-brand {
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(52, 152, 219, 0.15);
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* Buttons */
-.btn {
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary);
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, var(--secondary-blue), #2980B9);
-    color: white;
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary);
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-/* Timeline Components */
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-    border-left: 2px solid var(--accent-blue);
+.container.narrow {
+  max-width: 800px;
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-    padding-left: 1.5rem;
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -0.5rem;
-    top: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: var(--secondary-blue);
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px var(--accent-blue);
+.hero h2 {
+  font-size: 1.4rem;
+  color: var(--secondary);
 }
 
-/* Skill Bars */
-.skill-bar {
-    height: 8px;
-    background: var(--highlight);
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 0.5rem 0;
+.focus ul {
+  padding-left: 1.2rem;
 }
 
-.skill-level {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent-blue), var(--secondary-blue));
-    border-radius: 4px;
-    transition: width 1s ease-in-out;
+.project {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
-/* Responsive Design */
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-media img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.project-media {
+  flex: 1;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--accent);
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid var(--accent);
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+}
+
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        flex-direction: column;
-        background: white;
-        width: 100%;
-        transition: 0.3s;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
+  .project {
+    flex-direction: column;
+  }
 }

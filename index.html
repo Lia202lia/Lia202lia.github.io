@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
@@ -43,10 +43,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
+    <!-- Hero Section (NEW STYLE) -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-text fade-in">
                 <h1 class="hero-name">Tala Khaddour</h1>
                 <p class="hero-title">Robotics & Intelligent Systems Engineer</p>
                 
@@ -79,14 +79,12 @@
                 </div>
             </div>
 
-            <div class="hero-portrait">
-                <div class="portrait-container">
-                    <img src="assets/img/profile.jpg" alt="Tala Khaddour - Robotics Engineer" class="portrait-img">
-                    <div class="portrait-overlay">
-                        <div class="overlay-content">
-                            <h4>Robotics Researcher</h4>
-                            <p>Specializing in Rehabilitation Technology</p>
-                        </div>
+            <div class="profile-image-container fade-in delay-1">
+                <div class="profile-frame">
+                    <img src="assets/img/profile.jpg" alt="Tala Khaddour - Robotics Engineer" class="profile-img">
+                    <div class="profile-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Distinguished Engineer</span>
                     </div>
                 </div>
             </div>
@@ -96,6 +94,7 @@
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
+            <span class="scroll-text">Scroll to explore</span>
         </div>
     </section>
 
@@ -153,7 +152,7 @@
             </div>
 
             <div class="focus-grid">
-                <div class="focus-card">
+                <div class="focus-card fade-in">
                     <div class="card-visual">
                         <div class="visual-icon">
                             <i class="fas fa-hand-holding-heart"></i>
@@ -169,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="focus-card">
+                <div class="focus-card fade-in delay-1">
                     <div class="card-visual">
                         <div class="visual-icon">
                             <i class="fas fa-brain"></i>
@@ -184,7 +183,7 @@
                     </div>
                 </div>
 
-                <div class="focus-card">
+                <div class="focus-card fade-in delay-2">
                     <div class="card-visual">
                         <div class="visual-icon">
                             <i class="fas fa-eye"></i>

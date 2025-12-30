@@ -1,331 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Biography | Tala Khaddour</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
-                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-title">Academic Biography</span>
-                    </div>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link active"><i class="fas fa-user-graduate"></i> About</a></li>
-                    <li><a href="research.html" class="nav-link"><i class="fas fa-microscope"></i> Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link"><i class="fas fa-hands-helping"></i> Service</a></li>
-                    <li><a href="cv.html" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
-                    <li><a href="contact.html" class="nav-link btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>About | Tala Khaddour</title> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content="Academic background, research motivations, and values of Tala Khaddour, Robotics & Intelligent Systems Engineer."> <link rel="stylesheet" href="style.css"> <script defer src="main.js"></script> </head> <body> <header class="site-header"> <a class="skip-link" href="#main-content">Skip to main content</a> <div class="inner"> <div class="brand"> <a href="index.html"> <span class="brand-name">Tala Khaddour</span> <span class="brand-subtitle">Robotics &amp; Intelligent Systems</span> </a> </div> <nav aria-label="Primary"> <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"> <span class="nav-toggle-line"></span> <span class="nav-toggle-line"></span> </button> <ul id="site-nav" class="nav-list"> <li><a class="nav-link" href="index.html">Home</a></li> <li><a class="nav-link active" href="about.html">About</a></li> <li><a class="nav-link" href="research.html">Research</a></li> <li><a class="nav-link" href="volunteering.html">Volunteering</a></li> <li><a class="nav-link" href="cv.html">CV</a></li> <li><a class="nav-link" href="contact.html">Contact</a></li> </ul> </nav> </div> </header> <main id="main-content"> <section class="page-hero"> <div class="inner narrow"> <h1>About me</h1> <p class="lead"> I am a Robotics and Intelligent Systems engineer committed to designing assistive technologies that respect human capabilities while extending them. </p> </div> <div class="section-curve" aria-hidden="true"></div> </section>
+<section class="page-section">
+  <div class="inner split">
+    <div>
+      <h2>Academic background</h2>
+      <p>
+        My academic path in robotics and intelligent systems has been grounded in rigorous coursework in mechanics, control, embedded systems, and applied mathematics. Through this foundation, I learned to move fluently between modeling physical systems, implementing algorithms, and analyzing experimental data.
+      </p>
+      <p>
+        In my undergraduate studies, I focused on projects that required both careful hardware design and thoughtful algorithmic choices. I deliberately sought work that connected theoretical ideas in control and perception with tangible improvements in how robots support and collaborate with people.
+      </p>
+    </div>
+    <div>
+      <h2>Motivation for robotics</h2>
+      <p>
+        Robotics attracted me because it sits at the intersection of precision and empathy. The systems I design must satisfy strict technical constraints while also responding to the vulnerabilities and aspirations of the people who use them.
+      </p>
+      <p>
+        I am particularly motivated by contexts in which robotics can restore or enhance capabilities that illness, injury, or circumstance have limited. The design of such systems demands patience, humility, and a willingness to iterate in response to real users rather than idealized models.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <header class="page-header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="page-title">Academic Journey & Research Philosophy</h1>
-                <p class="page-subtitle">
-                    From distinguished student to robotics engineer: A story of perseverance, 
-                    innovation, and commitment to human-centered technology
-                </p>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
-                    <span>Academic Biography</span>
-                </div>
-            </div>
-        </div>
-    </header>
+<section class="page-section alt">
+  <div class="inner split">
+    <div>
+      <h2>Research interests</h2>
+      <p>
+        My research interests are centered on human–robot interaction, rehabilitation robotics, intelligent control, and computer vision. I am drawn to questions about how robots can interpret noisy, partial signals from humans and environments to make safe and helpful decisions.
+      </p>
+      <p>
+        In human–robot interaction and rehabilitation robotics, I am interested in assistive devices that adapt to individual users, capturing both biomechanical and behavioral patterns over time. Intelligent control and computer vision provide the tools to embed this adaptivity directly into the control loops that govern motion and feedback.
+      </p>
+    </div>
+    <div>
+      <h2>Values and outlook</h2>
+      <p>
+        Perseverance, responsibility, service, and access to education guide how I approach both research and collaboration. I view each project as a long-term commitment, from the initial literature review to the final documentation that enables others to build upon the work.
+      </p>
+      <p>
+        Growing up and studying in Syria has shaped an international outlook grounded in constraints and creativity. I am deeply aware that many communities face barriers to advanced healthcare, technology, and education, and I aspire to contribute to research that makes high-quality robotic assistance and learning opportunities more widely accessible.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <section class="biography">
-        <div class="container">
-            <div class="bio-grid">
-                <div class="bio-portrait">
-                    <div class="portrait-wrapper">
-                        <img src="assets/img/tala-portrait.jpg" alt="Tala Khaddour Academic Portrait" class="bio-image">
-                        <div class="portrait-overlay">
-                            <div class="overlay-text">
-                                <h3>Robotics Engineer</h3>
-                                <p>Specializing in Rehabilitation Systems</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portrait-info">
-                        <div class="info-item">
-                            <i class="fas fa-university"></i>
-                            <div>
-                                <strong>Manara University</strong>
-                                <p>BSc Robotics Engineering</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Latakia, Syria</strong>
-                                <p>Research & Development</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <strong>Distinguished Graduate</strong>
-                                <p>Thesis Score: 96/100</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bio-content">
-                    <div class="bio-intro">
-                        <h2 class="bio-title">Tala Khaddour</h2>
-                        <h3 class="bio-subtitle">Robotics & Intelligent Systems Engineer</h3>
-                        <p class="bio-lead">
-                            A passionate robotics engineer dedicated to creating intelligent systems 
-                            that enhance human capabilities, with particular focus on affordable 
-                            rehabilitation technologies for global healthcare challenges.
-                        </p>
-                    </div>
-                    
-                    <div class="bio-story">
-                        <h3><i class="fas fa-seedling"></i> Early Academic Foundation</h3>
-                        <p>
-                            My journey in robotics began at the <strong>National Center for the Distinguished</strong>, 
-                            where I ranked 3rd among 75 selected students nationwide. This early exposure 
-                            to rigorous academic training cultivated my analytical thinking and passion for 
-                            engineering innovation.
-                        </p>
-                        
-                        <h3><i class="fas fa-robot"></i> Robotics Engineering Education</h3>
-                        <p>
-                            At <strong>Manara University</strong>, I pursued a Bachelor's in Robotics and Intelligent Systems 
-                            Engineering through the Distinguished Student Program. The curriculum emphasized 
-                            advanced coursework in control systems, artificial intelligence, and human-robot 
-                            interaction, preparing me for graduate-level research.
-                        </p>
-                        
-                        <h3><i class="fas fa-hand-paper"></i> Research Focus: Rehabilitation Robotics</h3>
-                        <p>
-                            My honors thesis on <strong>"Intelligent Trajectory and Control of a Designed Hand Exoskeleton 
-                            for Rehabilitation"</strong> represents my commitment to bridging engineering excellence 
-                            with human welfare. This work addresses the critical need for affordable assistive 
-                            devices in regions with limited healthcare resources.
-                        </p>
-                        
-                        <h3><i class="fas fa-globe"></i> Global Perspective & Aspirations</h3>
-                        <p>
-                            Through international competitions like the World Robot Olympiad and participation 
-                            in global initiatives like Girls in AI, I've developed a cross-cultural understanding 
-                            of technology's role in society. I aim to contribute to international research 
-                            collaborations that advance accessible rehabilitation technologies worldwide.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="education-timeline">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Academic Timeline</h2>
-                <p class="section-subtitle">A journey of continuous learning and achievement</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2017 - 2020</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">National Center for the Distinguished</h3>
-                        <div class="timeline-subtitle">High School Diploma - Scientific Stream</div>
-                        <ul class="timeline-details">
-                            <li>Rank: 3 out of 75 selected students nationwide</li>
-                            <li>Final Grade: 92.3%</li>
-                            <li>Selected from 1,800 pre-qualified applicants</li>
-                            <li>Foundation in advanced mathematics and physics</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2025</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Manara University</h3>
-                        <div class="timeline-subtitle">Bachelor of Science in Robotics and Intelligent Systems Engineering</div>
-                        <ul class="timeline-details">
-                            <li>Distinguished Student Program with selective academic track</li>
-                            <li>GPA: 3.28/4.0 (Graduated with Honors)</li>
-                            <li>Thesis Score: 96/100 - "Intelligent Hand Exoskeleton for Rehabilitation"</li>
-                            <li>Emphasis on advanced control systems and AI applications</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2025</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Professional Development</h3>
-                        <div class="timeline-subtitle">Research & Leadership Growth</div>
-                        <ul class="timeline-details">
-                            <li>World Robot Olympiad - 5th Place Nationwide (2022)</li>
-                            <li>Robotics Coach & Trainer - Syrian Computer Society (2023-2024)</li>
-                            <li>Damascus International Fair - Scientific Projects Participant (2025)</li>
-                            <li>InnoSync Conference Participant - JCI Organized (2025)</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="philosophy">
-        <div class="container">
-            <div class="philosophy-card">
-                <div class="philosophy-header">
-                    <h2><i class="fas fa-brain"></i> Research Philosophy</h2>
-                    <p>Guiding principles that shape my approach to robotics engineering</p>
-                </div>
-                
-                <div class="philosophy-grid">
-                    <div class="principle">
-                        <div class="principle-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Human-Centered Design</h3>
-                        <p>
-                            Technology should serve humanity. Every robotic system I design prioritizes 
-                            accessibility, usability, and direct positive impact on human lives, 
-                            particularly in healthcare applications.
-                        </p>
-                    </div>
-                    
-                    <div class="principle">
-                        <div class="principle-icon">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <h3>Ethical Innovation</h3>
-                        <p>
-                            Responsible engineering requires considering the social, economic, and 
-                            ethical implications of technological advancement, ensuring solutions are 
-                            sustainable and equitable.
-                        </p>
-                    </div>
-                    
-                    <div class="principle">
-                        <div class="principle-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Collaborative Excellence</h3>
-                        <p>
-                            Breakthroughs happen at the intersection of disciplines. I value 
-                            cross-cultural and interdisciplinary collaboration as essential for 
-                            solving complex global challenges.
-                        </p>
-                    </div>
-                    
-                    <div class="principle">
-                        <div class="principle-icon">
-                            <i class="fas fa-globe-americas"></i>
-                        </div>
-                        <h3>Global Perspective</h3>
-                        <p>
-                            Engineering solutions must consider diverse contexts. I'm committed to 
-                            developing technologies that are adaptable to different cultural and 
-                            economic environments worldwide.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="future-goals">
-        <div class="container">
-            <div class="goals-content">
-                <h2 class="goals-title">Graduate Research Aspirations</h2>
-                <div class="goals-grid">
-                    <div class="goal-card">
-                        <h3><i class="fas fa-graduation-cap"></i> Advanced Studies Focus</h3>
-                        <ul>
-                            <li>MSc/PhD in Robotics or Biomedical Engineering</li>
-                            <li>Specialization in Rehabilitation Robotics</li>
-                            <li>Advanced control systems and AI integration</li>
-                            <li>Human-robot interaction research</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="goal-card">
-                        <h3><i class="fas fa-flask"></i> Research Objectives</h3>
-                        <ul>
-                            <li>Develop affordable rehabilitation devices</li>
-                            <li>Advance adaptive control algorithms</li>
-                            <li>Integrate AI for personalized therapy</li>
-                            <li>Collaborate with medical professionals</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="goal-card">
-                        <h3><i class="fas fa-handshake"></i> Contribution Goals</h3>
-                        <ul>
-                            <li>Publish in top robotics journals</li>
-                            <li>Contribute to open-source robotics</li>
-                            <li>Mentor aspiring engineers</li>
-                            <li>Bridge academic research and clinical application</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="cta-box">
-                    <h3>Seeking Scholarship Opportunities</h3>
-                    <p>
-                        I am actively pursuing prestigious scholarship programs to advance my research 
-                        in rehabilitation robotics and contribute to global healthcare innovation.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Discuss Research Collaboration
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<section class="page-section">
+  <div class="inner narrow">
+    <h2>Looking ahead</h2>
+    <p>
+      At the graduate level, I hope to join a research group where I can contribute to ongoing work in assistive and intelligent robotics while developing independent projects at the intersection of control, perception, and human factors. I am eager to collaborate with supervisors and peers who value careful experimentation, ethical reflection, and mentoring of the next generation of engineers.
+    </p>
+  </div>
+</section>
+</main> <footer class="site-footer"> <div class="inner footer-inner"> <p>&copy; <span id="year"></span> Tala Khaddour. All rights reserved.</p> <p class="footer-location">Currently based in Syria, open to international research opportunities.</p> </div> </footer> </body> </html>

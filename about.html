@@ -1,246 +1,245 @@
+<!-- about.html (COMPLETE FILE with chessboard text-image layout) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Tala Khaddour</title>
+    <meta name="description" content="About Tala Khaddour, Robotics & Intelligent Systems Engineer: academic path, work experience, competitions, and awards.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">
+                <span class="nav-logo-mark">TK</span>
+                <span class="nav-logo-text">Tala Khaddour</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link nav-link-active">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-hero" aria-labelledby="about-title">
+        <div class="page-hero-inner">
+            <h1 id="about-title" class="page-hero-title">About me</h1>
+            <p class="page-hero-subtitle">
+                Robotics & Intelligent Systems Engineer from Syria, specializing in rehabilitation robotics, intelligent control, and human-robot interaction.
+            </p>
+        </div>
+        <div class="hero-curve hero-curve-small" aria-hidden="true"></div>
+    </section>
+</header>
+
 <main>
-    <!-- ABOUT ME SECTION (hero-like, text + image) -->
-    <section class="section fade-section" aria-labelledby="about-me-heading">
-        <div class="section-inner about-hero">
-            <div class="about-text-block">
-                <p class="about-kicker">Academic identity</p>
-                <h2 id="about-me-heading" class="section-title">Who I am as an engineer</h2>
-                <p>
-                    I was trained as a Robotics and Intelligent Systems Engineer in Latakia, Syria, where I learned to treat engineering as both a scientific discipline and a public responsibility. Working in an environment shaped by conflict and limited resources has taught me to design systems that are efficient, explainable, and mindful of the people who will rely on them.
+    <!-- 1. ABOUT ME: TEXT LEFT + IMAGE RIGHT -->
+    <section class="section fade-section" aria-labelledby="about-identity">
+        <div class="section-inner chess-row">
+            <div class="chess-text">
+                <h2 id="about-identity" class="section-title">Academic identity</h2>
+                <p class="hero-bio">
+                    Trained as a Robotics and Intelligent Systems Engineer in Latakia, Syria. My work combines technical rigor with social responsibility, designing systems that work in resource-constrained environments for people who need them most.
                 </p>
-                <p>
-                    My current interests lie in rehabilitation robotics, human–robot interaction, intelligent control, and computer vision. I am particularly drawn to problems where careful modeling, control, and perception can translate directly into improved quality of life for individuals recovering from injury or living with chronic motor impairments.
-                </p>
-                <p>
-                    Beyond technical skills, I value perseverance, responsibility, service, and access to education. These values guide how I choose research problems, how I mentor younger students, and how I hope to contribute within an international graduate program.
+                <p class="hero-bio">
+                    Core interests: rehabilitation robotics, human-robot interaction, intelligent control, computer vision. Values: perseverance, responsibility, service, access to education.
                 </p>
             </div>
-            <div class="about-portrait-wrapper">
-                <div class="about-portrait-shell" aria-hidden="true"></div>
-                <img src="assets/img/profile.jpg" alt="Portrait of Tala Khaddour" class="about-portrait">
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section class="section section-alt fade-section" aria-labelledby="education-heading">
-        <div class="section-inner">
-            <div class="section-header-inline">
-                <h2 id="education-heading" class="section-title">Education</h2>
-                <p class="section-kicker">From early distinction to honors-level undergraduate work</p>
-            </div>
-
-            <!-- Manara University: text left, images right -->
-            <div class="edu-row">
-                <div class="edu-text edu-card-soft">
-                    <h3 class="edu-institution">
-                        <a href="https://manara.edu.sy" target="_blank" rel="noopener noreferrer" class="text-link">
-                            Manara University – Robotics &amp; Intelligent Systems Engineering
-                        </a>
-                    </h3>
-                    <p class="edu-location">Latakia, Syria · 2020 – 2025</p>
-                    <p class="edu-degree">Bachelor of Science in Robotics and Intelligent Systems Engineering</p>
-                    <p>
-                        Manara University provided an integrated program in robotics and intelligent systems that combines control, perception, and embedded development. The Distinguished Student Program allowed me to follow an intensive academic track designed to prepare students for graduate-level research and innovation.
-                    </p>
-                    <ul class="edu-list">
-                        <li>Distinguished Student Program with a selective track emphasizing advanced coursework and research preparation.</li>
-                        <li>GPA: 3.28 / 4.0 · Thesis score: 96 / 100 (Graduated with Honors).</li>
-                        <li>Thesis: <em>Intelligent Trajectory and Control of a Designed Hand Exoskeleton for Rehabilitation</em>.</li>
-                    </ul>
-                    <p class="edu-links">
-                        <a href="https://manara.edu.sy/eng/index.php?page=show&ex=2&dir=items&lang=2&service=52&cat_id=1109" target="_blank" rel="noopener noreferrer" class="text-link">
-                            See program course description
-                        </a>
-                        <span aria-hidden="true">·</span>
-                        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="text-link">
-                            Click here to see my Manara University graduation certificate
-                        </a>
-                        <span aria-hidden="true">·</span>
-                        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="text-link">
-                            See proof of Distinguished Student Program
-                        </a>
-                    </p>
-                </div>
-                <div class="edu-images edu-images-column">
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/manara-grad-1.jpg" alt="Graduation ceremony at Manara University" class="edu-img">
-                        <figcaption class="edu-caption">Graduation ceremony at Manara University.</figcaption>
-                    </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/manara-grad-2.jpg" alt="Working in the robotics and intelligent systems lab" class="edu-img">
-                        <figcaption class="edu-caption">Working in the robotics and intelligent systems lab.</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <!-- NCD: images left, text right -->
-            <div class="edu-row edu-row-reverse">
-                <div class="edu-images edu-images-column">
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/ncd-1.jpg" alt="National Center for the Distinguished campus" class="edu-img">
-                        <figcaption class="edu-caption">National Center for the Distinguished campus.</figcaption>
-                    </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/ncd-2.jpg" alt="NCD academic events and activities" class="edu-img">
-                        <figcaption class="edu-caption">NCD academic events and activities that shaped my scientific interests.</figcaption>
-                    </figure>
-                </div>
-                <div class="edu-text edu-card-soft">
-                    <h3 class="edu-institution">
-                        <a href="http://ncd.sy" target="_blank" rel="noopener noreferrer" class="text-link">
-                            National Center for the Distinguished (NCD)
-                        </a>
-                    </h3>
-                    <p class="edu-location">Latakia, Syria · 2017 – 2020</p>
-                    <p class="edu-degree">High School Diploma – Scientific Stream · Top 75 Students Nationwide</p>
-                    <p>
-                        At NCD, I joined a national cohort of students selected for their academic potential. The program combined a strong conceptual curriculum in mathematics, physics, and computer science with a culture of curiosity, experimentation, and responsibility.
-                    </p>
-                    <ul class="edu-list">
-                        <li>Final grade: 92.3% with a rank of 3 out of 75 students.</li>
-                        <li>Selected among 75 students from approximately 1,800 pre-qualified applicants across Syria.</li>
-                        <li>Developed an early interest in robotics, autonomous systems, and problem solving in constrained environments.</li>
-                    </ul>
+            <div class="chess-image">
+                <div class="image-frame">
+                    <img src="assets/img/profile.jpg" alt="Tala Khaddour, Robotics Engineer" class="hero-portrait">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WORK EXPERIENCE: row 1 text–image, row 2 image–text -->
-    <section class="section fade-section" aria-labelledby="experience-heading">
-        <div class="section-inner">
-            <div class="section-header-inline">
-                <h2 id="experience-heading" class="section-title">Work experience</h2>
-                <p class="section-kicker">Coaching, teaching, and applied robotics</p>
+    <!-- 2. EDUCATION: MANARA UNI (TEXT LEFT + 2 IMAGES RIGHT) -->
+    <section class="section section-alt fade-section" aria-labelledby="manara-heading">
+        <div class="section-inner chess-row">
+            <div class="chess-text edu-card-soft">
+                <h3 class="edu-institution">
+                    <a href="https://manara.edu.sy" target="_blank" class="text-link">Manara University</a>
+                </h3>
+                <p class="edu-location">2020–2025 · Latakia, Syria</p>
+                <p class="edu-degree"><strong>BSc Robotics & Intelligent Systems Engineering</strong></p>
+                <ul class="edu-list">
+                    <li>Distinguished Student Program (top selective track for graduate research preparation)</li>
+                    <li>GPA: 3.28/4.0 | Thesis: 96/100 (Graduated with Honors)</li>
+                    <li>Thesis: "Intelligent Trajectory and Control of Designed Hand Exoskeleton for Rehabilitation"</li>
+                </ul>
             </div>
-
-            <!-- Row 1: text left, image right -->
-            <div class="experience-row">
-                <div class="experience-text edu-card-soft">
-                    <h3 class="experience-role">Robotics Project Coach (RFG Program)</h3>
-                    <p class="experience-org">Manara University &amp; Sanad Youth Development Foundation · Latakia, Syria · Jan 2023 – Aug 2023</p>
-                    <p>
-                        As a robotics project coach, I guided a student team preparing for participation in the Robotics For the Globe competition. My role combined technical supervision with mentoring, helping students structure their ideas, test hypotheses, and communicate their work clearly.
-                    </p>
-                    <ul class="experience-list">
-                        <li>Advised on Arduino-based development, sensor integration, and control strategies.</li>
-                        <li>Encouraged systematic experimentation, documentation, and reflection on failures.</li>
-                        <li>Helped align the team’s project with the competition’s social and technical goals.</li>
-                    </ul>
-                </div>
-                <div class="experience-image experience-image-large">
-                    <figure class="exp-figure">
-                        <img src="assets/img/work-rfg.jpg" alt="Coaching a student robotics team for the RFG competition" class="exp-img">
-                        <figcaption class="exp-caption">Coaching a student robotics team in preparation for competition.</figcaption>
+            <div class="chess-image">
+                <div class="image-grid-2">
+                    <figure class="image-frame-small">
+                        <img src="assets/img/manara-1.jpg" alt="Manara University graduation">
+                        <figcaption>Graduation ceremony</figcaption>
                     </figure>
-                </div>
-            </div>
-
-            <!-- Row 2: image left, text right -->
-            <div class="experience-row experience-row-reverse">
-                <div class="experience-image experience-image-large">
-                    <figure class="exp-figure">
-                        <img src="assets/img/work-scs.jpg" alt="Delivering a robotics and programming workshop" class="exp-img">
-                        <figcaption class="exp-caption">Leading a robotics and programming workshop at the Syrian Computer Society.</figcaption>
+                    <figure class="image-frame-small">
+                        <img src="assets/img/manara-2.jpg" alt="Robotics laboratory work">
+                        <figcaption>Robotics laboratory</figcaption>
                     </figure>
-                </div>
-                <div class="experience-text edu-card-soft">
-                    <h3 class="experience-role">Robotics &amp; Programming Trainer / Tutor</h3>
-                    <p class="experience-org">Syrian Computer Society · Latakia &amp; Jableh, Syria · 2023 – 2024</p>
-                    <p>
-                        As a trainer and tutor, I worked with students at different levels to introduce robotics, programming, and basic AI. The focus was always on connecting theory with practice through small, meaningful projects.
-                    </p>
-                    <ul class="experience-list">
-                        <li>Delivered short courses and workshops on robotics fundamentals and introductory AI concepts.</li>
-                        <li>Designed hands-on exercises where trainees implemented and tested core ideas on real hardware.</li>
-                        <li>Helped students see themselves as future contributors to robotics and AI, regardless of background.</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PARTICIPATION & AWARDS: WRO (text–image) + conferences (image–text) + other (chess with 4 images) -->
-    <section class="section section-alt fade-section" aria-labelledby="participation-heading">
-        <div class="section-inner">
-            <div class="section-header-inline">
-                <h2 id="participation-heading" class="section-title">Participation &amp; awards</h2>
-                <p class="section-kicker">Competitions, conferences, and academic recognition</p>
-            </div>
-
-            <!-- WRO: text left, image right -->
-            <div class="experience-row">
-                <div class="experience-text edu-card-soft">
-                    <h3 class="experience-role">World Robot Olympiad – Future Engineers</h3>
-                    <p class="experience-org">5th Place Nationwide · 2022</p>
-                    <p>
-                        In the World Robot Olympiad Future Engineers category, I worked on autonomous vehicle design and control under strict constraints. The experience strengthened my ability to make design decisions under pressure and to work in a team toward a well-defined technical goal.
-                    </p>
-                    <ul class="experience-list">
-                        <li>Developed and tuned autonomous behaviors for a competition platform within time limits.</li>
-                        <li>Practiced clear division of roles, version control, and iterative improvement.</li>
-                    </ul>
-                </div>
-                <div class="experience-image experience-image-large">
-                    <figure class="exp-figure">
-                        <img src="assets/img/wro-1.jpg" alt="World Robot Olympiad event photo" class="exp-img">
-                        <figcaption class="exp-caption">Participating in the World Robot Olympiad – Future Engineers category.</figcaption>
+    <!-- EDUCATION: NCD (2 IMAGES LEFT + TEXT RIGHT) -->
+    <section class="section fade-section" aria-labelledby="ncd-heading">
+        <div class="section-inner chess-row chess-row-reverse">
+            <div class="chess-image">
+                <div class="image-grid-2">
+                    <figure class="image-frame-small">
+                        <img src="assets/img/ncd-1.jpg" alt="NCD campus">
+                        <figcaption>NCD campus</figcaption>
+                    </figure>
+                    <figure class="image-frame-small">
+                        <img src="assets/img/ncd-2.jpg" alt="NCD academic activities">
+                        <figcaption>Academic activities</figcaption>
                     </figure>
                 </div>
             </div>
+            <div class="chess-text edu-card-soft">
+                <h3 class="edu-institution">
+                    <a href="http://ncd.sy" target="_blank" class="text-link">National Center for the Distinguished (NCD)</a>
+                </h3>
+                <p class="edu-location">2017–2020 · Latakia, Syria</p>
+                <p class="edu-degree"><strong>High School Diploma – Scientific Stream</strong> (Top 75 Nationwide)</p>
+                <ul class="edu-list">
+                    <li>Rank: 3/75 | Final grade: 92.3% | Top 4% nationally</li>
+                    <li>Selected from 1,800 pre-qualified applicants across Syria</li>
+                    <li>Advanced curriculum: mathematics, physics, computer science</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <!-- Conferences: image left, text right -->
-            <div class="edu-row edu-row-reverse">
-                <div class="edu-images edu-images-column">
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/conf-1.jpg" alt="Presenting a project at a scientific fair" class="edu-img">
-                        <figcaption class="edu-caption">Presenting work at a scientific exhibition.</figcaption>
-                    </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/conf-2.jpg" alt="Attending an innovation and entrepreneurship conference" class="edu-img">
-                        <figcaption class="edu-caption">Attending an innovation and entrepreneurship conference.</figcaption>
-                    </figure>
-                </div>
-                <div class="edu-text edu-card-soft">
-                    <h3 class="experience-role">Conferences &amp; exhibitions</h3>
-                    <ul class="experience-list">
-                        <li>Damascus International Fair (62nd Edition), 2025 – Participant in the Scientific Projects Pavilion with the Distinction and Creativity Agency.</li>
-                        <li>InnoSync Conference 2025 – Conference participant; organized by Junior Chamber International (JCI).</li>
-                        <li>Manara University Student Exhibition 2025 – Participant; received a certificate of appreciation for project presentation.</li>
-                    </ul>
+    <!-- 3. WORK EXPERIENCE 1: TEXT LEFT + IMAGE RIGHT -->
+    <section class="section section-alt fade-section" aria-labelledby="rfg-heading">
+        <div class="section-inner chess-row">
+            <div class="chess-text edu-card-soft">
+                <h3 class="experience-role">Robotics Project Coach (RFG Program)</h3>
+                <p class="experience-org">Manara University & Sanad Youth Development Foundation<br>Jan 2023 – Aug 2023 · Latakia, Syria</p>
+                <ul class="experience-list">
+                    <li>Coached robotics team for Robotics For the Globe competition</li>
+                    <li>Arduino development, sensor integration, control strategies</li>
+                    <li>Technical documentation and creative project guidance</li>
+                </ul>
+            </div>
+            <div class="chess-image">
+                <div class="image-frame">
+                    <img src="assets/img/rfg-coach.jpg" alt="Coaching robotics team">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Other participation: text left, 4 images right -->
-            <div class="edu-row">
-                <div class="edu-text edu-card-soft">
-                    <h3 class="experience-role">Scholarships, hackathons &amp; youth programs</h3>
-                    <ul class="experience-list">
-                        <li>Distinction and Creativity Agency (DCA) Academic Scholarship, 2020 – 2025: merit-based national scholarship supporting my undergraduate studies.</li>
-                        <li>Girls in AI – Teens in AI: Ada Lovelace Hackathon, 2021: international program exposing young women to AI, ethics, and social impact.</li>
-                        <li>Acquaint, 2025 – present: volunteer participant in international youth activities focused on cross-cultural collaboration and global perspectives.</li>
-                    </ul>
+    <!-- WORK EXPERIENCE 2: IMAGE LEFT + TEXT RIGHT -->
+    <section class="section fade-section" aria-labelledby="scs-heading">
+        <div class="section-inner chess-row chess-row-reverse">
+            <div class="chess-image">
+                <div class="image-frame">
+                    <img src="assets/img/scs-training.jpg" alt="Robotics training session">
                 </div>
-                <div class="edu-images edu-images-grid-4">
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/part-1.jpg" alt="Hackathon teamwork session" class="edu-img">
-                        <figcaption class="edu-caption">Working with teammates during an AI-focused hackathon.</figcaption>
+            </div>
+            <div class="chess-text edu-card-soft">
+                <h3 class="experience-role">Robotics & Programming Trainer</h3>
+                <p class="experience-org">Syrian Computer Society<br>2023–2024 · Latakia & Jableh, Syria</p>
+                <ul class="experience-list">
+                    <li>Training sessions in robotics and basic AI concepts</li>
+                    <li>Hands-on exercises and small projects with real hardware</li>
+                    <li>Built local community of young robotics/AI learners</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PARTICIPATION: WRO (TEXT LEFT + 4 IMAGES RIGHT) -->
+    <section class="section section-alt fade-section" aria-labelledby="wro-heading">
+        <div class="section-inner chess-row">
+            <div class="chess-text edu-card-soft">
+                <h3 class="experience-role">World Robot Olympiad (WRO)</h3>
+                <p class="experience-org"><strong>5th Place Nationwide</strong> – Future Engineers Category · 2022</p>
+                <ul class="experience-list">
+                    <li>Autonomous vehicle design and control under competition constraints</li>
+                    <li>Teamwork, rapid prototyping, competition documentation</li>
+                    <li>Reinforced commitment to research-grade robotics engineering</li>
+                </ul>
+            </div>
+            <div class="chess-image">
+                <div class="image-grid-4">
+                    <figure class="image-frame-tiny"><img src="assets/img/wro-1.jpg" alt="WRO competition"></figure>
+                    <figure class="image-frame-tiny"><img src="assets/img/wro-2.jpg" alt="WRO team"></figure>
+                    <figure class="image-frame-tiny"><img src="assets/img/wro-3.jpg" alt="WRO robot"></figure>
+                    <figure class="image-frame-tiny"><img src="assets/img/wro-4.jpg" alt="WRO award"></figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFERENCES: 2 IMAGES LEFT + TEXT RIGHT -->
+    <section class="section fade-section" aria-labelledby="conf-heading">
+        <div class="section-inner chess-row chess-row-reverse">
+            <div class="chess-image">
+                <div class="image-grid-2">
+                    <figure class="image-frame-small">
+                        <img src="assets/img/damascus-fair.jpg" alt="Damascus International Fair">
+                        <figcaption>Damascus Fair</figcaption>
                     </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/part-2.jpg" alt="Scholarship or award recognition moment" class="edu-img">
-                        <figcaption class="edu-caption">Receiving recognition related to academic distinction.</figcaption>
+                    <figure class="image-frame-small">
+                        <img src="assets/img/innosync.jpg" alt="InnoSync Conference">
+                        <figcaption=InnoSync Conference</figcaption>
                     </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/part-3.jpg" alt="Youth program group activity" class="edu-img">
-                        <figcaption class="edu-caption">Participating in an international youth program activity.</figcaption>
-                    </figure>
-                    <figure class="edu-figure edu-figure-large">
-                        <img src="assets/img/part-4.jpg" alt="Volunteering or event support scene" class="edu-img">
-                        <figcaption class="edu-caption">Supporting academic and outreach events as a volunteer.</figcaption>
-                    </figure>
+                </div>
+            </div>
+            <div class="chess-text edu-card-soft">
+                <h3 class="experience-role">Conferences & Exhibitions</h3>
+                <ul class="experience-list">
+                    <li>Damascus International Fair (62nd Edition) 2025 – Scientific Projects Pavilion</li>
+                    <li>InnoSync Conference 2025 – Junior Chamber International (JCI)</li>
+                    <li>Manara University Student Exhibition 2025 – Certificate of Appreciation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER PARTICIPATION: TEXT LEFT + IMAGE RIGHT -->
+    <section class="section section-alt fade-section" aria-labelledby="other-heading">
+        <div class="section-inner chess-row">
+            <div class="chess-text edu-card-soft">
+                <h3 class="experience-role">Scholarships & Hackathons</h3>
+                <ul class="experience-list">
+                    <li>Distinction and Creativity Agency (DCA) Scholarship 2020–2025</li>
+                    <li>Girls in AI: Teens in AI Ada Lovelace Hackathon 2021 (international)</li>
+                    <li>Acquaint international youth program 2025–present</li>
+                </ul>
+            </div>
+            <div class="chess-image">
+                <div class="image-frame">
+                    <img src="assets/img/awards.jpg" alt="Awards and scholarships">
                 </div>
             </div>
         </div>
     </section>
 </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-name">Tala Khaddour</p>
+        <p class="footer-tagline">Robotics · Intelligent Systems · Human-centered engineering</p>
+        <p class="footer-meta">Designed for international scholarship applications and graduate admissions.</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

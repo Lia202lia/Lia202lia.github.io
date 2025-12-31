@@ -40,7 +40,7 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     line-height: 1.7;
-    font-size: 17px; /* slightly larger base for readability [web:12][web:18] */
+    font-size: 17px;
 }
 
 /* ========= TYPOGRAPHY ========= */
@@ -256,7 +256,7 @@ p {
 
 .hero-philosophy-text {
     font-style: italic;
-    font-size: 1.25rem; /* Increased from 1.02rem */
+    font-size: 1.25rem;
     line-height: 1.5;
     color: #2A3747;
     padding: 0.2rem 0;
@@ -279,7 +279,6 @@ p {
     justify-content: center;
 }
 
-/* Remove the capsule background */
 .hero-portrait-shell {
     display: none;
 }
@@ -636,22 +635,21 @@ p {
     background: #F0F3F8;
 }
 
+/* FIXED: Proper image-text grid layout */
 .case-grid {
     display: grid;
-    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.6fr);
-    gap: 3rem;
+    grid-template-columns: 1.1fr 1.9fr; /* Better ratio: 35% image, 65% text */
+    gap: 2.5rem;
     align-items: start;
 }
 
 .case-grid-reverse {
-    grid-template-columns: minmax(0, 1.6fr) minmax(240px, 0.9fr);
+    grid-template-columns: 1.9fr 1.1fr;
 }
 
 .case-text {
     display: flex;
     flex-direction: column;
-    max-width: none;
-    padding-right: 1.5rem;
 }
 
 .case-tagline {
@@ -660,59 +658,66 @@ p {
     font-weight: 600;
     margin-bottom: 1.2rem;
     line-height: 1.5;
-    max-width: 85ch;
 }
 
-/* Professional image containers */
+/* FIXED: Professional image containers - NO excess white space */
 .case-media {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
 }
 
 .figure-single {
     width: 100%;
-    height: 280px;
+    aspect-ratio: 3/4; /* Better aspect ratio */
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    background: #F8F9FB;
+    background: var(--color-background);
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(159, 183, 212, 0.25);
+    position: relative;
 }
 
+/* FIXED: Two images side by side horizontally */
 .figure-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0.8rem;
-    height: 320px;
+    grid-template-columns: 1fr 1fr; /* Two columns side by side */
+    grid-template-rows: 1fr; /* Single row for horizontal layout */
+    gap: 1rem;
+    width: 100%;
+    aspect-ratio: 2/1; /* Horizontal rectangle */
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    background: #F8F9FB;
+    background: var(--color-background);
     margin: 0;
-    padding: 0.5rem;
-    border: 1px solid rgba(159, 183, 212, 0.25);
 }
 
-/* Professional image display */
-.figure-single img,
+/* FIXED: Images fill containers properly */
+.figure-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill container, maintain aspect ratio */
+    display: block;
+}
+
 .figure-grid img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #F8F9FB;
-    padding: 0.3rem;
+    object-fit: cover; /* Fill each grid cell */
+    display: block;
+}
+
+/* Remove any white borders/frames */
+.figure-single,
+.figure-grid {
+    border: 1px solid rgba(159, 183, 212, 0.2); /* Subtle border */
+    padding: 0; /* No padding to eliminate white space */
+    background: var(--color-background); /* Match page background */
 }
 
 /* Text styling */
 .body-text {
     font-size: 1.05rem;
-    max-width: 75ch;
     line-height: 1.7;
     color: #2A3747;
     margin-bottom: 1.2rem;
@@ -730,7 +735,6 @@ p {
 .case-text ul {
     padding-left: 1.2rem;
     margin: 0.8rem 0 1.2rem;
-    max-width: 70ch;
 }
 
 .case-text li {
@@ -746,7 +750,6 @@ p {
     margin: 1.2rem 0;
     display: grid;
     gap: 0.6rem;
-    max-width: 70ch;
 }
 
 .hero-focus-list li {
@@ -789,38 +792,35 @@ p {
     }
     
     .figure-single {
-        height: 240px;
-        max-width: 400px;
+        aspect-ratio: 3/4;
+        max-width: 350px;
         margin: 0 auto;
     }
     
     .figure-grid {
-        height: 280px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        max-width: 400px;
+        aspect-ratio: 2/1;
+        max-width: 500px;
         margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
     
     .page-hero-subtitle {
         margin-left: 0;
         max-width: 100%;
     }
-    
-    .case-text {
-        padding-right: 0;
-    }
 }
 
 @media (max-width: 600px) {
     .figure-single {
-        height: 220px;
+        aspect-ratio: 3/4;
+        max-width: 280px;
     }
     
     .figure-grid {
-        height: 250px;
-        gap: 0.5rem;
-        padding: 0.3rem;
+        aspect-ratio: 2/1;
+        max-width: 400px;
+        gap: 0.8rem;
     }
     
     .case-grid {
@@ -834,5 +834,13 @@ p {
     .page-hero-subtitle {
         font-size: 1.05rem;
         padding: 1rem 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .figure-grid {
+        aspect-ratio: 1.5/1;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; /* Stack vertically on very small screens */
     }
 }

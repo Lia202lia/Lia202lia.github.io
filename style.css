@@ -662,117 +662,155 @@ p {
     border: 3px solid rgba(248, 249, 251, 0.9);
 }
 
-/* Soft card for education and experience blocks */
-.edu-card-soft {
-    background: var(--color-surface);
-    border-radius: 18px;
-    border: 1px solid rgba(211, 216, 224, 0.9);
-    padding: 1.6rem 1.8rem;
+/* CHESSBOARD LAYOUT FOR ABOUT PAGE */
+.chess-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+    margin-bottom: 4rem;
 }
 
-/* RESPONSIVE TWEAKS FOR ABOUT PAGE */
-@media (max-width: 880px) {
-    .about-hero {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 2.5rem;
-    }
-
-    .about-portrait-shell {
-        inset: 10% 24%;
-    }
+.chess-row-reverse {
+    grid-template-columns: 1fr 1.4fr;
 }
 
-@media (max-width: 720px) {
-    .about-hero {
-        gap: 2.1rem;
-    }
-
-    .about-portrait-shell {
-        inset: 10% 22%;
-    }
-}
-
-@media (max-width: 520px) {
-    .about-portrait {
-        width: min(240px, 80vw);
-    }
-
-    .about-portrait-shell {
-        inset: 10% 20%;
-    }
-}
-/* Make education/experience rows look like clear chessboard blocks */
-.edu-row,
-.experience-row {
-    align-items: stretch;
-}
-
-/* Column behavior: images in a vertical column with enough size */
-.edu-images-column {
+.chess-text {
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
 }
 
-/* Larger image frame for visibility */
-.edu-figure-large,
-.experience-image-large .exp-figure {
-    border-radius: 18px;
-    overflow: hidden;
-    background: #E2E7F1;
-    box-shadow: 0 12px 26px rgba(4, 18, 36, 0.09);
+.chess-image {
+    display: flex;
+    justify-content: center;
 }
 
-/* Ensure images have a strong presence */
-.edu-img,
-.exp-img {
+/* IMAGE FRAMES - PERFECTLY VISIBLE SIZE */
+.image-frame {
     width: 100%;
-    height: 230px;
+    height: 320px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background: #E8EEF5;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Grid of 4 images on desktop, collapsing on mobile */
-.edu-images-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.1rem;
+.image-frame-small {
+    height: 180px;
+    border-radius: 16px;
 }
 
-/* Slightly increase padding on the cards to balance big images */
+.image-frame-small img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-frame-tiny {
+    height: 110px;
+    border-radius: 12px;
+}
+
+.image-frame-tiny img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* IMAGE GRIDS */
+.image-grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    height: 380px;
+}
+
+.image-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    height: 240px;
+}
+
+/* EDUCATION/WORK CARDS */
 .edu-card-soft {
-    padding: 1.7rem 1.9rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-soft);
+    border: 1px solid var(--color-border-subtle);
+    padding: 2rem;
 }
 
-/* About hero already defined before; just ensure it adapts well */
-.about-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
-    gap: 3rem;
-    align-items: center;
+.experience-role, .edu-institution {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
 }
 
-/* RESPONSIVE: stack nicely on smaller screens */
+.experience-org, .edu-location {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.edu-list, .experience-list {
+    padding-left: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.edu-list li, .experience-list li {
+    margin-bottom: 0.6rem;
+    font-size: 0.98rem;
+}
+
+/* PAGE HERO */
+.page-hero {
+    padding: 4rem 1.5rem 3rem;
+    background: linear-gradient(to bottom, #F4F6FB, var(--color-background));
+}
+
+.page-hero-title {
+    font-size: 2.4rem;
+}
+
+.page-hero-subtitle {
+    font-size: 1.1rem;
+    color: #4A5568;
+    max-width: 65ch;
+}
+
+/* RESPONSIVE CHESS LAYOUT */
 @media (max-width: 880px) {
-    .edu-row,
-    .edu-row-reverse,
-    .experience-row,
-    .experience-row-reverse {
-        grid-template-columns: minmax(0, 1fr);
+    .chess-row, .chess-row-reverse {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
     }
-
-    .edu-images-grid-4 {
-        grid-template-columns: minmax(0, 1fr);
+    
+    .image-frame {
+        height: 280px;
     }
-
-    .edu-img,
-    .exp-img {
-        height: 210px;
+    
+    .image-grid-2 {
+        height: 360px;
     }
 }
 
 @media (max-width: 600px) {
-    .edu-img,
-    .exp-img {
-        height: 190px;
+    .image-frame {
+        height: 240px;
+    }
+    
+    .image-grid-2 {
+        height: 300px;
+        gap: 1rem;
+    }
+    
+    .image-grid-4 {
+        height: 200px;
+        grid-template-columns: 1fr;
     }
 }
+

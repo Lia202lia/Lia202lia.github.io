@@ -604,3 +604,175 @@ p {
         margin-right: 0.85rem;
     }
 }
+/* ===== ABOUT PAGE SPECIFIC ===== */
+
+.hero-curve-small {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background: radial-gradient(circle at top, rgba(11, 28, 45, 0.05), transparent 60%);
+    bottom: -28px;
+    pointer-events: none;
+}
+
+/* About hero layout (text + portrait similar to index hero but lighter) */
+.about-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(260px, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text-block p {
+    max-width: 63ch;
+}
+
+.about-kicker {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-secondary);
+    margin-bottom: 0.4rem;
+}
+
+/* Portrait style for About page, borrowing from hero but a bit smaller */
+.about-portrait-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.about-portrait-shell {
+    position: absolute;
+    inset: 10% 12%;
+    border-radius: 150px;
+    background: radial-gradient(circle at 20% 0, rgba(159, 183, 212, 0.5), transparent 60%),
+                #E2E8F3;
+    transform: rotate(-5deg);
+    box-shadow: var(--shadow-soft);
+}
+
+.about-portrait {
+    position: relative;
+    width: min(280px, 75vw);
+    height: auto;
+    border-radius: 150px;
+    object-fit: cover;
+    border: 3px solid rgba(248, 249, 251, 0.9);
+}
+
+/* Soft card for education and experience blocks */
+.edu-card-soft {
+    background: var(--color-surface);
+    border-radius: 18px;
+    border: 1px solid rgba(211, 216, 224, 0.9);
+    padding: 1.6rem 1.8rem;
+}
+
+/* RESPONSIVE TWEAKS FOR ABOUT PAGE */
+@media (max-width: 880px) {
+    .about-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .about-portrait-shell {
+        inset: 10% 24%;
+    }
+}
+
+@media (max-width: 720px) {
+    .about-hero {
+        gap: 2.1rem;
+    }
+
+    .about-portrait-shell {
+        inset: 10% 22%;
+    }
+}
+
+@media (max-width: 520px) {
+    .about-portrait {
+        width: min(240px, 80vw);
+    }
+
+    .about-portrait-shell {
+        inset: 10% 20%;
+    }
+}
+/* Make education/experience rows look like clear chessboard blocks */
+.edu-row,
+.experience-row {
+    align-items: stretch;
+}
+
+/* Column behavior: images in a vertical column with enough size */
+.edu-images-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+/* Larger image frame for visibility */
+.edu-figure-large,
+.experience-image-large .exp-figure {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #E2E7F1;
+    box-shadow: 0 12px 26px rgba(4, 18, 36, 0.09);
+}
+
+/* Ensure images have a strong presence */
+.edu-img,
+.exp-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Grid of 4 images on desktop, collapsing on mobile */
+.edu-images-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+}
+
+/* Slightly increase padding on the cards to balance big images */
+.edu-card-soft {
+    padding: 1.7rem 1.9rem;
+}
+
+/* About hero already defined before; just ensure it adapts well */
+.about-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+/* RESPONSIVE: stack nicely on smaller screens */
+@media (max-width: 880px) {
+    .edu-row,
+    .edu-row-reverse,
+    .experience-row,
+    .experience-row-reverse {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .edu-images-grid-4 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .edu-img,
+    .exp-img {
+        height: 210px;
+    }
+}
+
+@media (max-width: 600px) {
+    .edu-img,
+    .exp-img {
+        height: 190px;
+    }
+}

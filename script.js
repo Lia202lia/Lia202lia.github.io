@@ -40,5 +40,4 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         fadeSections.forEach(section => section.classList.add('visible'));
     }
-}
-);
+});

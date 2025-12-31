@@ -1,25 +1,22 @@
+// Minimal, accessibility-focused JavaScript
 
-document.addEventListener("DOMContentLoaded", function () {
-const yearSpan = document.getElementById("year");
-if (yearSpan) {
-yearSpan.textContent = new Date().getFullYear();
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
 
-const navToggle = document.querySelector(".nav-toggle");
-const navList = document.getElementById("site-nav");
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function () {
+            const isOpen = navLinks.classList.toggle('nav-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
 
-if (navToggle && navList) {
-navToggle.addEventListener("click", function () {
-const isOpen = navList.classList.toggle("open");
-navToggle.setAttribute("aria-expanded", String(isOpen));
-});
-    document.addEventListener("click", function (event) {
-  if (!navList.contains(event.target) && !navToggle.contains(event.target)) {
-    if (navList.classList.contains("open")) {
-      navList.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  }
-});
+        // Close menu when a link is clicked (mobile)
+        navLinks.addEventListener('click', function (event) {
+            const target = event.target;
+            if (target instanceof HTMLAnchorElement && navLinks.classList.contains('nav-open')) {
+                navLinks.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 });

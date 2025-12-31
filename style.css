@@ -234,13 +234,33 @@ p {
     margin-bottom: 0.55rem;
 }
 
+/* ========= HERO PHILOSOPHY QUOTE ========= */
 .hero-philosophy {
     margin: 0 0 1.6rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--color-accent-soft);
+    position: relative;
+}
+
+.hero-philosophy-inner {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.hero-philosophy-line {
+    width: 4px;
+    background: linear-gradient(to bottom, #0B1C2D, #1A2F48);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-right: 1.2rem;
+}
+
+.hero-philosophy-text {
     font-style: italic;
-    font-size: 1.02rem;
-    color: #3a4657;
+    font-size: 1.25rem; /* Increased from 1.02rem */
+    line-height: 1.5;
+    color: #2A3747;
+    padding: 0.2rem 0;
+    flex-grow: 1;
 }
 
 .hero-cta-row {
@@ -449,6 +469,10 @@ p {
         inset: 8% 18%;
     }
 
+    .hero-philosophy-text {
+        font-size: 1.18rem; /* Adjusted for mobile */
+    }
+
     .focus-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -484,6 +508,14 @@ p {
         inset: 10% 20%;
     }
 
+    .hero-philosophy-text {
+        font-size: 1.15rem; /* Adjusted for mobile */
+    }
+
+    .hero-philosophy-line {
+        margin-right: 1rem;
+    }
+
     .focus-grid {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -510,5 +542,13 @@ p {
 
     .hero-name {
         font-size: 2.4rem;
+    }
+
+    .hero-philosophy-text {
+        font-size: 1.12rem; /* Adjusted for mobile */
+    }
+
+    .hero-philosophy-line {
+        margin-right: 0.85rem;
     }
 }

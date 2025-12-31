@@ -1,4 +1,4 @@
-// Minimal, accessibility-focused JavaScript
+// main.js (navigation + gentle fade-in)
 
 document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.getElementById('navToggle');
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
             navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
-        // Close menu when a link is clicked (mobile)
         navLinks.addEventListener('click', function (event) {
             const target = event.target;
             if (target instanceof HTMLAnchorElement && navLinks.classList.contains('nav-open')) {
@@ -18,5 +17,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 navToggle.setAttribute('aria-expanded', 'false');
             }
         });
+    }
+
+    const fadeSections = document.querySelectorAll('.fade-section');
+    if ('IntersectionObserver' in window && fadeSections.length) {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            }
+        );
+
+        fadeSections.forEach(section => observer.observe(section));
+    } else {
+        fadeSections.forEach(section => section.classList.add('visible'));
     }
 });

@@ -626,236 +626,178 @@ p {
     width: 100%;
 }
 
-/* CASE STUDY LAYOUT FOR ABOUT PAGE */
+/* ENHANCED CASE STUDY LAYOUT - LARGER & MORE COMPACT */
 .case-study {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1.5rem; /* Reduced from 4rem for more compact */
 }
 
 .case-study:nth-child(even) {
     background: #F0F3F8;
 }
 
-/* PROPER ALTERNATING LAYOUT */
 .case-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr; /* Image on left, text on right */
-    gap: 2.5rem;
+    grid-template-columns: minmax(380px, 1fr) minmax(0, 1.6fr); /* Larger image column */
+    gap: 3rem; /* Increased gap for breathing room */
     align-items: start;
 }
 
-/* REVERSED LAYOUT - text on left, image on right */
 .case-grid-reverse {
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: minmax(0, 1.6fr) minmax(380px, 1fr);
 }
 
-/* Make sure reversed layout actually reverses the order */
 .case-grid-reverse .case-media {
-    order: 2; /* Image moves to right */
+    order: 2;
 }
 
 .case-grid-reverse .case-text {
-    order: 1; /* Text moves to left */
+    order: 1;
 }
 
-.case-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.case-tagline {
-    font-size: 1.08rem;
-    color: var(--color-secondary);
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
-}
-
-/* PROFESSIONAL IMAGE CONTAINERS - NO WHITE BORDERS */
-.case-media {
-    display: flex;
-    align-items: center;
-}
-
-/* Single image container - Portrait (3:4 aspect ratio) */
+/* LARGER, MORE PROMINENT IMAGE CONTAINERS */
 .figure-single {
     width: 100%;
-    aspect-ratio: 3/4; /* Portrait rectangle */
+    height: 420px; /* Increased from 340px */
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
     background: var(--color-background);
     margin: 0;
-    border: 1px solid rgba(159, 183, 212, 0.2);
+    border: 2px solid rgba(159, 183, 212, 0.25);
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Grid container - Two images side by side horizontally */
+.figure-single:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(4, 18, 36, 0.15);
+}
+
 .figure-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns side by side */
-    gap: 0.8rem;
-    width: 100%;
-    aspect-ratio: 2/1; /* Horizontal rectangle (2:1 ratio) */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 480px; /* Increased from 400px */
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
     background: var(--color-background);
     margin: 0;
-    border: 1px solid rgba(159, 183, 212, 0.2);
-    padding: 0; /* NO padding to eliminate white space */
+    border: 2px solid rgba(159, 183, 212, 0.25);
 }
 
-/* Image styling for BOTH single and grid images */
-.figure-single img,
+.figure-grid:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(4, 18, 36, 0.15);
+}
+
 .figure-grid img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fill container while maintaining aspect ratio */
-    display: block;
+    object-fit: cover;
 }
 
-/* For grid images specifically */
-.figure-grid img {
-    border-radius: 0; /* Remove individual image rounding for seamless grid */
-}
-
-/* Ensure no background shows through */
-.figure-single,
-.figure-grid {
-    background: var(--color-background); /* Match page background exactly */
-}
-
-/* Text styling */
-.body-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #2A3747;
-    margin-bottom: 1.2rem;
-    padding: 0.3rem 0;
-}
-
-.case-text h3 {
-    font-size: 1.25rem;
-    margin: 1.5rem 0 0.8rem;
-    color: var(--color-primary);
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid rgba(159, 183, 212, 0.3);
-}
-
-.case-text ul {
-    padding-left: 1.2rem;
-    margin: 0.8rem 0 1.2rem;
-}
-
-.case-text li {
-    margin-bottom: 0.5rem;
-    font-size: 0.98rem;
-    line-height: 1.6;
-}
-
-/* Hero focus list */
-.hero-focus-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 1.2rem 0;
+/* NEW SKILLS & LANGUAGES GRID */
+.skills-grid {
     display: grid;
-    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.hero-focus-list li {
-    padding: 0.7rem 0.9rem;
-    background: linear-gradient(to right, rgba(159, 183, 212, 0.08), rgba(159, 183, 212, 0.04));
-    border-radius: 12px;
-    border: 1px solid rgba(159, 183, 212, 0.15);
-    font-size: 0.95rem;
+.skill-category {
+    background: var(--color-surface);
+    border-radius: var(--radius-soft);
+    padding: 2rem;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: 0 8px 25px rgba(4, 18, 36, 0.06);
+}
+
+.skill-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    padding: 0.6rem 0;
+    font-size: 0.98rem;
+    color: #2A3747;
+    border-bottom: 1px solid rgba(159, 183, 212, 0.15);
     transition: all var(--transition-fast);
 }
 
-.hero-focus-list li:hover {
-    transform: translateX(5px);
-    border-color: var(--color-accent-soft);
-    background: linear-gradient(to right, rgba(159, 183, 212, 0.15), rgba(159, 183, 212, 0.08));
-}
-
-.hero-focus-list li::before {
-    content: '▸';
+.skill-item:hover {
     color: var(--color-secondary);
-    margin-right: 0.8rem;
-    font-weight: bold;
+    padding-left: 0.5rem;
 }
 
-/* HERO CURVE FOR ABOUT PAGE */
-.hero-curve-small {
-    height: 55px;
-    bottom: -28px;
+.language-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0.4rem 0;
 }
 
-/* ========= RESPONSIVE FOR ABOUT PAGE ========= */
+.language-level {
+    flex: 1;
+    height: 6px;
+    background: rgba(47, 93, 140, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.language-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+/* RESPONSIVE ENHANCEMENTS */
 @media (max-width: 880px) {
     .case-grid,
     .case-grid-reverse {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: left;
-    }
-    
-    /* Reset orders for mobile */
-    .case-grid-reverse .case-media,
-    .case-grid-reverse .case-text {
-        order: 0; /* Reset to natural order */
+        gap: 2.5rem;
     }
     
     .figure-single {
-        aspect-ratio: 3/4;
-        max-width: 350px;
+        height: 360px; /* Larger mobile images */
+        max-width: 400px;
         margin: 0 auto;
     }
     
     .figure-grid {
-        aspect-ratio: 2/1;
+        height: 420px;
+        grid-template-columns: 1fr 1fr;
         max-width: 500px;
         margin: 0 auto;
-        grid-template-columns: 1fr 1fr;
     }
     
-    .page-hero-subtitle {
-        margin-left: 0;
-        max-width: 100%;
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 }
 
 @media (max-width: 600px) {
     .figure-single {
-        aspect-ratio: 3/4;
-        max-width: 280px;
+        height: 320px;
     }
     
     .figure-grid {
-        aspect-ratio: 2/1;
-        max-width: 400px;
-        gap: 0.5rem;
-    }
-    
-    .case-grid {
-        gap: 1.8rem;
-    }
-    
-    .page-hero-title {
-        font-size: 1.9rem;
-    }
-    
-    .page-hero-subtitle {
-        font-size: 1.05rem;
-        padding: 1rem 1.2rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .figure-grid {
-        aspect-ratio: 1.5/1;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr; /* Stack vertically on very small screens */
+        height: 380px;
+        gap: 0.8rem;
     }
 }

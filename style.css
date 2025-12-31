@@ -279,17 +279,35 @@ p {
     justify-content: center;
 }
 
+/* Remove or comment out the hero-portrait-shell background */
 .hero-portrait-shell {
-    position: absolute;
-    inset: 5% 5%; /* Adjusted for better framing */
-    border-radius: 180px; /* Slightly more rounded */
-    background: radial-gradient(circle at 20% 0, rgba(159, 183, 212, 0.7), transparent 70%),
-                linear-gradient(135deg, #E2E8F3, #D5DEEB);
-    transform: rotate(-4deg); /* Slightly less rotation */
-    box-shadow: var(--shadow-soft);
-    z-index: 1;
+    display: none; /* This removes the capsule/patch background */
 }
 
+/* Alternative: if you want to keep some subtle effect but remove the capsule, use this: */
+.hero-portrait-shell {
+    position: absolute;
+    inset: 0; /* Fill the container */
+    border-radius: 180px;
+    background: transparent; /* Remove gradient background */
+    transform: none; /* Remove rotation */
+    box-shadow: none; /* Remove shadow */
+    z-index: 1;
+    border: 2px solid rgba(159, 183, 212, 0.2); /* Optional: keep subtle border */
+}
+
+/* Make the portrait container stand out on its own */
+.hero-portrait-container {
+    position: relative;
+    z-index: 2;
+    width: min(340px, 85vw);
+    height: min(340px, 85vw);
+    border-radius: 180px;
+    overflow: hidden;
+    border: 4px solid rgba(248, 249, 251, 0.95);
+    box-shadow: 0 20px 50px rgba(4, 18, 36, 0.25);
+    background: var(--color-surface); /* Solid white background */
+}
 .hero-portrait-container {
     position: relative;
     z-index: 2;
@@ -950,4 +968,80 @@ p {
     .figure-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+/* Add this to fix About Me section alignment */
+.case-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr; /* Changed ratio to push content more to the right */
+    gap: 3.5rem;
+    align-items: start;
+}
+
+.case-grid-reverse {
+    grid-template-columns: 1.4fr 1fr; /* Changed ratio */
+}
+
+/* Remove the problematic figure styles that were causing issues */
+.figure-single,
+.figure-grid {
+    background: transparent !important; /* Remove forced background */
+}
+
+/* Fix the image display */
+.figure-single img,
+.figure-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Show entire image */
+    background: transparent;
+}
+/* ========= FIX ABOUT ME SECTION ALIGNMENT ========= */
+.case-grid {
+    grid-template-columns: 1fr 1.4fr; /* Push text more to the right */
+}
+
+.case-grid-reverse {
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.figure-single,
+.figure-grid {
+    background: transparent !important;
+    border: 1px solid rgba(159, 183, 212, 0.2); /* Subtle border instead */
+}
+
+.figure-single img,
+.figure-grid img {
+    object-fit: contain;
+    background: #F8F9FB; /* Light background for images */
+}
+
+/* ========= REMOVE CAPSULE BACKGROUND FROM INDEX PAGE ========= */
+.hero-portrait-shell {
+    display: none; /* Completely remove the capsule */
+}
+
+/* Optional: If you want a cleaner look for the portrait */
+.hero-portrait-container {
+    box-shadow: 0 15px 40px rgba(11, 28, 45, 0.15); /* Softer shadow */
+    border: 3px solid #ffffff; /* Clean white border */
+}
+
+/* ========= ENHANCE IMAGE DISPLAY IN ABOUT PAGE ========= */
+.case-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-soft);
+    box-shadow: 0 10px 30px rgba(4, 18, 36, 0.1);
+    background: #F8F9FB;
+    padding: 0.5rem;
+}
+
+.figure-single .case-img {
+    max-height: 300px;
+}
+
+.figure-grid .case-img {
+    max-height: 160px;
 }

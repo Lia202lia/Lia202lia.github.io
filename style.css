@@ -1061,3 +1061,10 @@ p {
     margin-left: 2rem; /* Move it to the right by 2rem */
     margin-right: 0;
 }
+.page-hero-title {
+    text-align: left;
+}
+
+.page-hero-inner {
+    text-align: left;
+}

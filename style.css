@@ -635,43 +635,44 @@ p {
     background: #F0F3F8;
 }
 
-/* FIXED: PROPER ALTERNATING GRID LAYOUT */
+/* CORRECT GRID SYSTEM - ALL GRIDS IN ONE PLACE */
+.section-inner {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+/* NORMAL LAYOUT: Image Left (33%) | Text Right (67%) */
 .case-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Image 33% | Text 67% */
+    grid-template-columns: 1fr 2fr; /* Exactly 33% | 67% */
     gap: 3rem;
     align-items: start;
 }
 
-/* FIXED: REVERSED LAYOUT - Text left, Image right */
+/* REVERSED LAYOUT: Text Left (67%) | Image Right (33%) */
 .case-grid-reverse {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Text 67% | Image 33% */
+    grid-template-columns: 2fr 1fr; /* Exactly 67% | 33% */
     gap: 3rem;
     align-items: start;
 }
 
-/* FIXED: Make sure elements are in correct columns */
-.case-grid-reverse .case-media {
-    grid-column: 2; /* Image in column 2 (right side) */
+/* Text area styling - takes 67% width */
+.case-text {
+    grid-column: 2; /* Default: text in right column (for normal layout) */
 }
 
 .case-grid-reverse .case-text {
-    grid-column: 1; /* Text in column 1 (left side) */
+    grid-column: 1; /* For reversed: text in left column */
 }
 
-/* Text styling */
-.case-text {
-    display: flex;
-    flex-direction: column;
+/* Image area styling - takes 33% width */
+.case-media {
+    grid-column: 1; /* Default: image in left column (for normal layout) */
 }
 
-.case-tagline {
-    font-size: 1.08rem;
-    color: var(--color-secondary);
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
+.case-grid-reverse .case-media {
+    grid-column: 2; /* For reversed: image in right column */
 }
 
 /* Professional image containers */
@@ -717,7 +718,20 @@ p {
     display: block;
 }
 
-/* Body text styling */
+/* Text styling - takes 67% width */
+.case-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-tagline {
+    font-size: 1.08rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
 .body-text {
     font-size: 1.05rem;
     line-height: 1.7;
@@ -778,73 +792,6 @@ p {
     font-weight: bold;
 }
 
-/* NEW SKILLS & LANGUAGES GRID */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.skill-category {
-    background: var(--color-surface);
-    border-radius: var(--radius-soft);
-    padding: 2rem;
-    border: 1px solid var(--color-border-subtle);
-    box-shadow: 0 8px 25px rgba(4, 18, 36, 0.06);
-}
-
-.skill-title {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.skill-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skill-item {
-    padding: 0.6rem 0;
-    font-size: 0.98rem;
-    color: #2A3747;
-    border-bottom: 1px solid rgba(159, 183, 212, 0.15);
-    transition: all var(--transition-fast);
-}
-
-.skill-item:hover {
-    color: var(--color-secondary);
-    padding-left: 0.5rem;
-}
-
-.language-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin: 0.4rem 0;
-}
-
-.language-level {
-    flex: 1;
-    height: 6px;
-    background: rgba(47, 93, 140, 0.2);
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.language-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-    border-radius: 3px;
-    transition: width 0.8s ease;
-}
-
 /* HERO CURVE FOR ABOUT PAGE */
 .hero-curve-small {
     height: 55px;
@@ -860,9 +807,17 @@ p {
     }
     
     /* Reset grid positions for mobile */
+    .case-media,
+    .case-text,
     .case-grid-reverse .case-media,
     .case-grid-reverse .case-text {
         grid-column: 1;
+    }
+    
+    /* Image on top for all sections on mobile */
+    .case-grid .case-media,
+    .case-grid-reverse .case-media {
+        order: -1;
     }
     
     .figure-single {
@@ -875,11 +830,6 @@ p {
         height: 300px;
         max-width: 500px;
         margin: 0 auto;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
     }
 }
 

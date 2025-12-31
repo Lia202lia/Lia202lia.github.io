@@ -1,405 +1,244 @@
+<!-- volunteering.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leadership & Service | Tala Khaddour</title>
+    <title>Volunteering & Academic Service | Tala Khaddour</title>
+    <meta name="description" content="Volunteering, academic service, youth development, and robotics education activities by Tala Khaddour.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
-                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-title">Leadership & Service</span>
-                    </div>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link"><i class="fas fa-user-graduate"></i> About</a></li>
-                    <li><a href="research.html" class="nav-link"><i class="fas fa-microscope"></i> Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link active"><i class="fas fa-hands-helping"></i> Service</a></li>
-                    <li><a href="cv.html" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
-                    <li><a href="contact.html" class="nav-link btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">
+                <span class="nav-logo-mark">TK</span>
+                <span class="nav-logo-text">Tala Khaddour</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link nav-link-active">Volunteering</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header class="page-header volunteer-header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="page-title">Community Leadership & Service</h1>
-                <p class="page-subtitle">
-                    Demonstrating commitment to social responsibility, youth development, 
-                    and academic community building through dedicated volunteer work
-                </p>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
-                    <span>Leadership & Service</span>
-                </div>
-            </div>
+    <section class="page-hero" aria-labelledby="volunteering-title">
+        <div class="page-hero-inner">
+            <h1 id="volunteering-title" class="page-hero-title">Volunteering &amp; Academic Service</h1>
+            <p class="page-hero-subtitle">
+                Teaching, mentoring, and academic service activities that support young learners, promote access to education, and strengthen the robotics community.
+            </p>
         </div>
-    </header>
+        <div class="hero-curve hero-curve-small" aria-hidden="true"></div>
+    </section>
+</header>
 
-    <section class="service-intro">
-        <div class="container">
-            <div class="intro-card">
-                <div class="intro-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h2>Engineering with Purpose</h2>
-                <p>
-                    Beyond technical excellence, I believe in the engineer's responsibility to 
-                    serve society. My volunteer work focuses on <strong>education accessibility</strong>, 
-                    <strong>youth empowerment</strong>, and <strong>community resilience</strong>, 
-                    applying engineering skills to address real-world challenges.
-                </p>
-                <div class="service-stats">
-                    <div class="stat">
-                        <div class="stat-number">4+</div>
-                        <div class="stat-label">Years of Service</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Students Mentored</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Organizations Served</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Volunteer Hours</div>
-                    </div>
-                </div>
+<main>
+    <!-- 1. OVERVIEW -->
+    <section class="section section-compact fade-section" aria-labelledby="vol-overview-heading">
+        <div class="section-inner">
+            <div class="section-header-inline">
+                <h2 id="vol-overview-heading" class="section-title">Commitment to service</h2>
+                <p class="section-kicker">Education, ethics, and long-term impact</p>
+            </div>
+            <p class="vol-intro">
+                Volunteering and academic service are central to how I understand engineering.
+                Alongside my technical work, I dedicate time to mentoring students, supporting science programs, and helping young learners see themselves as future engineers and researchers.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. CURVED SERVICE STRIPES -->
+    <section class="section section-alt-vol fade-section" aria-labelledby="service-areas-heading">
+        <div class="section-inner">
+            <div class="section-header-inline">
+                <h2 id="service-areas-heading" class="section-title">Service areas</h2>
+                <p class="section-kicker">Where I try to make a difference</p>
+            </div>
+
+            <div class="vol-stripes">
+                <article class="vol-stripe">
+                    <h3 class="vol-stripe-title">Robotics education &amp; mentoring</h3>
+                    <p class="vol-stripe-text">
+                        Designing and delivering robotics workshops that introduce students to sensors, control, and problem-solving through hands-on projects.
+                    </p>
+                </article>
+                <article class="vol-stripe">
+                    <h3 class="vol-stripe-title">Science Olympiad support</h3>
+                    <p class="vol-stripe-text">
+                        Supporting students preparing for STEM competitions by guiding practice, reviewing solutions, and encouraging systematic thinking.
+                    </p>
+                </article>
+                <article class="vol-stripe">
+                    <h3 class="vol-stripe-title">Distinction and Creativity Agency</h3>
+                    <p class="vol-stripe-text">
+                        Engaging with programs that identify and nurture highly motivated students, reinforcing perseverance and responsibility in academic work.
+                    </p>
+                </article>
+                <article class="vol-stripe">
+                    <h3 class="vol-stripe-title">Youth development</h3>
+                    <p class="vol-stripe-text">
+                        Contributing to initiatives that help young people in Syria build confidence, communication skills, and a sense of agency in their future.
+                    </p>
+                </article>
+                <article class="vol-stripe">
+                    <h3 class="vol-stripe-title">Humanitarian mindset</h3>
+                    <p class="vol-stripe-text">
+                        Approaching engineering and education as tools for restoring dignity, widening access, and supporting communities affected by crisis.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="service-timeline">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Service Journey Timeline</h2>
-                <p class="section-subtitle">A consistent commitment to community engagement</p>
+    <!-- 3. DETAILED ROLES (ALTERNATING) -->
+    <section class="section fade-section" aria-labelledby="roles-heading">
+        <div class="section-inner">
+            <div class="section-header-inline">
+                <h2 id="roles-heading" class="section-title">Selected roles</h2>
+                <p class="section-kicker">Examples of sustained engagement</p>
             </div>
-            
-            <div class="timeline-vertical">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - Present</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Robotics & Programming Trainer</h3>
-                            <div class="timeline-org">Syrian Computer Society</div>
-                            <ul>
-                                <li>Delivered training sessions in robotics and basic AI concepts</li>
-                                <li>Developed hands-on exercises for Arduino and Python programming</li>
-                                <li>Mentored students in project-based learning approaches</li>
-                                <li>Conducted workshops in Latakia and Jableh centers</li>
-                            </ul>
-                            <div class="impact-tags">
-                                <span class="tag">STEM Education</span>
-                                <span class="tag">Youth Empowerment</span>
-                                <span class="tag">Technical Training</span>
-                            </div>
-                        </div>
+
+            <!-- Role 1 -->
+            <article class="vol-role vol-role-grid">
+                <div class="vol-role-text">
+                    <h3 class="vol-role-title">Robotics &amp; Programming Trainer</h3>
+                    <p class="vol-role-meta">Syrian Computer Society &mdash; Latakia &amp; Jableh</p>
+                    <p class="vol-role-body">
+                        As a trainer, I worked with school and university students to introduce robotics concepts, embedded programming, and basic AI.
+                        The goal was not only to complete projects, but to build students' confidence in reading documentation, troubleshooting, and presenting their work.
+                    </p>
+                    <ul class="vol-role-list">
+                        <li>Delivered structured sessions on microcontrollers, sensors, and actuators.</li>
+                        <li>Guided students through the full cycle from idea to working prototype.</li>
+                        <li>Encouraged teamwork, reflection, and peer feedback as core habits.</li>
+                    </ul>
+                </div>
+                <div class="vol-role-visual">
+                    <div class="vol-figure-soft">
+                        <img src="assets/placeholder.svg" alt="Students working with robotics kits">
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">Jan - Aug 2023</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Robotics Project Coach</h3>
-                            <div class="timeline-org">Manara University & Sanad Youth Development Foundation</div>
-                            <ul>
-                                <li>Coached student teams for Robotics For the Globe (RFG) competition</li>
-                                <li>Provided guidance on Arduino-based robotics development</li>
-                                <li>Assisted in sensor integration and control system design</li>
-                                <li>Supported technical documentation and project presentation</li>
-                            </ul>
-                            <div class="impact-tags">
-                                <span class="tag">Competition Preparation</span>
-                                <span class="tag">Team Mentoring</span>
-                                <span class="tag">Project Guidance</span>
-                            </div>
-                        </div>
+            </article>
+
+            <!-- Role 2 -->
+            <article class="vol-role vol-role-grid vol-role-grid-reverse">
+                <div class="vol-role-text">
+                    <h3 class="vol-role-title">Support for Science Competitions</h3>
+                    <p class="vol-role-meta">Science Olympiad and STEM-focused initiatives</p>
+                    <p class="vol-role-body">
+                        I contributed to the preparation of students for science and technology competitions, focusing on problem interpretation,
+                        solution structure, and strategies for managing time and stress in high-stakes environments.
+                    </p>
+                    <ul class="vol-role-list">
+                        <li>Helped students break complex problems into manageable sub-tasks.</li>
+                        <li>Reviewed solutions and highlighted rigorous reasoning and clarity.</li>
+                        <li>Reinforced ethics, collaboration, and respect for peers and judges.</li>
+                    </ul>
+                </div>
+                <div class="vol-role-visual">
+                    <div class="vol-figure-soft">
+                        <img src="assets/placeholder.svg" alt="Students participating in a science competition">
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Academic Support - Senior Category</h3>
-                            <div class="timeline-org">Syrian Science Olympiad (SSO)</div>
-                            <ul>
-                                <li>Supported student registration and qualification processes</li>
-                                <li>Assisted in organizing local selection activities</li>
-                                <li>Provided logistical support for online examinations</li>
-                                <li>Contributed to event coordination and management</li>
-                            </ul>
-                            <div class="impact-tags">
-                                <span class="tag">Academic Excellence</span>
-                                <span class="tag">Event Organization</span>
-                                <span class="tag">Student Support</span>
-                            </div>
-                        </div>
+            </article>
+
+            <!-- Role 3 -->
+            <article class="vol-role vol-role-grid">
+                <div class="vol-role-text">
+                    <h3 class="vol-role-title">Engagement with Distinction and Creativity Agency</h3>
+                    <p class="vol-role-meta">Supporting pathways for high-potential students</p>
+                    <p class="vol-role-body">
+                        Through scholarship and distinction programs, I interacted with students who, like me, were selected for their academic potential.
+                        These experiences strengthened my commitment to keeping academic spaces inclusive, demanding, and supportive.
+                    </p>
+                    <ul class="vol-role-list">
+                        <li>Shared experiences on navigating demanding curricula and research expectations.</li>
+                        <li>Discussed long-term planning for scholarships and graduate study.</li>
+                        <li>Emphasized responsibility and service as parts of academic excellence.</li>
+                    </ul>
+                </div>
+                <div class="vol-role-visual">
+                    <div class="vol-figure-soft">
+                        <img src="assets/placeholder.svg" alt="Gathering of scholarship and distinction students">
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2018 - 2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Event-Based Volunteer</h3>
-                            <div class="timeline-org">Distinction and Creativity Agency (DCA)</div>
-                            <ul>
-                                <li>Assisted in organizing academic events and competitions</li>
-                                <li>Supported admission tests and evaluation processes</li>
-                                <li>Contributed to logistics and participant coordination</li>
-                                <li>Provided on-site support during national academic events</li>
-                            </ul>
-                            <div class="impact-tags">
-                                <span class="tag">Event Management</span>
-                                <span class="tag">Academic Administration</span>
-                                <span class="tag">Logistics Support</span>
-                            </div>
-                        </div>
+            </article>
+
+            <!-- Role 4 -->
+            <article class="vol-role vol-role-grid vol-role-grid-reverse">
+                <div class="vol-role-text">
+                    <h3 class="vol-role-title">Youth &amp; Community Activities</h3>
+                    <p class="vol-role-meta">Local youth-focused initiatives</p>
+                    <p class="vol-role-body">
+                        Outside formal institutions, I participate in activities that give young people space to discuss their goals, challenges, and hopes.
+                        These conversations inform how I think about the social responsibility of robotics and AI.
+                    </p>
+                    <ul class="vol-role-list">
+                        <li>Participated in dialogue-based workshops on education and careers.</li>
+                        <li>Encouraged participants to see engineering as a tool for service.</li>
+                        <li>Connected interested students with available programs and resources.</li>
+                    </ul>
+                </div>
+                <div class="vol-role-visual">
+                    <div class="vol-figure-soft">
+                        <img src="assets/placeholder.svg" alt="Youth discussion and community event">
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
-    <section class="service-gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Service in Action</h2>
-                <p class="section-subtitle">Capturing moments of community engagement and impact</p>
+    <!-- 4. VALUES SUMMARY -->
+    <section class="section section-compact fade-section" aria-labelledby="values-heading">
+        <div class="section-inner">
+            <div class="section-header-inline">
+                <h2 id="values-heading" class="section-title">Values in practice</h2>
+                <p class="section-kicker">How volunteering shapes my engineering work</p>
             </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="assets/projects/volunteer-1.jpg" alt="Robotics Training Session">
-                        <div class="gallery-overlay">
-                            <h4>Robotics Workshop</h4>
-                            <p>Teaching Arduino programming to students</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="assets/projects/volunteer-2.jpg" alt="Science Olympiad Support">
-                        <div class="gallery-overlay">
-                            <h4>Science Olympiad</h4>
-                            <p>Supporting student registration</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="assets/projects/volunteer-3.jpg" alt="Competition Preparation">
-                        <div class="gallery-overlay">
-                            <h4>Team Coaching</h4>
-                            <p>Preparing students for robotics competition</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="assets/projects/volunteer-4.jpg" alt="Community Event">
-                        <div class="gallery-overlay">
-                            <h4>Community Outreach</h4>
-                            <p>Participating in local education initiatives</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="assets/projects/volunteer-5.jpg" alt="Youth Development Program">
-                        <div class="gallery-overlay">
-                            <h4>Youth Development</h4>
-                            <p>Mentoring aspiring engineers</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="leadership-qualities">
-        <div class="container">
-            <div class="qualities-grid">
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Collaborative Leadership</h3>
-                    <p>
-                        Demonstrated through team coaching and collaborative project guidance, 
-                        fostering inclusive learning environments where every participant can 
-                        contribute and grow.
+            <div class="vol-values-grid">
+                <div class="vol-value">
+                    <h3 class="vol-value-title">Perseverance</h3>
+                    <p class="vol-value-text">
+                        Working with students who persist despite limited resources continually reminds me to approach technical obstacles with patience and determination.
                     </p>
                 </div>
-                
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Effective Communication</h3>
-                    <p>
-                        Developed through teaching complex technical concepts to diverse audiences, 
-                        from beginner students to academic peers, adapting communication style 
-                        for maximum understanding.
+                <div class="vol-value">
+                    <h3 class="vol-value-title">Responsibility</h3>
+                    <p class="vol-value-text">
+                        Mentoring younger learners reinforces my sense of duty to communicate clearly, act ethically, and model careful engineering practice.
                     </p>
                 </div>
-                
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovative Problem-Solving</h3>
-                    <p>
-                        Applied engineering mindset to community challenges, developing creative 
-                        solutions for educational outreach and resource-limited teaching environments.
-                    </p>
-                </div>
-                
-                <div class="quality-card">
-                    <div class="quality-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Empathetic Engagement</h3>
-                    <p>
-                        Built through direct interaction with students from varied backgrounds, 
-                        understanding individual learning needs and providing personalized support.
+                <div class="vol-value">
+                    <h3 class="vol-value-title">Service &amp; access</h3>
+                    <p class="vol-value-text">
+                        Volunteering keeps me focused on the role of robotics and intelligent systems in widening access to education, healthcare, and opportunity.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+</main>
 
-    <section class="service-impact">
-        <div class="container">
-            <div class="impact-statement">
-                <h2><i class="fas fa-chart-line"></i> Measurable Impact</h2>
-                <div class="impact-grid">
-                    <div class="impact-metric">
-                        <div class="metric-value">50+</div>
-                        <div class="metric-label">Students Trained</div>
-                        <div class="metric-desc">In robotics and programming fundamentals</div>
-                    </div>
-                    
-                    <div class="impact-metric">
-                        <div class="metric-value">3</div>
-                        <div class="metric-label">Student Teams Coached</div>
-                        <div class="metric-desc">For national robotics competitions</div>
-                    </div>
-                    
-                    <div class="impact-metric">
-                        <div class="metric-value">10+</div>
-                        <div class="metric-label">Workshops Conducted</div>
-                        <div class="metric-desc">Across multiple cities and institutions</div>
-                    </div>
-                    
-                    <div class="impact-metric">
-                        <div class="metric-value">100%</div>
-                        <div class="metric-label">Positive Feedback</div>
-                        <div class="metric-desc">From participants and organizing bodies</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-name">Tala Khaddour</p>
+        <p class="footer-tagline">Robotics · Intelligent Systems · Human-centered engineering</p>
+        <p class="footer-meta">
+            Academic portfolio for international scholarship applications and graduate admissions.
+        </p>
+    </div>
+</footer>
 
-    <section class="future-service">
-        <div class="container">
-            <div class="future-card">
-                <h2><i class="fas fa-bullseye"></i> Future Service Commitments</h2>
-                <div class="commitments">
-                    <div class="commitment">
-                        <h3><i class="fas fa-globe"></i> International Youth Programs</h3>
-                        <p>
-                            Actively participating in cross-cultural communication initiatives 
-                            like Acquaint and Kaan Balsaman to build global understanding and 
-                            collaborative networks for social impact.
-                        </p>
-                    </div>
-                    
-                    <div class="commitment">
-                        <h3><i class="fas fa-hand-holding-heart"></i> Humanitarian Response</h3>
-                        <p>
-                            Contributing to earthquake response efforts and children's welfare 
-                            programs, applying engineering skills to address urgent community needs.
-                        </p>
-                    </div>
-                    
-                    <div class="commitment">
-                        <h3><i class="fas fa-graduation-cap"></i> Continued Education Advocacy</h3>
-                        <p>
-                            Committed to expanding STEM education access, particularly for 
-                            underrepresented groups, through ongoing mentorship and curriculum 
-                            development initiatives.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="service-cta">
-                    <p>
-                        My service journey reflects a deep commitment to using engineering skills 
-                        for social good. I seek scholarship opportunities that value both academic 
-                        excellence and community engagement.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-handshake"></i> Discuss Service Initiatives
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
-
-    <script src="script.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

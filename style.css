@@ -279,24 +279,11 @@ p {
     justify-content: center;
 }
 
-/* Remove or comment out the hero-portrait-shell background */
+/* Remove the capsule background */
 .hero-portrait-shell {
-    display: none; /* This removes the capsule/patch background */
+    display: none;
 }
 
-/* Alternative: if you want to keep some subtle effect but remove the capsule, use this: */
-.hero-portrait-shell {
-    position: absolute;
-    inset: 0; /* Fill the container */
-    border-radius: 180px;
-    background: transparent; /* Remove gradient background */
-    transform: none; /* Remove rotation */
-    box-shadow: none; /* Remove shadow */
-    z-index: 1;
-    border: 2px solid rgba(159, 183, 212, 0.2); /* Optional: keep subtle border */
-}
-
-/* Make the portrait container stand out on its own */
 .hero-portrait-container {
     position: relative;
     z-index: 2;
@@ -305,25 +292,14 @@ p {
     border-radius: 180px;
     overflow: hidden;
     border: 4px solid rgba(248, 249, 251, 0.95);
-    box-shadow: 0 20px 50px rgba(4, 18, 36, 0.25);
-    background: var(--color-surface); /* Solid white background */
-}
-.hero-portrait-container {
-    position: relative;
-    z-index: 2;
-    width: min(340px, 85vw); /* Slightly larger container */
-    height: min(340px, 85vw);
-    border-radius: 180px; /* Match the shell */
-    overflow: hidden;
-    border: 4px solid rgba(248, 249, 251, 0.95);
-    box-shadow: 0 20px 50px rgba(4, 18, 36, 0.25);
+    box-shadow: 0 15px 40px rgba(11, 28, 45, 0.15);
     background: var(--color-background);
 }
 
 .hero-portrait {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills container without distortion */
+    object-fit: cover;
     object-position: center center;
     display: block;
     transition: transform 0.5s ease;
@@ -486,7 +462,7 @@ p {
     transform: translateY(0);
 }
 
-/* ========= RESPONSIVE ========= */
+/* ========= RESPONSIVE FOR INDEX PAGE ========= */
 @media (max-width: 880px) {
     body {
         font-size: 16px;
@@ -506,17 +482,13 @@ p {
         margin-top: 1rem;
     }
 
-    .hero-portrait-shell {
-        inset: 8% 15%;
-    }
-
     .hero-portrait-container {
         width: min(300px, 80vw);
         height: min(300px, 80vw);
     }
 
     .hero-philosophy-text {
-        font-size: 1.18rem; /* Adjusted for mobile */
+        font-size: 1.18rem;
     }
 
     .hero-badge {
@@ -556,17 +528,13 @@ p {
         padding-bottom: 2.5rem;
     }
 
-    .hero-portrait-shell {
-        inset: 8% 20%;
-    }
-
     .hero-portrait-container {
         width: min(280px, 75vw);
         height: min(280px, 75vw);
     }
 
     .hero-philosophy-text {
-        font-size: 1.15rem; /* Adjusted for mobile */
+        font-size: 1.15rem;
     }
 
     .hero-philosophy-line {
@@ -595,10 +563,6 @@ p {
         height: min(260px, 70vw);
     }
 
-    .hero-portrait-shell {
-        inset: 10% 22%;
-    }
-
     .hero-badge {
         max-width: 200px;
         right: 10%;
@@ -615,258 +579,182 @@ p {
     }
 
     .hero-philosophy-text {
-        font-size: 1.12rem; /* Adjusted for mobile */
+        font-size: 1.12rem;
     }
 
     .hero-philosophy-line {
         margin-right: 0.85rem;
     }
 }
-/* RESEARCH-STYLE CASE STUDY LAYOUT FOR ABOUT */
+
+/* ========= ABOUT PAGE SPECIFIC STYLES ========= */
+.page-hero {
+    padding: 3.5rem 1.5rem 2.5rem;
+    background: linear-gradient(to bottom, #F0F3F8, #F8F9FB);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero-inner {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.page-hero-title {
+    text-align: left;
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.page-hero-subtitle {
+    max-width: 75ch;
+    font-size: 1.15rem;
+    color: #2A3747;
+    margin-top: 0.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+    padding: 1.2rem 1.8rem;
+    background: rgba(159, 183, 212, 0.08);
+    border-radius: var(--radius-soft);
+    border-left: 4px solid var(--color-secondary);
+    box-shadow: 0 6px 18px rgba(4, 18, 36, 0.04);
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-right: 0;
+    width: 100%;
+}
+
+/* CASE STUDY LAYOUT FOR ABOUT PAGE */
 .case-study {
     padding: 4rem 1.5rem;
 }
 
 .case-study:nth-child(even) {
-    background: var(--color-surface-alt);
+    background: #F0F3F8;
 }
 
 .case-grid {
     display: grid;
-    grid-template-columns: minmax(320px, 1fr) minmax(0, 1.6fr);
-    gap: 3.5rem;
+    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.6fr);
+    gap: 3rem;
     align-items: start;
 }
 
 .case-grid-reverse {
-    grid-template-columns: minmax(0, 1.6fr) minmax(320px, 1fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(240px, 0.9fr);
 }
 
 .case-text {
     display: flex;
-    flex-direction:  column;
+    flex-direction: column;
+    max-width: none;
+    padding-right: 1.5rem;
 }
 
 .case-tagline {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     color: var(--color-secondary);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    max-width: 85ch;
 }
 
+/* Professional image containers */
 .case-media {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
-/* PERFECTLY SIZED IMAGE CONTAINERS */
 .figure-single {
     width: 100%;
-    height: 340px;
+    height: 280px;
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    background: #E8EEF5;
+    background: #F8F9FB;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(159, 183, 212, 0.25);
 }
 
 .figure-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    height: 400px;
+    gap: 0.8rem;
+    height: 320px;
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    background: #E8EEF5;
+    background: #F8F9FB;
     margin: 0;
+    padding: 0.5rem;
+    border: 1px solid rgba(159, 183, 212, 0.25);
 }
 
+/* Professional image display */
+.figure-single img,
 .figure-grid img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #F8F9FB;
+    padding: 0.3rem;
 }
 
-.case-text h3 {
-    font-size: 1.1rem;
-    margin: 1.8rem 0 0.8rem;
-    color: var(--color-primary);
-}
-
-.case-text ul {
-    padding-left: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.case-text li {
-    margin-bottom: 0.5rem;
-    font-size: 0.97rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 880px) {
-    .case-grid,
-    .case-grid-reverse {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-    }
-    
-    .figure-single {
-        height: 300px;
-    }
-    
-    .figure-grid {
-        height: 360px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .figure-single {
-        height: 260px;
-    }
-    
-    .figure-grid {
-        height: 320px;
-    }
-    
-    .case-grid {
-        gap: 2rem;
-    }
-}
-/* style.css - Enhanced about page styling */
-
-/* Add these styles to your existing style.css file */
-
-/* ========= ENHANCED BIO STYLING ========= */
-.page-hero-subtitle {
-    max-width: 65ch;
-    font-size: 1.15rem;
-    color: #2A3747;
-    margin-top: 0.4rem;
-    line-height: 1.6;
-    font-weight: 500;
-    padding: 1rem 1.5rem;
-    background: rgba(159, 183, 212, 0.1);
-    border-radius: var(--radius-soft);
-    border-left: 4px solid var(--color-secondary);
-    box-shadow: 0 8px 20px rgba(4, 18, 36, 0.05);
-}
-
-/* ========= FIX IMAGE DISPLAY ========= */
-.case-img {
-    width: 100%;
-    height: auto;
-    max-height: 220px;
-    object-fit: contain; /* Changed from cover to contain to show full image */
-    border-radius: var(--radius-soft);
-    box-shadow: var(--shadow-soft);
-    transition: transform var(--transition-fast);
-    background: #F0F4FA;
-    padding: 0.5rem;
-}
-
-.figure-single .case-img {
-    max-height: 280px;
-}
-
-.figure-grid .case-img {
-    max-height: 180px;
-}
-
-/* ========= ENHANCED CASE STUDY STYLING ========= */
-.case-study {
-    padding: 4rem 1.5rem;
-    position: relative;
-}
-
-.case-study::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(to right, transparent, var(--color-accent-soft), transparent);
-}
-
-.case-tagline {
-    font-size: 1.15rem;
-    color: var(--color-secondary);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    position: relative;
-    padding-left: 1rem;
-}
-
-.case-tagline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.4rem;
-    bottom: 0.4rem;
-    width: 3px;
-    background: var(--color-accent-soft);
-    border-radius: 2px;
-}
-
-/* ========= ENHANCED TEXT STYLING ========= */
+/* Text styling */
 .body-text {
     font-size: 1.05rem;
-    max-width: 64ch;
+    max-width: 75ch;
     line-height: 1.7;
     color: #2A3747;
     margin-bottom: 1.2rem;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
 }
 
 .case-text h3 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid rgba(159, 183, 212, 0.3);
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.8rem;
     color: var(--color-primary);
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(159, 183, 212, 0.3);
 }
 
 .case-text ul {
     padding-left: 1.2rem;
     margin: 0.8rem 0 1.2rem;
+    max-width: 70ch;
 }
 
 .case-text li {
-    margin-bottom: 0.6rem;
-    line-height: 1.5;
-    position: relative;
-    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
 }
 
-.case-text li::marker {
-    color: var(--color-secondary);
-}
-
-/* ========= ENHANCED HERO FOCUS LIST ========= */
+/* Hero focus list */
 .hero-focus-list {
     list-style: none;
     padding-left: 0;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     display: grid;
-    gap: 0.8rem;
+    gap: 0.6rem;
+    max-width: 70ch;
 }
 
 .hero-focus-list li {
-    padding: 0.8rem 1rem;
-    background: linear-gradient(to right, rgba(159, 183, 212, 0.1), rgba(159, 183, 212, 0.05));
-    border-radius: var(--radius-soft);
-    border: 1px solid rgba(159, 183, 212, 0.2);
+    padding: 0.7rem 0.9rem;
+    background: linear-gradient(to right, rgba(159, 183, 212, 0.08), rgba(159, 183, 212, 0.04));
+    border-radius: 12px;
+    border: 1px solid rgba(159, 183, 212, 0.15);
     font-size: 0.95rem;
-    color: var(--color-text);
     display: flex;
     align-items: center;
     transition: all var(--transition-fast);
@@ -885,186 +773,66 @@ p {
     font-weight: bold;
 }
 
-/* ========= ENHANCED FIGURE STYLING ========= */
-.figure-single, .figure-grid {
-    margin: 0;
-    position: relative;
+/* HERO CURVE FOR ABOUT PAGE */
+.hero-curve-small {
+    height: 55px;
+    bottom: -28px;
 }
 
-.figure-single {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.figure-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
-}
-
-.figure-grid img {
-    width: 100%;
-}
-
-/* ========= ENHANCED SECTION STYLING ========= */
-.section-alt {
-    background: linear-gradient(to bottom, #F0F3F8, #F8F9FB);
-    position: relative;
-}
-
-.section-alt::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(159, 183, 212, 0.3), transparent);
-}
-
-/* ========= RESPONSIVE ENHANCEMENTS ========= */
+/* ========= RESPONSIVE FOR ABOUT PAGE ========= */
 @media (max-width: 880px) {
-    .page-hero-subtitle {
-        font-size: 1.1rem;
-        padding: 0.8rem 1.2rem;
+    .case-grid,
+    .case-grid-reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: left;
     }
     
-    .case-tagline {
-        font-size: 1.1rem;
-    }
-    
-    .figure-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-}
-
-@media (max-width: 720px) {
-    .page-hero-subtitle {
-        font-size: 1.05rem;
-        padding: 0.7rem 1rem;
-    }
-    
-    .case-img {
-        max-height: 180px;
-    }
-    
-    .figure-single .case-img {
-        max-height: 220px;
-    }
-}
-
-@media (max-width: 520px) {
-    .page-hero-subtitle {
-        font-size: 1rem;
-        border-left-width: 3px;
-    }
-    
-    .case-tagline {
-        font-size: 1.05rem;
-        padding-left: 0.8rem;
+    .figure-single {
+        height: 240px;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .figure-grid {
-        grid-template-columns: repeat(2, 1fr);
+        height: 280px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .page-hero-subtitle {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    
+    .case-text {
+        padding-right: 0;
     }
 }
-/* Add this to fix About Me section alignment */
-.case-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr; /* Changed ratio to push content more to the right */
-    gap: 3.5rem;
-    align-items: start;
-}
 
-.case-grid-reverse {
-    grid-template-columns: 1.4fr 1fr; /* Changed ratio */
-}
-
-/* Remove the problematic figure styles that were causing issues */
-.figure-single,
-.figure-grid {
-    background: transparent !important; /* Remove forced background */
-}
-
-/* Fix the image display */
-.figure-single img,
-.figure-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Show entire image */
-    background: transparent;
-}
-/* ========= FIX ABOUT ME SECTION ALIGNMENT ========= */
-.case-grid {
-    grid-template-columns: 1fr 1.4fr; /* Push text more to the right */
-}
-
-.case-grid-reverse {
-    grid-template-columns: 1.4fr 1fr;
-}
-
-.figure-single,
-.figure-grid {
-    background: transparent !important;
-    border: 1px solid rgba(159, 183, 212, 0.2); /* Subtle border instead */
-}
-
-.figure-single img,
-.figure-grid img {
-    object-fit: contain;
-    background: #F8F9FB; /* Light background for images */
-}
-
-/* ========= REMOVE CAPSULE BACKGROUND FROM INDEX PAGE ========= */
-.hero-portrait-shell {
-    display: none; /* Completely remove the capsule */
-}
-
-/* Optional: If you want a cleaner look for the portrait */
-.hero-portrait-container {
-    box-shadow: 0 15px 40px rgba(11, 28, 45, 0.15); /* Softer shadow */
-    border: 3px solid #ffffff; /* Clean white border */
-}
-
-/* ========= ENHANCE IMAGE DISPLAY IN ABOUT PAGE ========= */
-.case-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: var(--radius-soft);
-    box-shadow: 0 10px 30px rgba(4, 18, 36, 0.1);
-    background: #F8F9FB;
-    padding: 0.5rem;
-}
-
-.figure-single .case-img {
-    max-height: 300px;
-}
-
-.figure-grid .case-img {
-    max-height: 160px;
-}
-.page-hero-subtitle {
-    max-width: 65ch;
-    font-size: 1.15rem;
-    color: #2A3747;
-    margin-top: 0.4rem;
-    line-height: 1.6;
-    font-weight: 500;
-    padding: 1rem 1.5rem;
-    background: rgba(159, 183, 212, 0.1);
-    border-radius: var(--radius-soft);
-    border-left: 4px solid var(--color-secondary);
-    box-shadow: 0 8px 20px rgba(4, 18, 36, 0.05);
-    text-align: left;
-    margin-left: 2rem; /* Move it to the right by 2rem */
-    margin-right: 0;
-}
-.page-hero-title {
-    text-align: left;
-}
-
-.page-hero-inner {
-    text-align: left;
+@media (max-width: 600px) {
+    .figure-single {
+        height: 220px;
+    }
+    
+    .figure-grid {
+        height: 250px;
+        gap: 0.5rem;
+        padding: 0.3rem;
+    }
+    
+    .case-grid {
+        gap: 1.8rem;
+    }
+    
+    .page-hero-title {
+        font-size: 1.9rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1.05rem;
+        padding: 1rem 1.2rem;
+    }
 }

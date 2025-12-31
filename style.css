@@ -626,7 +626,7 @@ p {
     width: 100%;
 }
 
-/* BULLETPROOF 1/3 IMAGE | 2/3 TEXT - WORKS EVERY TIME */
+/* CASE STUDY LAYOUT FOR ABOUT PAGE */
 .case-study {
     padding: 3.5rem 1.5rem;
 }
@@ -635,25 +635,148 @@ p {
     background: #F0F3F8;
 }
 
-/* NORMAL: IMAGE LEFT (33%) | TEXT RIGHT (67%) */
+/* FIXED: PROPER ALTERNATING GRID LAYOUT */
 .case-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;  /* 33% | 67% */
+    grid-template-columns: 1fr 2fr; /* Image 33% | Text 67% */
     gap: 3rem;
     align-items: start;
 }
 
-/* REVERSE: TEXT LEFT (67%) | IMAGE RIGHT (33%) */
+/* FIXED: REVERSED LAYOUT - Text left, Image right */
 .case-grid-reverse {
     display: grid;
-    grid-template-columns: 2fr 1fr;  /* 67% | 33% */
+    grid-template-columns: 2fr 1fr; /* Text 67% | Image 33% */
     gap: 3rem;
     align-items: start;
 }
 
-/* DELETE ALL THESE CONFLICTING RULES FROM YOUR CSS */
-/* .case-grid > * { ... }  ← DELETE THESE */
-/* .case-grid-reverse > * { ... }  ← DELETE THESE */
+/* FIXED: Make sure elements are in correct columns */
+.case-grid-reverse .case-media {
+    grid-column: 2; /* Image in column 2 (right side) */
+}
+
+.case-grid-reverse .case-text {
+    grid-column: 1; /* Text in column 1 (left side) */
+}
+
+/* Text styling */
+.case-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-tagline {
+    font-size: 1.08rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Professional image containers */
+.case-media {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Single image container */
+.figure-single {
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background: var(--color-background);
+    margin: 0;
+    border: 1px solid rgba(159, 183, 212, 0.2);
+}
+
+/* Grid container - Two images side by side */
+.figure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.8rem;
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background: var(--color-background);
+    margin: 0;
+    border: 1px solid rgba(159, 183, 212, 0.2);
+}
+
+/* Image styling */
+.figure-single img,
+.figure-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Body text styling */
+.body-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #2A3747;
+    margin-bottom: 1.2rem;
+    padding: 0.3rem 0;
+}
+
+.case-text h3 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.8rem;
+    color: var(--color-primary);
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(159, 183, 212, 0.3);
+}
+
+.case-text ul {
+    padding-left: 1.2rem;
+    margin: 0.8rem 0 1.2rem;
+}
+
+.case-text li {
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* Hero focus list */
+.hero-focus-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.2rem 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.hero-focus-list li {
+    padding: 0.7rem 0.9rem;
+    background: linear-gradient(to right, rgba(159, 183, 212, 0.08), rgba(159, 183, 212, 0.04));
+    border-radius: 12px;
+    border: 1px solid rgba(159, 183, 212, 0.15);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-fast);
+}
+
+.hero-focus-list li:hover {
+    transform: translateX(5px);
+    border-color: var(--color-accent-soft);
+    background: linear-gradient(to right, rgba(159, 183, 212, 0.15), rgba(159, 183, 212, 0.08));
+}
+
+.hero-focus-list li::before {
+    content: '▸';
+    color: var(--color-secondary);
+    margin-right: 0.8rem;
+    font-weight: bold;
+}
 
 /* NEW SKILLS & LANGUAGES GRID */
 .skills-grid {
@@ -722,7 +845,13 @@ p {
     transition: width 0.8s ease;
 }
 
-/* RESPONSIVE ENHANCEMENTS */
+/* HERO CURVE FOR ABOUT PAGE */
+.hero-curve-small {
+    height: 55px;
+    bottom: -28px;
+}
+
+/* ========= RESPONSIVE FOR ABOUT PAGE ========= */
 @media (max-width: 880px) {
     .case-grid,
     .case-grid-reverse {
@@ -730,15 +859,20 @@ p {
         gap: 2.5rem;
     }
     
+    /* Reset grid positions for mobile */
+    .case-grid-reverse .case-media,
+    .case-grid-reverse .case-text {
+        grid-column: 1;
+    }
+    
     .figure-single {
-        height: 360px; /* Larger mobile images */
+        height: 280px;
         max-width: 400px;
         margin: 0 auto;
     }
     
     .figure-grid {
-        height: 420px;
-        grid-template-columns: 1fr 1fr;
+        height: 300px;
         max-width: 500px;
         margin: 0 auto;
     }
@@ -751,11 +885,11 @@ p {
 
 @media (max-width: 600px) {
     .figure-single {
-        height: 320px;
+        height: 240px;
     }
     
     .figure-grid {
-        height: 380px;
+        height: 260px;
         gap: 0.8rem;
     }
 }

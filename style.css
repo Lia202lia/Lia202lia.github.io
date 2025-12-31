@@ -626,7 +626,9 @@ p {
     width: 100%;
 }
 
-/* CASE STUDY LAYOUT FOR ABOUT PAGE */
+/* ========= ABOUT PAGE CASE STUDY GRID ========= */
+
+/* Sections already use .case-study from your file */
 .case-study {
     padding: 3.5rem 1.5rem;
 }
@@ -635,90 +637,71 @@ p {
     background: #F0F3F8;
 }
 
-/* CORRECT GRID SYSTEM - ALL GRIDS IN ONE PLACE */
-.section-inner {
-    max-width: var(--content-max-width);
-    margin: 0 auto;
-}
-
-/* NORMAL LAYOUT: Image Left (33%) | Text Right (67%) */
-.case-grid {
+/* NORMAL: image left (1/3), text right (2/3) */
+.section-inner.case-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Exactly 33% | 67% */
+    grid-template-columns: 1fr 2fr;  /* 33% | 67% */
     gap: 3rem;
     align-items: start;
 }
 
-/* REVERSED LAYOUT: Text Left (67%) | Image Right (33%) */
-.case-grid-reverse {
+/* REVERSE: text left (2/3), image right (1/3) */
+.section-inner.case-grid-reverse {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Exactly 67% | 33% */
+    grid-template-columns: 2fr 1fr;  /* 67% | 33% */
     gap: 3rem;
     align-items: start;
 }
 
-/* Text area styling - takes 67% width */
-.case-text {
-    grid-column: 2; /* Default: text in right column (for normal layout) */
-}
-
-.case-grid-reverse .case-text {
-    grid-column: 1; /* For reversed: text in left column */
-}
-
-/* Image area styling - takes 33% width */
-.case-media {
-    grid-column: 1; /* Default: image in left column (for normal layout) */
-}
-
-.case-grid-reverse .case-media {
-    grid-column: 2; /* For reversed: image in right column */
-}
-
-/* Professional image containers */
+/* Image containers */
 .case-media {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
-/* Single image container */
 .figure-single {
     width: 100%;
-    height: 320px;
+    height: 420px;
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
     background: var(--color-background);
     margin: 0;
-    border: 1px solid rgba(159, 183, 212, 0.2);
+    border: 2px solid rgba(159, 183, 212, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Grid container - Two images side by side */
+.figure-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.figure-single:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(4, 18, 36, 0.15);
+}
+
 .figure-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0.8rem;
-    width: 100%;
-    height: 320px;
+    gap: 1rem;
+    height: 480px;
     border-radius: var(--radius-soft);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
     background: var(--color-background);
     margin: 0;
-    border: 1px solid rgba(159, 183, 212, 0.2);
+    border: 2px solid rgba(159, 183, 212, 0.25);
 }
 
-/* Image styling */
-.figure-single img,
 .figure-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-/* Text styling - takes 67% width */
+/* Text block */
 .case-text {
     display: flex;
     flex-direction: column;
@@ -730,14 +713,6 @@ p {
     font-weight: 600;
     margin-bottom: 1.2rem;
     line-height: 1.5;
-}
-
-.body-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #2A3747;
-    margin-bottom: 1.2rem;
-    padding: 0.3rem 0;
 }
 
 .case-text h3 {
@@ -759,87 +734,105 @@ p {
     line-height: 1.6;
 }
 
-/* Hero focus list */
-.hero-focus-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 1.2rem 0;
+/* Skills & languages (as you already had) */
+.skills-grid {
     display: grid;
-    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.hero-focus-list li {
-    padding: 0.7rem 0.9rem;
-    background: linear-gradient(to right, rgba(159, 183, 212, 0.08), rgba(159, 183, 212, 0.04));
-    border-radius: 12px;
-    border: 1px solid rgba(159, 183, 212, 0.15);
-    font-size: 0.95rem;
+.skill-category {
+    background: var(--color-surface);
+    border-radius: var(--radius-soft);
+    padding: 2rem;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: 0 8px 25px rgba(4, 18, 36, 0.06);
+}
+
+.skill-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    padding: 0.6rem 0;
+    font-size: 0.98rem;
+    color: #2A3747;
+    border-bottom: 1px solid rgba(159, 183, 212, 0.15);
     transition: all var(--transition-fast);
 }
 
-.hero-focus-list li:hover {
-    transform: translateX(5px);
-    border-color: var(--color-accent-soft);
-    background: linear-gradient(to right, rgba(159, 183, 212, 0.15), rgba(159, 183, 212, 0.08));
-}
-
-.hero-focus-list li::before {
-    content: '▸';
+.skill-item:hover {
     color: var(--color-secondary);
-    margin-right: 0.8rem;
-    font-weight: bold;
+    padding-left: 0.5rem;
 }
 
-/* HERO CURVE FOR ABOUT PAGE */
-.hero-curve-small {
-    height: 55px;
-    bottom: -28px;
+.language-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0.4rem 0;
 }
 
-/* ========= RESPONSIVE FOR ABOUT PAGE ========= */
+.language-level {
+    flex: 1;
+    height: 6px;
+    background: rgba(47, 93, 140, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.language-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+    border-radius: 3px;
+}
+
+/* Responsive */
 @media (max-width: 880px) {
-    .case-grid,
-    .case-grid-reverse {
+    .section-inner.case-grid,
+    .section-inner.case-grid-reverse {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    
-    /* Reset grid positions for mobile */
-    .case-media,
-    .case-text,
-    .case-grid-reverse .case-media,
-    .case-grid-reverse .case-text {
-        grid-column: 1;
-    }
-    
-    /* Image on top for all sections on mobile */
-    .case-grid .case-media,
-    .case-grid-reverse .case-media {
-        order: -1;
-    }
-    
+
     .figure-single {
-        height: 280px;
+        height: 360px;
         max-width: 400px;
         margin: 0 auto;
     }
-    
+
     .figure-grid {
-        height: 300px;
+        height: 420px;
+        grid-template-columns: 1fr 1fr;
         max-width: 500px;
         margin: 0 auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 600px) {
     .figure-single {
-        height: 240px;
+        height: 320px;
     }
-    
+
     .figure-grid {
-        height: 260px;
+        height: 380px;
         gap: 0.8rem;
     }
 }

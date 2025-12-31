@@ -982,3 +982,51 @@ p {
         gap: 0.25rem;
     }
 }
+//////////////////////////////////////////////////////////////////////////////////////////////research
+/* Add this to the BOTTOM of your existing style.css */
+
+/* ========= RESEARCH PAGE – OVERVIEW ========= */
+
+.section-kicker {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #6a7a91;
+    margin-top: 0.1rem;
+}
+
+.research-intro {
+    font-size: 1.02rem;
+    color: #28354a;
+    max-width: 70ch;
+}
+
+/* ========= RESEARCH PAGE – CASE STUDIES (chessboard layout) ========= */
+/* Reuses .case-study, .section-inner.case-grid, .section-inner.case-grid-reverse,
+   .case-media, .figure-single, .figure-grid, .case-text, .case-tagline, etc.
+   already defined for the About page, so the visual language stays consistent. */
+
+.section.section-alt {
+    background: #F0F3F8;
+}
+
+/* Slight spacing adjustment so research sections breathe well */
+.section.case-study {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+/* Tweak inside headings to look more "case study" */
+.case-text h3 {
+    font-size: 1.12rem;
+    margin-top: 1.2rem;
+}
+
+/* ========= RESEARCH PAGE – RESPONSIVE TWEAKS ========= */
+
+@media (max-width: 880px) {
+    .section.case-study {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}

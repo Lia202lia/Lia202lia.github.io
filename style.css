@@ -1215,3 +1215,150 @@ p {
         border-radius: 20px;
     }
 }
+/*================================================================CV===============================================================*/
+/* Add this to the BOTTOM of your existing style.css */
+
+/* ========= CV PAGE – HEADER ========= */
+
+.cv-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.cv-header-main {
+    max-width: 52ch;
+}
+
+.cv-header-title {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.cv-header-note {
+    font-size: 0.98rem;
+    color: #28354a;
+}
+
+.cv-header-meta {
+    text-align: right;
+    font-size: 0.92rem;
+    color: #4a566d;
+}
+
+.cv-header-line {
+    margin: 0 0 0.2rem;
+}
+
+.cv-download {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+}
+
+/* ========= CV PAGE – SECTIONS & LAYOUT ========= */
+
+.cv-section-header {
+    margin-bottom: 1.4rem;
+}
+
+.cv-two-column {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 1.8rem;
+    padding-block: 0.9rem;
+    border-top: 1px solid rgba(211, 216, 224, 0.8);
+}
+
+.cv-two-column:last-of-type {
+    border-bottom: 1px solid rgba(211, 216, 224, 0.8);
+}
+
+.cv-left-label {
+    font-size: 0.9rem;
+    color: #5a6b84;
+    padding-top: 0.2rem;
+}
+
+.cv-right-content {
+    font-size: 0.95rem;
+    color: #1f2838;
+}
+
+.cv-entry-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+}
+
+.cv-entry-org {
+    font-size: 0.92rem;
+    color: #52627b;
+    margin-bottom: 0.45rem;
+}
+
+.cv-entry-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-entry-list li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(230, 234, 241, 0.9);
+}
+
+.cv-entry-list li:last-child {
+    border-bottom: none;
+}
+
+/* ========= CV PAGE – SKILLS GRID ========= */
+
+.cv-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.7rem;
+    margin-top: 1rem;
+}
+
+.cv-skill-block {
+    background: #ffffff;
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(211, 216, 224, 0.95);
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 8px 18px rgba(4, 18, 36, 0.05);
+}
+
+.cv-skill-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ========= CV PAGE – RESPONSIVE ========= */
+
+@media (max-width: 880px) {
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.4rem;
+    }
+
+    .cv-header-meta {
+        text-align: left;
+    }
+
+    .cv-two-column {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.6rem;
+    }
+
+    .cv-left-label {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-skill-block {
+        padding: 1.4rem 1.4rem;
+    }
+}

@@ -1030,3 +1030,188 @@ p {
         padding-bottom: 3rem;
     }
 }
+/* ========================================================= volunteer ================================================================= */
+/* Add this to the BOTTOM of your existing style.css */
+
+/* ========= VOLUNTEERING PAGE – OVERVIEW ========= */
+
+.vol-intro {
+    font-size: 1.02rem;
+    color: #28354a;
+    max-width: 70ch;
+}
+
+/* ========= VOLUNTEERING PAGE – SOFT STRIPES SECTION ========= */
+
+.section-alt-vol {
+    padding: 3.8rem 1.5rem 3.6rem;
+    background: linear-gradient(to bottom, #F0F3F8, #F8F9FB);
+}
+
+.vol-stripes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+}
+
+.vol-stripe {
+    position: relative;
+    border-radius: 999px;
+    padding: 1.1rem 1.6rem;
+    background: #ffffff;
+    border: 1px solid rgba(211, 216, 224, 0.8);
+    box-shadow: 0 10px 24px rgba(4, 18, 36, 0.05);
+    overflow: hidden;
+}
+
+.vol-stripe::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(159, 183, 212, 0.16), transparent 60%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.vol-stripe-title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.vol-stripe-text {
+    font-size: 0.94rem;
+    color: #2b394f;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========= VOLUNTEERING PAGE – DETAILED ROLES (ALTERNATING) ========= */
+
+.vol-role {
+    margin-top: 2.2rem;
+}
+
+.vol-role-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(220px, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.vol-role-grid-reverse {
+    grid-template-columns: minmax(220px, 1fr) minmax(0, 1.6fr);
+}
+
+.vol-role-grid-reverse .vol-role-text {
+    order: 2;
+}
+
+.vol-role-grid-reverse .vol-role-visual {
+    order: 1;
+}
+
+.vol-role-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+}
+
+.vol-role-meta {
+    font-size: 0.92rem;
+    color: #5a6b84;
+    margin-bottom: 0.9rem;
+}
+
+.vol-role-body {
+    font-size: 0.96rem;
+    color: #253145;
+    margin-bottom: 0.8rem;
+}
+
+.vol-role-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0;
+}
+
+.vol-role-list li {
+    font-size: 0.94rem;
+    color: #263246;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(159, 183, 212, 0.18);
+}
+
+.vol-role-list li:last-child {
+    border-bottom: none;
+}
+
+.vol-figure-soft {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(159, 183, 212, 0.65);
+    box-shadow: 0 16px 36px rgba(4, 18, 36, 0.12);
+    background: #ffffff;
+}
+
+.vol-figure-soft img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ========= VOLUNTEERING PAGE – VALUES SUMMARY ========= */
+
+.vol-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.7rem;
+    margin-top: 1.8rem;
+}
+
+.vol-value {
+    background: #ffffff;
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(211, 216, 224, 0.95);
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 8px 20px rgba(4, 18, 36, 0.05);
+}
+
+.vol-value-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+.vol-value-text {
+    font-size: 0.95rem;
+    color: #2b394f;
+}
+
+/* ========= VOLUNTEERING PAGE – RESPONSIVE ========= */
+
+@media (max-width: 880px) {
+    .vol-role-grid,
+    .vol-role-grid-reverse {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .vol-role-grid-reverse .vol-role-text,
+    .vol-role-grid-reverse .vol-role-visual {
+        order: initial;
+    }
+
+    .vol-role {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .section-alt-vol {
+        padding-inline: 1.25rem;
+    }
+
+    .vol-stripe {
+        border-radius: 20px;
+    }
+}

@@ -1362,3 +1362,147 @@ p {
         padding: 1.4rem 1.4rem;
     }
 }
+/*=============================================================================contact==========================================================*/
+/* Add this to the BOTTOM of your existing style.css */
+
+/* ========= CONTACT PAGE – INTRO ========= */
+
+.contact-intro {
+    font-size: 1.02rem;
+    color: #28354a;
+    max-width: 70ch;
+}
+
+/* ========= CONTACT PAGE – GRID ========= */
+
+.contact-grid-header {
+    margin-bottom: 1.3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.6rem;
+    margin-top: 0.4rem;
+}
+
+.contact-card {
+    background: #ffffff;
+    border-radius: var(--radius-soft);
+    border: 1px solid rgba(211, 216, 224, 0.95);
+    padding: 1.6rem 1.7rem;
+    box-shadow: 0 8px 20px rgba(4, 18, 36, 0.06);
+}
+
+.contact-card-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-card-text {
+    font-size: 0.94rem;
+    color: #2b394f;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card-highlight {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    word-break: break-word;
+}
+
+.contact-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(47, 93, 140, 0.25);
+    padding-bottom: 1px;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    color: var(--color-primary);
+    border-color: rgba(47, 93, 140, 0.55);
+}
+
+/* ========= CONTACT PAGE – FORM ========= */
+
+.contact-form {
+    margin-top: 1.2rem;
+    padding: 1.8rem 1.8rem 1.7rem;
+    border-radius: var(--radius-soft);
+    background: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: 0 10px 26px rgba(4, 18, 36, 0.07);
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.9rem;
+}
+
+.form-field label {
+    font-size: 0.92rem;
+    color: #364155;
+}
+
+.form-field input,
+.form-field textarea {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(211, 216, 224, 0.95);
+    background: #FDFEFF;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+    border-color: rgba(47, 93, 140, 0.7);
+    box-shadow: 0 0 0 1px rgba(47, 93, 140, 0.25);
+    background: #ffffff;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-disclaimer {
+    font-size: 0.85rem;
+    color: #5b6880;
+    margin-top: 0.4rem;
+    margin-bottom: 1.1rem;
+    max-width: 70ch;
+}
+
+.contact-submit {
+    font-size: 0.94rem;
+}
+
+/* ========= CONTACT PAGE – RESPONSIVE ========= */
+
+@media (max-width: 880px) {
+    .contact-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .contact-form {
+        padding-inline: 1.4rem;
+    }
+}

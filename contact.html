@@ -1,464 +1,175 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & References | Tala Khaddour</title>
+    <title>Contact & Academic Links | Tala Khaddour</title>
+    <meta name="description" content="Formal academic contact information and professional links for Tala Khaddour.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
-                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-title">Contact & References</span>
-                    </div>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link"><i class="fas fa-user-graduate"></i> About</a></li>
-                    <li><a href="research.html" class="nav-link"><i class="fas fa-microscope"></i> Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link"><i class="fas fa-hands-helping"></i> Service</a></li>
-                    <li><a href="cv.html" class="nav-link"><i class="fas fa-file-alt"></i> CV</a></li>
-                    <li><a href="contact.html" class="nav-link active btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">
+                <span class="nav-logo-mark">TK</span>
+                <span class="nav-logo-text">Tala Khaddour</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+                <li><a href="contact.html" class="nav-link nav-link-active">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header class="page-header contact-header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="page-title">Professional Contact & References</h1>
-                <p class="page-subtitle">
-                    Connect for research collaboration, scholarship inquiries, or academic discussion
-                </p>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
-                    <span>Contact & References</span>
-                </div>
-            </div>
+    <section class="page-hero" aria-labelledby="contact-title">
+        <div class="page-hero-inner">
+            <h1 id="contact-title" class="page-hero-title">Contact &amp; Academic Links</h1>
+            <p class="page-hero-subtitle">
+                Formal academic contact information and professional profiles for scholarship committees, admissions offices, and prospective research supervisors.
+            </p>
         </div>
-    </header>
+        <div class="hero-curve hero-curve-small" aria-hidden="true"></div>
+    </section>
+</header>
 
-    <section class="contact-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <div class="overview-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Scholarship Applications</h3>
-                    <p>For Fulbright, Chevening, DAAD, Erasmus Mundus, and other prestigious scholarship inquiries</p>
-                </div>
-                
-                <div class="overview-card">
-                    <div class="overview-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Research Collaboration</h3>
-                    <p>Interested in rehabilitation robotics, intelligent control systems, or AI applications</p>
-                </div>
-                
-                <div class="overview-card">
-                    <div class="overview-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Academic Discussion</h3>
-                    <p>For professors, researchers, and academic institutions interested in my work</p>
-                </div>
+<main>
+    <!-- 1. CONTACT SUMMARY -->
+    <section class="section section-compact fade-section" aria-labelledby="contact-overview-heading">
+        <div class="section-inner">
+            <div class="section-header-inline">
+                <h2 id="contact-overview-heading" class="section-title">Academic correspondence</h2>
+                <p class="section-kicker">Professional contact details and locations</p>
             </div>
+            <p class="contact-intro">
+                The information below is intended for formal academic and professional communication related to scholarships, graduate admissions, and research opportunities.
+                Messages related to supervision, collaborative work, or academic guidance are especially welcome.
+            </p>
         </div>
     </section>
 
-    <section class="contact-main">
-        <div class="container">
+    <!-- 2. CONTACT GRID -->
+    <section class="section section-compact fade-section" aria-labelledby="contact-details-heading">
+        <div class="section-inner">
+            <div class="contact-grid-header">
+                <h2 id="contact-details-heading" class="section-title">Contact information</h2>
+            </div>
+
             <div class="contact-grid">
-                <div class="contact-form-section">
-                    <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
-                    <p class="form-description">
-                        Please provide detailed information about your inquiry. For scholarship-related 
-                        communications, please specify the program and deadline if applicable.
+                <div class="contact-card">
+                    <h3 class="contact-card-title">Primary email</h3>
+                    <p class="contact-card-text">
+                        For formal academic correspondence, scholarship-related questions, and potential research supervision.
                     </p>
-                    
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Dr. John Smith, Professor, University Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="professional@institution.edu">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="institution">Institution / Organization</label>
-                            <input type="text" id="institution" name="institution" placeholder="University, Company, or Scholarship Program">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="purpose">Purpose of Contact *</label>
-                            <select id="purpose" name="purpose" required>
-                                <option value="">Select a purpose...</option>
-                                <option value="scholarship">Scholarship Inquiry/Application</option>
-                                <option value="research">Research Collaboration</option>
-                                <option value="academic">Academic Discussion</option>
-                                <option value="reference">Reference Request</option>
-                                <option value="other">Other Professional Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Detailed Message *</label>
-                            <textarea id="message" name="message" rows="6" required 
-                                      placeholder="Please include relevant details such as:
-• Specific scholarship program
-• Research collaboration interests
-• Timeline or deadlines
-• Any attached documents you'd like me to review"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="documents" value="yes">
-                                <span>I have attached relevant documents (CV, proposal, etc.) that I will send separately</span>
-                            </label>
-                        </div>
-                        
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-primary btn-large">
-                                <i class="fas fa-paper-plane"></i> Send Professional Inquiry
-                            </button>
-                            <p class="form-note">
-                                <i class="fas fa-clock"></i> Typical response time: 48 hours for academic inquiries
-                            </p>
-                        </div>
-                    </form>
+                    <p class="contact-card-highlight">
+                        <a href="mailto:tala.khaddour@example.com" class="contact-link">tala.khaddour@example.com</a>
+                    </p>
                 </div>
-                
-                <div class="contact-info-section">
-                    <div class="info-card">
-                        <h2><i class="fas fa-address-card"></i> Direct Contact Information</h2>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Primary Email</h3>
-                                <a href="mailto:khaddour.tala@gmail.com">khaddour.tala@gmail.com</a>
-                                <p>For all academic and professional communications</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Phone / WhatsApp</h3>
-                                <a href="tel:+963936693678">+963 (936) 693 678</a>
-                                <p>Available for calls: 9 AM - 6 PM Syria Time (UTC+3)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Location</h3>
-                                <p>Latakia, Syria</p>
-                                <p>Manara University (Primary academic affiliation)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Availability</h3>
-                                <p>Currently available for:</p>
-                                <ul>
-                                    <li>Graduate program applications (Fall 2026 intake)</li>
-                                    <li>Research collaboration proposals</li>
-                                    <li>Scholarship interviews</li>
-                                    <li>Academic mentorship opportunities</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-card">
-                        <h3><i class="fas fa-share-alt"></i> Professional Profiles</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-profile linkedin">
-                                <i class="fab fa-linkedin"></i>
-                                <div>
-                                    <strong>LinkedIn</strong>
-                                    <span>Professional network</span>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="social-profile github">
-                                <i class="fab fa-github"></i>
-                                <div>
-                                    <strong>GitHub</strong>
-                                    <span>Code repositories</span>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="social-profile scholar">
-                                <i class="fas fa-graduation-cap"></i>
-                                <div>
-                                    <strong>Google Scholar</strong>
-                                    <span>Research publications</span>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="social-profile researchgate">
-                                <i class="fab fa-researchgate"></i>
-                                <div>
-                                    <strong>ResearchGate</strong>
-                                    <span>Academic network</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+
+                <div class="contact-card">
+                    <h3 class="contact-card-title">Location</h3>
+                    <p class="contact-card-text">
+                        Based in Syria, with a strong interest in international collaboration and graduate study in Robotics and AI.
+                    </p>
+                    <p class="contact-card-highlight">
+                        Syria
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3 class="contact-card-title">LinkedIn</h3>
+                    <p class="contact-card-text">
+                        Professional profile summarizing academic background, experience, and ongoing interests in robotics and intelligent systems.
+                    </p>
+                    <p class="contact-card-highlight">
+                        <a href="https://www.linkedin.com/in/your-linkedin" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            linkedin.com/in/your-linkedin
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3 class="contact-card-title">GitHub</h3>
+                    <p class="contact-card-text">
+                        Selected code, prototypes, and small experiments related to robotics, control, and perception.
+                    </p>
+                    <p class="contact-card-highlight">
+                        <a href="https://github.com/lia202lia" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            github.com/lia202lia
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="references" class="references-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title"><i class="fas fa-user-friends"></i> Academic References</h2>
-                <p class="section-subtitle">Professional references available for scholarship applications</p>
+    <!-- 3. OPTIONAL FORM (NEUTRAL ACADEMIC TONE) -->
+    <section class="section section-compact fade-section" aria-labelledby="contact-form-heading">
+        <div class="section-inner">
+            <div class="contact-grid-header">
+                <h2 id="contact-form-heading" class="section-title">Structured contact form</h2>
+                <p class="section-kicker">For academic and professional inquiries</p>
             </div>
-            
-            <div class="references-grid">
-                <div class="reference-card">
-                    <div class="reference-header">
-                        <div class="reference-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="reference-info">
-                            <h3>Academic Supervisor</h3>
-                            <p class="reference-title">Professor of Robotics Engineering</p>
-                            <p class="reference-org">Manara University</p>
-                        </div>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
-                    <div class="reference-details">
-                        <p><strong>Relationship:</strong> Thesis supervisor and academic advisor</p>
-                        <p><strong>Duration:</strong> 3 years of academic guidance</p>
-                        <p><strong>Available for:</strong> Academic reference letters, research capability assessment</p>
+                    <div class="form-field">
+                        <label for="email">Institutional or professional email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
                 </div>
-                
-                <div class="reference-card">
-                    <div class="reference-header">
-                        <div class="reference-avatar">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <div class="reference-info">
-                            <h3>Research Mentor</h3>
-                            <p class="reference-title">Senior Robotics Researcher</p>
-                            <p class="reference-org">Syrian Computer Society</p>
-                        </div>
-                    </div>
-                    <div class="reference-details">
-                        <p><strong>Relationship:</strong> Research project supervisor and mentor</p>
-                        <p><strong>Duration:</strong> 2 years of research collaboration</p>
-                        <p><strong>Available for:</strong> Technical skills assessment, research potential evaluation</p>
-                    </div>
+
+                <div class="form-field">
+                    <label for="affiliation">Institution / organization</label>
+                    <input type="text" id="affiliation" name="affiliation" autocomplete="organization">
                 </div>
-                
-                <div class="reference-card">
-                    <div class="reference-header">
-                        <div class="reference-avatar">
-                            <i class="fas fa-hands-helping"></i>
-                        </div>
-                        <div class="reference-info">
-                            <h3>Community Service Supervisor</h3>
-                            <p class="reference-title">Program Director</p>
-                            <p class="reference-org">Sanad Youth Development Foundation</p>
-                        </div>
-                    </div>
-                    <div class="reference-details">
-                        <p><strong>Relationship:</strong> Volunteer program supervisor</p>
-                        <p><strong>Duration:</strong> 1 year of service coordination</p>
-                        <p><strong>Available for:</strong> Leadership skills assessment, community engagement evaluation</p>
-                    </div>
+
+                <div class="form-field">
+                    <label for="subject">Purpose of contact</label>
+                    <input type="text" id="subject" name="subject" required>
                 </div>
-            </div>
-            
-            <div class="references-request">
-                <h3><i class="fas fa-envelope-open-text"></i> Requesting Reference Letters</h3>
-                <p>
-                    For scholarship applications requiring formal reference letters, please:
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <p class="contact-disclaimer">
+                    This form is intended for academic, professional, and research-related communication only.
+                    Submission does not create any formal obligation but helps structure potential collaboration or supervision discussions.
                 </p>
-                <ol>
-                    <li>Contact me first to discuss the scholarship program and deadlines</li>
-                    <li>Provide the reference form or specific requirements</li>
-                    <li>Allow 2-3 weeks for reference letter preparation</li>
-                    <li>Include any specific points you'd like addressed in the reference</li>
-                </ol>
-                <div class="request-actions">
-                    <a href="#contactForm" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Request References
-                    </a>
-                    <a href="assets/documents/Reference_Request_Guide.pdf" class="btn btn-outline">
-                        <i class="fas fa-download"></i> Download Reference Guide
-                    </a>
-                </div>
-            </div>
+
+                <button type="submit" class="button-primary contact-submit">
+                    Submit inquiry
+                </button>
+            </form>
         </div>
     </section>
+</main>
 
-    <section class="communication-policy">
-        <div class="container">
-            <div class="policy-card">
-                <h2><i class="fas fa-comments"></i> Communication Policy</h2>
-                <div class="policy-grid">
-                    <div class="policy-item">
-                        <h3><i class="fas fa-clock"></i> Response Time</h3>
-                        <ul>
-                            <li><strong>Academic/Scholarship inquiries:</strong> 48 hours</li>
-                            <li><strong>Research collaboration:</strong> 1 week</li>
-                            <li><strong>Reference requests:</strong> 2-3 weeks (allow extra time)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="policy-item">
-                        <h3><i class="fas fa-language"></i> Preferred Languages</h3>
-                        <ul>
-                            <li><strong>Academic correspondence:</strong> English</li>
-                            <li><strong>Informal communication:</strong> Arabic or English</li>
-                            <li><strong>Technical discussions:</strong> English (with technical terminology)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="policy-item">
-                        <h3><i class="fas fa-calendar-check"></i> Best Contact Times</h3>
-                        <ul>
-                            <li><strong>Weekdays:</strong> 9:00 AM - 6:00 PM (UTC+3)</li>
-                            <li><strong>Virtual meetings:</strong> Available with advance scheduling</li>
-                            <li><strong>Urgent matters:</strong> Please indicate in email subject</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-name">Tala Khaddour</p>
+        <p class="footer-tagline">Robotics · Intelligent Systems · Human-centered engineering</p>
+        <p class="footer-meta">
+            Academic portfolio for international scholarship applications and graduate admissions.
+        </p>
+    </div>
+</footer>
 
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Connect?</h2>
-                <p>
-                    Whether you're a scholarship committee member, research collaborator, or academic mentor, 
-                    I look forward to discussing how we can work together to advance rehabilitation robotics 
-                    and global healthcare technology.
-                </p>
-                <div class="cta-actions">
-                    <a href="mailto:khaddour.tala@gmail.com" class="btn btn-primary btn-large">
-                        <i class="fas fa-paper-plane"></i> Send Direct Email
-                    </a>
-                    <a href="cv.html" class="btn btn-secondary">
-                        <i class="fas fa-file-alt"></i> Review Complete CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Contact form handling
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form data
-                    const formData = new FormData(this);
-                    const formValues = Object.fromEntries(formData.entries());
-                    
-                    // Simple validation
-                    if (!formValues.name || !formValues.email || !formValues.message) {
-                        alert('Please fill in all required fields.');
-                        return;
-                    }
-                    
-                    // Show loading state
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    submitBtn.disabled = true;
-                    
-                    // Simulate form submission (in real implementation, this would be an API call)
-                    setTimeout(() => {
-                        // Success message
-                        alert('Thank you for your inquiry! I have received your message and will respond within 48 hours. For urgent matters, you may also contact me directly at khaddour.tala@gmail.com');
-                        
-                        // Reset form
-                        contactForm.reset();
-                        
-                        // Restore button
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                        
-                        // Scroll to top of form
-                        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 1500);
-                });
-            }
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId !== '#') {
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            e.preventDefault();
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+<script src="main.js"></script>
 </body>
 </html>

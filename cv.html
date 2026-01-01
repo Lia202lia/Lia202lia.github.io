@@ -1,426 +1,331 @@
+<!-- cv.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic CV | Tala Khaddour</title>
+    <title>Curriculum Vitae | Tala Khaddour</title>
+    <meta name="description" content="Curriculum Vitae of Tala Khaddour, Robotics & Intelligent Systems Engineer: education, research, experience, awards, skills, and languages.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/icons/academic-badge.svg">
-    <style>
-        .cv-print {
-            max-width: 210mm;
-            margin: 0 auto;
-            padding: 20mm;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        
-        @media print {
-            body {
-                background: white;
-                font-size: 11pt;
-            }
-            .cv-print {
-                box-shadow: none;
-                padding: 0;
-                margin: 0;
-                max-width: 100%;
-            }
-            .navbar, .footer, .print-hide, .no-print {
-                display: none !important;
-            }
-            .page-break {
-                page-break-before: always;
-            }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="15" fill="#2C5AA0" opacity="0.9"/>
-                            <path d="M12 9 L20 16 L12 23" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">Tala Khaddour</span>
-                        <span class="logo-title">Academic CV</span>
-                    </div>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="about.html" class="nav-link"><i class="fas fa-user-graduate"></i> About</a></li>
-                    <li><a href="research.html" class="nav-link"><i class="fas fa-microscope"></i> Research</a></li>
-                    <li><a href="volunteering.html" class="nav-link"><i class="fas fa-hands-helping"></i> Service</a></li>
-                    <li><a href="cv.html" class="nav-link active"><i class="fas fa-file-alt"></i> CV</a></li>
-                    <li><a href="contact.html" class="nav-link btn-nav"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                
-                <button class="mobile-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Go to homepage">
+                <span class="nav-logo-mark">TK</span>
+                <span class="nav-logo-text">Tala Khaddour</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+                <li><a href="cv.html" class="nav-link nav-link-active">CV</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header class="page-header cv-header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="page-title">Complete Academic Curriculum Vitae</h1>
-                <p class="page-subtitle">
-                    Comprehensive professional profile prepared for prestigious scholarship applications
-                </p>
-                <div class="cv-actions print-hide">
-                    <button onclick="window.print()" class="btn btn-primary">
-                        <i class="fas fa-print"></i> Print CV
-                    </button>
-                    <a href="assets/documents/Tala_Khaddour_CV.pdf" download class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download PDF
-                    </a>
-                    <a href="contact.html#references" class="btn btn-outline">
-                        <i class="fas fa-envelope-open-text"></i> Request References
-                    </a>
+    <section class="page-hero" aria-labelledby="cv-title">
+        <div class="page-hero-inner">
+            <h1 id="cv-title" class="page-hero-title">Curriculum Vitae</h1>
+            <p class="page-hero-subtitle">
+                Formal academic record summarizing education, research, experience, awards, technical skills, and languages.
+            </p>
+        </div>
+        <div class="hero-curve hero-curve-small" aria-hidden="true"></div>
+    </section>
+</header>
+
+<main>
+    <!-- HEADER ROW: NAME + QUICK INFO -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-header-heading">
+        <div class="section-inner">
+            <div class="cv-header">
+                <div class="cv-header-main">
+                    <h2 id="cv-header-heading" class="section-title">Tala Khaddour</h2>
+                    <p class="cv-header-title">Robotics &amp; Intelligent Systems Engineer</p>
+                    <p class="cv-header-note">
+                        This website and CV are submitted as part of my international scholarship applications and graduate admissions.
+                    </p>
                 </div>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
-                    <span>Academic CV</span>
+                <div class="cv-header-meta">
+                    <p class="cv-header-line">Location: Syria</p>
+                    <p class="cv-header-line">Fields: Robotics, Intelligent Control, Human–Robot Interaction</p>
+                    <a href="assets/tala-khaddour-cv.pdf" class="button-ghost cv-download" download>
+                        Download CV (PDF)
+                    </a>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="cv-print">
-        <!-- Header Section -->
-        <header class="cv-header-section">
-            <div class="cv-name-title">
-                <h1>Tala Khaddour</h1>
-                <h2>Robotics & Intelligent Systems Engineer</h2>
+    <!-- EDUCATION -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-education-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-education-heading" class="section-title">Education</h2>
             </div>
-            <div class="cv-contact-info">
-                <p><i class="fas fa-envelope"></i> khaddour.tala@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +963 (936) 693 678</p>
-                <p><i class="fas fa-map-marker-alt"></i> Latakia, Syria</p>
-                <p><i class="fas fa-link"></i> githublia202lia.github.io</p>
-            </div>
-            <div class="cv-social">
-                <span class="social-item"><i class="fab fa-linkedin"></i> LinkedIn</span>
-                <span class="social-item"><i class="fab fa-github"></i> GitHub</span>
-                <span class="social-item"><i class="fas fa-graduation-cap"></i> Google Scholar</span>
-            </div>
-        </header>
 
-        <!-- Education Section -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-university"></i> Education</h2>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Manara University</h3>
-                    <div class="cv-date">2020 – 2025</div>
-                </div>
-                <div class="cv-item-subtitle">
-                    <strong>Bachelor of Science in Robotics and Intelligent Systems Engineering</strong>
-                    <span class="cv-location">Latakia, Syria</span>
-                </div>
-                <ul class="cv-item-details">
-                    <li>Distinguished Student Program with selective academic track emphasizing advanced coursework and preparation for graduate-level research</li>
-                    <li><strong>GPA:</strong> 3.28/4.0 (Graduated with Honors)</li>
-                    <li><strong>Thesis Score:</strong> 96/100 - "Intelligent Trajectory and Control of a Designed Hand Exoskeleton for Rehabilitation"</li>
-                    <li>Advanced coursework in modern robotics, control systems, artificial intelligence, and human-robot interaction</li>
-                </ul>
-            </div>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>National Center for the Distinguished (NCD)</h3>
-                    <div class="cv-date">2017 – 2020</div>
-                </div>
-                <div class="cv-item-subtitle">
-                    <strong>High School Diploma - Scientific Stream | Top 75 Students Nationwide</strong>
-                    <span class="cv-location">Latakia, Syria</span>
-                </div>
-                <ul class="cv-item-details">
-                    <li><strong>Final Grade:</strong> 92.3% | <strong>Rank:</strong> 3 out of 75 students</li>
-                    <li>Selected among 75 students from 1,800 pre-qualified applicants nationwide</li>
-                    <li>Advanced curriculum in mathematics, physics, and computer science</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Research Experience -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-flask"></i> Research & Projects</h2>
-            
-            <div class="cv-item" id="exoskeleton-project">
-                <div class="cv-item-header">
-                    <h3>Hand Exoskeleton for Rehabilitation</h3>
-                    <div class="cv-date">Jan 2024 – Aug 2025</div>
-                </div>
-                <ul class="cv-item-details">
-                    <li>Designed and dynamic modeling of a self-alignment, lightweight, cable-driven hand exoskeleton for safe human-robot interaction</li>
-                    <li>Implemented three control strategies (Adaptive SMC, DMRAC, PID with NN compensation) for the nonlinear model</li>
-                    <li>Achieved <strong>&lt;0.5° tracking error</strong> and <strong>20% reduction in settling time</strong> under disturbances</li>
-                    <li>Applied stereo vision–based hand pose mirroring, reducing mean joint position error from 22.4 mm to 15.4 mm</li>
-                    <li>Maintained system latency <strong>&lt;200 ms</strong> for real-time operation</li>
-                    <li><strong>Technologies:</strong> MATLAB/Simulink, ROS, SolidWorks, Python (TensorFlow), Adaptive Control</li>
-                </ul>
-            </div>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Fuzzy Logic Based Control of a Unicycle Mobile Robot - Comparative Analysis</h3>
-                    <div class="cv-date">Nov 2023 – Feb 2024</div>
-                </div>
-                <ul class="cv-item-details">
-                    <li>Designed, implemented, and fine-tuned four Mamdani-type fuzzy controllers (P, PI, PD, PID-like)</li>
-                    <li>Achieved high accuracy in goal tracking: PID-like fuzzy control reached <strong>0.001 m error</strong> with negligible oscillations</li>
-                    <li>PI-like controller achieved 0.05 m error, PD-like 0.1 m error</li>
-                    <li>Demonstrated robustness and smooth trajectory following in simulated environments</li>
-                    <li><strong>Technologies:</strong> Python, MATLAB, Fuzzy Logic Toolbox, Robotics Simulation</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Work Experience -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Robotics Project Coach (RFG Program)</h3>
-                    <div class="cv-date">Jan 2023 – Aug 2023</div>
-                </div>
-                <div class="cv-item-subtitle">
-                    <strong>Manara University & Sanad Youth Development Foundation</strong>
-                    <span class="cv-location">Latakia, Syria</span>
-                </div>
-                <ul class="cv-item-details">
-                    <li>Coached a robotic team preparing for participation in the Robotics For the Globe (RFG) competition</li>
-                    <li>Provided guidance on Arduino-based robotics development, including sensor integration and control systems</li>
-                    <li>Assisted students in selecting creative project ideas addressing competition goals</li>
-                    <li>Guided technical documentation and project presentation development</li>
-                </ul>
-            </div>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Robotics and Programming Trainer / Tutor</h3>
-                    <div class="cv-date">2023 – 2024</div>
-                </div>
-                <div class="cv-item-subtitle">
-                    <strong>Syrian Computer Society</strong>
-                    <span class="cv-location">Latakia & Jableh, Syria</span>
-                </div>
-                <ul class="cv-item-details">
-                    <li>Delivered training sessions and courses in robotics and basic artificial intelligence concepts</li>
-                    <li>Assisted trainees in applying theoretical concepts through hands-on exercises and small projects</li>
-                    <li>Developed curriculum materials for beginner to intermediate robotics education</li>
-                    <li>Mentored 50+ students in robotics fundamentals and competition preparation</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Awards & Honors -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-award"></i> Awards & Recognition</h2>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Participation & Awards</h3>
-                </div>
-                <ul class="cv-item-details">
-                    <li><strong>Damascus International Fair (62nd Edition) 2025</strong> – Participant in Scientific Projects Pavilion (Distinction and Creativity Agency)</li>
-                    <li><strong>InnoSync Conference 2025</strong> – Conference Participant; Organized by Junior Chamber International (JCI)</li>
-                    <li><strong>Manara University Student Exhibition 2025</strong> – Participant; Certificate of Appreciation</li>
-                    <li><strong>Distinction and Creativity Agency (DCA) Academic Scholarship 2020 – 2025</strong> – Merit-Based National Scholarship</li>
-                    <li><strong>World Robot Olympiad (WRO) – Future Engineers Category 2022</strong> – 5th Place Nationwide</li>
-                    <li><strong>Girls in AI Hackathon 2021</strong> – Participant – Teens in AI: Ada Lovelace Hackathon (International program with global mentorship)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Volunteering & Service -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-hands-helping"></i> Academic Service & Volunteering</h2>
-            
-            <div class="cv-item">
-                <div class="cv-item-header">
-                    <h3>Academic & Community Service</h3>
-                </div>
-                <ul class="cv-item-details">
-                    <li><strong>Acquaint & Kaan Balsaman</strong> (Nov 2025 – Present) – Volunteer participant in international youth programs focused on cross-cultural communication and global collaboration</li>
-                    <li><strong>Earthquake Response Initiatives</strong> – Volunteer in humanitarian aid and community support efforts</li>
-                    <li><strong>Sair Team</strong> – Volunteer working to help children in street situations</li>
-                    <li><strong>Syrian Science Olympiad (SSO) 2023</strong> – Academic Support for Senior Category; supported student registration, online qualification examinations, and local organization</li>
-                    <li><strong>Distinction and Creativity Agency (DCA) 2018 – 2024</strong> – Event-Based Volunteer; assisted in organizing academic events, admission tests, and competition-related activities</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Technical Competencies -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-cogs"></i> Technical Competencies</h2>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Robotics & Control Systems</h4>
-                    <ul>
-                        <li>Robot modeling and dynamics</li>
-                        <li>ROS (Robot Operating System)</li>
-                        <li>SolidWorks, CATIA</li>
-                        <li>Adaptive control (SMC, DMRAC)</li>
-                        <li>Sensor fusion and Kalman filtering</li>
-                        <li>MATLAB/Simulink</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>AI & Machine Learning</h4>
-                    <ul>
-                        <li>Python (TensorFlow, PyTorch)</li>
-                        <li>Computer Vision (OpenCV)</li>
-                        <li>Neural Networks (CNN, LSTM)</li>
-                        <li>Fuzzy Logic Control</li>
-                        <li>Reinforcement Learning</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Embedded Systems & Programming</h4>
-                    <ul>
-                        <li>Arduino, Raspberry Pi</li>
-                        <li>C, C++</li>
-                        <li>Real-time systems</li>
-                        <li>Microcontroller programming</li>
-                        <li>Hardware-software integration</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Tools & Platforms</h4>
-                    <ul>
-                        <li>Linux/Ubuntu</li>
-                        <li>Git, GitHub</li>
-                        <li>Docker</li>
-                        <li>Gazebo, RViz</li>
-                        <li>LaTeX (Academic writing)</li>
-                        <li>Jupyter Notebooks</li>
+            <div class="cv-two-column">
+                <div class="cv-left-label">2020 &ndash; 2025</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">B.Sc. in Robotics &amp; Intelligent Systems Engineering</h3>
+                    <p class="cv-entry-org">Manara University &mdash; Latakia, Syria</p>
+                    <ul class="cv-entry-list">
+                        <li>GPA: 3.28 / 4.0 &nbsp;&middot;&nbsp; Graduated with Honors.</li>
+                        <li>Thesis: “Intelligent Trajectory and Control of Designed Hand Exoskeleton for Rehabilitation” (Score: 96 / 100).</li>
+                        <li>Distinguished Student Program &mdash; selective track for research-oriented students.</li>
                     </ul>
                 </div>
             </div>
-        </section>
 
-        <!-- Languages -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-language"></i> Languages</h2>
-            
-            <div class="languages-grid">
-                <div class="language-item">
-                    <strong>Arabic:</strong> Native proficiency
-                </div>
-                <div class="language-item">
-                    <strong>English:</strong> Proficient (C1 level) – Academic reading, writing, and presentation
-                </div>
-                <div class="language-item">
-                    <strong>French:</strong> Basic (A2 level) – Reading comprehension and basic conversation
+            <div class="cv-two-column">
+                <div class="cv-left-label">2017 &ndash; 2020</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">National Center for the Distinguished (NCD)</h3>
+                    <p class="cv-entry-org">High School &mdash; Scientific Stream, Syria</p>
+                    <ul class="cv-entry-list">
+                        <li>Rank: 3 / 75 students &nbsp;&middot;&nbsp; Final grade: 92.3% (Top 4% nationally).</li>
+                        <li>Selected from 1,800 pre-qualified applicants across Syria.</li>
+                        <li>Intensive curriculum in mathematics, physics, and computer science.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <!-- References -->
-        <section class="cv-section">
-            <h2 class="cv-section-title"><i class="fas fa-user-friends"></i> References</h2>
-            
-            <div class="references-note">
-                <p><strong>Professional and academic references available upon request.</strong></p>
-                <p>Includes professors from Manara University, supervisors from Syrian Computer Society, and academic mentors from research projects.</p>
-                <p class="no-print">Please use the <a href="contact.html#references">contact form</a> to request reference letters or contact information.</p>
-            </div>
-        </section>
-
-        <!-- Last Updated -->
-        <div class="cv-updated">
-            <p><strong>Last Updated:</strong> December 2025</p>
-            <p><strong>Portfolio:</strong> https://githublia202lia.github.io/</p>
         </div>
-    </main>
+    </section>
 
-    <div class="print-hide">
-        <section class="cv-download">
-            <div class="container">
-                <div class="download-card">
-                    <h2><i class="fas fa-file-pdf"></i> Complete Scholarship Package</h2>
-                    <p>Download the complete set of documents for scholarship applications:</p>
-                    <div class="download-grid">
-                        <a href="assets/documents/Tala_Khaddour_CV.pdf" class="download-item">
-                            <i class="fas fa-file-alt"></i>
-                            <div>
-                                <strong>Complete CV</strong>
-                                <span>Updated December 2025</span>
-                            </div>
-                        </a>
-                        <a href="assets/documents/Research_Statement.pdf" class="download-item">
-                            <i class="fas fa-file-contract"></i>
-                            <div>
-                                <strong>Research Statement</strong>
-                                <span>Graduate research objectives</span>
-                            </div>
-                        </a>
-                        <a href="assets/documents/Personal_Statement.pdf" class="download-item">
-                            <i class="fas fa-user-edit"></i>
-                            <div>
-                                <strong>Personal Statement</strong>
-                                <span>Academic journey narrative</span>
-                            </div>
-                        </a>
-                        <a href="assets/documents/Recommendation_Letters.pdf" class="download-item">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <div>
-                                <strong>Recommendation Letters</strong>
-                                <span>Academic references</span>
-                            </div>
-                        </a>
-                    </div>
+    <!-- RESEARCH & PROJECTS (SUMMARY) -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-research-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-research-heading" class="section-title">Research &amp; Selected Projects</h2>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2024 &ndash; 2025</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Hand Exoskeleton for Rehabilitation</h3>
+                    <p class="cv-entry-org">Bachelor Thesis &mdash; Manara University</p>
+                    <ul class="cv-entry-list">
+                        <li>Designed a cable-driven hand exoskeleton for post-stroke rehabilitation.</li>
+                        <li>Implemented intelligent trajectory generation and supervisory control using sliding mode and heuristic rules.</li>
+                        <li>Achieved trajectory tracking error below 5° for therapeutic flexion–extension cycles.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2023</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Fuzzy Logic Control of a Unicycle Mobile Robot</h3>
+                    <p class="cv-entry-org">Course project &mdash; Intelligent Control</p>
+                    <ul class="cv-entry-list">
+                        <li>Developed a fuzzy controller for robust path tracking under model uncertainty and disturbances.</li>
+                        <li>Reduced steady-state lateral error by approximately 40% compared with a baseline PID controller in simulation.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2023 &ndash; 2024</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Stereo Vision for Mirrored Upper-Limb Motion</h3>
+                    <p class="cv-entry-org">Perception &amp; HRI exploratory project</p>
+                    <ul class="cv-entry-list">
+                        <li>Implemented stereo calibration, depth estimation, and pose extraction for upper-limb motion.</li>
+                        <li>Mapped estimated pose to robotic motion for intuitive demonstration-based control.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2022</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Autonomous Vehicle for World Robot Olympiad</h3>
+                    <p class="cv-entry-org">WRO &mdash; Future Engineers Category</p>
+                    <ul class="cv-entry-list">
+                        <li>Developed an autonomous vehicle for a national WRO competition; team placed 5th nationwide.</li>
+                        <li>Worked on perception, control, and competition strategy under time constraints.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-experience-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-experience-heading" class="section-title">Experience</h2>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2023 &ndash; 2024</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Robotics &amp; Programming Trainer</h3>
+                    <p class="cv-entry-org">Syrian Computer Society &mdash; Latakia &amp; Jableh</p>
+                    <ul class="cv-entry-list">
+                        <li>Delivered robotics and introductory AI training to school and university students.</li>
+                        <li>Guided learners through hands-on projects with real hardware implementation.</li>
+                        <li>Helped build a local community of young robotics and AI enthusiasts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2023</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Robotics Project Coach (RFG)</h3>
+                    <p class="cv-entry-org">Manara University &amp; Sanad Youth Foundation</p>
+                    <ul class="cv-entry-list">
+                        <li>Coached a student team for the Robotics For the Globe competition.</li>
+                        <li>Supported Arduino development, sensor integration, and control strategies.</li>
+                        <li>Provided feedback on technical documentation and project narrative.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS & SCHOLARSHIPS -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-awards-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-awards-heading" class="section-title">Awards &amp; Scholarships</h2>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2020 &ndash; 2025</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Distinction and Creativity Agency (DCA) Scholarship</h3>
+                    <p class="cv-entry-org">Syria</p>
+                    <ul class="cv-entry-list">
+                        <li>Multi-year scholarship awarded to students with demonstrated academic excellence and potential.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2022</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">World Robot Olympiad &mdash; Future Engineers</h3>
+                    <p class="cv-entry-org">National Round &mdash; Syria</p>
+                    <ul class="cv-entry-list">
+                        <li>Team achieved 5th place nationally in the Future Engineers category.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2021</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Girls in AI: Teens in AI Ada Lovelace Hackathon</h3>
+                    <p class="cv-entry-org">International program</p>
+                    <ul class="cv-entry-list">
+                        <li>Participated in a global hackathon focused on AI solutions led by young women.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-two-column">
+                <div class="cv-left-label">2025 &ndash; present</div>
+                <div class="cv-right-content">
+                    <h3 class="cv-entry-title">Acquaint International Youth Program</h3>
+                    <p class="cv-entry-org">International youth initiative</p>
+                    <ul class="cv-entry-list">
+                        <li>Engaged in cross-cultural dialogue and collaboration on global issues.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SUMMARY -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-skills-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-skills-heading" class="section-title">Technical skills</h2>
+            </div>
+
+            <div class="cv-skills-grid">
+                <div class="cv-skill-block">
+                    <h3 class="cv-skill-title">Robotics &amp; Control</h3>
+                    <ul class="cv-entry-list">
+                        <li>Robot modeling &amp; dynamics (ROS, SolidWorks, CATIA).</li>
+                        <li>Sliding mode control, MRAC, fuzzy control.</li>
+                        <li>Trajectory planning and state estimation.</li>
+                        <li>Modern Robotics Specialization (Coursera).</li>
+                    </ul>
+                </div>
+                <div class="cv-skill-block">
+                    <h3 class="cv-skill-title">AI &amp; Machine Learning</h3>
+                    <ul class="cv-entry-list">
+                        <li>Python, TensorFlow, PyTorch.</li>
+                        <li>Computer vision and neural networks (including LSTM-based models).</li>
+                        <li>Fuzzy logic control systems.</li>
+                        <li>MATLAB/Simulink for control design.</li>
+                    </ul>
+                </div>
+                <div class="cv-skill-block">
+                    <h3 class="cv-skill-title">Embedded &amp; Software</h3>
+                    <ul class="cv-entry-list">
+                        <li>Arduino, Raspberry Pi, C/C++.</li>
+                        <li>Real-time embedded control.</li>
+                        <li>Linux, Git, Docker.</li>
+                        <li>Gazebo and RViz simulation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANGUAGES SUMMARY -->
+    <section class="section section-compact fade-section" aria-labelledby="cv-languages-heading">
+        <div class="section-inner">
+            <div class="cv-section-header">
+                <h2 id="cv-languages-heading" class="section-title">Languages</h2>
+            </div>
+
+            <div class="languages-block">
+                <div class="language-row">
+                    <span class="language-name">Arabic</span>
+                    <span class="language-level-text">
+                        <span class="level-chip">Native</span>
+                    </span>
+                </div>
+                <div class="language-row">
+                    <span class="language-name">English</span>
+                    <span class="language-level-text">
+                        <span class="level-chip">C1 &ndash; Proficient</span>
+                    </span>
+                </div>
+                <div class="language-row">
+                    <span class="language-name">French</span>
+                    <span class="language-level-text">
+                        <span class="level-chip">A2 &ndash; Basic</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-name">Tala Khaddour</p>
+        <p class="footer-tagline">Robotics · Intelligent Systems · Human-centered engineering</p>
+        <p class="footer-meta">
+            Academic portfolio for international scholarship applications and graduate admissions.
+        </p>
     </div>
+</footer>
 
-    <footer class="footer">
-        <!-- Same footer as index.html -->
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Print optimization
-        document.addEventListener('DOMContentLoaded', function() {
-            const printBtn = document.querySelector('[onclick="window.print()"]');
-            if (printBtn) {
-                printBtn.addEventListener('click', function() {
-                    // Add print-specific optimizations
-                    document.body.classList.add('printing');
-                    setTimeout(() => {
-                        window.print();
-                        document.body.classList.remove('printing');
-                    }, 100);
-                });
-            }
-        });
-    </script>
+<script src="main.js"></script>
 </body>
 </html>

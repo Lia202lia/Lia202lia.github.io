@@ -2,24 +2,23 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  /* primary palette: warm academic red + soft ivory */
-  --white-ish: #FCF7F5;
-  --light-gray: #F2E9E6;
-  --bluish-gray: #F7F1EF;        /* light panel bg */
-  --blue-light: #C56A63;         /* soft red accent */
-  --blue-medium: #9E3B3F;        /* main academic red */
-  --blue-medium-rgb: 158, 59, 63;
-  --blue-dark: #5A1F29;          /* deep header/footer red */
-  --dark-b: #3A121A;             /* near-oxblood for strong elements */
-  --gray-black: #3B3940;         /* neutral text */
-  --darker-b: #241017;           /* darkest footer band */
+  /* neutral + red accent inspired by minimalist academic sites [web:33][web:37] */
+  --white-ish: #FCFAF8;
+  --light-gray: #F2EEEB;
+  --bluish-gray: #E6E0DD;
+  --blue-light: #C25A5A;          /* red accent for links/buttons */
+  --blue-medium: #9B3237;         /* main academic red */
+  --blue-medium-rgb: 155, 50, 55;
+  --blue-dark: #5A1F2A;           /* dark red for nav/footer */
+  --dark-b: #30252A;
+  --gray-black: #333135;
+  --darker-b: #1E1519;
 }
 
 html, body {
   height: 100%;
 }
 
-/* Use the root variable for primary color in your CSS */
 body {
   background-color: var(--light-gray);
   font-family: 'Ubuntu Sans', sans-serif;
@@ -31,36 +30,30 @@ nav {
   background-color: var(--blue-dark);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
-
 .navbar-brand {
   color: var(--white-ish) !important;
   font-size: 1.75rem !important;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
-
 .nav-link {
   color: var(--white-ish) !important;
 }
-
 .nav-link:hover,
 .nav-link:focus {
   color: var(--blue-light) !important;
 }
-
 .navbar-expand-lg {
   font-size: 1.2rem !important;
 }
 
-/* buttons */
+/* links */
 #header_middle_letter {
   color: var(--blue-light);
 }
-
 a {
   color: var(--blue-light);
 }
-
 a:hover {
   color: var(--blue-medium) !important;
 }
@@ -76,16 +69,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--blue-dark);
   font-size: smaller;
 }
-
 .footer-lemos-nifme {
   background-color: var(--darker-b);
   font-size: smaller;
 }
-
 .footer-icons {
   color: var(--blue-light);
 }
-
 .footer-icons:hover {
   color: var(--blue-medium);
 }
@@ -95,27 +85,25 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   min-height: 93vh;
 }
-
 #content-wrap {
-  padding-bottom: 2.5rem; /* Footer height */
+  padding-bottom: 2.5rem; /* footer height */
 }
-
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem; /*Footer height*/
+  height: 2.5rem;
 }
 
-/* simple header cover strip using header.jpeg */
+/* simple top cover using header.jpg */
 .header-cover {
   width: 100%;
-  height: 220px;
+  height: 200px;
   background-image:
-    linear-gradient(to bottom, rgba(90, 31, 41, 0.55), rgba(58, 18, 26, 0.85)),
-    url('/assets/img/header.jpeg');
+    linear-gradient(to bottom, rgba(90, 31, 42, 0.4), rgba(90, 31, 42, 0.7)),
+    url('/assets/img/header.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }

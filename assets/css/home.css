@@ -3,18 +3,18 @@
 --------------------------------------------------------------*/
 :root {
   /* --primary-colors --*/
-  --white-ish:#F9F7F7;
-  --light-gray: #F5F5F5;
-  --blue-light:#EF5350;
-  --blue-medium: #D32F2F;
-  --blue-dark:rgb(183, 28, 28);
-  --dark-b: #900000;
-  --gray-black: #424242;
-  --darker-b:#212121;
+  --white-ish:#FAFAFA;
+  --light-gray: #F0F0F0;
+  --blue-light:#C04040;
+  --blue-medium: #A52A2A;
+  --blue-dark:rgb(128, 0, 32);
+  --dark-b: #4B0000;
+  --gray-black: #333333;
+  --darker-b:#1A1A1A;
   /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 }
 h4,h5, p, ul>li, .btn-blue{
-    font-family: 'Merriweather', serif;
+    font-family: 'Inter', sans-serif;
 }
 /* body > div > ol:nth-child(7) > li > button > a */
 .btn-blue{
@@ -58,7 +58,7 @@ a {
 .ref-journal{
     font-weight: 600;
     font-style: italic;
-    font-family: 'Merriweather', serif;
+    font-family: 'Inter', sans-serif;
     color:var(--blue-medium);
 }
 /* .pl-5{

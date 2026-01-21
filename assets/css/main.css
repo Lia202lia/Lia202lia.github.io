@@ -2,104 +2,176 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  /* --primary-colors --*/
-  --white-ish:#FAFAFA;
-  --light-gray: #F5F5F5;
-  --bluish-gray: #E0E0E0;
-  --blue-light:#C8102E;
-  --blue-medium: #A51C30;
-  --blue-medium-rgb: rgb(165, 28, 48);
-  --blue-dark:#841D26;
-  --dark-b: #5E0F18;
-  --gray-black: #333333;
-  --darker-b:#1A1A1A;
-  /* Inspired by Ivy League palettes */
+  /* Core palette: academic navy + ivory + subtle gold */
+  --white-ish: #F8F5F0;          /* warm ivory background */
+  --light-gray: #E5E0D6;         /* soft neutral section background */
+  --bluish-gray: #D4D7E1;        /* cool accent gray */
+  --blue-light: #9C8C7A;         /* muted warm accent */
+  --blue-medium: #1E3A5F;        /* primary academic navy */
+  --blue-medium-rgb: 30, 58, 95;
+  --blue-dark: #0B1424;          /* deep header/footer navy */
+  --dark-b: #020B18;             /* almost black navy */
+  --gray-black: #2F3847;         /* main text color */
+  --darker-b: #111726;           /* dark footer band */
+  --accent-gold: #C79E3B;        /* subtle gold accent */
 }
-html, body {
-    height:100%;
-}
-/* Use the root variable for primary color in your CSS */
+
+html,
 body {
-  background: linear-gradient(to bottom, var(--light-gray), #E8E8E8);
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Inter', sans-serif;
+  height: 100%;
+}
+
+/* Body */
+body {
+  background: radial-gradient(circle at top left, #FDF8F3 0%, #F8F5F0 45%, #E5E0D6 100%);
+  font-family: 'Ubuntu Sans', sans-serif;
   color: var(--gray-black);
-  /* padding-bottom: 600px; */
- 
- 
 }
-/* .ref-author-lemos {
-    font-weight: 700;
-    color:var(--darker-b);
-}
-.ref-journal{
-    font-weight: 700 !important;
-    font-style: italic !important;
-    color:var(--blue-medium) !important;
-} */
+
+/* Navigation bar */
 nav {
-background-color:var(--blue-dark);
-    /* height: 5rem; */
+  background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.navbar-brand{
-color:var(--light-gray) !important;
-font-size:1.75rem !important;
-    font-weight: 700;
+
+.navbar-brand {
+  color: var(--white-ish) !important;
+  font-size: 1.75rem !important;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
-.nav-link{
-color:var(--light-gray) !important;
+
+.nav-link {
+  color: var(--light-gray) !important;
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
-.navbar-expand-lg{
-    font-size:1.2rem !important;
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-gold) !important;
+  border-bottom-color: var(--accent-gold);
 }
-/* buttons */
-#header_middle_letter{
-    color: var(--blue-light);
+
+.navbar-expand-lg {
+  font-size: 1.1rem !important;
 }
+
+/* Global links */
+#header_middle_letter {
+  color: var(--accent-gold);
+}
+
 a {
-  color:var(--blue-light);
+  color: var(--blue-medium);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.25em;
 }
+
 a:hover {
-  color: var(--blue-medium) !important;
-  /* text-decoration: none !important; */
-  /* font-size:1.3rem !important; */
+  color: var(--accent-gold) !important;
 }
-h1, h2, h3, h4, h5, h6 {
-  /* font-family: "Raleway", sans-serif;
-   */
-   font-family: 'Inter', sans-serif;
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu Sans', sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--blue-dark);
 }
-/* footer */
-.footer-lemos {
-  background-color: #841D26;
-  font-size: smaller;
-}
-.footer-lemos-nifme {
-    background-color: #1A1A1A;
-    font-size: smaller;
-  }
-.footer-icons{
-    color: var(--blue-light);
-}
-.footer-icons:hover{
-    color: var(--blue-medium);
-}
+
+/* Layout container/footer anchor */
 #page-container {
-    position: relative;
-    /* min-height: 94%; */
-    min-height:93vh;
-  }
- 
-#content-wrap {
-    /* padding-bottom: 100px; Footer height */
-    padding-bottom: 2.5rem; /*Footer height*/
-    /* padding-top: 5rem; */
+  position: relative;
+  min-height: 93vh;
 }
+
+#content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* height: 100px; Footer height */
-    height: 2.5rem; /*Footer height*/
-   
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /* Footer height */
+}
+
+/* Footer */
+.footer-lemos {
+  background: linear-gradient(180deg, var(--blue-dark), var(--darker-b));
+  font-size: smaller;
+  border-top: 1px solid rgba(199, 158, 59, 0.4);
+}
+
+.footer-lemos-nifme {
+  background-color: var(--darker-b);
+  font-size: smaller;
+  border-top: 1px solid rgba(199, 158, 59, 0.25);
+}
+
+.footer-icons {
+  color: var(--accent-gold);
+}
+
+.footer-icons:hover {
+  color: var(--white-ish);
+}
+
+/*--------------------------------------------------------------
+# Hero cover (optional top cover image)
+--------------------------------------------------------------*/
+.hero-cover {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 8, 23, 0.80),
+      rgba(2, 8, 23, 0.88)
+    ),
+    url("/assets/img/cover-academic.jpg"); /* supply your own cover image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white-ish);
+  padding: 3.5rem 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white-ish);
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(248, 245, 240, 0.90);
+}
+
+.hero-text {
+  font-size: 0.98rem;
+  max-width: 40rem;
+  color: rgba(248, 245, 240, 0.85);
+}
+
+@media (max-width: 576px) {
+  .hero-cover {
+    min-height: 220px;
+    padding: 2.75rem 0;
+    background-position: center top;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
 }

@@ -1,214 +1,105 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
 :root {
-  /* -- Primary Academic Luxury Colors -- */
-  --ivory: #FAF8F5;
-  --parchment: #F5F1E8;
-  --warm-gray: #E8E4DD;
-  --charcoal: #2C3E50;
-  --navy: #1A365D;
-  --burgundy: #6A1B1B;
-  --dark-burgundy: #4A0F0F;
-  --accent-gold: #C5A572;
-  --dark-gold: #9C7C4A;
-  --academic-blue: #2D3748;
-  --slate: #4A5568;
-  
-  /* Luxury gradients */
-  --gradient-bg: linear-gradient(135deg, #FAF8F5 0%, #F5F1E8 100%);
-  --gradient-nav: linear-gradient(135deg, #1A365D 0%, #2C3E50 100%);
+  /* --primary-colors --*/
+  --white-ish:#F9F7F7;
+  --light-gray: #F5F5F5;
+  --bluish-gray: #E0E0E0;
+  --blue-light:#EF5350;
+  --blue-medium: #D32F2F;
+  --blue-medium-rgb: rgb(211, 47, 47);
+  --blue-dark:#B71C1C;
+  --dark-b: #900000;
+  --gray-black: #424242;
+  --darker-b:#212121;
+  /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 }
-
 html, body {
     height:100%;
 }
-
+/* Use the root variable for primary color in your CSS */
 body {
-  background: var(--gradient-bg);
-  background-attachment: fixed;
-  font-family: 'Crimson Pro', serif;
-  color: var(--charcoal);
-  position: relative;
+  background: linear-gradient(to bottom, var(--light-gray), #EDEDED);
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Merriweather', serif;
+  color: var(--gray-black);
+  /* padding-bottom: 600px; */
+ 
+ 
 }
-
-/* Subtle paper texture overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e8e4dd' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: -1;
+/* .ref-author-lemos {
+    font-weight: 700;
+    color:var(--darker-b);
 }
-
-/* Navigation */
+.ref-journal{
+    font-weight: 700 !important;
+    font-style: italic !important;
+    color:var(--blue-medium) !important;
+} */
 nav {
-  background: var(--gradient-nav);
-  box-shadow: 0 2px 20px rgba(26, 54, 93, 0.1);
-  border-bottom: 1px solid var(--accent-gold);
+background-color:var(--blue-dark);
+    /* height: 5rem; */
 }
-
-.navbar-brand {
-  color: var(--accent-gold) !important;
-  font-size: 1.75rem !important;
-  font-weight: 700;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.5px;
+.navbar-brand{
+color:var(--light-gray) !important;
+font-size:1.75rem !important;
+    font-weight: 700;
 }
-
-.nav-link {
-  color: var(--parchment) !important;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
+.nav-link{
+color:var(--light-gray) !important;
 }
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--accent-gold);
-  transition: width 0.3s ease;
+.navbar-expand-lg{
+    font-size:1.2rem !important;
 }
-
-.nav-link:hover {
-  color: var(--accent-gold) !important;
+/* buttons */
+#header_middle_letter{
+    color: var(--blue-light);
 }
-
-.nav-link:hover::after {
-  width: 80%;
-}
-
-#header_middle_letter {
-  color: var(--accent-gold);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  color: var(--navy);
-  letter-spacing: 0.3px;
-}
-
-h4 {
-  border-bottom: 2px solid var(--accent-gold);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-h4::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--burgundy);
-}
-
-/* Links */
 a {
-  color: var(--burgundy);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-weight: 500;
+  color:var(--blue-light);
 }
-
 a:hover {
-  color: var(--dark-burgundy) !important;
-  text-decoration: none;
+  color: var(--blue-medium) !important;
+  /* text-decoration: none !important; */
+  /* font-size:1.3rem !important; */
 }
-
-/* Buttons */
-.btn-blue {
-  background: linear-gradient(135deg, var(--burgundy) 0%, var(--dark-burgundy) 100%);
-  border: none;
-  color: var(--parchment) !important;
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(106, 27, 27, 0.2);
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: "Raleway", sans-serif;
+   */
+   font-family: 'Merriweather', serif;
 }
-
-.btn-blue:hover {
-  background: linear-gradient(135deg, var(--dark-burgundy) 0%, var(--burgundy) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(106, 27, 27, 0.3);
-}
-
-/* Cards and containers */
-.card, .container, .row {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(197, 165, 114, 0.1);
-}
-
-/* Footer */
+/* footer */
 .footer-lemos {
-  background: var(--navy);
-  color: var(--parchment);
-  border-top: 2px solid var(--accent-gold);
+  background-color: #B71C1C;
+  font-size: smaller;
 }
-
 .footer-lemos-nifme {
-  background: var(--charcoal);
-  color: var(--parchment);
+    background-color: #212121;
+    font-size: smaller;
+  }
+.footer-icons{
+    color: var(--blue-light);
 }
-
-.footer-icons {
-  color: var(--accent-gold);
-  transition: all 0.3s ease;
+.footer-icons:hover{
+    color: var(--blue-medium);
 }
-
-.footer-icons:hover {
-  color: var(--parchment);
-  transform: scale(1.1);
-}
-
-/* Layout */
 #page-container {
-  position: relative;
-  min-height: 93vh;
-}
-
+    position: relative;
+    /* min-height: 94%; */
+    min-height:93vh;
+  }
+ 
 #content-wrap {
-  padding-bottom: 2.5rem;
+    /* padding-bottom: 100px; Footer height */
+    padding-bottom: 2.5rem; /*Footer height*/
+    /* padding-top: 5rem; */
 }
-
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--parchment);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-gold);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--dark-gold);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 100px; Footer height */
+    height: 2.5rem; /*Footer height*/
+   
 }

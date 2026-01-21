@@ -3,16 +3,16 @@
 --------------------------------------------------------------*/
 :root {
   /* --primary-colors --*/
-  --white-ish:#F9F7F7;
-  --light-gray: #F5F5F5;
-  --bluish-gray: #E0E0E0;
-  --blue-light:#EF5350;
-  --blue-medium: #D32F2F;
-  --blue-medium-rgb: rgb(211, 47, 47);
-  --blue-dark:#B71C1C;
-  --dark-b: #900000;
-  --gray-black: #424242;
-  --darker-b:#212121;
+  --white-ish:#FAFAFA;
+  --light-gray: #F0F0F0;
+  --bluish-gray: #DCDCDC;
+  --blue-light:#C04040;
+  --blue-medium: #A52A2A;
+  --blue-medium-rgb: rgb(165, 42, 42);
+  --blue-dark:#800020;
+  --dark-b: #4B0000;
+  --gray-black: #333333;
+  --darker-b:#1A1A1A;
   /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 }
 html, body {
@@ -20,9 +20,9 @@ html, body {
 }
 /* Use the root variable for primary color in your CSS */
 body {
-  background: linear-gradient(to bottom, var(--light-gray), #EDEDED);
+  background: linear-gradient(to bottom, var(--light-gray), #E0E0E0);
   /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Merriweather', serif;
+  font-family: 'Inter', sans-serif;
   color: var(--gray-black);
   /* padding-bottom: 600px; */
  
@@ -67,15 +67,15 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   /* font-family: "Raleway", sans-serif;
    */
-   font-family: 'Merriweather', serif;
+   font-family: 'Inter', sans-serif;
 }
 /* footer */
 .footer-lemos {
-  background-color: #B71C1C;
+  background-color: #800020;
   font-size: smaller;
 }
 .footer-lemos-nifme {
-    background-color: #212121;
+    background-color: #1A1A1A;
     font-size: smaller;
   }
 .footer-icons{
@@ -102,4 +102,12 @@ h1, h2, h3, h4, h5, h6 {
     /* height: 100px; Footer height */
     height: 2.5rem; /*Footer height*/
    
+}
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/assets/img/cover.jpg');
 }

@@ -1,135 +1,217 @@
 /*--------------------------------------------------------------
-# General
+# Academic Elegance - Harvard Inspired Theme
 --------------------------------------------------------------*/
 
 :root {
-  /* --primary-colors --*/
-  --white-ish:#F9F7F7;
-  --light-gray: #DBE2EF;
-  --bluish-gray: #e4e9f1;
-  --blue-light:#669bbc;
-  --blue-medium: #0077b6;
-  --blue-medium-rgb: rgb(0, 119, 182);
-  --blue-dark:#0f4c75;
-  --dark-b: #003566;
-  --gray-black: #415a77;
-  --darker-b:#1B262C;
-
-  /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
+  /* Harvard Crimson Palette */
+  --crimson-primary: #A51C30;
+  --crimson-dark: #7A0019;
+  --crimson-light: #C84E40;
+  --crimson-rgba: rgba(165, 28, 48, 0.08);
+  
+  /* Academic Neutrals */
+  --ivory-bg: #F9F6F0;
+  --parchment: #F5F1E6;
+  --charcoal-text: #2C2C2C;
+  --slate-subtle: #6C757D;
+  --gold-accent: #B9941C;
+  
+  /* Spacing & Effects */
+  --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 10px 30px rgba(165, 28, 48, 0.12);
+  --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Base Styles */
 html, body {
-    height:100%;
+  height: 100%;
 }
 
-/* Use the root variable for primary color in your CSS */
 body {
-  background-color: var(--light-gray);
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Ubuntu Sans', sans-serif;
-  color: var(--gray-black);
-  /* padding-bottom: 600px; */
-
-  
-  
+  background-color: var(--ivory-bg);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--charcoal-text);
+  line-height: 1.7;
+  padding-top: 76px; /* For fixed navbar */
 }
 
-/* .ref-author-lemos {
-    font-weight: 700; 
-    color:var(--darker-b);
+/* Elegant Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-weight: 600;
+  color: var(--crimson-primary);
+  margin-bottom: 1.2rem;
 }
 
-.ref-journal{
-    font-weight: 700 !important; 
-    font-style: italic !important;
-    color:var(--blue-medium) !important;
-} */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; border-bottom: 2px solid var(--gold-accent); padding-bottom: 0.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
 
-
-nav {
-	background-color:var(--blue-dark);
-    /* height: 5rem; */
+/* Refined Navigation */
+.navbar {
+  background-color: white !important;
+  box-shadow: var(--nav-shadow);
+  border-bottom: 2px solid var(--crimson-primary);
+  padding: 1rem 0;
 }
 
-.navbar-brand{
-	color:var(--light-gray) !important;
-	font-size:1.75rem !important;
-    font-weight: 700;
+.navbar-brand {
+  color: var(--crimson-dark) !important;
+  font-size: 1.8rem !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.nav-link{
-	color:var(--light-gray) !important;
+.navbar-brand:hover {
+  color: var(--crimson-primary) !important;
 }
 
-.navbar-expand-lg{
-    font-size:1.2rem !important;
+.nav-link {
+  color: var(--charcoal-text) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-
-/* buttons */
-
-
-
-
-#header_middle_letter{
-    color: var(--blue-light);
+.nav-link:hover {
+  color: var(--crimson-primary) !important;
+  background-color: var(--crimson-rgba);
+  transform: translateY(-2px);
 }
 
+.navbar-expand-lg {
+  font-size: 1.1rem !important;
+}
+
+/* Links */
 a {
-  color:var(--blue-light);
+  color: var(--crimson-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px dotted transparent;
 }
 
 a:hover {
-  color: var(--blue-medium) !important;
-  /* text-decoration: none !important; */
-  /* font-size:1.3rem !important; */
+  color: var(--crimson-dark) !important;
+  border-bottom: 1px dotted var(--crimson-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  /* font-family: "Raleway", sans-serif;
-   */
-   font-family: 'Ubuntu Sans', sans-serif;
+/* Academic Cards & Containers */
+.academic-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--crimson-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
+.academic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
 
-/* footer */
+/* Buttons */
+.btn-academic {
+  background-color: var(--crimson-primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(165, 28, 48, 0.3);
+}
 
+.btn-academic:hover {
+  background-color: var(--crimson-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(165, 28, 48, 0.4);
+}
+
+.btn-academic-outline {
+  background-color: transparent;
+  color: var(--crimson-primary);
+  border: 2px solid var(--crimson-primary);
+  padding: 0.6rem 1.8rem;
+}
+
+.btn-academic-outline:hover {
+  background-color: var(--crimson-rgba);
+  color: var(--crimson-dark);
+}
+
+/* Footer */
 .footer-lemos {
-  background-color: #0f4c75;
-  font-size: smaller;
+  background-color: var(--crimson-dark);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
 }
 
-.footer-lemos-nifme {
-    background-color: #1B262C;
-    font-size: smaller;
-  }
-
-.footer-icons{
-    color: var(--blue-light);   
+.footer-icons {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  margin: 0 0.7rem;
+  transition: all 0.3s ease;
 }
 
-.footer-icons:hover{
-    color: var(--blue-medium);   
+.footer-icons:hover {
+  color: white;
+  transform: translateY(-3px);
 }
 
-
+/* Page Layout */
 #page-container {
-    position: relative;
-    /* min-height: 94%; */
-    min-height:93vh;
-  }
-  
+  position: relative;
+  min-height: 100vh;
+}
+
 #content-wrap {
-    /* padding-bottom: 100px;    Footer height */
-    padding-bottom: 2.5rem;    /*Footer height*/
-    /* padding-top: 5rem; */
+  padding-bottom: 6rem;
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* height: 100px;            Footer height */
-    height: 2.5rem;            /*Footer height*/
-    
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+  
+  .academic-card {
+    padding: 1.5rem;
+  }
+  
+  .nav-link {
+    margin: 0.2rem 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar, .footer-lemos {
+    display: none;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
 }

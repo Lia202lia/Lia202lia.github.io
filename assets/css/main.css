@@ -3,114 +3,103 @@
 --------------------------------------------------------------*/
 :root {
   /* --primary-colors --*/
-  --white-ish: #F8F5F0;         /* soft ivory */
-  --light-gray: #E4E0D8;        /* warm light background */
-  --bluish-gray: #D3D7E0;       /* subtle cool contrast */
-  --blue-light: #B89B82;        /* taupe / soft accent */
-  --blue-medium: #1E3A5F;       /* academic navy */
-  --blue-medium-rgb: 30, 58, 95;
-  --blue-dark: #0B1424;         /* deep navy for header/footer */
-  --dark-b: #02101F;            /* almost-black navy */
-  --gray-black: #2F3B4C;        /* refined text color */
-  --darker-b: #121826;          /* dark surfaces */
-  --accent-gold: #D4AF37;       /* luxury gold accent */
-  /* palette inspired by navy–gold–ivory academic/luxury schemes [web:1][web:4][web:10] */
+  --white-ish:#F9F7F7;
+  --light-gray: #F5F5F5;
+  --bluish-gray: #E0E0E0;
+  --blue-light:#EF5350;
+  --blue-medium: #D32F2F;
+  --blue-medium-rgb: rgb(211, 47, 47);
+  --blue-dark:#B71C1C;
+  --dark-b: #900000;
+  --gray-black: #424242;
+  --darker-b:#212121;
+  /* https://colorhunt.co/palette/f9f7f7dbe2ef3f72af112d4e */
 }
-
 html, body {
-  height: 100%;
+    height:100%;
 }
-
+/* Use the root variable for primary color in your CSS */
 body {
-  background: radial-gradient(circle at top left, #FDF8F3 0%, #F8F5F0 40%, #E4E0D8 100%);
-  font-family: 'Ubuntu Sans', sans-serif;
+  background: linear-gradient(to bottom, var(--light-gray), #EDEDED);
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Merriweather', serif;
   color: var(--gray-black);
+  /* padding-bottom: 600px; */
+ 
+ 
 }
-
-/* Nav */
+/* .ref-author-lemos {
+    font-weight: 700;
+    color:var(--darker-b);
+}
+.ref-journal{
+    font-weight: 700 !important;
+    font-style: italic !important;
+    color:var(--blue-medium) !important;
+} */
 nav {
-  background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue-medium) 100%);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+background-color:var(--blue-dark);
+    /* height: 5rem; */
 }
-
-.navbar-brand {
-  color: var(--white-ish) !important;
-  font-size: 1.75rem !important;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+.navbar-brand{
+color:var(--light-gray) !important;
+font-size:1.75rem !important;
+    font-weight: 700;
 }
-
-.nav-link {
-  color: var(--light-gray) !important;
-  transition: color 0.2s ease, border-color 0.2s ease;
-  border-bottom: 2px solid transparent;
+.nav-link{
+color:var(--light-gray) !important;
 }
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-gold) !important;
-  border-bottom-color: var(--accent-gold);
+.navbar-expand-lg{
+    font-size:1.2rem !important;
 }
-
-.navbar-expand-lg {
-  font-size: 1.1rem !important;
+/* buttons */
+#header_middle_letter{
+    color: var(--blue-light);
 }
-
-/* links */
-#header_middle_letter {
-  color: var(--accent-gold);
-}
-
 a {
-  color: var(--blue-medium);
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.2em;
+  color:var(--blue-light);
 }
-
 a:hover {
-  color: var(--accent-gold) !important;
+  color: var(--blue-medium) !important;
+  /* text-decoration: none !important; */
+  /* font-size:1.3rem !important; */
 }
-
-/* headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu Sans', sans-serif;
-  letter-spacing: 0.03em;
-  color: var(--blue-dark);
+  /* font-family: "Raleway", sans-serif;
+   */
+   font-family: 'Merriweather', serif;
 }
-
 /* footer */
 .footer-lemos {
-  background: linear-gradient(180deg, var(--blue-dark), var(--darker-b));
+  background-color: #B71C1C;
   font-size: smaller;
-  border-top: 1px solid rgba(212, 175, 55, 0.4);
 }
-
 .footer-lemos-nifme {
-  background-color: var(--darker-b);
-  font-size: smaller;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
+    background-color: #212121;
+    font-size: smaller;
+  }
+.footer-icons{
+    color: var(--blue-light);
 }
-
-.footer-icons {
-  color: var(--accent-gold);
+.footer-icons:hover{
+    color: var(--blue-medium);
 }
-
-.footer-icons:hover {
-  color: var(--white-ish);
-}
-
 #page-container {
-  position: relative;
-  min-height: 93vh;
-}
-
+    position: relative;
+    /* min-height: 94%; */
+    min-height:93vh;
+  }
+ 
 #content-wrap {
-  padding-bottom: 2.5rem; /* Footer height */
+    /* padding-bottom: 100px; Footer height */
+    padding-bottom: 2.5rem; /*Footer height*/
+    /* padding-top: 5rem; */
 }
-
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; /* Footer height */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 100px; Footer height */
+    height: 2.5rem; /*Footer height*/
+   
 }

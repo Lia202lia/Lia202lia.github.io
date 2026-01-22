@@ -1,73 +1,57 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
 :root {
-  --white-ish: #FDFAF7;
-  --light-gray: #F8F4EE;
-  --blue-light: #64748B;
-  --blue-medium: #475569;
-  --blue-dark: #334155;
-  --dark-b: #1E293B;
-  --gray-black: #334155;
-  --darker-b: #0F172A;
+  --white-ish: #FFFFFF;
+  --light-gray: #F8F8F8;
+  --blue-light: #6C6C6C;
+  --blue-medium: #4A4A4A;
+  --blue-dark: #2A2A2A;
+  --dark-b: #1A1A1A;
+  --gray-black: #333333;
+  --darker-b: #111111;
 }
-
 h4,h5, p, ul>li, .btn-blue{
     font-family: 'Ubuntu Sans', sans-serif;
 }
-
+/* buttons: capsule shape, minimalist */
 .btn-blue{
     color: var(--white-ish) !important;
     background-color: var(--blue-light);
-    border: 2px solid var(--blue-medium);
-    border-radius: 25px;
-    padding: 0.45rem 1.3rem;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(100, 116, 139, 0.2);
+    border: none;
+    border-radius: 50px;
 }
-
 .btn-blue > a{
     color: var(--white-ish);
-    border-color: var(--light-gray);
 }
-
 button:hover{
-    font-size:1.0001rem;
     background-color: var(--blue-medium);
-    box-shadow: 0 6px 20px rgba(71, 85, 105, 0.3);
-    transform: translateY(-2px);
 }
-
 button > a {
-    color: var(--white-ish) !important; 
+    color: var(--white-ish) !important;
 }
-
 button > a:hover{
     color: var(--white-ish) !important;
     text-decoration: none;
 }
-
 a {
     color:var(--blue-light);
-}
-
-a:hover {
-    color: var(--blue-medium);
+  }
+  a:hover {
+    color: var(--blue-medium) ;
     text-decoration: none !important;
-}
-
-.fa-fw{
-  color: var(--blue-medium);
-}
-
-.social-icons {
-  list-style-type: none;
-}
-
+  }
+ 
+  .fa-fw{
+    color: var(--blue-medium) ;
+  }
+  .social-icons {
+    list-style-type: none;
+  }
+ 
 .ref-journal{
-    font-weight: 600; 
+    font-weight: 600;
     font-style: italic;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Ubuntu Sans', sans-serif;
     color:var(--blue-medium);
 }

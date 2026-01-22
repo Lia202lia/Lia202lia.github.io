@@ -3,17 +3,17 @@
 --------------------------------------------------------------*/
 
 :root {
-  /* --primary-colors -- ACADEMIC SCHOLARSHIP PALETTE */
-  --white-ish: #FCFAF8;
-  --light-gray: #F5F3F0;
-  --bluish-gray: #E8E3DC;
-  --blue-light: #6B7280;        /* subtle slate accent */
-  --blue-medium: #4B5563;       /* professional slate */
-  --blue-medium-rgb: 75, 85, 99;
-  --blue-dark: #374151;         /* dark slate nav/footer */
-  --dark-b: #1F2937;
-  --gray-black: #374151;
-  --darker-b: #111827;
+  /* --primary-colors -- CATCHY ACADEMIC SCHOLARSHIP PALETTE */
+  --white-ish: #FDFAF7;
+  --light-gray: #F4F1ED;
+  --bluish-gray: #E8E3DD;
+  --blue-light: #5A9CB7;        /* warm teal accent - catchy yet academic */
+  --blue-medium: #3E8BA3;       /* professional teal */
+  --blue-medium-rgb: 62, 139, 163;
+  --blue-dark: #2B6A88;         /* dark teal nav/footer */
+  --dark-b: #1F4A5E;
+  --gray-black: #3D5A6A;
+  --darker-b: #1A2D3A;
 }
 
 html, body {
@@ -27,17 +27,17 @@ body {
 }
 
 nav {
-	background-color: var(--blue-dark);
+	background-color:var(--blue-dark);
 }
 
 .navbar-brand{
-	color: var(--white-ish) !important;
+	color:var(--white-ish) !important;
 	font-size:1.75rem !important;
     font-weight: 700;
 }
 
 .nav-link{
-	color: var(--white-ish) !important;
+	color:var(--white-ish) !important;
 }
 
 .navbar-expand-lg{
@@ -49,7 +49,7 @@ nav {
 }
 
 a {
-  color: var(--blue-light);
+  color:var(--blue-light);
 }
 
 a:hover {
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-lemos-nifme {
     background-color: var(--darker-b);
     font-size: smaller;
-}
+  }
 
 .footer-icons{
     color: var(--blue-light);   
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 #page-container {
     position: relative;
     min-height:93vh;
-}
+  }
   
 #content-wrap {
     padding-bottom: 2.5rem;

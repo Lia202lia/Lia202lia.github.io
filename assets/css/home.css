@@ -4,13 +4,13 @@
 
 :root {
   --white-ish: #FDFAF7;
-  --light-gray: #F4F1ED;
-  --blue-light: #5A9CB7;
-  --blue-medium: #3E8BA3;
-  --blue-dark: #2B6A88;
-  --dark-b: #1F4A5E;
-  --gray-black: #3D5A6A;
-  --darker-b: #1A2D3A;
+  --light-gray: #F8F4EE;
+  --blue-light: #64748B;
+  --blue-medium: #475569;
+  --blue-dark: #334155;
+  --dark-b: #1E293B;
+  --gray-black: #334155;
+  --darker-b: #0F172A;
 }
 
 h4,h5, p, ul>li, .btn-blue{
@@ -23,9 +23,8 @@ h4,h5, p, ul>li, .btn-blue{
     border: 2px solid var(--blue-medium);
     border-radius: 25px;
     padding: 0.45rem 1.3rem;
-    font-weight: 500;
-    box-shadow: 0 2px 8px rgba(90, 156, 183, 0.2);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(100, 116, 139, 0.2);
 }
 
 .btn-blue > a{
@@ -34,9 +33,9 @@ h4,h5, p, ul>li, .btn-blue{
 }
 
 button:hover{
-    font-size:1.0001rem ;
+    font-size:1.0001rem;
     background-color: var(--blue-medium);
-    box-shadow: 0 6px 16px rgba(62, 139, 163, 0.35);
+    box-shadow: 0 6px 20px rgba(71, 85, 105, 0.3);
     transform: translateY(-2px);
 }
 
@@ -51,21 +50,21 @@ button > a:hover{
 
 a {
     color:var(--blue-light);
-  }
+}
 
 a:hover {
     color: var(--blue-medium);
     text-decoration: none !important;
-  }
-  
+}
+
 .fa-fw{
-    color: var(--blue-medium);
-  }
+  color: var(--blue-medium);
+}
 
 .social-icons {
-    list-style-type: none;
-  }
-  
+  list-style-type: none;
+}
+
 .ref-journal{
     font-weight: 600; 
     font-style: italic;

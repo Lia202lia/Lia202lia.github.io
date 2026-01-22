@@ -1,57 +1,41 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 :root {
   --white-ish: #FFFFFF;
-  --light-gray: #F8F8F8;
-  --blue-light: #6C6C6C;
-  --blue-medium: #4A4A4A;
-  --blue-dark: #2A2A2A;
-  --dark-b: #1A1A1A;
-  --gray-black: #333333;
-  --darker-b: #111111;
+  --light-gray: #F9FAFB;
+  --blue-light: #0066CC;
+  --blue-medium: #003D80;
+  --blue-dark: #002B5C;
+  --dark-b: #1F2937;
+  --gray-black: #374151;
+  --darker-b: #111827;
 }
-h4,h5, p, ul>li, .btn-blue{
-    font-family: 'Ubuntu Sans', sans-serif;
+
+.btn-blue {
+  color: var(--white-ish) !important;
+  background-color: var(--blue-light);
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
 }
-/* buttons: capsule shape, minimalist */
-.btn-blue{
-    color: var(--white-ish) !important;
-    background-color: var(--blue-light);
-    border: none;
-    border-radius: 50px;
+
+.btn-blue:hover {
+  background-color: var(--blue-medium);
 }
-.btn-blue > a{
-    color: var(--white-ish);
-}
-button:hover{
-    background-color: var(--blue-medium);
-}
-button > a {
-    color: var(--white-ish) !important;
-}
-button > a:hover{
-    color: var(--white-ish) !important;
-    text-decoration: none;
-}
+
 a {
-    color:var(--blue-light);
-  }
-  a:hover {
-    color: var(--blue-medium) ;
-    text-decoration: none !important;
-  }
- 
-  .fa-fw{
-    color: var(--blue-medium) ;
-  }
-  .social-icons {
-    list-style-type: none;
-  }
- 
-.ref-journal{
-    font-weight: 600;
-    font-style: italic;
-    font-family: 'Ubuntu Sans', sans-serif;
-    color:var(--blue-medium);
+  color: var(--blue-light);
+}
+
+a:hover {
+  color: var(--blue-medium);
+  text-decoration: none !important;
+}
+
+.ref-journal {
+  color: var(--blue-medium);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fa-fw {
+  color: var(--blue-medium);
 }

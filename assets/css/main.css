@@ -1,83 +1,57 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 :root {
-  /* minimalist academic palette: neutrals only for elegance */
   --white-ish: #FFFFFF;
-  --light-gray: #F8F8F8;
-  --bluish-gray: #E8E8E8;
-  --blue-light: #6C6C6C; /* subtle gray for links */
-  --blue-medium: #4A4A4A; /* darker gray for accents */
-  --blue-medium-rgb: rgb(74, 74, 74);
-  --blue-dark: #2A2A2A; /* dark gray for nav/footer */
-  --dark-b: #1A1A1A;
-  --gray-black: #333333;
-  --darker-b: #111111;
+  --light-gray: #F9FAFB;
+  --blue-light: #0066CC;
+  --blue-medium: #003D80;
+  --blue-medium-rgb: rgb(0, 61, 128);
+  --blue-dark: #002B5C;
+  --dark-b: #1F2937;
+  --gray-black: #374151;
+  --darker-b: #111827;
 }
-html, body {
-    height:100%;
-}
-/* Use the root variable for primary color in your CSS */
+
 body {
   background-color: var(--light-gray);
   font-family: 'Ubuntu Sans', sans-serif;
   color: var(--gray-black);
 }
-/* nav: clean, no shadows */
+
 nav {
   background-color: var(--blue-dark);
 }
-.navbar-brand{
-  color: var(--light-gray) !important;
-  font-size:1.75rem !important;
+
+.navbar-brand {
+  color: var(--white-ish) !important;
+  font-size: 1.75rem !important;
   font-weight: 700;
 }
-.nav-link{
-  color: var(--light-gray) !important;
+
+.nav-link {
+  color: var(--white-ish) !important;
 }
-.navbar-expand-lg{
-  font-size:1.2rem !important;
-}
-/* buttons: capsule shape */
-#header_middle_letter{
+
+a {
   color: var(--blue-light);
 }
-a {
-  color:var(--blue-light);
-}
+
 a:hover {
   color: var(--blue-medium) !important;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu Sans', sans-serif;
+  color: var(--dark-b);
 }
-/* footer: simple */
+
 .footer-lemos {
   background-color: var(--blue-dark);
-  font-size: smaller;
 }
 .footer-lemos-nifme {
-    background-color: var(--darker-b);
-    font-size: smaller;
-  }
-.footer-icons{
-    color: var(--blue-light);
+  background-color: var(--darker-b);
 }
-.footer-icons:hover{
-    color: var(--blue-medium);
+.footer-icons {
+  color: var(--blue-light);
 }
-#page-container {
-    position: relative;
-    min-height:93vh;
-  }
- 
-#content-wrap {
-    padding-bottom: 2.5rem; /*Footer height*/
-}
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem; /*Footer height*/
-   
+.footer-icons:hover {
+  color: var(--blue-medium);
 }

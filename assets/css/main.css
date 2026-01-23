@@ -1,15 +1,15 @@
 :root {
-  --paper: #fbfaf8;
-  --ink: #0e0f11;
-  --ink-muted: #5b5e66;
+  --paper: #f9f8f6;
+  --ink: #0b0d12;
+  --ink-muted: #545861;
 
-  --obsidian: #121417;
-  --smoke: #1a1d22;
+  --carbon: #0f1115;
+  --carbon-soft: #171a20;
 
-  --platinum: #cfd2d8;
-  --champagne: #d6c7a1;
+  --stone: #d8d6cf;
+  --platinum: #bfc3cc;
 
-  --accent: #3b5ccc;
+  --signal: #2f5eff;
 }
 
 html, body {
@@ -17,29 +17,28 @@ html, body {
   padding: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Inter", "Ubuntu Sans", system-ui, sans-serif;
-  line-height: 1.8;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ===== HEADER ===== */
 
 .site-header {
-  background: rgba(18, 20, 23, 0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: var(--carbon);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .site-header .navbar-brand {
   color: #ffffff;
   font-weight: 500;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
 }
 
 .site-header .nav-link {
   color: rgba(255,255,255,0.65);
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+  font-size: 0.85rem;
 }
 
 .site-header .nav-link:hover {
@@ -49,20 +48,20 @@ html, body {
 /* ===== TYPOGRAPHY ===== */
 
 h1, h2, h3, h4 {
-  font-family: "Canela", "Georgia", serif;
-  font-weight: 500;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 400;
   letter-spacing: 0.2px;
 }
 
 h4 {
-  margin-top: 2.4rem;
-  margin-bottom: 0.9rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* ===== LINKS ===== */
 
 a {
-  color: var(--accent);
+  color: var(--signal);
   text-decoration: none;
 }
 
@@ -70,27 +69,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== BUTTONS ===== */
-
-.btn-academic {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid rgba(59,92,204,0.35);
-  border-radius: 999px;
-  padding: 6px 18px;
-  font-size: 0.8rem;
-  transition: all 0.25s ease;
-}
-
-.btn-academic:hover {
-  background: rgba(59,92,204,0.08);
-}
-
 /* ===== FOOTER ===== */
 
 .site-footer {
-  background: var(--obsidian);
+  background: var(--carbon-soft);
   color: rgba(255,255,255,0.55);
   font-size: 0.75rem;
-  margin-top: 120px;
+  margin-top: 140px;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }

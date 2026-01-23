@@ -1,83 +1,104 @@
 /*--------------------------------------------------------------
-# General2
+# General
 --------------------------------------------------------------*/
 :root {
-  /* minimalist academic palette: white/gray with subtle blue accents */
-  --white-ish: #FFFFFF;
-  --light-gray: #FAFAFA;
-  --bluish-gray: #F0F0F0;
-  --blue-light: #007BFF; /* subtle academic blue for links */
-  --blue-medium: #0056D2; /* deeper blue for hover/accent */
-  --blue-medium-rgb: rgb(0, 86, 210);
-  --blue-dark: #343A40; /* dark gray for nav/footer */
-  --dark-b: #212529;
-  --gray-black: #495057;
-  --darker-b: #1C1F23;
+  /* Academic neutral palette */
+  --bg-main: #ffffff;
+  --bg-soft: #f8f9fa;
+  --text-main: #212529;
+  --text-muted: #495057;
+
+  /* Academic blue (used sparingly) */
+  --accent: #0b5ed7;
+  --accent-hover: #084298;
+
+  /* Structural dark */
+  --nav-dark: #1f2933;
+  --footer-dark: #111827;
 }
+
 html, body {
-    height:100%;
+  height: 100%;
 }
-/* Use the root variable for primary color in your CSS */
+
 body {
-  background-color: var(--light-gray);
+  background-color: var(--bg-main);
   font-family: 'Ubuntu Sans', sans-serif;
-  color: var(--gray-black);
+  color: var(--text-main);
+  line-height: 1.65;
 }
-/* nav: simple dark gray */
+
+/* Navigation */
 nav {
-  background-color: var(--blue-dark);
+  background-color: var(--nav-dark);
 }
-.navbar-brand{
-  color: var(--white-ish) !important;
-  font-size:1.75rem !important;
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.75rem !important;
   font-weight: 700;
+  letter-spacing: 0.3px;
 }
-.nav-link{
-  color: var(--white-ish) !important;
+
+.nav-link {
+  color: #e5e7eb !important;
 }
-.navbar-expand-lg{
-  font-size:1.2rem !important;
+
+.nav-link:hover {
+  color: #ffffff !important;
 }
-/* buttons */
-#header_middle_letter{
-  color: var(--blue-light);
-}
+
+/* Links */
 a {
-  color:var(--blue-light);
+  color: var(--accent);
+  text-decoration: none;
 }
+
 a:hover {
-  color: var(--blue-medium) !important;
+  color: var(--accent-hover);
 }
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu Sans', sans-serif;
+  font-weight: 700;
+  color: var(--text-main);
 }
-/* footer: matching dark gray */
+
+/* Footer */
 .footer-lemos {
-  background-color: var(--blue-dark);
-  font-size: smaller;
+  background-color: var(--nav-dark);
+  font-size: 0.8rem;
+  color: #e5e7eb;
 }
+
 .footer-lemos-nifme {
-    background-color: var(--darker-b);
-    font-size: smaller;
-  }
-.footer-icons{
-    color: var(--blue-light);
+  background-color: var(--footer-dark);
+  font-size: 0.75rem;
+  color: #9ca3af;
 }
-.footer-icons:hover{
-    color: var(--blue-medium);
+
+.footer-icons {
+  color: var(--accent);
 }
+
+.footer-icons:hover {
+  color: var(--accent-hover);
+}
+
+/* Layout helpers */
 #page-container {
-    position: relative;
-    min-height:93vh;
-  }
- 
-#content-wrap {
-    padding-bottom: 2.5rem; /*Footer height*/
+  position: relative;
+  min-height: 93vh;
 }
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem; /*Footer height*/
-   
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }

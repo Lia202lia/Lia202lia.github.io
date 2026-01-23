@@ -1,77 +1,83 @@
 :root {
-  --parchment: #fbf7f2;
-  --ink: #0c0f14;
-  --ink-soft: #5f6470;
-
-  --obsidian: #101216;
-
-  --royal-gold: #c8a951;
-  --antique-gold: #e6d8a3;
-
-  --deep-navy: #1c2340;
+  /* Modern Academic Prestige Palette */
+  --bg-main: #fdfdfd;          /* near-paper white */
+  --bg-soft: #f5f7f8;          /* soft light gray */
+  --text-main: #1f2328;        /* charcoal black for text */
+  --text-muted: #5a616d;       /* muted slate */
+  
+  --primary: #1f7a8c;          /* muted teal for accents, links, buttons */
+  --primary-light: #70b1c6;    /* light teal for hover */
+  --accent-gold: #c7b89d;      /* subtle luxury accent gold */
+  --border-soft: #dce0e4;      /* light border */
 }
 
-html, body {
+/* General */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background: var(--parchment);
-  color: var(--ink);
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.85;
-  -webkit-font-smoothing: antialiased;
 }
-
-/* ===== HEADER ===== */
-
-.site-header {
-  background: var(--obsidian);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.site-header .navbar-brand {
-  color: var(--antique-gold);
-  font-weight: 500;
-  letter-spacing: 0.6px;
-}
-
-.site-header .nav-link {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.85rem;
-}
-
-.site-header .nav-link:hover {
-  color: #ffffff;
-}
-
-/* ===== TYPOGRAPHY ===== */
-
-h1, h2, h3, h4 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-h4 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
-/* ===== LINKS ===== */
 
 a {
-  color: var(--deep-navy);
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--primary-light);
   text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
+/* Headers */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
 
-.site-footer {
-  background: var(--obsidian);
-  color: rgba(255,255,255,0.6);
-  font-size: 0.75rem;
-  margin-top: 160px;
+/* Buttons */
+.btn-academic {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-academic:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-main);
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  padding: 18px 0;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Header links */
+.navbar {
+  background-color: var(--text-main);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--accent-gold) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-light) !important;
 }

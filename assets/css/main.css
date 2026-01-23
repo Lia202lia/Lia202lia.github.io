@@ -1,56 +1,37 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-:root {
-  /* Academic neutral palette */
-  --bg-main: #ffffff;
-  --bg-soft: #f8f9fa;
-  --text-main: #212529;
-  --text-muted: #495057;
-
-  /* Academic blue (used sparingly) */
-  --accent: #0b5ed7;
-  --accent-hover: #084298;
-
-  /* Structural dark */
-  --nav-dark: #1f2933;
-  --footer-dark: #111827;
-}
-
 html, body {
   height: 100%;
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--bg-primary);
   font-family: 'Ubuntu Sans', sans-serif;
   color: var(--text-main);
   line-height: 1.65;
 }
 
-/* Navigation */
+/* NAVBAR — elite dark slate */
 nav {
   background-color: var(--nav-dark);
 }
 
 .navbar-brand {
-  color: #ffffff !important;
+  color: white !important;
   font-size: 1.75rem !important;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.02em;
 }
 
 .nav-link {
-  color: #e5e7eb !important;
+  color: #D1D5DB !important;
 }
 
 .nav-link:hover {
-  color: #ffffff !important;
+  color: white !important;
 }
 
-/* Links */
+/* LINKS */
 a {
-  color: var(--accent);
+  color: var(--accent-primary);
   text-decoration: none;
 }
 
@@ -58,35 +39,33 @@ a:hover {
   color: var(--accent-hover);
 }
 
-/* Headings */
+/* HEADINGS */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu Sans', sans-serif;
   font-weight: 700;
-  color: var(--text-main);
+  letter-spacing: 0.01em;
 }
 
-/* Footer */
+/* FOOTER */
 .footer-lemos {
   background-color: var(--nav-dark);
-  font-size: 0.8rem;
-  color: #e5e7eb;
+  font-size: smaller;
 }
 
 .footer-lemos-nifme {
   background-color: var(--footer-dark);
-  font-size: 0.75rem;
-  color: #9ca3af;
+  font-size: smaller;
 }
 
 .footer-icons {
-  color: var(--accent);
+  color: var(--icon-muted);
 }
 
 .footer-icons:hover {
   color: var(--accent-hover);
 }
 
-/* Layout helpers */
+/* PAGE STRUCTURE */
 #page-container {
   position: relative;
   min-height: 93vh;

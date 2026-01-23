@@ -1,5 +1,17 @@
 :root {
-  /* Your color vars above */
+--bg-main: #fcfcfb;          /* paper white */
+--bg-header: #1b2430;       /* deep academic navy */
+--bg-footer: #0f172a;       /* institutional footer */
+
+--text-main: #1e1f23;
+--text-muted: #6b7280;
+--text-invert: #f8fafc;
+
+--primary: #2f5dab;         /* Ivy blue */
+--accent-gold: #bfa46f;     /* muted academic gold */
+--accent-silver: #9ca3af;
+--border-soft: #d1d5db;
+--shadow-light: rgba(0,0,0,0.08);  /* subtle depth */
 }
 
 html, body {

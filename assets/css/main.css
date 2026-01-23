@@ -1,64 +1,98 @@
+/* =========================================================
+   GLOBAL DESIGN TOKENS — ACADEMIC PRESTIGE SYSTEM
+   ========================================================= */
+
 :root {
+  /* Backgrounds */
   --bg-main: #fcfcfb;
   --bg-header: #1b2430;
   --bg-footer: #0f172a;
 
+  /* Text */
   --text-main: #1e1f23;
   --text-muted: #6b7280;
   --text-invert: #f8fafc;
 
-  --primary: #2f5dab;
-  --accent-gold: #bfa46f;
+  /* Accents */
+  --primary: #2f5dab;        /* academic blue */
+  --accent-gold: #bfa46f;   /* restrained gold */
   --accent-silver: #9ca3af;
 
+  /* Borders */
   --border-soft: #d1d5db;
 }
 
-html, body {
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: "Ubuntu Sans", system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ---------------- HEADER ---------------- */
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
 
 .site-header {
   background-color: var(--bg-header);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-header .navbar-brand {
   color: var(--text-invert);
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .site-header .nav-link {
   color: #cbd5e1;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  margin-left: 14px;
 }
 
 .site-header .nav-link:hover {
   color: #ffffff;
 }
 
-/* ---------------- TYPOGRAPHY ---------------- */
+/* =========================================================
+   TYPOGRAPHY — ACADEMIC HIERARCHY
+   ========================================================= */
 
-h1, h2, h3, h4 {
-  font-family: "Georgia", "Times New Roman", serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 600;
   color: var(--text-main);
 }
 
 h4 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.15rem;
 }
 
-/* ---------------- LINKS ---------------- */
+/* Paragraph refinement */
+p {
+  margin-bottom: 1.1rem;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
 
 a {
   color: var(--primary);
@@ -69,15 +103,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------------- BUTTONS ---------------- */
+/* =========================================================
+   BUTTONS — RESTRAINED, INSTITUTIONAL
+   ========================================================= */
 
 .btn-academic {
   background-color: var(--primary);
   color: #ffffff;
   border: 1px solid var(--primary);
   border-radius: 6px;
-  padding: 6px 16px;
-  font-size: 0.85rem;
+  padding: 6px 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
 }
 
 .btn-academic:hover {
@@ -85,14 +122,16 @@ a:hover {
   border-color: #224a86;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .site-footer {
   background-color: var(--bg-footer);
   color: #9ca3af;
-  font-size: 0.85rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: 90px;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 110px;
 }
 
 .site-footer a {

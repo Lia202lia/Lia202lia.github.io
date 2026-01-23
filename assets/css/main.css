@@ -1,14 +1,15 @@
 :root {
-  --bg-main: #fdfdfc;
-  --bg-header: #1f2933;
-  --bg-footer: #111827;
+  --bg-main: #fcfcfb;
+  --bg-header: #1b2430;
+  --bg-footer: #0f172a;
 
-  --text-main: #1c1e21;
+  --text-main: #1e1f23;
   --text-muted: #6b7280;
-  --text-invert: #f9fafb;
+  --text-invert: #f8fafc;
 
-  --primary: #2b5dab;
-  --primary-soft: #e9eef6;
+  --primary: #2f5dab;
+  --accent-gold: #bfa46f;
+  --accent-silver: #9ca3af;
 
   --border-soft: #d1d5db;
 }
@@ -26,17 +27,17 @@ html, body {
 
 .site-header {
   background-color: var(--bg-header);
-  border-bottom: 1px solid #374151;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .site-header .navbar-brand {
   color: var(--text-invert);
   font-weight: 600;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
 }
 
 .site-header .nav-link {
-  color: #d1d5db;
+  color: #cbd5e1;
   font-size: 0.95rem;
 }
 
@@ -75,7 +76,7 @@ a:hover {
   color: #ffffff;
   border: 1px solid var(--primary);
   border-radius: 6px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   font-size: 0.85rem;
 }
 
@@ -90,8 +91,8 @@ a:hover {
   background-color: var(--bg-footer);
   color: #9ca3af;
   font-size: 0.85rem;
-  border-top: 1px solid #1f2933;
-  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 90px;
 }
 
 .site-footer a {

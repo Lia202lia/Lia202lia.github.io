@@ -2,26 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Your Name | Academic Profile</title>
+  <title>Your Name | Robotics Engineer & Scholar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/home.css">
-  <link rel="stylesheet" href="/assets/css/fontawesome651.all.min.css">
-
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/fontawesome651.all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<!-- ================= HEADER ================= -->
-<nav class="navbar navbar-expand-lg site-header">
+<!-- Header -->
+<nav class="navbar navbar-expand-md site-header">
   <div class="container">
     <a class="navbar-brand" href="/">Your Name</a>
-
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
@@ -31,73 +29,54 @@
   </div>
 </nav>
 
-<!-- ================= MAIN CONTENT ================= -->
-<main class="container mt-5">
-
-  <div class="row">
-
-    <!-- LEFT COLUMN -->
-    <aside class="col-sm-4 text-center">
-
+<!-- Content -->
+<div class="container mt-5 pb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-5 text-center mb-4 mb-md-0">
       <div class="profile-frame">
-        <img src="/assets/img/profile.jpg" alt="Profile photo" class="profile-img">
+        <img src="assets/img/profile.jpg" alt="Your professional photo" class="profile-img">
       </div>
-
-      <h1 class="profile-name">Your Name</h1>
+      <h4 class="profile-name">Your Name</h4>
       <p class="profile-sub">
-        BSc in Robotics & Intelligent Systems<br>
-        Manara University
+        BSc Robotics & Intelligent Systems<br>
+        Manara University, Aleppo
       </p>
-
-      <ul class="social-icons text-left text-sm-left">
-        <li><i class="fa-solid fa-location-dot"></i> Syria</li>
+      <ul class="social-icons">
+        <li><i class="fa-solid fa-location-dot"></i> Aleppo, Syria</li>
         <li><i class="fa-solid fa-school"></i> Manara University</li>
-        <li><i class="fa-regular fa-envelope"></i> email@domain.com</li>
-        <li><i class="fa-brands fa-google-scholar"></i> Google Scholar</li>
-        <li><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
-        <li><i class="fa-brands fa-github"></i> GitHub</li>
+        <li><i class="fa-regular fa-envelope"></i> your.email@manara.edu</li>
+        <li><i class="fa-brands fa-google-scholar"></i> <a href="#">Google Scholar</a></li>
+        <li><i class="fa-brands fa-linkedin"></i> <a href="#">LinkedIn</a></li>
+        <li><i class="fa-brands fa-github"></i> <a href="#">GitHub</a></li>
       </ul>
-
-    </aside>
-
-    <!-- RIGHT COLUMN -->
-    <section class="col-sm-8">
-
+    </div>
+    <div class="col-lg-8 col-md-7">
       <h4 id="about">About Me</h4>
-      <p>
-        I am a robotics and intelligent systems engineering graduate with a strong
-        interest in artificial intelligence, human-centered robotics, and applied
-        research. I am currently preparing applications for highly competitive
-        international scholarship programs and graduate studies abroad.
+      <p class="text-justify">
+        Robotics engineer from Aleppo with expertise in kinematics, AI, and human-robot interaction. Preparing for elite scholarships (Erasmus Mundus, DAAD) to advance rehabilitation robotics globally.
       </p>
-
       <h4 id="research">Research Interests</h4>
-      <p>
-        Robotics, artificial intelligence, human–robot interaction, rehabilitation
-        systems, intelligent sensing, and applied machine learning.
-      </p>
-
+      <p>Degrees of freedom analysis, particle swarm optimization, exoskeleton design, machine learning for sensing, web-integrated simulations.</p>
       <h4>News</h4>
-      <ul>
-        <li><span class="ref-journal">2025:</span> Preparing applications for Erasmus Mundus, DAAD, Swiss Excellence</li>
-        <li><span class="ref-journal">2024:</span> Designed a wearable hand rehabilitation exoskeleton</li>
+      <ul class="list-unstyled">
+        <li><span class="ref-journal">2026:</span> Scholarship apps for ETH Zurich, Oxford robotics programs</li>
+        <li><span class="ref-journal">2025:</span> Built wearable hand exoskeleton prototype</li>
       </ul>
-
       <h4 id="cv">CV & Documents</h4>
-      <a href="#" class="btn btn-academic btn-sm">Curriculum Vitae</a>
-      <a href="#" class="btn btn-academic btn-sm ml-2">Research Statement</a>
-
-    </section>
+      <a href="assets/cv.pdf" class="btn btn-academic">Curriculum Vitae (PDF)</a>
+      <a href="assets/research-statement.pdf" class="btn btn-academic">Research Statement (PDF)</a>
+      <h4 id="contact">Contact</h4>
+      <p>Reach out via email or LinkedIn for collaborations in robotics research.</p>
+    </div>
   </div>
-</main>
+</div>
 
-<!-- ================= FOOTER ================= -->
+<!-- Footer -->
 <footer class="site-footer">
-  <div class="container text-center py-4">
-    © 2026 Your Name · Academic Personal Website<br>
-    Designed with a focus on research excellence and scholarship readiness
+  <div class="container text-center">
+    © 2026 Your Name · Robotics Scholar, Aleppo<br>
+    Built for research excellence and global impact
   </div>
 </footer>
-
 </body>
 </html>

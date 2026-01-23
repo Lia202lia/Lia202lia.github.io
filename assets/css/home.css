@@ -1,51 +1,40 @@
-/*--------------------------------------------------------------
-# Home Page
---------------------------------------------------------------*/
-:root {
-  --accent: #0b5ed7;
-  --accent-hover: #084298;
-  --text-muted: #495057;
-}
-
-p, ul > li {
+h4, h5, p, ul>li, .btn-blue {
   font-family: 'Ubuntu Sans', sans-serif;
-  color: var(--text-muted);
-  font-size: 0.95rem;
 }
 
-/* Buttons */
+/* BUTTONS — subtle, serious */
 .btn-blue {
-  background-color: var(--accent);
-  color: #ffffff !important;
+  color: white !important;
+  background-color: var(--accent-primary);
   border: none;
   border-radius: 999px;
   padding: 6px 18px;
-  font-size: 0.85rem;
-  letter-spacing: 0.3px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .btn-blue:hover {
   background-color: var(--accent-hover);
 }
 
-.btn-blue a {
-  color: #ffffff !important;
+/* LINKS */
+a {
+  color: var(--accent-primary);
 }
 
-/* Icons */
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: none !important;
+}
+
+/* ICONS */
 .fa-fw {
-  color: var(--accent);
+  color: var(--accent-primary);
 }
 
-/* Social list */
-.social-icons {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* Research highlights */
+/* JOURNAL / NEWS HIGHLIGHT */
 .ref-journal {
   font-weight: 600;
   font-style: italic;
-  color: var(--accent);
+  color: var(--accent-primary);
 }

@@ -1,53 +1,46 @@
-/* ===== ACADEMIC MEDALLION ===== */
+/* ===== PROFILE MEDALLION ===== */
 
 .profile-medallion {
-  width: 240px; /* smaller medallion */
-  height: 240px;
+  width: 220px;          /* slightly smaller */
+  height: 220px;
   margin: 0 auto 24px;
-  border-radius: 50%;
-  padding: 8px;
+  border-radius: 50%;    /* perfectly circular */
+  padding: 4px;          /* thin frame */
 
-  background:
-    radial-gradient(
-      circle at top,
-      #e6d8a3,  /* antique gold */
-      #c8a951,  /* royal gold */
-      #9e8234
-    );
-
+  background: none;      /* frame color is border only */
+  border: 3px solid #c5a369; /* muted elegant gold */
   box-shadow:
-    0 20px 50px rgba(0,0,0,0.35),
-    inset 0 0 0 1.5px rgba(255,255,255,0.35);
-
-  transition: transform 0.6s ease;
+    0 12px 28px rgba(0,0,0,0.25); /* soft prestige shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .profile-medallion:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
 }
 
 .profile-img {
-  width: 92%;  /* slightly smaller image */
-  height: 92%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  background: #ffffff;
 }
 
 /* ===== TEXT ===== */
 
 .profile-name {
-  font-size: 1.8rem;
-  color: var(--deep-navy);
+  font-size: 1.75rem;
+  color: #3b3a39; /* deep slate */
+  font-weight: 600;
 }
 
 .profile-sub {
   font-size: 0.95rem;
-  color: var(--ink-soft);
-  margin-bottom: 32px;
+  color: #666562;  /* muted sophisticated gray */
+  margin-bottom: 28px;
 }
 
-/* ===== META ===== */
+/* ===== META LIST ===== */
 
 .meta-list {
   list-style: none;
@@ -56,17 +49,18 @@
 }
 
 .meta-list li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  color: #555452;
 }
 
-/* ===== SIGNAL ===== */
+/* ===== SIGNAL (News/Updates) ===== */
 
 .ref-signal {
-  color: var(--deep-navy);
+  color: #a17c50; /* muted gold for highlights */
   font-weight: 500;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== ACADEMIC BUTTONS ===== */
 
 .btn-academic {
   display: inline-block;
@@ -74,8 +68,8 @@
   margin-top: 8px;
   margin-right: 8px;
 
-  background-color: var(--obsidian); /* header/footer color */
-  color: var(--antique-gold);       /* ceremonial gold text */
+  background-color: #3b3a39; /* deep slate (matches header/footer) */
+  color: #c5a369;             /* muted gold */
   font-weight: 500;
   text-decoration: none;
   border-radius: 6px;
@@ -84,8 +78,8 @@
 }
 
 .btn-academic:hover {
-  background-color: var(--deep-navy);
-  color: var(--royal-gold);
+  background-color: #2e2d2c;  /* slightly darker on hover */
+  color: #e0c77d;             /* brighter gold on hover */
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }

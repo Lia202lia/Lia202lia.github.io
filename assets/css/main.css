@@ -1,40 +1,38 @@
 /* --------------------------------------------------
-   Academic Header (Minimal, Serious)
+   Academic Footer
 -------------------------------------------------- */
 
-header, 
-header-component {
+footer,
+footer-component,
+footer-component-lemos {
   display: block;
   background-color: var(--bg-main);
-  border-bottom: 1px solid var(--border-soft);
+  border-top: 1px solid var(--border-soft);
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
-nav {
-  background-color: transparent !important;
-  padding: 12px 0;
+/* Footer spacing */
+#footer {
+  margin-top: 80px;
 }
 
-/* Site title / name */
-.navbar-brand {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--text-main) !important;
+/* Footer links */
+footer a {
+  color: var(--primary);
 }
 
-/* Navigation links */
-.nav-link {
-  font-size: 0.95rem;
-  color: var(--text-muted) !important;
-  margin-left: 14px;
-}
-
-.nav-link:hover {
-  color: var(--primary) !important;
+footer a:hover {
   text-decoration: underline;
 }
 
-/* Mobile toggle */
-.navbar-toggler {
-  border: none;
+/* Footer icons */
+.footer-icons,
+footer i {
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+footer i:hover {
+  color: #244b6f;
 }

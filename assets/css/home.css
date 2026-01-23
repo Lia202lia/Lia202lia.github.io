@@ -1,29 +1,12 @@
-/* ===== CEREMONIAL PROFILE OBJECT ===== */
+/* ===== PORTRAIT AS ACADEMIC SEAL ===== */
 
 .profile-frame {
-  width: 260px;
-  height: 260px;
-  margin: 0 auto 22px;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 28px;
   border-radius: 50%;
-  padding: 7px;
-
-  background:
-    radial-gradient(
-      circle at top,
-      #ffffff,
-      var(--champagne),
-      #bfb38f
-    );
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,0.25),
-    inset 0 0 0 1px rgba(255,255,255,0.45);
-
-  transition: transform 0.6s ease;
-}
-
-.profile-frame:hover {
-  transform: translateY(-4px);
+  padding: 6px;
+  background: var(--platinum);
 }
 
 .profile-img {
@@ -37,36 +20,30 @@
 /* ===== TEXT ===== */
 
 .profile-name {
-  font-size: 1.75rem;
-  letter-spacing: 0.3px;
+  font-size: 1.65rem;
 }
 
 .profile-sub {
   font-size: 0.95rem;
   color: var(--ink-muted);
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
-/* ===== SOCIAL ===== */
+/* ===== META ===== */
 
-.social-icons {
+.meta-list {
   list-style: none;
   padding-left: 0;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
 }
 
-.social-icons li {
+.meta-list li {
   margin-bottom: 10px;
 }
 
-.social-icons i {
-  color: var(--accent);
-  margin-right: 8px;
-}
+/* ===== SIGNAL ===== */
 
-/* ===== NEWS ===== */
-
-.ref-journal {
+.ref-signal {
+  color: var(--signal);
   font-weight: 500;
-  color: var(--accent);
 }

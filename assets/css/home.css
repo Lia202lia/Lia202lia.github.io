@@ -1,70 +1,43 @@
-/*--------------------------------------------------------------
-# Home – Scholarly & Distinguished
---------------------------------------------------------------*/
-:root {
-  --white-ish: #FDFEFE;
-  --light-gray: #F5F7F9;
-  --blue-light: #3A5F8F;
-  --blue-medium: #243B5A;
-  --blue-dark: #1E2329;
-  --gray-black: #2E3440;
-  --accent-bronze: #8A6D3B;
+/* Profile image */
+.profile-img {
+  width: 60%;
+  max-width: 240px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  margin-bottom: 10px;
 }
 
-h4, h5, p, ul > li, .btn-blue {
-  font-family: 'Ubuntu Sans', sans-serif;
+/* Name */
+.profile-name {
+  font-size: 1.7rem;
+  color: var(--primary);
+  margin-bottom: 4px;
 }
 
-/*--------------------------------------------------------------
-# Buttons – Calm Authority
---------------------------------------------------------------*/
-.btn-blue {
-  color: var(--white-ish) !important;
-  background-color: var(--blue-medium);
-  border: none;
-  border-radius: 50px;
-  padding: 0.4rem 1.2rem;
-  letter-spacing: 0.3px;
+/* Short bio */
+.profile-sub {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
 }
 
-.btn-blue > a {
-  color: var(--white-ish);
+/* Social list */
+.social-icons {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.9rem;
 }
 
-button:hover {
-  background-color: var(--accent-bronze);
+.social-icons li {
+  margin-bottom: 8px;
 }
 
-button > a:hover {
-  color: var(--white-ish) !important;
-  text-decoration: none;
+.social-icons i {
+  color: var(--primary);
 }
 
-/*--------------------------------------------------------------
-# Icons & Links
---------------------------------------------------------------*/
-a {
-  color: var(--blue-light);
-}
-
-a:hover {
-  color: var(--accent-bronze);
-}
-
-.fa-fw {
-  color: var(--blue-medium);
-}
-
-/*--------------------------------------------------------------
-# Scholarly Emphasis
---------------------------------------------------------------*/
+/* News highlight */
 .ref-journal {
   font-weight: 600;
-  font-style: italic;
-  color: var(--accent-bronze);
-}
-
-/* Social list remains unchanged structurally */
-.social-icons {
-  list-style-type: none;
+  color: var(--primary);
 }

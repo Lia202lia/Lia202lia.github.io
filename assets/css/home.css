@@ -1,64 +1,62 @@
-/* ==========================================================
-   HOME.CSS — ACADEMIC PROFILE DETAILS
-   ========================================================== */
-
-h4, h5, p, ul > li {
-  font-family: 'Ubuntu Sans', sans-serif;
+/* Profile card */
+.profile-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 28px 22px;
 }
 
-/* =========================
-   PROFILE IMAGE — LUXURY
-========================= */
+/* Profile image */
 .profile-img {
-  border-radius: 50%;
-  width: 60%;
-  max-width: 240px;
-  border: 3px solid rgba(200, 164, 93, 0.55); /* champagne ring */
+    width: 65%;
+    max-width: 230px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    padding: 4px;
+    margin-bottom: 12px;
 }
 
-/* =========================
-   BUTTONS — EDITORIAL
-========================= */
-.btn-blue {
-  background-color: transparent;
-  border: 1.5px solid var(--accent-blue);
-  color: var(--accent-blue) !important;
-  border-radius: 6px;
-  padding: 6px 18px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: 0.25s ease;
+/* Name */
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
 }
 
-.btn-blue:hover {
-  background-color: var(--accent-blue);
-  color: #FFFFFF !important;
+/* Bio subtitle */
+.profile-sub {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
 }
 
-.btn-blue a {
-  color: inherit !important;
-}
-
-/* =========================
-   ICONS
-========================= */
-.fa-fw {
-  color: var(--accent-blue);
-}
-
-/* =========================
-   RESEARCH / NEWS
-========================= */
-.ref-journal {
-  font-weight: 600;
-  font-style: italic;
-  color: var(--accent-gold);
-}
-
-/* =========================
-   SOCIAL LIST
-========================= */
+/* Social list */
 .social-icons {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons li {
+    margin-bottom: 8px;
+}
+
+.social-icons i {
+    color: var(--accent);
+}
+
+/* Content cards */
+.content-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* News */
+.ref-journal {
+    font-weight: 600;
+    color: var(--primary);
 }

@@ -1,43 +1,41 @@
 :root {
-  --bg-main: #fcfcfb;
-  --bg-header: #1b2430;
-  --bg-footer: #0f172a;
+  --paper: #fefefe;
+  --ink: #111827;
+  --ink-soft: #4b5563;
 
-  --text-main: #1e1f23;
-  --text-muted: #6b7280;
-  --text-invert: #f8fafc;
+  --navy: #0f172a;
+  --navy-soft: #1e293b;
 
-  --primary: #2f5dab;
-  --accent-gold: #bfa46f;
-  --accent-silver: #9ca3af;
+  --ivy-blue: #1f4fd8;
+  --champagne: #c9b37e;
 
-  --border-soft: #d1d5db;
+  --border: #e5e7eb;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  font-family: "Ubuntu Sans", system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: "Ubuntu Sans", system-ui, sans-serif;
+  line-height: 1.75;
 }
 
-/* ---------------- HEADER ---------------- */
+/* ===== HEADER ===== */
 
 .site-header {
-  background-color: var(--bg-header);
+  background-color: var(--navy);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .site-header .navbar-brand {
-  color: var(--text-invert);
+  color: #ffffff;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .site-header .nav-link {
-  color: #cbd5e1;
+  color: #cbd5f5;
   font-size: 0.95rem;
 }
 
@@ -45,23 +43,23 @@ html, body {
   color: #ffffff;
 }
 
-/* ---------------- TYPOGRAPHY ---------------- */
+/* ===== TYPOGRAPHY ===== */
 
 h1, h2, h3, h4 {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--ink);
 }
 
 h4 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
-/* ---------------- LINKS ---------------- */
+/* ===== LINKS ===== */
 
 a {
-  color: var(--primary);
+  color: var(--ivy-blue);
   text-decoration: none;
 }
 
@@ -69,36 +67,28 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------------- BUTTONS ---------------- */
+/* ===== BUTTONS ===== */
 
 .btn-academic {
-  background-color: var(--primary);
+  background-color: var(--ivy-blue);
+  border: 1px solid var(--ivy-blue);
   color: #ffffff;
-  border: 1px solid var(--primary);
-  border-radius: 6px;
-  padding: 6px 16px;
+  border-radius: 5px;
+  padding: 6px 18px;
   font-size: 0.85rem;
 }
 
 .btn-academic:hover {
-  background-color: #224a86;
-  border-color: #224a86;
+  background-color: #163db5;
+  border-color: #163db5;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ===== FOOTER ===== */
 
 .site-footer {
-  background-color: var(--bg-footer);
+  background-color: var(--navy-soft);
   color: #9ca3af;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: 90px;
-}
-
-.site-footer a {
-  color: #c7d2fe;
-}
-
-.site-footer a:hover {
-  color: #ffffff;
+  margin-top: 100px;
 }

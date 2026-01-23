@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Your Name | Academic Portfolio</title>
+  <title>Your Name | Academic Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -10,93 +10,72 @@
   <link rel="stylesheet" href="/assets/css/home.css">
   <link rel="stylesheet" href="/assets/css/fontawesome651.all.min.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container d-flex justify-content-between align-items-center">
-    <h1>Your Name</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Research</a>
-      <a href="#">Publications</a>
-      <a href="#">CV</a>
-    </nav>
-  </div>
-</header>
+<div class="container mt-4">
 
-<!-- ================= MAIN ================= -->
-<div class="container">
   <div class="row">
 
-    <!-- PROFILE -->
-    <div class="col-md-4">
-      <div class="section-card profile-box">
-        <img src="/assets/img/profile.jpg" class="profile-img" alt="Profile">
+    <!-- LEFT COLUMN -->
+    <div class="col-sm-4">
 
-        <div class="profile-name">Your Name</div>
-        <div class="profile-subtitle">
-          MSc Applicant · Robotics & AI<br>
-          Manara University
-        </div>
+      <img src="/assets/img/profile.jpg"
+           alt="Profile"
+           class="profile-img mx-auto d-block">
 
-        <ul class="profile-list text-left">
-          <li><i class="fa-solid fa-location-dot"></i> Syria</li>
-          <li><i class="fa-solid fa-school"></i> Manara University</li>
-          <li><i class="fa-regular fa-envelope"></i> email@domain.com</li>
-          <li><i class="fa-brands fa-google-scholar"></i> Google Scholar</li>
-          <li><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
-        </ul>
-      </div>
+      <h4 class="profile-name text-center">Your Name</h4>
+      <p class="profile-sub text-center">
+        BSc in Robotics & Intelligent Systems<br>
+        Manara University
+      </p>
+
+      <ul class="social-icons">
+        <li><i class="fa-solid fa-location-dot"></i> Syria</li>
+        <li><i class="fa-solid fa-school"></i> Manara University</li>
+        <li><i class="fa-regular fa-envelope"></i> email@domain.com</li>
+        <li><i class="fa-brands fa-google-scholar"></i> Google Scholar</li>
+        <li><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
+      </ul>
+
     </div>
 
-    <!-- CONTENT -->
-    <div class="col-md-8">
+    <!-- RIGHT COLUMN -->
+    <div class="col-sm-8">
 
-      <div class="section-card">
-        <h2>About Me</h2>
-        <p>
-          I am a robotics and intelligent systems engineer with strong interests in
-          artificial intelligence, human-centered robotics, and applied research for
-          real-world impact. I am currently preparing applications for competitive
-          international master's and PhD programs.
-        </p>
-      </div>
+      <h4>About Me</h4>
+      <p class="text-justify">
+        I am a robotics and intelligent systems engineering graduate with strong
+        interests in artificial intelligence, human-centered robotics, and applied
+        research. I am currently preparing applications for competitive international
+        scholarship programs and graduate studies abroad.
+      </p>
 
-      <div class="section-card">
-        <h2>Research Interests</h2>
-        <p>
-          Human–robot interaction, rehabilitation robotics, multi-modal AI systems,
-          intelligent sensing, and applied machine learning.
-        </p>
-      </div>
+      <h4>Research Interests</h4>
+      <p>
+        Robotics, artificial intelligence, human–robot interaction, rehabilitation
+        systems, intelligent sensing, and applied machine learning.
+      </p>
 
-      <div class="section-card">
-        <h2>News</h2>
-        <ul>
-          <li><span class="ref-journal">2025:</span> Applying for Erasmus Mundus & Swiss Excellence Scholarships</li>
-          <li><span class="ref-journal">2024:</span> Developed a wearable hand rehabilitation exoskeleton</li>
-        </ul>
-      </div>
+      <h4>News</h4>
+      <ul>
+        <li><span class="ref-journal">2025:</span> Preparing applications for Erasmus Mundus, DAAD, and Swiss Excellence</li>
+        <li><span class="ref-journal">2024:</span> Designed a wearable hand rehabilitation exoskeleton</li>
+      </ul>
 
-      <div class="section-card">
-        <h2>CV & Documents</h2>
-        <a href="#" class="btn-academic">Download CV</a>
-        <a href="#" class="btn-academic ml-2">Research Statement</a>
-      </div>
+      <h4>CV & Documents</h4>
+      <a href="#" class="btn btn-blue btn-sm">Curriculum Vitae</a>
+      <a href="#" class="btn btn-blue btn-sm ml-2">Research Statement</a>
 
     </div>
   </div>
+
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="container text-center">
-    © 2026 Your Name · Academic Portfolio
-  </div>
+<footer class="text-center">
+  © 2026 Your Name
 </footer>
 
 </body>

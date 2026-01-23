@@ -1,122 +1,65 @@
-/* ==========================================================
-   MAIN.CSS — LUXURY ACADEMIC / EDITORIAL STYLE
-   ========================================================== */
-
 :root {
-  /* Backgrounds */
-  --bg-main: #FBFCFD;
-  --bg-soft: #EEF1F5;
-
-  /* Text */
-  --text-main: #1F2937;
-  --text-muted: #6B7280;
-
-  /* Academic accents */
-  --accent-blue: #3B5FA5;
-  --accent-gold: #C8A45D;
-
-  /* Borders */
-  --border-light: #E5E7EB;
+    --bg-main: #f7f6f3;
+    --bg-card: #ffffff;
+    --ink-main: #1f2933;
+    --ink-soft: #4b5563;
+    --primary: #2f4a63;
+    --secondary: #6b7280;
+    --accent: #b08d57;
+    --border-soft: #e5e7eb;
 }
 
 html, body {
-  height: 100%;
+    background-color: var(--bg-main);
+    color: var(--ink-main);
+    font-family: "Ubuntu Sans", system-ui, sans-serif;
+    line-height: 1.7;
 }
 
-body {
-  background-color: var(--bg-main);
-  font-family: 'Ubuntu Sans', sans-serif;
-  color: var(--text-main);
-  line-height: 1.65;
-}
-
-/* =========================
-   HEADER / NAVIGATION
-========================= */
-nav {
-  background-color: var(--bg-soft);
-  border-bottom: 1px solid var(--border-light);
-}
-
-.navbar-brand {
-  color: var(--text-main) !important;
-  font-size: 1.8rem !important;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.nav-link {
-  color: var(--text-muted) !important;
-  font-size: 1.05rem;
-}
-
-.nav-link:hover {
-  color: var(--accent-blue) !important;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--text-main);
-}
-
-p {
-  color: var(--text-muted);
-}
-
-/* =========================
-   LINKS
-========================= */
 a {
-  color: var(--accent-blue);
-  text-decoration: none;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent-gold);
+    color: var(--accent);
+    text-decoration: none;
 }
 
-/* =========================
-   FOOTER — LIGHT, PRESTIGE
-========================= */
-.footer-lemos {
-  background-color: var(--bg-soft);
-  border-top: 1px solid var(--border-light);
-  font-size: 0.8rem;
-  color: var(--text-muted);
+/* Headings */
+h1, h2, h3, h4 {
+    font-family: "Georgia", "Times New Roman", serif;
+    letter-spacing: 0.3px;
 }
 
-.footer-lemos-nifme {
-  background-color: var(--bg-main);
-  font-size: 0.75rem;
-  color: var(--text-muted);
+h4 {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    margin-bottom: 16px;
 }
 
-.footer-icons {
-  color: var(--accent-blue);
+/* Buttons */
+.btn-blue {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 999px;
+    padding: 6px 18px;
+    font-size: 0.9rem;
 }
 
-.footer-icons:hover {
-  color: var(--accent-gold);
+.btn-blue:hover {
+    background-color: var(--primary);
+    color: #ffffff;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-#page-container {
-  position: relative;
-  min-height: 93vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;
-}
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+/* Footer */
+footer {
+    background-color: transparent;
+    border-top: 1px solid var(--border-soft);
+    color: var(--secondary);
+    font-size: 0.85rem;
+    padding: 20px 0;
+    margin-top: 60px;
 }
